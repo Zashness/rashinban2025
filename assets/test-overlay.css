@@ -1,6 +1,6 @@
 /* no fancy scss, we be raw doggin css */
 body {
-  background-color: powderblue;
+  background-color: black;
 }
 h1 {
   color: blue;
@@ -15,7 +15,7 @@ p {
   display: flex;
   align-items: center;
   justify-self: center;
-  margin-top: 80px;
+  margin-top: 15px;
 }
 
 .spacer {
@@ -23,7 +23,7 @@ p {
 }
 
 .center {
-  width: 200px;
+  width: 240px;
 }
 
 .score-wrapper {
@@ -31,23 +31,66 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 60px;
   border-radius: 18px;
 }
 
 .score {
-  font-size: 70px;
+  font-size: 60px;
   color: white;
   font-family: 'Seymour One', sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
-.score-wrapper1 {
+.score-wrapper1,
+.player-wrapper1 {
   background-color: #00a1fe;
 }
 
-.score-wrapper2 {
+.score-wrapper2,
+.player-wrapper2 {
   background-color: #e94660;
+}
+
+.playerbar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 65px;
+}
+
+.player {
+  font-family: 'Raleway', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.center-wrapper {
+  width: 640px;
+  display: flex;
+}
+
+.player-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 42px;
+  border-radius: 10px;
+}
+
+.player {
+  margin: 0px 20px;
+  font-size: 26px;
+  color: white;
+  letter-spacing: 1px;
+  font-family: 'Raleway', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: italic;
 }

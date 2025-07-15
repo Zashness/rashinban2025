@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Seymour+One&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Seymour+One&display=swap"
       rel="stylesheet"
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
@@ -33,11 +33,27 @@
       <div class="spacer"></div>
     </div>
 
+    <div class="playerbar">
+      <div class="spacer"></div>
+      <div class="center-wrapper">
+        <div class="player-wrapper player-wrapper1">
+          <div id="player1" class="player player1"></div>
+        </div>
+        <div class="spacer"></div>
+        <div class="player-wrapper player-wrapper2">
+          <div id="player2" class="player player2"></div>
+        </div>
+      </div>
+      <div class="spacer"></div>
+    </div>
+
     <script>
       function render(data) {
         // debugger;
         document.getElementById('score1').innerHTML = data[0].score || '0';
         document.getElementById('score2').innerHTML = data[1].score || '0';
+        document.getElementById('player1').innerHTML = data[0].name || '';
+        document.getElementById('player2').innerHTML = data[1].name || '';
       }
 
       function fetchData() {
