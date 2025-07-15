@@ -8,3 +8,29 @@ h1 {
 p {
   color: red;
 }
+
+.score-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 18px;
+}
+
+.score {
+  font-size: 70px;
+  color: white;
+  font-family: 'Seymour One', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.score-wrapper1 {
+  background-color: #00a1fe;
+}
+
+.score-wrapper2 {
+  background-color: #e94660;
+}
