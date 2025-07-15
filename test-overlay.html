@@ -5,8 +5,7 @@
     <title>Overlay X</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="assets/test-overlay.css" />
-    <!-- Tabletop for reading published Google Sheets -->
-    <script src="https://cdn.jsdelivr.net/npm/tabletop@1.5.1/src/tabletop.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
 
     <script>
       const CONFIG = {
@@ -14,7 +13,6 @@
         sheetTab: 'Sheet1', // perhaps tab name?
       };
     </script>
-    <script src="assets/script.js"></script>
   </head>
   <body>
     <div id="thing"></div>
@@ -42,16 +40,23 @@
         container.innerHTML = html;
       }
 
-      /**
-       * Fetches the published sheet via Tabletop every 10 seconds
-       */
       function fetchData() {
-        Tabletop.init({
-          key: CONFIG.sheetId,
-          simpleSheet: true,
-        })
-          .then((data) => renderTable(data))
-          .catch((err) => console.error('Tabletop error:', err));
+        // adjust "gid=0" as needed for different tabs.
+        const csvUrl = `https://docs.google.com/spreadsheets/d/${CONFIG.sheetId}/export?format=csv&gid=0`;
+
+        fetch(csvUrl)
+          .then((res) => {
+            if (!res.ok) throw new Error(`HTTP ${res.status}`);
+            return res.text();
+          })
+          .then((txt) => {
+            const { data } = Papa.parse(txt, { header: true, skipEmptyLines: true });
+            render(data);
+          })
+          .catch((err) => {
+            console.error('Fetch/Parse error:', err);
+            document.getElementById('thing').innerHTML = '<p>Error loading data.</p>';
+          });
       }
 
       window.addEventListener('DOMContentLoaded', () => {
