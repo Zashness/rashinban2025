@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Overlay X</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/test-overlay.css" />
+    <!-- Tabletop for reading published Google Sheets -->
+    <script src="https://cdn.jsdelivr.net/npm/tabletop@1.5.1/src/tabletop.min.js"></script>
+
+    <script>
+      const CONFIG = {
+        sheetId: '1IfaRkxsSQSrc9FloVuEY5paGmeEuTOGvru5TJeR6Hvg', // Google Sheet ID here
+        sheetTab: 'Sheet1', // perhaps tab name?
+      };
+    </script>
+    <script src="assets/script.js"></script>
+  </head>
+  <body>
+    <div id="thing"></div>
+
+    <script>
+      function render(data) {
+        const container = document.getElementById('thing');
+        if (!data || data.length === 0) {
+          container.innerHTML = '<p>No data.</p>';
+          return;
+        }
+
+        let html = '<table><thead><tr>';
+        const headers = Object.keys(data[0]);
+        headers.forEach((h) => (html += `<th>${h}</th>`));
+        html += '</tr></thead><tbody>';
+
+        data.forEach((row) => {
+          html += '<tr>';
+          headers.forEach((h) => (html += `<td>${row[h] || ''}</td>`));
+          html += '</tr>';
+        });
+        html += '</tbody></table>';
+
+        container.innerHTML = html;
+      }
+
+      /**
+       * Fetches the published sheet via Tabletop every 10 seconds
+       */
+      function fetchData() {
+        Tabletop.init({
+          key: CONFIG.sheetId,
+          simpleSheet: true,
+        })
+          .then((data) => renderTable(data))
+          .catch((err) => console.error('Tabletop error:', err));
+      }
+
+      window.addEventListener('DOMContentLoaded', () => {
+        fetchData();
+        setInterval(fetchData, 10 * 1000);
+      });
+    </script>
+  </body>
+</html>
