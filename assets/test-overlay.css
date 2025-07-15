@@ -9,6 +9,23 @@ p {
   color: red;
 }
 
+.topbar {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  margin-top: 80px;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.center {
+  width: 200px;
+}
+
 .score-wrapper {
   position: relative;
   display: flex;
