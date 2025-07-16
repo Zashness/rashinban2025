@@ -1,4 +1,11 @@
 /* no fancy scss, we be raw doggin css */
+
+:root {
+  --score-distance-from-each-other: 475px;
+  --name-center-point-distance-from-edge: 455px;
+  --name-distance-from-top: 4px;
+}
+
 body {
   position: relative;
   background-color: #00ff00;
@@ -20,7 +27,7 @@ body {
 }
 
 .center {
-  width: 320px;
+  width: var(--score-distance-from-each-other);
 }
 
 .score-bg {
@@ -29,7 +36,7 @@ body {
   align-items: center;
   justify-content: center;
   width: 100px;
-  height: 60px;
+  height: 76px;
   border-radius: 18px;
   margin-top: 25px;
 }
@@ -50,13 +57,6 @@ body {
 .score-bg2,
 .player-name-bg2 {
   background-color: #e94660;
-}
-
-.player {
-  font-family: 'Raleway', sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
 }
 
 .player-name-bg {
@@ -82,18 +82,24 @@ body {
   font-optical-sizing: auto;
   font-weight: 900;
   font-style: italic;
+  /* font-style: normal; */
 }
 
 .player-wrapper1 {
   position: absolute;
-  left: 455px;
-  top: 4px;
+  left: var(--name-center-point-distance-from-edge);
+  top: var(--name-distance-from-top);
   transform: translateX(-50%);
 }
 
 .player-wrapper2 {
   position: absolute;
-  right: 455px;
-  top: 4px;
+  right: var(--name-center-point-distance-from-edge);
+  top: var(--name-distance-from-top);
   transform: translateX(50%);
+}
+
+.player-wrapper1,
+.player-wrapper2 {
+  margin-top: 185px;
 }
