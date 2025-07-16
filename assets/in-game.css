@@ -1,0 +1,99 @@
+/* no fancy scss, we be raw doggin css */
+body {
+  position: relative;
+  background-color: #00ff00;
+  width: 1920px;
+  height: 1080px;
+  margin: 0;
+}
+
+.topbar {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.center {
+  width: 320px;
+}
+
+.score-bg {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 60px;
+  border-radius: 18px;
+  margin-top: 25px;
+}
+
+.score {
+  font-size: 60px;
+  color: white;
+  font-family: 'Seymour One', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.score-bg1,
+.player-name-bg1 {
+  background-color: #00a1fe;
+}
+
+.score-bg2,
+.player-name-bg2 {
+  background-color: #e94660;
+}
+
+.player {
+  font-family: 'Raleway', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.player-name-bg {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 42px;
+  border-radius: 10px;
+  padding: 0 20px;
+  margin-top: 20px;
+}
+
+.player {
+  white-space: nowrap;
+  max-width: 330px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0px;
+  font-size: 26px;
+  color: white;
+  letter-spacing: 1px;
+  font-family: 'Raleway', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.player-wrapper1 {
+  position: absolute;
+  left: 455px;
+  top: 4px;
+  transform: translateX(-50%);
+}
+
+.player-wrapper2 {
+  position: absolute;
+  right: 455px;
+  top: 4px;
+  transform: translateX(50%);
+}

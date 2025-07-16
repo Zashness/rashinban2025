@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Overlay X</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/in-game.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Seymour+One&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+
+    <script>
+      const CONFIG = {
+        sheetId: '1IfaRkxsSQSrc9FloVuEY5paGmeEuTOGvru5TJeR6Hvg', // Google Sheet ID here
+        sheetTab: 'Sheet1', // perhaps tab name?
+      };
+    </script>
+  </head>
+  <body>
+    <div class="topbar">
+      <div class="spacer"></div>
+      <div class="score-bg score-bg1">
+        <div id="score1" class="score score1"></div>
+      </div>
+      <div class="center"></div>
+      <div class="score-bg score-bg2">
+        <div id="score2" class="score score2"></div>
+      </div>
+      <div class="spacer"></div>
+    </div>
+
+    <div class="player-wrapper1">
+      <div class="player-name-bg player-name-bg1">
+        <div id="player1" class="player player1"></div>
+      </div>
+    </div>
+    <div class="player-wrapper2">
+      <div class="player-name-bg player-name-bg2">
+        <div id="player2" class="player player2"></div>
+      </div>
+    </div>
+
+    <script>
+      function render(data) {
+        // debugger;
+        document.getElementById('score1').innerHTML = data[0].score || '0';
+        document.getElementById('score2').innerHTML = data[1].score || '0';
+        document.getElementById('player1').innerHTML = data[0].name || '';
+        document.getElementById('player2').innerHTML = data[1].name || '';
+      }
+
+      function fetchData() {
+        // adjust "gid=0" as needed for different tabs.
+        const csvUrl = `https://docs.google.com/spreadsheets/d/${CONFIG.sheetId}/export?format=csv&gid=0`;
+
+        fetch(csvUrl)
+          .then((res) => {
+            if (!res.ok) throw new Error(`HTTP ${res.status}`);
+            return res.text();
+          })
+          .then((txt) => {
+            const { data } = Papa.parse(txt, { header: true, skipEmptyLines: true });
+            render(data);
+          })
+          .catch((err) => {
+            console.error('Fetch/Parse error:', err);
+            document.getElementById('thing').innerHTML = '<p>Error loading data.</p>';
+          });
+      }
+
+      window.addEventListener('DOMContentLoaded', () => {
+        fetchData();
+        setInterval(fetchData, 10 * 1000);
+      });
+    </script>
+  </body>
+</html>
