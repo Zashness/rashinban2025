@@ -83,7 +83,7 @@
         // Player 1
         document.getElementById('player1').innerHTML = playerOne[0].trim() || '';
         if (playerOne[1].trim()) {
-          document.getElementById('player1-handle').innerHTML = playerOne[1].trim() || '';
+          document.getElementById('player1-handle').innerHTML = '@' + playerOne[1].trim() || '';
           document.getElementById('player1-handle-bg').style.display = 'flex';
         } else {
           document.getElementById('player1-handle-bg').style.display = 'none';
@@ -93,7 +93,7 @@
         // Player 2
         document.getElementById('player2').innerHTML = playerTwo[0].trim() || '';
         if (playerTwo[1].trim()) {
-          document.getElementById('player2-handle').innerHTML = playerTwo[1].trim() || '';
+          document.getElementById('player2-handle').innerHTML = '@' + playerTwo[1].trim() || '';
           document.getElementById('player2-handle-bg').style.display = 'flex';
         } else {
           document.getElementById('player2-handle-bg').style.display = 'none';
