@@ -1,0 +1,478 @@
+/* no fancy scss, we be raw doggin css */
+
+body {
+  margin: 0;
+  overflow: hidden;
+}
+svg.bracket-svg {
+  width: 1920px;
+  height: 1080px;
+  display: block;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700');
+@import url('https://fonts.googleapis.com/css2?family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Blinker:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap');
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+body {
+  background-color: #2a2a2a;
+}
+
+svg.bracket-svg {
+  position: absolute;
+  -webkit-transform-origin: top left;
+  transform-origin: top left;
+  overflow: visible;
+}
+
+svg.bracket-svg.-double-clickable text {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.bracket-placeholder {
+  position: absolute;
+  display: none;
+  min-height: 100vh;
+  min-width: 100%;
+}
+
+.bracket-backdrop {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.bracket-backdrop video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+body.tournaments-xsplit .bracket-placeholder {
+  display: block;
+}
+
+.bracket-line-container {
+  transition: 0.5s ease-in-out;
+}
+
+.bracket-line {
+  fill: none;
+  stroke: #f0f0f0;
+  stroke-width: 2px;
+}
+
+.bracket-line.-entering {
+  -webkit-animation: dash 0.3s linear forwards;
+  animation: dash 0.3s linear forwards;
+}
+
+.bracket-line.-leaving {
+  opacity: 0;
+}
+
+@-webkit-keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.match {
+  overflow: visible;
+  transition: 0.5s ease-in-out;
+}
+
+.match.-entering {
+  -webkit-animation: fadein 0.5s;
+  animation: fadein 0.5s;
+}
+
+.match.-leaving {
+  opacity: 0;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.match--base-background {
+  fill: #626262;
+}
+
+.match--wrapper-background {
+  fill-opacity: 0;
+  shape-rendering: auto;
+}
+
+.match--wrapper-background.-underway {
+  fill: #08c;
+  fill-opacity: 1;
+}
+
+.match--scores-wrapper,
+.match--menu-wrapper {
+  fill: rgba(37, 37, 37, 0.95);
+  stroke: #2a2a2a;
+  stroke-width: 1px;
+}
+
+.match--score {
+  font-size: 12px;
+  fill: #bbb;
+}
+
+.match--score.-winner {
+  fill: #f17d3d;
+}
+
+.match--identifier {
+  fill: #999;
+  font-size: 10px;
+}
+
+.match--identifier.-highlighted {
+  fill: #3ae;
+}
+
+.match--seed {
+  fill: #252525;
+  font-size: 10px;
+  letter-spacing: -0.5px;
+  text-shadow: none;
+}
+
+.match--seed-background {
+  fill: #838383;
+}
+
+.match--player-score-background {
+  fill: #838383;
+}
+
+.match--player-score-background.-winner {
+  fill: #f17d3d;
+}
+
+.match--station-background {
+  fill: #505050;
+  opacity: 0.5;
+}
+
+.match--station-background.-stream {
+  fill: #4b367c;
+  opacity: 1;
+}
+
+.match--station-background.-stream:hover {
+  fill: #6045a0;
+}
+
+.match--station-link:hover {
+  text-decoration: none;
+}
+
+.match--station {
+  fill: #eee;
+  font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  pointer-events: none;
+}
+
+.match--station .match--fa-icon {
+  font-size: 11px;
+  fill: #9c9c9c;
+}
+
+.match--player-info-icon {
+  visibility: hidden;
+}
+
+svg.match--player:not(:root) {
+  overflow: visible;
+}
+
+svg.match--player.-over .match--player-background {
+  fill: #222;
+}
+
+svg.match--player.-over .match--player-background.-drop-active {
+  fill: #44b;
+}
+
+svg.match--player.-draggable {
+  cursor: move;
+}
+
+svg.match--player.-drop-incomplete path {
+  fill: #944;
+}
+
+svg.match--player.-drop-active path {
+  fill: #77c;
+}
+
+svg.match--player.-drop-target path {
+  fill: #44b;
+}
+
+svg.match--player.-incorrect path {
+  fill: #644;
+}
+
+svg.match--player.-incorrect .match--player-name {
+  text-decoration: line-through;
+  fill: #999;
+}
+
+svg.match--player.-correct path {
+  fill: #446ab6;
+}
+
+svg.match--player.-forfeited .match--player-name {
+  text-decoration: line-through;
+}
+
+.match--player.-dragging rect {
+  fill: #77c;
+  stroke: #44b;
+  stroke-width: 1px;
+}
+
+.match--player-portrait-backdrop {
+  fill: #fff;
+}
+
+.match--player-toggle-button-background {
+  fill: #111;
+  -webkit-transition: fill 0.15s ease;
+  transition: fill 0.15s ease;
+}
+
+.match--player-toggle-button-background:hover {
+  fill: #f68712;
+}
+
+.match--player-toggle-button-background.-toggled {
+  fill: #de1a00;
+}
+
+.match--player-toggle-button-text {
+  font-family: 'Font Awesome 6 Free';
+  fill: #fff;
+  font-size: 12px;
+  cursor: pointer;
+  pointer-events: none;
+}
+
+.match--player-name {
+  fill: #fff;
+  font-size: 12px;
+  text-shadow: 1px 1px 1px #222;
+}
+
+.match--player-name.-placeholder {
+  font-style: italic;
+  font-size: 11px;
+  fill: #bbb;
+}
+
+.match--player-score {
+  fill: #252525;
+  font-size: 12px;
+  text-shadow: none;
+}
+
+.match--player-container {
+  fill: #2392d0;
+}
+
+.match--player-background {
+  fill: #626262;
+}
+
+.match--player-toggle {
+  fill: #000;
+}
+
+.match--player-divider {
+  stroke: #4d4d4d;
+  stroke-width: 1px;
+}
+
+.match--decorative-path {
+  fill: #2392d0;
+}
+
+.third-place-match-label {
+  fill: #e9e9e9;
+  font-weight: bold;
+  transform: translate(0, -5px);
+}
+
+.match--fa-icon {
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  fill: #9c9c9c;
+  text-shadow: 1px 1px 1px #222;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.match--fa-icon:hover {
+  fill: #f17d3d;
+}
+
+.match--fa-icon.-text {
+  fill: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  margin-right: 4px;
+}
+
+.match--fa-icon.-text:hover {
+  fill: #f17d3d;
+}
+
+.match--fa-icon.-highlighted {
+  fill: #3ae;
+}
+
+.match--fa-icon.-highlighted:hover {
+  fill: #7cf;
+}
+
+g.-pulsing {
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-animation: custom-fa-spin 0.5s infinite steps(8);
+  -moz-animation: custom-fa-spin 0.5s infinite steps(8);
+  animation: custom-fa-spin 0.5s infinite steps(8);
+}
+
+@-webkit-keyframes custom-fa-spin {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+
+  100% {
+    -webkit-transform: rotate(359);
+    transform: rotate(359);
+  }
+}
+
+@keyframes custom-fa-spin {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+
+  100% {
+    -webkit-transform: rotate(359);
+    transform: rotate(359);
+  }
+}
+
+.svg-tooltip {
+  animation: fadein 0.3s;
+}
+
+.svg-tooltip rect {
+  fill: #252525;
+}
+
+.svg-tooltip polygon {
+  fill: #252525;
+}
+
+.svg-tooltip text {
+  fill: #fff;
+  font-size: 13px;
+}
+
+.round-label rect {
+  fill: transparent;
+}
+
+.round-label text {
+  fill: #fff;
+  font-size: 12px;
+}
+
+.round-label text.round-label--best-of {
+  fill: #6cf;
+  font-weight: bold;
+}
+
+.round-label.-editable:hover {
+  cursor: pointer;
+}
+
+.round-label.-editable:hover rect {
+  fill: #383f4f;
+}
+
+.rounds {
+  opacity: 1;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -moz-transition-duration: 0.15s;
+  -o-transition-duration: 0.15s;
+  -webkit-transition-duration: 0.15s;
+  transition-duration: 0.15s;
+  -moz-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  -webkit-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+}
+
+.rounds.-hidden {
+  opacity: 0;
+}
+
+.round-header-label text {
+  fill: #fff;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.round-header-label text.round-header-label--best-of {
+  fill: #6cf;
+  font-size: 12px;
+}
+
+.round-header-label.-editable:hover {
+  cursor: pointer;
+}
+
+.round-header-label.-editable:hover text {
+  fill: #626262;
+}
