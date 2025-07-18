@@ -20,6 +20,7 @@
         sheetId: '1IfaRkxsSQSrc9FloVuEY5paGmeEuTOGvru5TJeR6Hvg', // Google Sheet ID here
         sheetTab: '1383961576', // Tab ID
       };
+      const DISABLE = '--表示OFF--'; // Disables the interviewee overlay
     </script>
   </head>
   <body>
@@ -47,6 +48,28 @@
 
       function render(data) {
         // debugger;
+        /**
+         * Process columns with only 1 row:
+         *   - interviewee, next_event_hh, next_event_mm
+         */
+        // Interviewee: Controlled by `interviewee` column in spreadsheet.
+        if (data[0].interviewee === DISABLE) {
+          document.getElementById('player-wrapper').style.display = 'none';
+          return;
+        }
+
+        const interviewee = data[0].interviewee.split('|');
+        document.getElementById('player').innerHTML = interviewee[0].trim() || '';
+        if (interviewee[1].trim()) {
+          document.getElementById('player-handle').innerHTML = '@' + interviewee[1].trim() || '';
+          document.getElementById('player-handle-bg').style.display = 'flex';
+        } else {
+          document.getElementById('player-handle-bg').style.display = 'none';
+        }
+
+        /**
+         * Find "active" row as marked by the `active` column.
+         */
         const row = getActiveRow(data);
         if (
           !row ||
@@ -59,34 +82,22 @@
         const playerOne = row.player_1.split('|');
         const playerTwo = row.player_2.split('|');
 
-        // Player 1
+        // Player 1: `player_1` column in spreadsheet.
         playerOneName = playerOne[0].trim() || '';
         playerOneScore = row.player_1_score.trim() || '0';
 
-        // Player 2
+        // Player 2: `player_2` column in spreadsheet.
         playerTwoName = playerTwo[0].trim() || '';
         playerTwoScore = row.player_2_score.trim() || '0';
 
         document.getElementById('last-match').innerHTML = `
           <p>Last Match: ${playerOneName} ${playerOneScore} - ${playerTwoScore} ${playerTwoName}</p>
         `;
-
-        // Winner being interviewed
-        const winner = row.player_1_score > row.player_2_score ? row.player_1 : row.player_2;
-        const winnerNameAndHandle = winner.split('|');
-        document.getElementById('player').innerHTML = winnerNameAndHandle[0].trim() || '';
-        if (winnerNameAndHandle[1].trim()) {
-          document.getElementById('player-handle').innerHTML =
-            '@' + winnerNameAndHandle[1].trim() || '';
-          document.getElementById('player-handle-bg').style.display = 'flex';
-        } else {
-          document.getElementById('player-handle-bg').style.display = 'none';
-        }
       }
 
       function fetchData() {
         // adjust "gid=" as needed for different tabs.
-        const csvUrl = `https://docs.google.com/spreadsheets/d/${CONFIG.sheetId}/export?format=csv&gid=1383961576`;
+        const csvUrl = `https://docs.google.com/spreadsheets/d/${CONFIG.sheetId}/export?format=csv&gid=${CONFIG.sheetTab}`;
 
         fetch(csvUrl)
           .then((res) => {
