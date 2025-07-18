@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<!-- In Game: overlays for pre-game/in-game/post-game in Game Master Mode -->
+<!-- Interview: show last match & interviewee's name -->
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <title>Overlay X</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="assets/in-game.css" />
+    <link rel="stylesheet" href="assets/interview.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -23,37 +23,16 @@
     </script>
   </head>
   <body>
-    <div class="topbar">
-      <div class="spacer"></div>
-      <div class="score-bg score-bg1">
-        <div id="score1" class="score score1"></div>
-      </div>
-      <div class="center"></div>
-      <div class="score-bg score-bg2">
-        <div id="score2" class="score score2"></div>
-      </div>
-      <div class="spacer"></div>
-    </div>
-    <div class="round">ROUND</div>
-    <div class="game-mode">GAME MODE</div>
-    <div class="damage">DAMAGE</div>
-
-    <div class="player-wrapper1">
+    <!-- TODO: update to latest design -->
+    <div class="player-wrapper">
       <div class="player-name-bg player-name-bg1">
-        <div id="player1" class="player player1"></div>
+        <div id="player" class="player"></div>
       </div>
-      <div id="player1-handle-bg" class="player-handle-bg player-handle-bg1">
-        <div id="player1-handle" class="player-handle player1-handle"></div>
-      </div>
-    </div>
-    <div class="player-wrapper2">
-      <div class="player-name-bg player-name-bg2">
-        <div id="player2" class="player player2"></div>
-      </div>
-      <div id="player2-handle-bg" class="player-handle-bg player-handle-bg2">
-        <div id="player2-handle" class="player-handle player2-handle"></div>
+      <div id="player-handle-bg" class="player-handle-bg">
+        <div id="player-handle" class="player-handle"></div>
       </div>
     </div>
+    <div id="last-match"></div>
     <div id="error"></div>
 
     <script>
@@ -69,7 +48,11 @@
       function render(data) {
         // debugger;
         const row = getActiveRow(data);
-        if (!row || !row.player_1 || !row.player_2) {
+        if (
+          !row ||
+          !row.player_1 || // Ensure player_1 name and optional handle
+          !row.player_2 // Ensure player_2 name and optional handle
+        ) {
           return;
         }
 
@@ -77,24 +60,28 @@
         const playerTwo = row.player_2.split('|');
 
         // Player 1
-        document.getElementById('player1').innerHTML = playerOne[0].trim() || '';
-        if (playerOne[1].trim()) {
-          document.getElementById('player1-handle').innerHTML = '@' + playerOne[1].trim() || '';
-          document.getElementById('player1-handle-bg').style.display = 'flex';
-        } else {
-          document.getElementById('player1-handle-bg').style.display = 'none';
-        }
-        document.getElementById('score1').innerHTML = row.player_1_score.trim() || '0';
+        playerOneName = playerOne[0].trim() || '';
+        playerOneScore = row.player_1_score.trim() || '0';
 
         // Player 2
-        document.getElementById('player2').innerHTML = playerTwo[0].trim() || '';
-        if (playerTwo[1].trim()) {
-          document.getElementById('player2-handle').innerHTML = '@' + playerTwo[1].trim() || '';
-          document.getElementById('player2-handle-bg').style.display = 'flex';
+        playerTwoName = playerTwo[0].trim() || '';
+        playerTwoScore = row.player_2_score.trim() || '0';
+
+        document.getElementById('last-match').innerHTML = `
+          <p>Last Match: ${playerOneName} ${playerOneScore} - ${playerTwoScore} ${playerTwoName}</p>
+        `;
+
+        // Winner being interviewed
+        const winner = row.player_1_score > row.player_2_score ? row.player_1 : row.player_2;
+        const winnerNameAndHandle = winner.split('|');
+        document.getElementById('player').innerHTML = winnerNameAndHandle[0].trim() || '';
+        if (winnerNameAndHandle[1].trim()) {
+          document.getElementById('player-handle').innerHTML =
+            '@' + winnerNameAndHandle[1].trim() || '';
+          document.getElementById('player-handle-bg').style.display = 'flex';
         } else {
-          document.getElementById('player2-handle-bg').style.display = 'none';
+          document.getElementById('player-handle-bg').style.display = 'none';
         }
-        document.getElementById('score2').innerHTML = row.player_2_score.trim() || '0';
       }
 
       function fetchData() {

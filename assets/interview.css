@@ -1,0 +1,66 @@
+/* no fancy scss, we be raw doggin css */
+
+:root {
+  --name-distance-from-page-edge: 700px;
+  --distance-from-top: 40px;
+}
+
+body {
+  position: relative;
+  background-color: #00ff00;
+  width: 1920px;
+  height: 1080px;
+  margin: 0;
+  color: white;
+}
+
+.player-wrapper {
+  position: absolute;
+  left: var(--name-distance-from-page-edge);
+  border-left: 10px solid white;
+  align-items: flex-start;
+  margin-top: 0;
+  top: var(--distance-from-top);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: 700;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.player-name-bg {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 73px;
+  padding: 0 42px;
+  border-radius: 0 20px 20px 0;
+  background-color: #ff3030;
+}
+
+.player {
+  white-space: nowrap;
+  max-width: 260px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0px;
+  margin-top: -8px;
+  font-size: 40px;
+}
+
+.player-handle {
+  margin-top: -4px;
+}
+
+.player-handle-bg {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  padding: 0 42px;
+  font-size: 20px;
+  background-color: #ff3030;
+  border-bottom-right-radius: 12px;
+}
