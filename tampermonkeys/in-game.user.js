@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Rashinban Geoguessr Game Master Mode
-// @namespace    https://greasyfork.org/users/1495265-zashness
+// @namespace    https://github.com/Zashness/rashinban2025/blob/gh-pages/tampermonkeys/in-game.user.js
 // @version      0.2.0
 // @description  Game Master Mode mods for Rashinban2025
 // @author       Zashness
