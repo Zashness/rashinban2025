@@ -105,7 +105,7 @@ body {
 
 .player {
   white-space: nowrap;
-  max-width: 330px;
+  max-width: 260px;
   overflow: hidden;
   text-overflow: ellipsis;
   margin: 0px;
