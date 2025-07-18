@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<!-- Interview: show last match & interviewee's name -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Overlay X</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/interval.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Parses csv to JSON -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+
+    <script>
+      const CONFIG = {
+        sheetId: '1IfaRkxsSQSrc9FloVuEY5paGmeEuTOGvru5TJeR6Hvg', // Google Sheet ID here
+        sheetTab: '1383961576', // Tab ID
+      };
+      const DISABLE = '--表示OFF--'; // Disables the interviewee overlay
+    </script>
+  </head>
+  <body>
+    <!-- TODO: update to latest design -->
+    <div id="last-match"></div>
+    <div id="countdown"></div>
+    <div id="error"></div>
+
+    <script>
+      /** Finds the first row where `next` column is TRUE */
+      function getNextMatchRow(data) {
+        for (row of data) {
+          if (row.next === 'TRUE') {
+            return row;
+          }
+        }
+      }
+
+      function getTimeToNextEvent(hoursStr, minsStr) {
+        const h = parseInt(hoursStr, 10);
+        const m = parseInt(minsStr, 10);
+
+        const nowLocal = new Date();
+        // don't know where the running instance is, so convert to utc
+        const utcMs = nowLocal.getTime() + nowLocal.getTimezoneOffset() * 60_000;
+        // convert now into JST
+        const nowJst = new Date(utcMs + 9 * 60 * 60_000);
+
+        // build a Date for today’s event time in JST
+        let eventJst = new Date(
+          nowJst.getFullYear(),
+          nowJst.getMonth(),
+          nowJst.getDate(),
+          h,
+          m,
+          0,
+          0
+        );
+
+        // if the event passed in the last 10 minutes, just show 0
+        // we do this to prevent seeing 23:59 when the countdown reaches 0
+        // beyond that, we roll it to tomorrow
+        if (eventJst <= nowJst + 600_000) {
+          eventJst.setDate(eventJst.getDate() + 1);
+        }
+
+        const diffMs = eventJst - nowJst;
+        const diffH = Math.floor(diffMs / 3_600_000);
+        const diffM = Math.floor((diffMs % 3_600_000) / 60_000);
+
+        // format, pad single digits to always 2 digits "5" -> "05", and clamp any negative to 0
+        const formattedDiffH = String(Math.max(diffH, 0)).padStart(2, '0');
+        const formattedDiffM = String(Math.max(diffH, 0)).padStart(2, '0');
+
+        return `${formattedDiffH}:${formattedDiffM}`;
+      }
+
+      function render(data) {
+        const hh = data[0].next_event_hh || 0;
+        const mm = data[0].next_event_mm || 0;
+        const remaining = getTimeToNextEvent(hh, mm);
+        document.getElementById('countdown').textContent = `Time to next event: ${remaining}`;
+
+        const row = getNextMatchRow(data);
+        if (
+          !row ||
+          !row.player_1 || // Ensure player_1 name and optional handle
+          !row.player_2 // Ensure player_2 name and optional handle
+        ) {
+          return;
+        }
+
+        const playerOne = row.player_1.split('|');
+        const playerTwo = row.player_2.split('|');
+
+        // Player 1: `player_1` column in spreadsheet.
+        playerOneName = playerOne[0].trim() || '';
+
+        // Player 2: `player_2` column in spreadsheet.
+        playerTwoName = playerTwo[0].trim() || '';
+
+        document.getElementById('last-match').innerHTML = `
+          <p>Last Match: ${playerOneName} vs ${playerTwoName}</p>
+        `;
+      }
+
+      function fetchData() {
+        // adjust "gid=" as needed for different tabs.
+        const csvUrl = `https://docs.google.com/spreadsheets/d/${CONFIG.sheetId}/export?format=csv&gid=${CONFIG.sheetTab}`;
+
+        fetch(csvUrl)
+          .then((res) => {
+            if (!res.ok) throw new Error(`HTTP ${res.status}`);
+            return res.text();
+          })
+          .then((txt) => {
+            const { data } = Papa.parse(txt, { header: true, skipEmptyLines: true });
+            render(data);
+          })
+          .catch((err) => {
+            console.error('Fetch/Parse error:', err);
+            // document.getElementById('error').innerHTML = '<p>Error loading data.</p>';
+          });
+      }
+
+      window.addEventListener('DOMContentLoaded', () => {
+        fetchData();
+        setInterval(fetchData, 10_000); // Six times a minute
+      });
+    </script>
+  </body>
+</html>
