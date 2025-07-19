@@ -4,7 +4,7 @@
 // @version      0.2.0
 // @description  Game Master Mode mods for Rashinban2025
 // @author       Zashness
-// @match        https://www.geoguessr.com/duels/*/spectate*
+// @match        https://www.geoguessr.com/*
 // @icon         https://rashinban.org/assets/images/favicon.ico
 // @grant        GM_addStyle
 // ==/UserScript==

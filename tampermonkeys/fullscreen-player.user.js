@@ -4,19 +4,19 @@
 // @version      2025-07-19
 // @description  Game Master fullscreen player window
 // @author       sp4ghet
-// @match        https://www.geoguessr.com/duels/*/spectate*
+// @match        https://www.geoguessr.com/*
 // @icon         https://rashinban.org/assets/images/favicon.ico
 // @grant        GM_addStyle
 // ==/UserScript==
 
-(function() {
-    'use strict';
-    let currentStyle;
-    function show(showLeft){
-        const leftIndex = showLeft ? 100 : 0;
-        const rightIndex = showLeft ? 0 : 100;
-        currentStyle?.remove();
-        currentStyle = GM_addStyle(`
+(function () {
+  'use strict';
+  let currentStyle;
+  function show(showLeft) {
+    const leftIndex = showLeft ? 100 : 0;
+    const rightIndex = showLeft ? 0 : 100;
+    currentStyle?.remove();
+    currentStyle = GM_addStyle(`
         [class^="views_playerViews__"] > :first-child {
           z-index: ${leftIndex};
         }
@@ -25,15 +25,19 @@
           z-index: ${rightIndex};
         }
         `);
+  }
+  show(true);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === '1') {
+      return show(true);
     }
-    show(true);
+    if (e.key === '2') {
+      return show(false);
+    }
+  });
 
-    document.addEventListener("keydown", (e) => {
-      if(e.key === "1") {return show(true);}
-      if(e.key === "2") {return show(false);}
-    });
-
-    GM_addStyle(`
+  GM_addStyle(`
     [class^="player-view_guessMap__"] {
       --width: 14vw;
     }
@@ -71,7 +75,4 @@
       outline: 0;
     }
     `);
-
-
-
 })();
