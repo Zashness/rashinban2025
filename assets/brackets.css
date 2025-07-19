@@ -1,28 +1,41 @@
 /* no fancy scss, we be raw doggin css */
 
-body {
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+.bracket-wrapper {
   margin: 0;
   overflow: hidden;
+  background-color: #2a2a2a;
+  background: url('https://rashinban.org/assets/images/key-visual.png');
 }
+
+/* blur and darken it with a semi-transparent scrim */
+.bracket-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  filter: blur(4px);
+  transform: scale(1.05);
+  z-index: 0;
+}
+/* darken background */
+.bracket-wrapper::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.15);
+  z-index: -1;
+}
+
 svg.bracket-svg {
   width: 1920px;
   height: 1080px;
   display: block;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700');
-@import url('https://fonts.googleapis.com/css2?family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Blinker:wght@400;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap');
-
 svg:not(:root) {
   overflow: hidden;
-}
-
-body {
-  background-color: #2a2a2a;
 }
 
 svg.bracket-svg {
@@ -30,6 +43,11 @@ svg.bracket-svg {
   -webkit-transform-origin: top left;
   transform-origin: top left;
   overflow: visible;
+}
+
+.round,
+.match {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .bracket-line-container {
@@ -88,7 +106,7 @@ svg.bracket-svg {
 }
 
 .match--base-background {
-  fill: #626262;
+  fill: #272727;
 }
 
 .match--wrapper-background {
@@ -113,10 +131,6 @@ svg.bracket-svg {
   fill: #bbb;
 }
 
-.match--score.-winner {
-  fill: #f17d3d;
-}
-
 .match--identifier {
   fill: #999;
   font-size: 10px;
@@ -127,52 +141,24 @@ svg.bracket-svg {
 }
 
 .match--seed {
-  fill: #252525;
-  font-size: 10px;
+  fill: white;
+  font-size: 13px;
+  font-weight: 400;
+  font-family: 'Oswald', sans-serif;
   letter-spacing: -0.5px;
   text-shadow: none;
 }
 
 .match--seed-background {
-  fill: #838383;
+  fill: #5d5d5d;
+}
+
+.match--player.winner .match--seed-background {
+  fill: #ff3030;
 }
 
 .match--player-score-background {
   fill: #838383;
-}
-
-.match--player-score-background.-winner {
-  fill: #f17d3d;
-}
-
-.match--station-background {
-  fill: #505050;
-  opacity: 0.5;
-}
-
-.match--station-background.-stream {
-  fill: #4b367c;
-  opacity: 1;
-}
-
-.match--station-background.-stream:hover {
-  fill: #6045a0;
-}
-
-.match--station-link:hover {
-  text-decoration: none;
-}
-
-.match--station {
-  fill: #eee;
-  font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
-  font-size: 11px;
-  pointer-events: none;
-}
-
-.match--station .match--fa-icon {
-  font-size: 11px;
-  fill: #9c9c9c;
 }
 
 .match--player-info-icon {
@@ -279,7 +265,11 @@ svg.match--player.-forfeited .match--player-name {
 }
 
 .match--player-background {
-  fill: #626262;
+  fill: #272727;
+}
+
+.match--player.winner .match--player-background {
+  fill: #ff2c2c;
 }
 
 .match--player-toggle {
@@ -387,7 +377,7 @@ g.-pulsing {
 }
 
 .round-label rect {
-  fill: transparent;
+  fill: #626262bf;
 }
 
 .round-label text {
@@ -398,14 +388,6 @@ g.-pulsing {
 .round-label text.round-label--best-of {
   fill: #6cf;
   font-weight: bold;
-}
-
-.round-label.-editable:hover {
-  cursor: pointer;
-}
-
-.round-label.-editable:hover rect {
-  fill: #383f4f;
 }
 
 .rounds {
@@ -437,12 +419,4 @@ g.-pulsing {
 .round-header-label text.round-header-label--best-of {
   fill: #6cf;
   font-size: 12px;
-}
-
-.round-header-label.-editable:hover {
-  cursor: pointer;
-}
-
-.round-header-label.-editable:hover text {
-  fill: #626262;
 }
