@@ -2732,10 +2732,11 @@
       // define the “steps” you want to zoom to (in the SVG’s own coordinate system)
       // adjust these x,y,width,height values by eyeballing the viewBox
       const views = [
-        { x: -50, y: 0, w: 1550, h: 780 }, // full bracket
+        { x: -50, y: 20, w: 1550, h: 780 }, // full bracket
         { x: -20, y: -50, w: 950, h: 523 }, // winners R1+R2+Semis
-        { x: 2, y: 470, w: 656, h: 446 }, // losers bracket
-        { x: 662, y: 60, w: 800, h: 660 }, // R3+Semis+Final
+        { x: 70, y: 470, w: 556, h: 436 }, // losers bracket
+        { x: 675, y: 60, w: 800, h: 660 }, // winnersR3+Semis+Final & losersR3~R6
+        { x: 650, y: 20, w: 500, h: 460 }, // winnersR3+Semis+Final
         // add some more?
       ];
 
@@ -2776,25 +2777,32 @@
         if (e.key === '4') {
           zoomTo(views[3]);
         }
+        if (e.key === '5') {
+          zoomTo(views[4]);
+        }
       });
+
+      function removeWinner(matchNumber) {
+        document.getElementById(`match${matchNumber}-top`).parentElement.classList.remove('winner');
+        document
+          .getElementById(`match${matchNumber}-bottom`)
+          .parentElement.classList.remove('winner');
+      }
 
       function render(data) {
         // debugger;
         for (row of data) {
-          // debugger;
+          if (row && row.match_number && !row.player_1 && !row.player_2) {
+            // reset
+            document.getElementById(`match${row.match_number}-top`).textContent = '';
+            document.getElementById(`match${row.match_number}-bottom`).textContent = '';
+            document.getElementById(`match${row.match_number}-score-top`).textContent = '';
+            document.getElementById(`match${row.match_number}-score-bottom`).textContent = '';
+            removeWinner(row.match_number);
+            continue;
+          }
 
           if (row && row.match_number && (row.player_1 || row.player_2)) {
-            debugger;
-            /* in scope for convenience */
-            function removeWinner() {
-              document
-                .getElementById(`match${row.match_number}-top`)
-                .parentElement.classList.remove('winner');
-              document
-                .getElementById(`match${row.match_number}-bottom`)
-                .parentElement.classList.remove('winner');
-            }
-
             document.getElementById(`match${row.match_number}-top`).textContent =
               row.player_1.trim();
             document.getElementById(`match${row.match_number}-bottom`).textContent =
@@ -2805,7 +2813,7 @@
             if (p1_score === '' || p2_score === '') {
               document.getElementById(`match${row.match_number}-score-top`).textContent = '';
               document.getElementById(`match${row.match_number}-score-bottom`).textContent = '';
-              removeWinner();
+              removeWinner(row.match_number);
               continue;
             }
 
@@ -2813,7 +2821,8 @@
             p2_score = Number(row.player_2_score.trim() || 0);
 
             // debugger;
-            if (p1_score && p2_score && p1_score + p2_score === 3) {
+            if (p1_score + p2_score === 3) {
+              removeWinner(row.match_number);
               const winnerPosition = p1_score > p2_score ? 'top' : 'bottom';
               const winnerEl = document.getElementById(
                 `match${row.match_number}-${winnerPosition}`
@@ -2821,7 +2830,7 @@
               const parent = winnerEl.parentElement;
               parent.classList.add('winner');
             } else {
-              removeWinner();
+              removeWinner(row.match_number);
             }
             document.getElementById(`match${row.match_number}-score-top`).textContent = p1_score;
             document.getElementById(`match${row.match_number}-score-bottom`).textContent = p2_score;
