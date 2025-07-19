@@ -32,36 +32,6 @@ svg.bracket-svg {
   overflow: visible;
 }
 
-svg.bracket-svg.-double-clickable text {
-  -webkit-user-select: none;
-  user-select: none;
-}
-
-.bracket-placeholder {
-  position: absolute;
-  display: none;
-  min-height: 100vh;
-  min-width: 100%;
-}
-
-.bracket-backdrop {
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.bracket-backdrop video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-body.tournaments-xsplit .bracket-placeholder {
-  display: block;
-}
-
 .bracket-line-container {
   transition: 0.5s ease-in-out;
 }

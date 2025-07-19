@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="assets/brackets.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <!-- Parses csv to JSON -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+    <script>
+      const CONFIG = {
+        sheetId: '1IfaRkxsSQSrc9FloVuEY5paGmeEuTOGvru5TJeR6Hvg', // Google Sheet ID here
+        sheetTab: '1019896571', // Tab ID
+      };
+    </script>
   </head>
   <body>
     <!-- don't ask me where I got this -->
@@ -15,6 +23,11 @@
       viewBox="0 0 1920 1080"
       xmlns="http://www.w3.org/2000/svg"
     >
+      <defs>
+        <clipPath id="match-clippath-top">
+          <rect x="26" y="5" width="200" height="45" rx="3" ry="3"></rect>
+        </clipPath>
+      </defs>
       <g class="parent">
         <g>
           <g transform="translate(976 583.0000000000001)" class="bracket-line-container">
@@ -212,7 +225,7 @@
               ry="3"
               class="match--base-background"
             ></rect>
-            <g clip-path="url(#match-clippath-29)">
+            <g clip-path="url(#match-clippath-top)">
               <svg x="0" y="5" class="match--player">
                 <title></title>
                 <path d="M 50 0 h 147 v 22 h -147 Z" class="match--player-background -empty"></path>
@@ -227,7 +240,6 @@
                 ></text>
                 <text
                   id="match29-top"
-                  clip-path="url(#clipPath3421321)"
                   x="55"
                   y="15"
                   width="147"
@@ -280,7 +292,7 @@
               ry="3"
               class="match--base-background"
             ></rect>
-            <g clip-path="url(#match-clippath-27)">
+            <g clip-path="url(#match-clippath-top)">
               <svg x="0" y="5" class="match--player">
                 <title></title>
                 <path d="M 50 0 h 147 v 22 h -147 Z" class="match--player-background -empty"></path>
@@ -338,7 +350,7 @@
               ry="3"
               class="match--base-background"
             ></rect>
-            <g clip-path="url(#match-clippath-26)">
+            <g clip-path="url(#match-clippath-top)">
               <svg x="0" y="5" class="match--player">
                 <title></title>
                 <path d="M 50 0 h 147 v 22 h -147 Z" class="match--player-background -empty"></path>
@@ -353,7 +365,6 @@
                 ></text>
                 <text
                   id="match26-top"
-                  clip-path="url(#clipPath9401393)"
                   x="55"
                   y="15"
                   width="147"
@@ -406,7 +417,7 @@
               ry="3"
               class="match--base-background"
             ></rect>
-            <g clip-path="url(#match-clippath-25)">
+            <g clip-path="url(#match-clippath-top)">
               <svg x="0" y="5" class="match--player">
                 <title></title>
                 <path d="M 50 0 h 147 v 22 h -147 Z" class="match--player-background -empty"></path>
@@ -421,7 +432,6 @@
                 ></text>
                 <text
                   id="match25-top"
-                  clip-path="url(#clipPath4947624)"
                   x="55"
                   y="15"
                   width="147"
@@ -474,7 +484,7 @@
               ry="3"
               class="match--base-background"
             ></rect>
-            <g clip-path="url(#match-clippath-21)">
+            <g clip-path="url(#match-clippath-top)">
               <svg x="0" y="5" class="match--player">
                 <title></title>
                 <path d="M 50 0 h 147 v 22 h -147 Z" class="match--player-background -empty"></path>
@@ -532,7 +542,7 @@
               ry="3"
               class="match--base-background"
             ></rect>
-            <g clip-path="url(#match-clippath-22)">
+            <g clip-path="url(#match-clippath-top)">
               <svg x="0" y="5" class="match--player">
                 <title></title>
                 <path d="M 50 0 h 147 v 22 h -147 Z" class="match--player-background -empty"></path>
@@ -590,7 +600,7 @@
               ry="3"
               class="match--base-background"
             ></rect>
-            <g clip-path="url(#match-clippath-17)">
+            <g clip-path="url(#match-clippath-top)">
               <svg x="0" y="5" class="match--player">
                 <title></title>
                 <path d="M 50 0 h 147 v 22 h -147 Z" class="match--player-background -empty"></path>
@@ -605,7 +615,6 @@
                 ></text>
                 <text
                   id="match17-top"
-                  clip-path="url(#clipPath7575325)"
                   x="55"
                   y="15"
                   width="147"
@@ -658,7 +667,7 @@
               ry="3"
               class="match--base-background"
             ></rect>
-            <g clip-path="url(#match-clippath-18)">
+            <g clip-path="url(#match-clippath-top)">
               <svg x="0" y="5" class="match--player">
                 <title></title>
                 <path d="M 50 0 h 147 v 22 h -147 Z" class="match--player-background -empty"></path>
@@ -673,7 +682,6 @@
                 ></text>
                 <text
                   id="match18-top"
-                  clip-path="url(#clipPath1438767)"
                   x="55"
                   y="15"
                   width="147"
@@ -726,7 +734,7 @@
               ry="3"
               class="match--base-background"
             ></rect>
-            <g clip-path="url(#match-clippath-19)">
+            <g clip-path="url(#match-clippath-top)">
               <svg x="0" y="5" class="match--player">
                 <title></title>
                 <path d="M 50 0 h 147 v 22 h -147 Z" class="match--player-background -empty"></path>
@@ -741,7 +749,6 @@
                 ></text>
                 <text
                   id="match19-top"
-                  clip-path="url(#clipPath7851718)"
                   x="55"
                   y="15"
                   width="147"
@@ -794,7 +801,7 @@
               ry="3"
               class="match--base-background"
             ></rect>
-            <g clip-path="url(#match-clippath-20)">
+            <g clip-path="url(#match-clippath-top)">
               <svg x="0" y="5" class="match--player">
                 <title></title>
                 <path d="M 50 0 h 147 v 22 h -147 Z" class="match--player-background -empty"></path>
@@ -809,7 +816,6 @@
                 ></text>
                 <text
                   id="match20-top"
-                  clip-path="url(#clipPath3537282)"
                   x="55"
                   y="15"
                   width="147"
@@ -862,7 +868,7 @@
               ry="3"
               class="match--base-background"
             ></rect>
-            <g clip-path="url(#match-clippath-12)">
+            <g clip-path="url(#match-clippath-top)">
               <svg x="0" y="5" class="match--player">
                 <title></title>
                 <path d="M 50 0 h 147 v 22 h -147 Z" class="match--player-background -empty"></path>
@@ -877,7 +883,6 @@
                 ></text>
                 <text
                   id="match12-top"
-                  clip-path="url(#clipPath3647106)"
                   x="55"
                   y="15"
                   width="147"
@@ -899,7 +904,6 @@
                 ></text>
                 <text
                   id="match12-bottom"
-                  clip-path="url(#clipPath9506473)"
                   x="55"
                   y="15"
                   width="147"
@@ -940,7 +944,7 @@
               ry="3"
               class="match--base-background"
             ></rect>
-            <g clip-path="url(#match-clippath-11)">
+            <g clip-path="url(#match-clippath-top)">
               <svg x="0" y="5" class="match--player">
                 <title></title>
                 <path d="M 50 0 h 147 v 22 h -147 Z" class="match--player-background -empty"></path>
@@ -955,7 +959,6 @@
                 ></text>
                 <text
                   id="match11-top"
-                  clip-path="url(#clipPath3010673)"
                   x="55"
                   y="15"
                   width="147"
@@ -977,7 +980,6 @@
                 ></text>
                 <text
                   id="match11-bottom"
-                  clip-path="url(#clipPath4312007)"
                   x="55"
                   y="15"
                   width="147"
@@ -1018,7 +1020,7 @@
               ry="3"
               class="match--base-background"
             ></rect>
-            <g clip-path="url(#match-clippath-10)">
+            <g clip-path="url(#match-clippath-top)">
               <svg x="0" y="5" class="match--player">
                 <title></title>
                 <path d="M 50 0 h 147 v 22 h -147 Z" class="match--player-background -empty"></path>
@@ -1033,7 +1035,6 @@
                 ></text>
                 <text
                   id="match10-top"
-                  clip-path="url(#clipPath3625621)"
                   x="55"
                   y="15"
                   width="147"
@@ -1055,7 +1056,6 @@
                 ></text>
                 <text
                   id="match10-bottom"
-                  clip-path="url(#clipPath1444814)"
                   x="55"
                   y="15"
                   width="147"
@@ -1096,7 +1096,7 @@
               ry="3"
               class="match--base-background"
             ></rect>
-            <g clip-path="url(#match-clippath-9)">
+            <g clip-path="url(#match-clippath-top)">
               <svg x="0" y="5" class="match--player">
                 <title>Loser of 1</title>
                 <path d="M 50 0 h 147 v 22 h -147 Z" class="match--player-background -empty"></path>
@@ -1111,7 +1111,6 @@
                 ></text>
                 <text
                   id="match9-top"
-                  clip-path="url(#clipPath7757864)"
                   x="55"
                   y="15"
                   width="147"
@@ -1133,7 +1132,6 @@
                 ></text>
                 <text
                   id="match10-bottom"
-                  clip-path="url(#clipPath2619767)"
                   x="55"
                   y="15"
                   width="147"
@@ -1174,7 +1172,7 @@
               ry="3"
               class="match--base-background"
             ></rect>
-            <g clip-path="url(#match-clippath-30)">
+            <g clip-path="url(#match-clippath-top)">
               <svg x="0" y="5" class="match--player">
                 <title></title>
                 <path d="M 50 0 h 147 v 22 h -147 Z" class="match--player-background -empty"></path>
@@ -1201,7 +1199,6 @@
                 ></text>
                 <text
                   id="match30-bottom"
-                  clip-path="url(#clipPath8205699)"
                   x="55"
                   y="15"
                   width="147"
@@ -1214,11 +1211,6 @@
             </g>
           </g>
           <g transform="translate(732 224)" class="match -pending" data-identifier="28">
-            <defs>
-              <clipPath id="match-clippath-28">
-                <rect x="26" y="5" width="200" height="45" rx="3" ry="3"></rect>
-              </clipPath>
-            </defs>
             <text
               x="11"
               y="31"
@@ -1247,7 +1239,7 @@
               ry="3"
               class="match--base-background"
             ></rect>
-            <g clip-path="url(#match-clippath-28)">
+            <g clip-path="url(#match-clippath-top)">
               <svg x="0" y="5" class="match--player">
                 <title></title>
                 <path d="M 50 0 h 147 v 22 h -147 Z" class="match--player-background -empty"></path>
@@ -1278,7 +1270,7 @@
           </g>
           <g transform="translate(488 332)" class="match -pending" data-identifier="24">
             <defs>
-              <clipPath id="match-clippath-24">
+              <clipPath id="match-clippath-top">
                 <rect x="26" y="5" width="200" height="45" rx="3" ry="3"></rect>
               </clipPath>
             </defs>
@@ -1310,7 +1302,7 @@
               ry="3"
               class="match--base-background"
             ></rect>
-            <g clip-path="url(#match-clippath-24)">
+            <g clip-path="url(#match-clippath-top)">
               <svg x="0" y="5" class="match--player">
                 <title></title>
                 <path d="M 50 0 h 147 v 22 h -147 Z" class="match--player-background -empty"></path>
@@ -1341,7 +1333,7 @@
           </g>
           <g transform="translate(488 115)" class="match -pending" data-identifier="23">
             <defs>
-              <clipPath id="match-clippath-23">
+              <clipPath id="match-clippath-top">
                 <rect x="26" y="5" width="200" height="45" rx="3" ry="3"></rect>
               </clipPath>
             </defs>
@@ -1373,7 +1365,7 @@
               ry="3"
               class="match--base-background"
             ></rect>
-            <g clip-path="url(#match-clippath-23)">
+            <g clip-path="url(#match-clippath-top)">
               <svg x="0" y="5" class="match--player">
                 <title></title>
                 <path d="M 50 0 h 147 v 22 h -147 Z" class="match--player-background -empty"></path>
@@ -1404,7 +1396,7 @@
           </g>
           <g transform="translate(244 386)" class="match -pending" data-identifier="16">
             <defs>
-              <clipPath id="match-clippath-16">
+              <clipPath id="match-clippath-top">
                 <rect x="26" y="5" width="200" height="45" rx="3" ry="3"></rect>
               </clipPath>
             </defs>
@@ -1436,7 +1428,7 @@
               ry="3"
               class="match--base-background"
             ></rect>
-            <g clip-path="url(#match-clippath-16)">
+            <g clip-path="url(#match-clippath-top)">
               <svg x="0" y="5" class="match--player">
                 <title></title>
                 <path d="M 50 0 h 147 v 22 h -147 Z" class="match--player-background -empty"></path>
@@ -1469,7 +1461,7 @@
           </g>
           <g transform="translate(244 278)" class="match -pending" data-identifier="15">
             <defs>
-              <clipPath id="match-clippath-15">
+              <clipPath id="match-clippath-top">
                 <rect x="26" y="5" width="200" height="45" rx="3" ry="3"></rect>
               </clipPath>
             </defs>
@@ -1501,7 +1493,7 @@
               ry="3"
               class="match--base-background"
             ></rect>
-            <g clip-path="url(#match-clippath-15)">
+            <g clip-path="url(#match-clippath-top)">
               <svg x="0" y="5" class="match--player">
                 <title></title>
                 <path d="M 50 0 h 147 v 22 h -147 Z" class="match--player-background -empty"></path>
@@ -1534,7 +1526,7 @@
           </g>
           <g transform="translate(244 170)" class="match -pending" data-identifier="14">
             <defs>
-              <clipPath id="match-clippath-14">
+              <clipPath id="match-clippath-top">
                 <rect x="26" y="5" width="200" height="45" rx="3" ry="3"></rect>
               </clipPath>
             </defs>
@@ -1566,7 +1558,7 @@
               ry="3"
               class="match--base-background"
             ></rect>
-            <g clip-path="url(#match-clippath-14)">
+            <g clip-path="url(#match-clippath-top)">
               <svg x="0" y="5" class="match--player">
                 <title></title>
                 <path d="M 50 0 h 147 v 22 h -147 Z" class="match--player-background -empty"></path>
@@ -1599,7 +1591,7 @@
           </g>
           <g transform="translate(244 62)" class="match -pending" data-identifier="13">
             <defs>
-              <clipPath id="match-clippath-13">
+              <clipPath id="match-clippath-top">
                 <rect x="26" y="5" width="200" height="45" rx="3" ry="3"></rect>
               </clipPath>
             </defs>
@@ -1631,7 +1623,7 @@
               ry="3"
               class="match--base-background"
             ></rect>
-            <g clip-path="url(#match-clippath-13)">
+            <g clip-path="url(#match-clippath-top)">
               <svg x="0" y="5" class="match--player">
                 <title></title>
                 <path d="M 50 0 h 147 v 22 h -147 Z" class="match--player-background -empty"></path>
@@ -1664,7 +1656,7 @@
           </g>
           <g transform="translate(0 413)" class="match -pending" data-identifier="8">
             <defs>
-              <clipPath id="match-clippath-8">
+              <clipPath id="match-clippath-top">
                 <rect x="26" y="5" width="200" height="45" rx="3" ry="3"></rect>
               </clipPath>
             </defs>
@@ -1696,17 +1688,22 @@
               ry="3"
               class="match--base-background"
             ></rect>
-            <g clip-path="url(#match-clippath-8)">
+            <g clip-path="url(#match-clippath-top)">
               <svg x="0" y="5" class="match--player -draggable" data-participant-id="267689253">
                 <title></title>
                 <path d="M 50 0 h 147 v 22 h -147 Z" class="match--player-background"></path>
                 <path d="M 26 0 h 24 v 22 h -24 Z" class="match--seed-background"></path>
-                <text x="38" y="14" width="10" height="12" text-anchor="middle" class="match--seed">
-                  6
-                </text>
+                <text
+                  id="match8-score-top"
+                  x="38"
+                  y="14"
+                  width="10"
+                  height="12"
+                  text-anchor="middle"
+                  class="match--seed"
+                ></text>
                 <text
                   id="match8-top"
-                  clip-path="url(#clipPath189224)"
                   x="55"
                   y="15"
                   width="147"
@@ -1718,12 +1715,17 @@
                 <title></title>
                 <path d="M 50 0 h 147 v 22 h -147 Z" class="match--player-background"></path>
                 <path d="M 26 0 h 24 v 22 h -24 Z" class="match--seed-background"></path>
-                <text x="38" y="14" width="10" height="12" text-anchor="middle" class="match--seed">
-                  11
-                </text>
+                <text
+                  id="match8-score-bottom"
+                  x="38"
+                  y="14"
+                  width="10"
+                  height="12"
+                  text-anchor="middle"
+                  class="match--seed"
+                ></text>
                 <text
                   id="match8-bottom"
-                  clip-path="url(#clipPath8376342)"
                   x="55"
                   y="15"
                   width="147"
@@ -1737,7 +1739,7 @@
           </g>
           <g transform="translate(0 359)" class="match -pending" data-identifier="7">
             <defs>
-              <clipPath id="match-clippath-7">
+              <clipPath id="match-clippath-top">
                 <rect x="26" y="5" width="200" height="45" rx="3" ry="3"></rect>
               </clipPath>
             </defs>
@@ -1769,17 +1771,22 @@
               ry="3"
               class="match--base-background"
             ></rect>
-            <g clip-path="url(#match-clippath-7)">
+            <g clip-path="url(#match-clippath-top)">
               <svg x="0" y="5" class="match--player -draggable" data-participant-id="267689255">
                 <title></title>
                 <path d="M 50 0 h 147 v 22 h -147 Z" class="match--player-background"></path>
                 <path d="M 26 0 h 24 v 22 h -24 Z" class="match--seed-background"></path>
-                <text x="38" y="14" width="10" height="12" text-anchor="middle" class="match--seed">
-                  3
-                </text>
+                <text
+                  id="match7-score-top"
+                  x="38"
+                  y="14"
+                  width="10"
+                  height="12"
+                  text-anchor="middle"
+                  class="match--seed"
+                ></text>
                 <text
                   id="match7-top"
-                  clip-path="url(#clipPath8377655)"
                   x="55"
                   y="15"
                   width="147"
@@ -1791,12 +1798,17 @@
                 <title></title>
                 <path d="M 50 0 h 147 v 22 h -147 Z" class="match--player-background"></path>
                 <path d="M 26 0 h 24 v 22 h -24 Z" class="match--seed-background"></path>
-                <text x="38" y="14" width="10" height="12" text-anchor="middle" class="match--seed">
-                  14
-                </text>
+                <text
+                  id="match7-score-bottom"
+                  x="38"
+                  y="14"
+                  width="10"
+                  height="12"
+                  text-anchor="middle"
+                  class="match--seed"
+                ></text>
                 <text
                   id="match7-bottom"
-                  clip-path="url(#clipPath4374005)"
                   x="55"
                   y="15"
                   width="147"
@@ -1810,7 +1822,7 @@
           </g>
           <g transform="translate(0 305)" class="match -pending" data-identifier="6">
             <defs>
-              <clipPath id="match-clippath-6">
+              <clipPath id="match-clippath-top">
                 <rect x="26" y="5" width="200" height="45" rx="3" ry="3"></rect>
               </clipPath>
             </defs>
@@ -1842,17 +1854,22 @@
               ry="3"
               class="match--base-background"
             ></rect>
-            <g clip-path="url(#match-clippath-6)">
+            <g clip-path="url(#match-clippath-top)">
               <svg x="0" y="5" class="match--player -draggable" data-participant-id="267689264">
                 <title></title>
                 <path d="M 50 0 h 147 v 22 h -147 Z" class="match--player-background"></path>
                 <path d="M 26 0 h 24 v 22 h -24 Z" class="match--seed-background"></path>
-                <text x="38" y="14" width="10" height="12" text-anchor="middle" class="match--seed">
-                  7
-                </text>
+                <text
+                  id="match6-score-top"
+                  x="38"
+                  y="14"
+                  width="10"
+                  height="12"
+                  text-anchor="middle"
+                  class="match--seed"
+                ></text>
                 <text
                   id="match6-top"
-                  clip-path="url(#clipPath757150)"
                   x="55"
                   y="15"
                   width="147"
@@ -1864,12 +1881,17 @@
                 <title></title>
                 <path d="M 50 0 h 147 v 22 h -147 Z" class="match--player-background"></path>
                 <path d="M 26 0 h 24 v 22 h -24 Z" class="match--seed-background"></path>
-                <text x="38" y="14" width="10" height="12" text-anchor="middle" class="match--seed">
-                  10
-                </text>
+                <text
+                  id="match6-score-bottom"
+                  x="38"
+                  y="14"
+                  width="10"
+                  height="12"
+                  text-anchor="middle"
+                  class="match--seed"
+                ></text>
                 <text
                   id="match6-bottom"
-                  clip-path="url(#clipPath5172402)"
                   x="55"
                   y="15"
                   width="147"
@@ -1883,7 +1905,7 @@
           </g>
           <g transform="translate(0 251)" class="match -pending" data-identifier="5">
             <defs>
-              <clipPath id="match-clippath-5">
+              <clipPath id="match-clippath-top">
                 <rect x="26" y="5" width="200" height="45" rx="3" ry="3"></rect>
               </clipPath>
             </defs>
@@ -1915,17 +1937,22 @@
               ry="3"
               class="match--base-background"
             ></rect>
-            <g clip-path="url(#match-clippath-5)">
+            <g clip-path="url(#match-clippath-top)">
               <svg x="0" y="5" class="match--player -draggable" data-participant-id="267689269">
                 <title></title>
                 <path d="M 50 0 h 147 v 22 h -147 Z" class="match--player-background"></path>
                 <path d="M 26 0 h 24 v 22 h -24 Z" class="match--seed-background"></path>
-                <text x="38" y="14" width="10" height="12" text-anchor="middle" class="match--seed">
-                  2
-                </text>
+                <text
+                  id="match5-score-top"
+                  x="38"
+                  y="14"
+                  width="10"
+                  height="12"
+                  text-anchor="middle"
+                  class="match--seed"
+                ></text>
                 <text
                   id="match5-top"
-                  clip-path="url(#clipPath138523)"
                   x="55"
                   y="15"
                   width="147"
@@ -1937,12 +1964,17 @@
                 <title></title>
                 <path d="M 50 0 h 147 v 22 h -147 Z" class="match--player-background"></path>
                 <path d="M 26 0 h 24 v 22 h -24 Z" class="match--seed-background"></path>
-                <text x="38" y="14" width="10" height="12" text-anchor="middle" class="match--seed">
-                  15
-                </text>
+                <text
+                  id="match5-score-bottom"
+                  x="38"
+                  y="14"
+                  width="10"
+                  height="12"
+                  text-anchor="middle"
+                  class="match--seed"
+                ></text>
                 <text
                   id="match5-bottom"
-                  clip-path="url(#clipPath314583)"
                   x="55"
                   y="15"
                   width="147"
@@ -1956,7 +1988,7 @@
           </g>
           <g transform="translate(0 197)" class="match -pending" data-identifier="4">
             <defs>
-              <clipPath id="match-clippath-4">
+              <clipPath id="match-clippath-top">
                 <rect x="26" y="5" width="200" height="45" rx="3" ry="3"></rect>
               </clipPath>
             </defs>
@@ -1988,17 +2020,22 @@
               ry="3"
               class="match--base-background"
             ></rect>
-            <g clip-path="url(#match-clippath-4)">
+            <g clip-path="url(#match-clippath-top)">
               <svg x="0" y="5" class="match--player -draggable" data-participant-id="267689268">
                 <title></title>
                 <path d="M 50 0 h 147 v 22 h -147 Z" class="match--player-background"></path>
                 <path d="M 26 0 h 24 v 22 h -24 Z" class="match--seed-background"></path>
-                <text x="38" y="14" width="10" height="12" text-anchor="middle" class="match--seed">
-                  5
-                </text>
+                <text
+                  id="match4-score-top"
+                  x="38"
+                  y="14"
+                  width="10"
+                  height="12"
+                  text-anchor="middle"
+                  class="match--seed"
+                ></text>
                 <text
                   id="match4-top"
-                  clip-path="url(#clipPath4476600)"
                   x="55"
                   y="15"
                   width="147"
@@ -2010,12 +2047,17 @@
                 <title>12</title>
                 <path d="M 50 0 h 147 v 22 h -147 Z" class="match--player-background"></path>
                 <path d="M 26 0 h 24 v 22 h -24 Z" class="match--seed-background"></path>
-                <text x="38" y="14" width="10" height="12" text-anchor="middle" class="match--seed">
-                  12
-                </text>
+                <text
+                  id="match4-score-bottom"
+                  x="38"
+                  y="14"
+                  width="10"
+                  height="12"
+                  text-anchor="middle"
+                  class="match--seed"
+                ></text>
                 <text
                   id="match4-bottom"
-                  clip-path="url(#clipPath3647929)"
                   x="55"
                   y="15"
                   width="147"
@@ -2029,7 +2071,7 @@
           </g>
           <g transform="translate(0 143)" class="match -pending" data-identifier="3">
             <defs>
-              <clipPath id="match-clippath-3">
+              <clipPath id="match-clippath-top">
                 <rect x="26" y="5" width="200" height="45" rx="3" ry="3"></rect>
               </clipPath>
             </defs>
@@ -2061,17 +2103,22 @@
               ry="3"
               class="match--base-background"
             ></rect>
-            <g clip-path="url(#match-clippath-3)">
+            <g clip-path="url(#match-clippath-top)">
               <svg x="0" y="5" class="match--player -draggable" data-participant-id="267689256">
                 <title></title>
                 <path d="M 50 0 h 147 v 22 h -147 Z" class="match--player-background"></path>
                 <path d="M 26 0 h 24 v 22 h -24 Z" class="match--seed-background"></path>
-                <text x="38" y="14" width="10" height="12" text-anchor="middle" class="match--seed">
-                  4
-                </text>
+                <text
+                  id="match3-score-top"
+                  x="38"
+                  y="14"
+                  width="10"
+                  height="12"
+                  text-anchor="middle"
+                  class="match--seed"
+                ></text>
                 <text
                   id="match3-top"
-                  clip-path="url(#clipPath6432659)"
                   x="55"
                   y="15"
                   width="147"
@@ -2083,12 +2130,17 @@
                 <title></title>
                 <path d="M 50 0 h 147 v 22 h -147 Z" class="match--player-background"></path>
                 <path d="M 26 0 h 24 v 22 h -24 Z" class="match--seed-background"></path>
-                <text x="38" y="14" width="10" height="12" text-anchor="middle" class="match--seed">
-                  13
-                </text>
+                <text
+                  id="match3-score-bottom"
+                  x="38"
+                  y="14"
+                  width="10"
+                  height="12"
+                  text-anchor="middle"
+                  class="match--seed"
+                ></text>
                 <text
                   id="match3-bottom"
-                  clip-path="url(#clipPath7010519)"
                   x="55"
                   y="15"
                   width="147"
@@ -2102,7 +2154,7 @@
           </g>
           <g transform="translate(0 89)" class="match -pending" data-identifier="2">
             <defs>
-              <clipPath id="match-clippath-2">
+              <clipPath id="match-clippath-top">
                 <rect x="26" y="5" width="200" height="45" rx="3" ry="3"></rect>
               </clipPath>
             </defs>
@@ -2134,17 +2186,22 @@
               ry="3"
               class="match--base-background"
             ></rect>
-            <g clip-path="url(#match-clippath-2)">
+            <g clip-path="url(#match-clippath-top)">
               <svg x="0" y="5" class="match--player -draggable" data-participant-id="267689265">
                 <title>p8</title>
                 <path d="M 50 0 h 147 v 22 h -147 Z" class="match--player-background"></path>
                 <path d="M 26 0 h 24 v 22 h -24 Z" class="match--seed-background"></path>
-                <text x="38" y="14" width="10" height="12" text-anchor="middle" class="match--seed">
-                  8
-                </text>
+                <text
+                  id="match2-score-top"
+                  x="38"
+                  y="14"
+                  width="10"
+                  height="12"
+                  text-anchor="middle"
+                  class="match--seed"
+                ></text>
                 <text
                   id="match2-top"
-                  clip-path="url(#clipPath4281463)"
                   x="55"
                   y="15"
                   width="147"
@@ -2156,12 +2213,17 @@
                 <title></title>
                 <path d="M 50 0 h 147 v 22 h -147 Z" class="match--player-background"></path>
                 <path d="M 26 0 h 24 v 22 h -24 Z" class="match--seed-background"></path>
-                <text x="38" y="14" width="10" height="12" text-anchor="middle" class="match--seed">
-                  9
-                </text>
+                <text
+                  id="match2-score-bottom"
+                  x="38"
+                  y="14"
+                  width="10"
+                  height="12"
+                  text-anchor="middle"
+                  class="match--seed"
+                ></text>
                 <text
                   id="match2-bottom"
-                  clip-path="url(#clipPath790893)"
                   x="55"
                   y="15"
                   width="147"
@@ -2175,7 +2237,7 @@
           </g>
           <g transform="translate(0 35)" class="match -pending" data-identifier="1">
             <defs>
-              <clipPath id="match-clippath-1">
+              <clipPath id="match-clippath-top">
                 <rect x="26" y="5" width="200" height="45" rx="3" ry="3"></rect>
               </clipPath>
             </defs>
@@ -2207,17 +2269,22 @@
               ry="3"
               class="match--base-background"
             ></rect>
-            <g clip-path="url(#match-clippath-1)">
+            <g clip-path="url(#match-clippath-top)">
               <svg x="0" y="5" class="match--player -draggable" data-participant-id="267689252">
                 <title></title>
                 <path d="M 50 0 h 147 v 22 h -147 Z" class="match--player-background"></path>
                 <path d="M 26 0 h 24 v 22 h -24 Z" class="match--seed-background"></path>
-                <text x="38" y="14" width="10" height="12" text-anchor="middle" class="match--seed">
-                  1
-                </text>
+                <text
+                  id="match1-score-top"
+                  x="38"
+                  y="14"
+                  width="10"
+                  height="12"
+                  text-anchor="middle"
+                  class="match--seed"
+                ></text>
                 <text
                   id="match1-top"
-                  clip-path="url(#clipPath3371619)"
                   x="55"
                   y="15"
                   width="147"
@@ -2229,12 +2296,17 @@
                 <title></title>
                 <path d="M 50 0 h 147 v 22 h -147 Z" class="match--player-background"></path>
                 <path d="M 26 0 h 24 v 22 h -24 Z" class="match--seed-background"></path>
-                <text x="38" y="14" width="10" height="12" text-anchor="middle" class="match--seed">
-                  16
-                </text>
+                <text
+                  id="match1-score-bottom"
+                  x="38"
+                  y="14"
+                  width="10"
+                  height="12"
+                  text-anchor="middle"
+                  class="match--seed"
+                ></text>
                 <text
                   id="match1-bottom"
-                  clip-path="url(#clipPath3838477)"
                   x="55"
                   y="15"
                   width="147"
@@ -2417,8 +2489,50 @@
         }
       });
 
-      // 4) Optionally, start in “full” view
+      function render(data) {
+        // debugger;
+        for (row of data) {
+          // debugger;
+
+          if (row && row.match_number && (row.player_1 || row.player_2)) {
+            document.getElementById(`match${row.match_number}-top`).textContent =
+              row.player_1.trim();
+            document.getElementById(`match${row.match_number}-bottom`).textContent =
+              row.player_2.trim();
+            document.getElementById(`match${row.match_number}-score-top`).textContent =
+              row.player_1_score.trim();
+            document.getElementById(`match${row.match_number}-score-bottom`).textContent =
+              row.player_2_score.trim();
+          }
+        }
+      }
+
+      // Start in “full” view
       zoomTo(views[0]);
+
+      function fetchData() {
+        // adjust "gid=" as needed for different tabs.
+        const csvUrl = `https://docs.google.com/spreadsheets/d/${CONFIG.sheetId}/export?format=csv&gid=${CONFIG.sheetTab}`;
+
+        fetch(csvUrl)
+          .then((res) => {
+            if (!res.ok) throw new Error(`HTTP ${res.status}`);
+            return res.text();
+          })
+          .then((txt) => {
+            const { data } = Papa.parse(txt, { header: true, skipEmptyLines: true });
+            render(data);
+          })
+          .catch((err) => {
+            console.error('Fetch/Parse error:', err);
+            // document.getElementById('error').innerHTML = '<p>Error loading data.</p>';
+          });
+      }
+
+      window.addEventListener('DOMContentLoaded', () => {
+        fetchData();
+        setInterval(fetchData, 5 * 1000);
+      });
     </script>
   </body>
 </html>
