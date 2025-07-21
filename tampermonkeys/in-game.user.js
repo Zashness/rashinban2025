@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Rashinban Geoguessr Game Master Mode
 // @namespace    https://github.com/Zashness/rashinban2025/blob/gh-pages/tampermonkeys/in-game.user.js
-// @version      0.2.0
+// @version      0.2.1
 // @description  Game Master Mode mods for Rashinban2025
 // @author       Zashness
 // @match        https://www.geoguessr.com/*
@@ -14,7 +14,8 @@
 
   // Inject a CSS rule that matches any class beginning with that prefix
   GM_addStyle(`
-    @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200..700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Akshar:wght@300..700&display=swap');
+    @import url('https://use.typekit.net/ljs6bhu.css');
 
     [class*="game_backgroundDefault__"][class*="game_backgroundDefault__"] {
       --background: url("https://rashinban.org/assets/images/key-visual.png");
@@ -65,9 +66,9 @@
     }
     /* (round #) "5",  "Moving"/"No Moving"/"NMPZ", "x2.5" */
     [class^="game-notch_roundInfo__"] div [class^="views_round"] > label:last-child {
-      font-family: "Oswald", sans-serif;
+      font-family: "kaneda-gothic", sans-serif;
       font-optical-sizing: auto;
-      font-weight: 500;
+      font-weight: 900;
       font-style: normal;
       top: 44px;
       position: fixed;
@@ -147,8 +148,8 @@
     [class*="round-score-animations_static__"][class*="round-score-animations_static__"],
     [class*="round-score-animations_distanceRow__"][class*="round-score-animations_distanceRow__"],
     [class*="round-score-animations_scoreColumn"][class*="round-score-animations_scoreColumn"] {
-      font-family: "Barlow", sans-serif;
-      font-weight: 500;
+      font-family: "Akshar", sans-serif;
+      font-weight: 700;
       font-style: normal;
     }
     /* Not sure why this can't be combined with above...but needed here separately */
