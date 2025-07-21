@@ -68,14 +68,15 @@
         }
 
         const diffMs = eventJst - nowJst;
-        const diffH = Math.floor(diffMs / 3_600_000);
-        const diffM = Math.floor((diffMs % 3_600_000) / 60_000);
+        const totalSec = Math.floor(diffMs / 1000);
+        const minsLeft = Math.floor(totalSec / 60);
+        const secsLeft = Math.floor(totalSec % 60);
 
         // format, pad single digits to always 2 digits "5" -> "05", and clamp any negative to 0
-        const formattedDiffH = String(Math.max(diffH, 0)).padStart(2, '0');
-        const formattedDiffM = String(Math.max(diffH, 0)).padStart(2, '0');
+        const formattedMinsLeft = String(Math.max(minsLeft, 0)).padStart(2, '0');
+        const formattedSecsLeft = String(Math.max(secsLeft, 0)).padStart(2, '0');
 
-        return `${formattedDiffH}:${formattedDiffM}`;
+        return `${formattedMinsLeft}:${formattedSecsLeft}`;
       }
 
       function render(data) {
