@@ -24,7 +24,7 @@ body {
   position: absolute;
   inset: 0;
   background: inherit;
-  filter: blur(4px);
+  filter: blur(3px);
   transform: scale(1.05);
   z-index: 0;
 }
@@ -33,8 +33,8 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.15);
-  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
 
 svg.bracket-svg {
@@ -44,6 +44,7 @@ svg.bracket-svg {
   /* width: 1920px;
   height: 1080px; */
   display: block;
+  z-index: 3;
 }
 
 svg:not(:root) {
@@ -57,9 +58,9 @@ svg.bracket-svg {
   overflow: visible;
 }
 
-.round,
 .match {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Noto Sans JP';
+  font-weight: bold;
 }
 
 .bracket-line-container {
@@ -69,7 +70,7 @@ svg.bracket-svg {
 .bracket-line {
   fill: none;
   stroke: #f0f0f0;
-  stroke-width: 2px;
+  stroke-width: 1px;
 }
 
 .bracket-line.-entering {
@@ -162,7 +163,7 @@ svg.bracket-svg {
 }
 
 .match--seed-background {
-  fill: #5d5d5d;
+  fill: #646464;
 }
 
 .match--player.winner .match--seed-background {
@@ -232,38 +233,9 @@ svg.match--player.-forfeited .match--player-name {
   fill: #fff;
 }
 
-.match--player-toggle-button-background {
-  fill: #111;
-  -webkit-transition: fill 0.15s ease;
-  transition: fill 0.15s ease;
-}
-
-.match--player-toggle-button-background:hover {
-  fill: #f68712;
-}
-
-.match--player-toggle-button-background.-toggled {
-  fill: #de1a00;
-}
-
-.match--player-toggle-button-text {
-  font-family: 'Font Awesome 6 Free';
-  fill: #fff;
-  font-size: 12px;
-  cursor: pointer;
-  pointer-events: none;
-}
-
 .match--player-name {
-  fill: #fff;
+  fill: #000;
   font-size: 12px;
-  text-shadow: 1px 1px 1px #222;
-}
-
-.match--player-name.-placeholder {
-  font-style: italic;
-  font-size: 11px;
-  fill: #bbb;
 }
 
 .match--player-score {
@@ -277,19 +249,11 @@ svg.match--player.-forfeited .match--player-name {
 }
 
 .match--player-background {
-  fill: #272727;
-}
-
-.match--player.winner .match--player-background {
-  fill: #ff2c2c;
-}
-
-.match--player-toggle {
-  fill: #000;
+  fill: #cfcfcf;
 }
 
 .match--player-divider {
-  stroke: #4d4d4d;
+  stroke: #fff;
   stroke-width: 1px;
 }
 
@@ -301,40 +265,6 @@ svg.match--player.-forfeited .match--player-name {
   fill: #e9e9e9;
   font-weight: bold;
   transform: translate(0, -5px);
-}
-
-.match--fa-icon {
-  font-family: 'Font Awesome 6 Free';
-  font-weight: 900;
-  fill: #9c9c9c;
-  text-shadow: 1px 1px 1px #222;
-  font-size: 18px;
-  cursor: pointer;
-}
-
-.match--fa-icon:hover {
-  fill: #f17d3d;
-}
-
-.match--fa-icon.-text {
-  fill: #fff;
-  font-weight: 700;
-  text-transform: uppercase;
-  font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
-  font-size: 14px;
-  margin-right: 4px;
-}
-
-.match--fa-icon.-text:hover {
-  fill: #f17d3d;
-}
-
-.match--fa-icon.-highlighted {
-  fill: #3ae;
-}
-
-.match--fa-icon.-highlighted:hover {
-  fill: #7cf;
 }
 
 g.-pulsing {
