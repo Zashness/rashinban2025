@@ -9,31 +9,54 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&family=Oswald:wght@200..700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Abel&family=Akshar:wght@300..700&family=Noto+Sans+JP:wght@100..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://use.typekit.net/ljs6bhu.css" />
+    <!-- kaneda-gothic -->
     <!-- Parses csv to JSON -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
 
     <script>
       const CONFIG = {
-        sheetId: '1IfaRkxsSQSrc9FloVuEY5paGmeEuTOGvru5TJeR6Hvg', // Google Sheet ID here
-        sheetTab: '1383961576', // Tab ID
+        sheetId: "1IfaRkxsSQSrc9FloVuEY5paGmeEuTOGvru5TJeR6Hvg", // Google Sheet ID here
+        sheetTab: "1383961576", // Tab ID
       };
-      const DISABLE = '--表示OFF--'; // Disables the interviewee overlay
+      const DISABLE = "--表示OFF--"; // Disables the interviewee overlay
     </script>
   </head>
   <body>
-    <!-- TODO: update to latest design -->
-    <div id="last-match"></div>
-    <div id="countdown"></div>
-    <div id="error"></div>
+    <div class="bg"></div>
+    <div class="container">
+      <img src="/assets/images/icon.svg" id="icon" />
+      <div class="topbar"></div>
+      <h1 class="title">ONLINE QUALIFIER</h1>
+      <div class="info">
+        <div>
+          <h2 class="coming-up">COMING UP</h2>
+          <div class="bar"></div>
+          <div id="next-match"></div>
+        </div>
+
+        <div id="countdown"></div>
+      </div>
+
+      <div class="slideshow">
+        <img src="assets/slides/1.png" class="slide"/>
+      </div>
+
+      <div id="error"></div>
+      <img src="/assets/images/logo.svg" id="logo" />
+      <div class="bottombar"></div>
+    </div>
 
     <script>
+      let papaData;
+
       /** Finds the first row where `next` column is TRUE */
       function getNextMatchRow(data) {
         for (row of data) {
-          if (row.next === 'TRUE') {
+          if (row.active === "TRUE") {
             return row;
           }
         }
@@ -45,7 +68,8 @@
 
         const nowLocal = new Date();
         // don't know where the running instance is, so convert to utc
-        const utcMs = nowLocal.getTime() + nowLocal.getTimezoneOffset() * 60_000;
+        const utcMs =
+          nowLocal.getTime() + nowLocal.getTimezoneOffset() * 60_000;
         // convert now into JST
         const nowJst = new Date(utcMs + 9 * 60 * 60_000);
 
@@ -73,17 +97,30 @@
         const secsLeft = Math.floor(totalSec % 60);
 
         // format, pad single digits to always 2 digits "5" -> "05", and clamp any negative to 0
-        const formattedMinsLeft = String(Math.max(minsLeft, 0)).padStart(2, '0');
-        const formattedSecsLeft = String(Math.max(secsLeft, 0)).padStart(2, '0');
+        const formattedMinsLeft = String(Math.max(minsLeft, 0)).padStart(
+          2,
+          "0"
+        );
+        const formattedSecsLeft = String(Math.max(secsLeft, 0)).padStart(
+          2,
+          "0"
+        );
 
         return `${formattedMinsLeft}:${formattedSecsLeft}`;
       }
 
-      function render(data) {
+      function render() {
+        if (!papaData) {
+          return;
+        }
+        const data = papaData;
+
         const hh = data[0].next_event_hh || 0;
         const mm = data[0].next_event_mm || 0;
         const remaining = getTimeToNextEvent(hh, mm);
-        document.getElementById('countdown').textContent = `Time to next event: ${remaining}`;
+        document.getElementById(
+          "countdown"
+        ).textContent = `${remaining}`;
 
         const row = getNextMatchRow(data);
         if (
@@ -94,17 +131,17 @@
           return;
         }
 
-        const playerOne = row.player_1.split('|');
-        const playerTwo = row.player_2.split('|');
+        const playerOne = row.player_1.split("|");
+        const playerTwo = row.player_2.split("|");
 
         // Player 1: `player_1` column in spreadsheet.
-        playerOneName = playerOne[0].trim() || '';
+        playerOneName = playerOne[0].trim() || "";
 
         // Player 2: `player_2` column in spreadsheet.
-        playerTwoName = playerTwo[0].trim() || '';
+        playerTwoName = playerTwo[0].trim() || "";
 
-        document.getElementById('last-match').innerHTML = `
-          <p>Last Match: ${playerOneName} vs ${playerTwoName}</p>
+        document.getElementById("next-match").innerHTML = `
+          <p class="game-name">${playerOneName} vs ${playerTwoName}</p>
         `;
       }
 
@@ -118,18 +155,23 @@
             return res.text();
           })
           .then((txt) => {
-            const { data } = Papa.parse(txt, { header: true, skipEmptyLines: true });
-            render(data);
+            const { data } = Papa.parse(txt, {
+              header: true,
+              skipEmptyLines: true,
+            });
+            papaData = data;
+            render();
           })
           .catch((err) => {
-            console.error('Fetch/Parse error:', err);
+            console.error("Fetch/Parse error:", err);
             // document.getElementById('error').innerHTML = '<p>Error loading data.</p>';
           });
       }
 
-      window.addEventListener('DOMContentLoaded', () => {
+      window.addEventListener("DOMContentLoaded", () => {
         fetchData();
         setInterval(fetchData, 10_000); // Six times a minute
+        setInterval(render, 1_000);
       });
     </script>
   </body>
