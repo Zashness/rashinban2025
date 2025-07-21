@@ -91,10 +91,32 @@ body, html,
 
 #next-match p{
     width: 1000px;
+    height: 44px;
+    margin: 0;
+    /* display: flex;
+    flex-direction: row;
+    align-items: center; */
+}
+
+.versus {
+    font-size: 40px;
+    margin-left: 18px
+}
+
+.name-kaneda{
+    font-family: "kaneda-gothic", sans-serif;
     font-size: 64px;
     line-height: 44px;
-    margin: 0;
     text-transform: uppercase;
+}
+
+.name-noto {
+    position: relative;
+    top: -3px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 35px;
 }
 
 #countdown {

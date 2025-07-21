@@ -28,7 +28,7 @@
   <body>
     <div class="bg"></div>
     <div class="container">
-      <img src="/assets/images/icon.svg" id="icon" />
+      <img src="assets/images/icon.svg" id="icon" />
       <div class="topbar"></div>
       <h1 class="title">ONLINE QUALIFIER</h1>
       <div class="info">
@@ -46,7 +46,7 @@
       </div>
 
       <div id="error"></div>
-      <img src="/assets/images/logo.svg" id="logo" />
+      <img src="assets/images/logo.svg" id="logo" />
       <div class="bottombar"></div>
     </div>
 
@@ -109,6 +109,20 @@
         return `${formattedMinsLeft}:${formattedSecsLeft}`;
       }
 
+      function isAlphaNumeric(str) {
+        var code, i, len;
+
+        for (i = 0, len = str.length; i < len; i++) {
+          code = str.charCodeAt(i);
+          if (!(code > 47 && code < 58) && // numeric (0-9)
+              !(code > 64 && code < 91) && // upper alpha (A-Z)
+              !(code > 96 && code < 123)) { // lower alpha (a-z)
+            return false;
+          }
+        }
+        return true;
+      };
+
       function render() {
         if (!papaData) {
           return;
@@ -134,14 +148,25 @@
         const playerOne = row.player_1.split("|");
         const playerTwo = row.player_2.split("|");
 
+        
+
         // Player 1: `player_1` column in spreadsheet.
         playerOneName = playerOne[0].trim() || "";
 
         // Player 2: `player_2` column in spreadsheet.
         playerTwoName = playerTwo[0].trim() || "";
 
+        const p1Az = isAlphaNumeric(playerOneName);
+        const p2Az = isAlphaNumeric(playerTwoName);
+        const p1Class = p1Az ? "name-kaneda" : "name-noto";
+        const p2Class = p2Az ? "name-kaneda" : "name-noto";
+
         document.getElementById("next-match").innerHTML = `
-          <p class="game-name">${playerOneName} vs ${playerTwoName}</p>
+          <p class="game-name">
+            <span class="${p1Class}">${playerOneName}</span>
+            <span class="versus" style="margin-right:${p2Az ? '18px' : '12px'};">VS</span>
+            <span class="${p2Class}">${playerTwoName}</span>
+          </p>
         `;
       }
 
@@ -171,7 +196,7 @@
       window.addEventListener("DOMContentLoaded", () => {
         fetchData();
         setInterval(fetchData, 10_000); // Six times a minute
-        setInterval(render, 1_000);
+        setInterval(render, 10_000);
       });
     </script>
   </body>
