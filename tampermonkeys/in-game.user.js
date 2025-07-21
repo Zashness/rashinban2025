@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Rashinban Geoguessr Game Master Mode
 // @namespace    https://github.com/Zashness/rashinban2025/blob/gh-pages/tampermonkeys/in-game.user.js
-// @version      0.2.1
+// @version      0.2.2
 // @description  Game Master Mode mods for Rashinban2025
 // @author       Zashness
 // @match        https://www.geoguessr.com/*
@@ -72,7 +72,7 @@
       font-style: normal;
       top: 44px;
       position: fixed;
-      font-size: 48px;
+      font-size: 64px;
       color: white;
     }
 
@@ -102,6 +102,12 @@
       transform: scale(2.0);
     }
 
+    [class^="clock-timer_timer__"] {
+      font-family: "kaneda-gothic", sans-serif;
+      font-weight: 900;
+      font-size: 36px;
+    }
+
     /* Wrapper for both player views */
     [class^="views_playerViews__"][class^="views_playerViews__"] {
       top: 60px;
@@ -117,6 +123,27 @@
     /* HP */
     [class*="cam-hud_wrapper__"][class*="cam-hud_wrapper__"] {
       top: -18px;
+      display: grid;
+      grid-template-columns: 1fr minmax(0, 40rem) 1fr;
+    }
+
+    [class^="wc-health-bar_container__"][class^="wc-health-bar_container__"] {
+      --height: 4rem;
+      --bar-container-width: 16.75rem;
+    }
+
+    div[class*="wc-health-bar_right__"] label[class^="wc-health-bar_livesLabel__"] {
+      transform: scaleX(-1) skew(-15deg) !important;
+    }
+
+    div[class^="wc-health-bar_barInner__"] label[class^="wc-health-bar_livesLabel__"] {
+      font-family: "kaneda-gothic", sans-serif;
+      font-weight: 900;
+      font-size: 48px;
+      font-style: normal;
+      font-optical-sizing: auto;
+      transform: skew(15deg,0deg);
+      text-shadow: 0;
     }
 
 
@@ -126,6 +153,38 @@
 
     [class^="cam-hud_wrapper__"]:has(~ [class^="preview-round_guessMapContainer__"]) {
       visibility:hidden;
+    }
+
+    [class^="round-score-screen_button__"] button,
+    [class^="preview-round_startRoundButton__"] button{
+      font-family: "kaneda-gothic", sans-serif;
+      font-weight: 900;
+      font-size: 36px;
+      font-style: normal;
+      border-radius: 10px;
+      --background: #ff0c0c;
+      --text-shadow: none;
+      --box-shadow: none;
+    }
+
+    [class^="round-score-screen_hotkey__"],
+    [class^="preview-round_hotkey__"] {
+      display: none;
+    }
+
+    [class^="views_roundStartTitle__"],
+    [class^="views_roundStartCount__"] {
+      font-family: "kaneda-gothic", sans-serif;
+      font-weight: 900;
+      font-style: normal;
+    }
+
+    [class^="views_roundStartTitle__"] {
+      font-size: 36px;
+    }
+
+    [class^="views_roundStartCount__"] {
+      font-size: 48px;
     }
 
 

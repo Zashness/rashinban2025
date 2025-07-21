@@ -20,9 +20,9 @@ body {
   display: flex;
   align-items: center;
   justify-self: center;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'kaneda-gothic', sans-serif;
   font-optical-sizing: auto;
-  font-weight: 600;
+  font-weight: 900;
   margin-top: var(--distance-from-top);
   font-style: normal;
 }
@@ -46,7 +46,7 @@ body {
 }
 
 .score {
-  font-size: 75px;
+  font-size: 96px;
   margin-top: -6px;
 }
 
@@ -114,6 +114,11 @@ body {
 }
 
 .player-handle {
+  font-family: "Akshar", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-optical-sizing: auto;
+  font-size: 20px;
   margin-top: -4px;
 }
 
@@ -123,7 +128,6 @@ body {
   justify-content: center;
   height: 40px;
   padding: 0 42px;
-  font-size: 20px;
 }
 
 .player-handle-bg1 {
@@ -141,13 +145,12 @@ body {
 .damage {
   position: fixed;
   padding: 4px;
-  top: 124px;
-  font-size: 23px;
-  font-family: 'Advent Pro', sans-serif;
+  top: 120px;
+  font-size: 24px;
+  font-family: 'Akshar', sans-serif;
+  font-weight: 500;
   font-optical-sizing: auto;
-  font-weight: 300;
   font-style: normal;
-  font-variation-settings: 'wdth' 100;
   color: white;
   background-color: #ff3030;
 }
