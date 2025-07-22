@@ -87,13 +87,16 @@
         // if the event passed in the last 10 minutes, just show 0
         // we do this to prevent seeing 23:59 when the countdown reaches 0
         // beyond that, we roll it to tomorrow
-        if (eventJst <= nowJst + 600_000) {
+        if (eventJst.getTime() <= nowJst.getTime()) {
+          if (nowJst.getTime() - eventJst.getTime() < 30 * 60 * 1000) {
+            return '00:00';
+          }
           eventJst.setDate(eventJst.getDate() + 1);
         }
 
         const diffMs = eventJst - nowJst;
         const totalSec = Math.floor(diffMs / 1000);
-        const minsLeft = Math.floor(totalSec / 60);
+        const minsLeft = Math.floor((totalSec / 60) % 60);
         const secsLeft = Math.floor(totalSec % 60);
 
         // format, pad single digits to always 2 digits "5" -> "05", and clamp any negative to 0
@@ -121,7 +124,7 @@
           }
         }
         return true;
-      };
+      }
 
       function render() {
         if (!papaData) {
@@ -132,9 +135,7 @@
         const hh = data[0].next_event_hh || 0;
         const mm = data[0].next_event_mm || 0;
         const remaining = getTimeToNextEvent(hh, mm);
-        document.getElementById(
-          "countdown"
-        ).textContent = `${remaining}`;
+        document.getElementById("countdown").textContent = remaining;
 
         const row = getNextMatchRow(data);
         if (
@@ -185,7 +186,6 @@
               skipEmptyLines: true,
             });
             papaData = data;
-            render();
           })
           .catch((err) => {
             console.error("Fetch/Parse error:", err);
@@ -196,7 +196,7 @@
       window.addEventListener("DOMContentLoaded", () => {
         fetchData();
         setInterval(fetchData, 10_000); // Six times a minute
-        setInterval(render, 10_000);
+        setInterval(render, 1_000);
       });
     </script>
   </body>
