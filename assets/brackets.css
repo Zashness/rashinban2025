@@ -99,6 +99,14 @@ svg.bracket-svg {
   transition: 0.5s ease-in-out;
 }
 
+.match-border{
+  display: none;
+}
+
+.match-border.active{
+  display: block;
+}
+
 .match.-entering {
   -webkit-animation: fadein 0.5s;
   animation: fadein 0.5s;
