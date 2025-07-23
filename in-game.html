@@ -6,6 +6,7 @@
     <title>Overlay X</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="assets/in-game.css" />
+    <link rel="modulepreload" href="assets/js/consts.js">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abel&family=Akshar:wght@300..700&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
@@ -54,10 +55,11 @@
     </div>
     <div id="error"></div>
 
-    <script>
+    <script type="module">
+      import { SHEET_ID, OVERLAYS_TAB_ID } from './assets/js/consts.js';
       /** Finds the first row where `active` column is TRUE */
       function getActiveRow(data) {
-        for (row of data) {
+        for (let row of data) {
           if (row.active === 'TRUE') {
             return row;
           }
@@ -96,8 +98,7 @@
       }
 
       function fetchData() {
-        // adjust "gid=" as needed for different tabs.
-        const csvUrl = `https://docs.google.com/spreadsheets/d/${CONFIG.sheetId}/export?format=csv&gid=1383961576`;
+        const csvUrl = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=${OVERLAYS_TAB_ID}`;
 
         fetch(csvUrl)
           .then((res) => {

@@ -6,6 +6,7 @@
     <title>Overlay X</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="assets/interval.css" />
+    <link rel="modulepreload" href="assets/js/consts.js">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -50,12 +51,14 @@
       <div class="bottombar"></div>
     </div>
 
-    <script>
+    <script type="module">
+      import { SHEET_ID, OVERLAYS_TAB_ID } from './assets/js/consts.js';
+
       let papaData;
 
       /** Finds the first row where `next` column is TRUE */
       function getNextMatchRow(data) {
-        for (row of data) {
+        for (let row of data) {
           if (row.active === "TRUE") {
             return row;
           }
@@ -113,7 +116,7 @@
       }
 
       function isAlphaNumeric(str) {
-        var code, i, len;
+        let code, i, len;
 
         for (i = 0, len = str.length; i < len; i++) {
           code = str.charCodeAt(i);
@@ -152,10 +155,10 @@
         
 
         // Player 1: `player_1` column in spreadsheet.
-        playerOneName = playerOne[0].trim() || "";
+        const playerOneName = playerOne[0].trim() || "";
 
         // Player 2: `player_2` column in spreadsheet.
-        playerTwoName = playerTwo[0].trim() || "";
+        const playerTwoName = playerTwo[0].trim() || "";
 
         const p1Az = isAlphaNumeric(playerOneName);
         const p2Az = isAlphaNumeric(playerTwoName);
@@ -172,8 +175,7 @@
       }
 
       function fetchData() {
-        // adjust "gid=" as needed for different tabs.
-        const csvUrl = `https://docs.google.com/spreadsheets/d/${CONFIG.sheetId}/export?format=csv&gid=${CONFIG.sheetTab}`;
+        const csvUrl = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=${OVERLAYS_TAB_ID}`;
 
         fetch(csvUrl)
           .then((res) => {

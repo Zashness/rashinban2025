@@ -6,6 +6,7 @@
     <title>Overlay X</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="assets/interview.css" />
+    <link rel="modulepreload" href="assets/js/consts.js">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -36,10 +37,12 @@
     <div id="last-match"></div>
     <div id="error"></div>
 
-    <script>
+    <script type="module">
+      import { SHEET_ID, OVERLAYS_TAB_ID } from './assets/js/consts.js';
+
       /** Finds the first row where `active` column is TRUE */
       function getActiveRow(data) {
-        for (row of data) {
+        for (let row of data) {
           if (row.active === 'TRUE') {
             return row;
           }
@@ -83,12 +86,12 @@
         const playerTwo = row.player_2.split('|');
 
         // Player 1: `player_1` column in spreadsheet.
-        playerOneName = playerOne[0].trim() || '';
-        playerOneScore = row.player_1_score.trim() || '0';
+        const playerOneName = playerOne[0].trim() || '';
+        const playerOneScore = row.player_1_score.trim() || '0';
 
         // Player 2: `player_2` column in spreadsheet.
-        playerTwoName = playerTwo[0].trim() || '';
-        playerTwoScore = row.player_2_score.trim() || '0';
+        const playerTwoName = playerTwo[0].trim() || '';
+        const playerTwoScore = row.player_2_score.trim() || '0';
 
         document.getElementById('last-match').innerHTML = `
           <p>Last Match: ${playerOneName} ${playerOneScore} - ${playerTwoScore} ${playerTwoName}</p>
@@ -96,8 +99,7 @@
       }
 
       function fetchData() {
-        // adjust "gid=" as needed for different tabs.
-        const csvUrl = `https://docs.google.com/spreadsheets/d/${CONFIG.sheetId}/export?format=csv&gid=${CONFIG.sheetTab}`;
+        const csvUrl = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=${OVERLAYS_TAB_ID}`;
 
         fetch(csvUrl)
           .then((res) => {
