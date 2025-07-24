@@ -1,7 +1,5 @@
 /* no fancy scss, we be raw doggin css */
 
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
-
 body {
   width: 1920px;
   height: 1080px;
@@ -163,11 +161,13 @@ svg.bracket-svg {
 
 .match--seed {
   fill: white;
-  font-size: 13px;
-  font-weight: 400;
-  font-family: 'Oswald', sans-serif;
-  letter-spacing: -0.5px;
+  font-size: 21px;
+  font-family: 'kaneda-gothic', sans-serif;
   text-shadow: none;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  margin-top: var(--distance-from-top);
+  font-style: normal;
 }
 
 .match--seed-background {
