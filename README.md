@@ -17,7 +17,7 @@ Overlays and tampermonkey scripts for [Rashinban 2025](https://rashinban.org/).
 
 ### Interview
 
-- Overlay: https://zashness.github.io/rashinban2025/brackets.html
+- Overlay: https://zashness.github.io/rashinban2025/interview.html
 
 ### For Analyst
 
