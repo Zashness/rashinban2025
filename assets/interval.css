@@ -75,6 +75,14 @@ body, html,
     justify-content: space-between;
 }
 
+.enabled {
+    visibility: visible;
+}
+
+.disabled {
+    visibility: hidden;
+}
+
 .coming-up {
     font-size: 96px;
     line-height: 66px;

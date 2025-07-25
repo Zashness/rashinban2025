@@ -25,7 +25,7 @@
       <div class="topbar"></div>
       <h1 class="title">ONLINE QUALIFIER</h1>
       <div class="info">
-        <div>
+        <div id="info" class="enabled">
           <h2 class="coming-up">COMING UP</h2>
           <div class="bar"></div>
           <div id="next-match"></div>
@@ -56,6 +56,8 @@
             return row;
           }
         }
+
+        return null;
       }
 
       function getTimeToNextEvent(hoursStr, minsStr) {
@@ -195,6 +197,7 @@
         const mm = data[0].next_event_mm || 0;
         const remaining = getTimeToNextEvent(hh, mm);
         document.getElementById("countdown").textContent = remaining;
+        const infoBox = document.getElementById("info")
 
         const row = getNextMatchRow(data);
         if (
@@ -202,8 +205,10 @@
           !row.player_1 || // Ensure player_1 name and optional handle
           !row.player_2 // Ensure player_2 name and optional handle
         ) {
+          infoBox.setAttribute("class", "disabled");
           return;
         }
+        infoBox.setAttribute("class", "enabled");
 
         const playerOne = row.player_1.split("|");
         const playerTwo = row.player_2.split("|");
