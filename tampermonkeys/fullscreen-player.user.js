@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Game Master Focus Player
 // @namespace    https://github.com/Zashness/rashinban2025/blob/gh-pages/tampermonkeys/fullscreen-player.user.js
-// @version      2025-07-19
+// @version      2025-07-25
 // @description  Game Master fullscreen player window
 // @author       sp4ghet
 // @match        https://www.geoguessr.com/*
@@ -59,6 +59,15 @@
 
     [class^="player-view_guessBanner__"]{
       visibility:hidden;
+    }
+
+    [class^="player-view_compassContainer__"]{
+      bottom: 8rem;
+      left: 1.5rem;
+    }
+
+    [class^="compass_compass__"]{
+      --size: 3rem !important;
     }
 
 
