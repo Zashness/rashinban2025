@@ -35,7 +35,7 @@
       </div>
 
       <div class="slideshow">
-        <img src="assets/slides/meta1.10.png" class="slide" id="slide"/>
+        <img src="assets/slides/meta1.10.png" class="slide visible" id="slide1"/>
         <img src="assets/slides/meta2.10.png" class="slide" id="slide2" />
       </div>
 
@@ -127,64 +127,57 @@
         return true;
       }
 
-      let slideIndex = 1;
-      let slideTime = Date.now();
-      const slideElement = document.getElementById("slide")
-      const slide2Element = document.getElementById("slide2")
-      let slide1OnTop = true
-      
+      const FILES = [
+        "meta.10.png",
+        "meta1.10.png",
+        "meta2.10.png",
+        "meta3.10.png",
+        "meta4.10.png",
+        "meta5.10.png",
+        "meta6.10.png",
+        "meta7.10.png",
+        "meta8.10.png",
+        "meta9.10.png",
+        "meta10.10.png",
+        "meta11.10.png",
+        "meta12.10.png",
+        "meta13.10.png",
+        "meta14.10.png",
+        "meta15.10.png",
+        "meta16.10.png",
+        "meta17.10.png",
+        "meta18.10.png",
+        "meta19.10.png",
+        "meta20.10.png",
+        "meta21.10.png",
+      ];
+
+      const slideEls = [
+        document.getElementById("slide1"),
+        document.getElementById("slide2")
+      ];
+      let currentSlideIndex = 0; // index in FILES
+      let topLayer = 0; // which of slideEls is currently visible
+
       function slideshow() {
-        const FILES = [
-          "meta.10.png",
-          "meta1.10.png",
-          "meta2.10.png",
-          "meta3.10.png",
-          "meta4.10.png",
-          "meta5.10.png",
-          "meta6.10.png",
-          "meta7.10.png",
-          "meta8.10.png",
-          "meta9.10.png",
-          "meta10.10.png",
-          "meta11.10.png",
-          "meta12.10.png",
-          "meta13.10.png",
-          "meta14.10.png",
-          "meta15.10.png",
-          "meta16.10.png",
-          "meta17.10.png",
-          "meta18.10.png",
-          "meta19.10.png",
-          "meta20.10.png",
-          "meta21.10.png",
-        ];
+        const filename = FILES[currentSlideIndex]
+        const duration = filename.split('.')[1] * 500;
+        const nextIndex = (currentSlideIndex + 1) % FILES.length;
+        const fadeOut = slideEls[topLayer];
+        const fadeIn = slideEls[1 - topLayer];
 
-        const filename = FILES[slideIndex]
-        const elapsed = Date.now() - slideTime;
-        const duration = filename.split('.')[1] * 500
+        // preload next image underneath
+        fadeIn.src = `assets/slides/${FILES[nextIndex]}`;
 
-        const animationLength = 500
-        if(duration - elapsed <= animationLength){
-          const t = (elapsed - duration + animationLength) / animationLength;
-          const toFade = slide1OnTop ? slideElement : slide2Element
-          const toOpaque = slide1OnTop ? slide2Element : slideElement
-          toFade.style.opacity = `${Math.floor((1 - t) * 100)}%`
-          toOpaque.style.opacity = `${Math.floor(t * 100)}%`
-        }
+        // trigger fade via CSS
+        fadeIn.classList.add("visible");
+        fadeOut.classList.remove("visible");
 
-        if(elapsed >= duration){
-          slideIndex = (slideIndex + 1) % FILES.length
-          const nextIndex = (slideIndex + 1) % FILES.length
-          slideTime = Date.now()
-          if(slide1OnTop){
-            slideElement.setAttribute("src", `assets/slides/${FILES[nextIndex]}`);
-            slide2Element.setAttribute("src", `assets/slides/${FILES[slideIndex]}`)
-          }else{
-            slideElement.setAttribute("src", `assets/slides/${FILES[slideIndex]}`);
-            slide2Element.setAttribute("src", `assets/slides/${FILES[nextIndex]}`)
-          }
-          slide1OnTop = !slide1OnTop
-        }
+        // advance pointers
+        currentSlideIndex = nextIndex;
+        topLayer = (topLayer + 1) % 2;
+
+        setTimeout(slideshow, duration);
       }
 
       function render() {
@@ -260,7 +253,7 @@
         fetchData();
         setInterval(fetchData, 10_000); // Six times a minute
         setInterval(render, 1_000);
-        setInterval(slideshow, 16);
+        slideshow();
       });
     </script>
   </body>
