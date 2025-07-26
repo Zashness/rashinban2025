@@ -1,8 +1,7 @@
 /* no fancy scss, we be raw doggin css */
 
 :root {
-  --name-distance-from-page-edge: 700px;
-  --distance-from-top: 40px;
+  --desk-bottom-bar-height: 286px;
 }
 
 body {
@@ -11,56 +10,95 @@ body {
   width: 1920px;
   height: 1080px;
   margin: 0;
+  overflow: hidden;
   color: white;
+  font-family: 'kaneda-gothic', sans-serif;
 }
 
-.player-wrapper {
-  position: absolute;
-  left: var(--name-distance-from-page-edge);
-  border-left: 10px solid white;
-  align-items: flex-start;
-  margin-top: 0;
-  top: var(--distance-from-top);
+.desk-bar {
   display: flex;
-  flex-direction: column;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: var(--desk-bottom-bar-height);
+  background-color: #ff0000;
   justify-content: center;
-  font-weight: 700;
-  font-family: 'Noto Sans JP', sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
+  align-items: center;
 }
 
-.player-name-bg {
-  display: inline-flex;
+#logo,
+#last-match,
+#interview {
+  display: none;
+}
+
+#logo.visible,
+#last-match.visible,
+#interview.visible {
+  display: flex;
+}
+
+#logo > img {
+  height: 142px;
+}
+
+#last-match {
+  font-size: 75px;
+  text-transform: uppercase;
   align-items: center;
-  justify-content: center;
-  height: 73px;
-  padding: 0 42px;
-  border-radius: 0 20px 20px 0;
-  background-color: #ff3030;
+  width: 100%;
 }
 
 .player {
-  white-space: nowrap;
-  max-width: 260px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin: 0px;
-  margin-top: -8px;
-  font-size: 40px;
+  flex: 1 1 0;
 }
 
-.player-handle {
-  margin-top: -4px;
+.player1 {
+  text-align: right;
+}
+.player2 {
+  text-align: left;
 }
 
-.player-handle-bg {
-  display: inline-flex;
-  align-items: center;
+.player.kana {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 900;
+  font-size: 61px;
+  margin-top: -5px;
+}
+
+.score {
+  margin: 0 22px;
+}
+
+.interview-label {
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+#interview {
   justify-content: center;
-  height: 40px;
-  padding: 0 42px;
-  font-size: 20px;
-  background-color: #ff3030;
-  border-bottom-right-radius: 12px;
+  align-items: center;
+  font-size: 80px;
+}
+
+.interviewee-wrapper {
+  border: 1px solid white;
+  border-radius: 8px;
+}
+
+#interviewee {
+  text-transform: uppercase;
+  font-size: 58px;
+  font-weight: bold;
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+#interviewee.kana {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 900;
+  font-size: 48px;
+  margin-top: -6px;
+  padding: 0 11px;
 }

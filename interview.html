@@ -6,35 +6,47 @@
     <title>Overlay X</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="assets/interview.css" />
-    <link rel="modulepreload" href="assets/js/consts.js">
+    <link rel="modulepreload" href="assets/js/consts.js" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&family=Oswald:wght@200..700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
       rel="stylesheet"
     />
+    <!-- kaneda-gothic -->
+    <link rel="stylesheet" href="https://use.typekit.net/ljs6bhu.css" />
     <!-- Parses csv to JSON -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
-
     <script>
-      const DISABLE = '--表示OFF--'; // Disables the interviewee overlay
+      const SHOW_LOGO = '--表示OFF--'; // show the logo by default
+      const SHOW_LAST_MATCH = "--Last 'active' match--"; // show the last match "<player1> 1 - 0 <player2>"
     </script>
   </head>
   <body>
-    <!-- TODO: update to latest design -->
-    <div class="player-wrapper">
-      <div class="player-name-bg player-name-bg1">
-        <div id="player" class="player"></div>
+    <div class="desk-bar">
+      <div id="logo">
+        <img src="assets/images/icon.svg" />
       </div>
-      <div id="player-handle-bg" class="player-handle-bg">
-        <div id="player-handle" class="player-handle"></div>
+      <div id="last-match">
+        <div class="player player1"></div>
+        <div class="score"></div>
+        <div class="player player2"></div>
+      </div>
+      <div id="interview">
+        <img src="assets/images/phone.svg" />
+        <div class="interview-label">PLAYER INTERVIEWS ...</div>
+        <div class="interviewee-wrapper">
+          <div id="interviewee">しいな</div>
+        </div>
       </div>
     </div>
-    <div id="last-match"></div>
     <div id="error"></div>
 
     <script type="module">
       import { SHEET_ID, OVERLAYS_TAB_ID } from './assets/js/consts.js';
+      const LOGO_NODE = document.getElementById('logo');
+      const LAST_MATCH_NODE = document.getElementById('last-match');
+      const INTERVIEW_NODE = document.getElementById('interview');
 
       /** Finds the first row where `active` column is TRUE */
       function getActiveRow(data) {
@@ -45,27 +57,38 @@
         }
       }
 
-      function render(data) {
-        // debugger;
-        /**
-         * Process columns with only 1 row:
-         *   - interviewee, next_event_hh, next_event_mm
-         */
-        // Interviewee: Controlled by `interviewee` column in spreadsheet.
-        if (data[0].interviewee === DISABLE) {
-          document.getElementById('player-wrapper').style.display = 'none';
-          return;
-        }
+      /**
+       * Sets 'visible' class for passed in element and hides the other 2 elements.
+       */
+      function showNode(nodeToShow) {
+        const nodes = new Set([LOGO_NODE, LAST_MATCH_NODE, INTERVIEW_NODE]);
+        nodes.delete(nodeToShow);
+        nodes.forEach((node) => {
+          node.classList.remove('visible');
+        });
 
-        const interviewee = data[0].interviewee.split('|');
-        document.getElementById('player').innerHTML = interviewee[0].trim() || '';
-        if (interviewee[1].trim()) {
-          document.getElementById('player-handle').innerHTML = '@' + interviewee[1].trim() || '';
-          document.getElementById('player-handle-bg').style.display = 'flex';
+        nodeToShow.classList.add('visible');
+      }
+
+      function showLogo() {
+        showNode(LOGO_NODE);
+      }
+
+      function containsJapanese(text) {
+        // "\p{Script=Han}" covers all CJK
+        const japaneseRE = /[\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Han}]/u;
+        return japaneseRE.test(text);
+      }
+
+      function applyKanaFont(playerName, node) {
+        if (containsJapanese(playerName)) {
+          node.classList.add('kana');
         } else {
-          document.getElementById('player-handle-bg').style.display = 'none';
+          node.classList.remove('kana');
         }
+      }
 
+      function showLastMatch(data) {
         /**
          * Find "active" row as marked by the `active` column.
          */
@@ -89,9 +112,39 @@
         const playerTwoName = playerTwo[0].trim() || '';
         const playerTwoScore = row.player_2_score.trim() || '0';
 
-        document.getElementById('last-match').innerHTML = `
-          <p>Last Match: ${playerOneName} ${playerOneScore} - ${playerTwoScore} ${playerTwoName}</p>
-        `;
+        const playerOneNode = LAST_MATCH_NODE.querySelector('.player1');
+        const playerTwoNode = LAST_MATCH_NODE.querySelector('.player2');
+        playerOneNode.innerText = playerOneName;
+        LAST_MATCH_NODE.querySelector('.score').innerText = `${playerOneScore} - ${playerTwoScore}`;
+        playerTwoNode.innerText = playerTwoName;
+
+        // apply different font size for Japanese names
+        applyKanaFont(playerOneName, playerOneNode);
+        applyKanaFont(playerTwoName, playerTwoNode);
+
+        showNode(LAST_MATCH_NODE);
+      }
+
+      function showInterview(data) {
+        const playerName = data[0].desk_view;
+        const playerNameNode = document.getElementById('interviewee');
+        playerNameNode.innerText = playerName;
+
+        // apply different font size for Japanese names
+        applyKanaFont(playerName, playerNameNode);
+
+        showNode(INTERVIEW_NODE);
+      }
+
+      function render(data) {
+        // Controlled by `desk_view` column in spreadsheet.
+        if (data[0].desk_view === SHOW_LOGO) {
+          showLogo();
+        } else if (data[0].desk_view === SHOW_LAST_MATCH) {
+          showLastMatch(data);
+        } else if (!!data[0].desk_view) {
+          showInterview(data);
+        }
       }
 
       function fetchData() {
@@ -114,7 +167,7 @@
 
       window.addEventListener('DOMContentLoaded', () => {
         fetchData();
-        setInterval(fetchData, 5 * 1000);
+        setInterval(fetchData, 2 * 1000);
       });
     </script>
   </body>
