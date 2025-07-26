@@ -21,7 +21,6 @@ body {
   bottom: 0;
   width: 100%;
   height: var(--desk-bottom-bar-height);
-  background-color: #ff0000;
   justify-content: center;
   align-items: center;
 }
@@ -30,12 +29,16 @@ body {
 #last-match,
 #interview {
   display: none;
+  background-color: #ff3030;
+  width: 100%;
 }
 
 #logo.visible,
 #last-match.visible,
 #interview.visible {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #logo > img {
@@ -45,8 +48,6 @@ body {
 #last-match {
   font-size: 75px;
   text-transform: uppercase;
-  align-items: center;
-  width: 100%;
 }
 
 .player {
@@ -68,7 +69,7 @@ body {
 }
 
 .score {
-  margin: 0 22px;
+  margin: 0 34px;
 }
 
 .interview-label {
@@ -83,7 +84,7 @@ body {
 }
 
 .interviewee-wrapper {
-  border: 1px solid white;
+  border: 3px solid white;
   border-radius: 8px;
 }
 
