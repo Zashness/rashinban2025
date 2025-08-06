@@ -6,7 +6,7 @@
     <title>Overlay X</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="assets/interval.css" />
-    <link rel="modulepreload" href="assets/js/consts.js">
+    <link rel="modulepreload" href="assets/js/consts.js" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -35,7 +35,11 @@
       </div>
 
       <div class="slideshow">
-        <img src="assets/slides/meta1.10.png" class="slide visible" id="slide1"/>
+        <img
+          src="assets/slides/meta1.10.png"
+          class="slide visible"
+          id="slide1"
+        />
         <img src="assets/slides/meta2.10.png" class="slide" id="slide2" />
       </div>
 
@@ -45,7 +49,7 @@
     </div>
 
     <script type="module">
-      import { SHEET_ID, OVERLAYS_TAB_ID } from './assets/js/consts.js';
+      import { SHEET_ID, OVERLAYS_TAB_ID } from "./assets/js/consts.js";
 
       let papaData;
 
@@ -127,47 +131,92 @@
         return true;
       }
 
-      const FILES = [
-        "meta.10.png",
-        "meta1.10.png",
-        "meta2.10.png",
-        "meta3.10.png",
-        "meta4.10.png",
-        "meta5.10.png",
-        "meta6.10.png",
-        "meta7.10.png",
-        "meta8.10.png",
-        "meta9.10.png",
-        "meta10.10.png",
-        "meta11.10.png",
-        "meta12.10.png",
-        "meta13.10.png",
-        "meta14.10.png",
-        "meta15.10.png",
-        "meta16.10.png",
-        "meta17.10.png",
-        "meta18.10.png",
-        "meta19.10.png",
-        "meta20.10.png",
-        "meta21.10.png",
+      const TERMS = [
+        "terms/1.png",
+        "terms/2.png",
+        "terms/3.png",
+        "terms/4.png",
+        "terms/5.png",
+        "terms/6.png",
+        "terms/7.png",
+        "terms/8.png",
+        "terms/9.png",
+        "terms/10.png",
+        "terms/11.png",
+        "terms/12.png"
+      ];
+
+      const METAS = [
+        "metas/1.png",
+        "metas/2.png",
+        "metas/3.png",
+        "metas/4.png",
+        "metas/5.png",
+        "metas/6.png",
+        "metas/7.png",
+        "metas/8.png",
+        "metas/9.png",
+        "metas/10.png",
+        "metas/11.png",
+        "metas/12.png",
+        "metas/13.png",
+        "metas/14.png",
+        "metas/15.png",
+        "metas/16.png",
+        "metas/17.png",
+        "metas/18.png",
+        "metas/19.png",
+        "metas/20.png",
+        "metas/21.png",
+        "metas/22.png",
+        "metas/23.png",
+        "metas/24.png",
+        "metas/25.png",
+        "metas/26.png",
+        "metas/27.png",
+        "metas/28.png",
+        "metas/29.png",
+        "metas/30.png",
+        "metas/31.png",
+        "metas/32.png",
+        "metas/33.png",
+        "metas/34.png",
+        "metas/35.png",
+        "metas/36.png",
+        "metas/37.png",
+        "metas/38.png",
+        "metas/39.png",
+        "metas/40.png",
+        "metas/41.png",
+        "metas/42.png",
+        "metas/43.png",
+        "metas/44.png",
+        "metas/45.png",
+        "metas/46.png",
+        "metas/47.png",
+        "metas/48.png",
+        "metas/49.png",
       ];
 
       const slideEls = [
         document.getElementById("slide1"),
-        document.getElementById("slide2")
+        document.getElementById("slide2"),
       ];
       let currentSlideIndex = 0; // index in FILES
       let topLayer = 0; // which of slideEls is currently visible
+      const SHUFFLED_TERMS = TERMS.map(x => {return {value: x, key: Math.random()}}).sort((a,b) => a.key - b.key).map(x => x.value)
+      const SHUFFLED_METAS = METAS.map(x => {return {value: x, key: Math.random()}}).sort((a,b) => a.key - b.key).map(x => x.value)
 
       function slideshow() {
-        const filename = FILES[currentSlideIndex]
-        const duration = filename.split('.')[1] * 500;
-        const nextIndex = (currentSlideIndex + 1) % FILES.length;
+        const files = SHUFFLED_TERMS.concat(SHUFFLED_METAS)
+        const filename = files[currentSlideIndex];
+        const duration = 10000;
+        const nextIndex = (currentSlideIndex + 1) % files.length;
         const fadeOut = slideEls[topLayer];
         const fadeIn = slideEls[1 - topLayer];
 
         // preload next image underneath
-        fadeIn.src = `assets/slides/${FILES[nextIndex]}`;
+        fadeIn.src = `assets/slides/${files[nextIndex]}`;
 
         // trigger fade via CSS
         fadeIn.classList.add("visible");
@@ -190,7 +239,7 @@
         const mm = data[0].next_event_mm || 0;
         const remaining = getTimeToNextEvent(hh, mm);
         document.getElementById("countdown").textContent = remaining;
-        const infoBox = document.getElementById("info")
+        const infoBox = document.getElementById("info");
 
         const row = getNextMatchRow(data);
         if (

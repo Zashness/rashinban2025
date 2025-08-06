@@ -6,17 +6,19 @@ body, html,
   margin: 0;
   color: white;
   overflow: hidden;
-
   font-family: 'kaneda-gothic', 'Noto Sans JP', sans-serif;
   font-weight: 700;
   font-style: normal;
+}
+
+body{
+  background-color: rgba(0,0,0,100);
 }
 
 .bg {
   position: absolute;
   width: 1920px;
   height: 1080px;
-  background: url("https://rashinban.org/assets/images/key-visual.png");
   overflow: hidden;
 }
 

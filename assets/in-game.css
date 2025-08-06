@@ -52,12 +52,14 @@ body {
 
 .score-bg1,
 .player-name-bg1 {
-  background-color: #ffb730;
+  /* background-color: #ffb730; */
+  background-color: #3083ff;
 }
 
 .score-bg2,
 .player-name-bg2 {
-  background-color: #3083ff;
+  /* background-color: #3083ff; */
+  background-color: #ff3030;
 }
 
 .player-wrapper1 {
@@ -131,12 +133,12 @@ body {
 }
 
 .player-handle-bg1 {
-  background-color: #db9920;
+  background-color: #205db7;
   border-bottom-left-radius: 12px;
 }
 
 .player-handle-bg2 {
-  background-color: #205db7;
+  background-color: #ff3030;
   border-bottom-right-radius: 12px;
 }
 
@@ -152,7 +154,7 @@ body {
   font-optical-sizing: auto;
   font-style: normal;
   color: white;
-  background-color: #ff3030;
+  background-color: #353535;
 }
 
 .round {
