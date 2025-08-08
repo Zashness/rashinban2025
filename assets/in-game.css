@@ -47,7 +47,6 @@ body {
 
 .score {
   font-size: 96px;
-  margin-top: -6px;
 }
 
 .score-bg1,
@@ -116,7 +115,7 @@ body {
 }
 
 .player-handle {
-  font-family: "Akshar", sans-serif;
+  font-family: 'Akshar', sans-serif;
   font-weight: 600;
   font-style: normal;
   font-optical-sizing: auto;
@@ -154,7 +153,7 @@ body {
   font-optical-sizing: auto;
   font-style: normal;
   color: white;
-  background-color: rgba(0,0,0,0);
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .round {
