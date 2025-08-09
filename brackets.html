@@ -1674,7 +1674,7 @@
             p2_score = Number(row.player_2_score.trim() || 0);
 
             // debugger;
-            if (p1_score + p2_score === 3) {
+            if (p1_score === 2 || p2_score === 2) {
               removeWinner(row.match_number);
               const winnerPosition = p1_score > p2_score ? 'top' : 'bottom';
               const winnerEl = document.getElementById(
