@@ -36,11 +36,23 @@
 
       <div class="slideshow">
         <img
-          src="assets/slides/meta1.10.png"
+          src="assets/slides/metas/1.png"
           class="slide visible"
           id="slide1"
         />
-        <img src="assets/slides/meta2.10.png" class="slide" id="slide2" />
+        <img src="assets/slides/metas/2.png" class="slide" id="slide2" />
+        <!-- Brackets slide -->
+        <div class="slide" id="slide-brackets">
+          <div class="frame-wrapper">
+            <iframe
+              id="bracketsFrame"
+              src="brackets.html?variant=mini"
+              loading="lazy"
+              class="frame-viewport"
+              sandbox="allow-scripts allow-same-origin"
+            ></iframe>
+          </div>
+        </div>
       </div>
 
       <div id="error"></div>
@@ -215,9 +227,48 @@
         .sort((a, b) => a.key - b.key)
         .map((x) => x.value);
 
+      const bracketSlide = document.getElementById("slide-brackets");
+      const bracketIframe = document.getElementById("bracketsFrame");
+
       function slideshow() {
+        // Initialize files array. This prevents adding brackets multiple times.
         const files = SHUFFLED_TERMS.concat(SHUFFLED_METAS);
-        const filename = files[currentSlideIndex];
+        // mix in brackets into slides when specified
+        if (papaData?.[0]?.with_brackets === "TRUE") {
+          // insert a brackets “slide” every N slides
+          const bracketsFrequency = Number(papaData?.[0]?.brackets_frequency) || 6;
+          const BRACKETS_TOKEN = "__BRACKETS__";
+
+          for (let i = bracketsFrequency; i < files.length; i += bracketsFrequency + 1) {
+            files.splice(i, 0, BRACKETS_TOKEN);
+          }
+        }
+
+        // brackets branch
+        if (files[currentSlideIndex] === "__BRACKETS__") {
+          // show iframe slide
+          bracketSlide.classList.add("visible");
+          bracketIframe.contentWindow.postMessage({type:'START'}, location.origin);
+
+          // hide image layers
+          slideEls[0].classList.remove("visible");
+          slideEls[1].classList.remove("visible");
+
+          // after 15s, hide iframe and continue to next item
+          const BRACKETS_DURATION = 15_000;
+          setTimeout(() => {
+            currentSlideIndex = (currentSlideIndex + 1) % files.length;
+            // slight delay to match fade timing
+            setTimeout(() => {
+              bracketSlide.classList.remove("visible");
+              // resets brackets for next time
+              bracketIframe.contentWindow.postMessage({type:'END'}, location.origin);
+            }, 160)
+            slideshow();
+          }, BRACKETS_DURATION);
+          return;
+        }
+
         const duration = 10000;
         const fadeOut = slideEls[topLayer];
         const fadeIn = slideEls[1 - topLayer];
@@ -239,7 +290,7 @@
         setTimeout(fadeout, 160);
       }
 
-      function render() {
+      function renderCountdown() {
         if (!papaData) {
           return;
         }
@@ -311,7 +362,7 @@
       window.addEventListener("DOMContentLoaded", () => {
         fetchData();
         setInterval(fetchData, 10_000); // Six times a minute
-        setInterval(render, 1_000);
+        setInterval(renderCountdown, 1_000);
         slideshow();
       });
     </script>

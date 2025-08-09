@@ -16,6 +16,14 @@ body {
   background: url('https://rashinban.org/assets/images/key-visual.png');
 }
 
+.mini .bracket-wrapper {
+  background: transparent;
+}
+
+.mini .bracket-wrapper::after {
+  background: transparent;
+}
+
 /* blur and darken it with a semi-transparent scrim */
 .bracket-wrapper::before {
   content: '';
