@@ -143,7 +143,7 @@
         "terms/9.png",
         "terms/10.png",
         "terms/11.png",
-        "terms/12.png"
+        "terms/12.png",
       ];
 
       const METAS = [
@@ -204,29 +204,39 @@
       ];
       let currentSlideIndex = 0; // index in FILES
       let topLayer = 0; // which of slideEls is currently visible
-      const SHUFFLED_TERMS = TERMS.map(x => {return {value: x, key: Math.random()}}).sort((a,b) => a.key - b.key).map(x => x.value)
-      const SHUFFLED_METAS = METAS.map(x => {return {value: x, key: Math.random()}}).sort((a,b) => a.key - b.key).map(x => x.value)
+      const SHUFFLED_TERMS = TERMS.map((x) => {
+        return { value: x, key: Math.random() };
+      })
+        .sort((a, b) => a.key - b.key)
+        .map((x) => x.value);
+      const SHUFFLED_METAS = METAS.map((x) => {
+        return { value: x, key: Math.random() };
+      })
+        .sort((a, b) => a.key - b.key)
+        .map((x) => x.value);
 
       function slideshow() {
-        const files = SHUFFLED_TERMS.concat(SHUFFLED_METAS)
+        const files = SHUFFLED_TERMS.concat(SHUFFLED_METAS);
         const filename = files[currentSlideIndex];
         const duration = 10000;
-        const nextIndex = (currentSlideIndex + 1) % files.length;
         const fadeOut = slideEls[topLayer];
         const fadeIn = slideEls[1 - topLayer];
 
         // preload next image underneath
-        fadeIn.src = `assets/slides/${files[nextIndex]}`;
+        fadeIn.src = `assets/slides/${files[currentSlideIndex]}`;
 
-        // trigger fade via CSS
-        fadeIn.classList.add("visible");
-        fadeOut.classList.remove("visible");
+        function fadeout() {
+          // trigger fade via CSS
+          fadeIn.classList.add("visible");
+          fadeOut.classList.remove("visible");
 
-        // advance pointers
-        currentSlideIndex = nextIndex;
-        topLayer = (topLayer + 1) % 2;
+          // advance pointers
+          currentSlideIndex = (currentSlideIndex + 1) % files.length;
+          topLayer = (topLayer + 1) % 2;
 
-        setTimeout(slideshow, duration);
+          setTimeout(slideshow, duration);
+        }
+        setTimeout(fadeout, 32);
       }
 
       function render() {
