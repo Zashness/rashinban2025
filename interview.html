@@ -18,14 +18,14 @@
     <!-- Parses csv to JSON -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
     <script>
-      const SHOW_LOGO = '--表示OFF--'; // show the logo by default
+      const SHOW_LOGO = "--表示OFF--"; // show the logo by default
       const SHOW_LAST_MATCH = "--Last 'active' match--"; // show the last match "<player1> 1 - 0 <player2>"
     </script>
   </head>
   <body>
     <div class="desk-bar">
       <div id="logo">
-        <img src="assets/images/icon.svg" />
+        <img src="assets/images/red.svg" />
       </div>
       <div id="last-match">
         <div class="player player1"></div>
@@ -43,15 +43,15 @@
     <div id="error"></div>
 
     <script type="module">
-      import { SHEET_ID, OVERLAYS_TAB_ID } from './assets/js/consts.js';
-      const LOGO_NODE = document.getElementById('logo');
-      const LAST_MATCH_NODE = document.getElementById('last-match');
-      const INTERVIEW_NODE = document.getElementById('interview');
+      import { SHEET_ID, OVERLAYS_TAB_ID } from "./assets/js/consts.js";
+      const LOGO_NODE = document.getElementById("logo");
+      const LAST_MATCH_NODE = document.getElementById("last-match");
+      const INTERVIEW_NODE = document.getElementById("interview");
 
       /** Finds the first row where `active` column is TRUE */
       function getActiveRow(data) {
         for (let row of data) {
-          if (row.active === 'TRUE') {
+          if (row.active === "TRUE") {
             return row;
           }
         }
@@ -64,10 +64,10 @@
         const nodes = new Set([LOGO_NODE, LAST_MATCH_NODE, INTERVIEW_NODE]);
         nodes.delete(nodeToShow);
         nodes.forEach((node) => {
-          node.classList.remove('visible');
+          node.classList.remove("visible");
         });
 
-        nodeToShow.classList.add('visible');
+        nodeToShow.classList.add("visible");
       }
 
       function showLogo() {
@@ -76,15 +76,16 @@
 
       function containsJapanese(text) {
         // "\p{Script=Han}" covers all CJK
-        const japaneseRE = /[\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Han}]/u;
+        const japaneseRE =
+          /[\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Han}]/u;
         return japaneseRE.test(text);
       }
 
       function applyKanaFont(playerName, node) {
         if (containsJapanese(playerName)) {
-          node.classList.add('kana');
+          node.classList.add("kana");
         } else {
-          node.classList.remove('kana');
+          node.classList.remove("kana");
         }
       }
 
@@ -101,21 +102,23 @@
           return;
         }
 
-        const playerOne = row.player_1.split('|');
-        const playerTwo = row.player_2.split('|');
+        const playerOne = row.player_1.split("|");
+        const playerTwo = row.player_2.split("|");
 
         // Player 1: `player_1` column in spreadsheet.
-        const playerOneName = playerOne[0].trim() || '';
-        const playerOneScore = row.player_1_score.trim() || '0';
+        const playerOneName = playerOne[0].trim() || "";
+        const playerOneScore = row.player_1_score.trim() || "0";
 
         // Player 2: `player_2` column in spreadsheet.
-        const playerTwoName = playerTwo[0].trim() || '';
-        const playerTwoScore = row.player_2_score.trim() || '0';
+        const playerTwoName = playerTwo[0].trim() || "";
+        const playerTwoScore = row.player_2_score.trim() || "0";
 
-        const playerOneNode = LAST_MATCH_NODE.querySelector('.player1');
-        const playerTwoNode = LAST_MATCH_NODE.querySelector('.player2');
+        const playerOneNode = LAST_MATCH_NODE.querySelector(".player1");
+        const playerTwoNode = LAST_MATCH_NODE.querySelector(".player2");
         playerOneNode.innerText = playerOneName;
-        LAST_MATCH_NODE.querySelector('.score').innerText = `${playerOneScore} - ${playerTwoScore}`;
+        LAST_MATCH_NODE.querySelector(
+          ".score"
+        ).innerText = `${playerOneScore} - ${playerTwoScore}`;
         playerTwoNode.innerText = playerTwoName;
 
         // apply different font size for Japanese names
@@ -127,7 +130,7 @@
 
       function showInterview(data) {
         const playerName = data[0].desk_view;
-        const playerNameNode = document.getElementById('interviewee');
+        const playerNameNode = document.getElementById("interviewee");
         playerNameNode.innerText = playerName;
 
         // apply different font size for Japanese names
@@ -156,16 +159,19 @@
             return res.text();
           })
           .then((txt) => {
-            const { data } = Papa.parse(txt, { header: true, skipEmptyLines: true });
+            const { data } = Papa.parse(txt, {
+              header: true,
+              skipEmptyLines: true,
+            });
             render(data);
           })
           .catch((err) => {
-            console.error('Fetch/Parse error:', err);
+            console.error("Fetch/Parse error:", err);
             // document.getElementById('error').innerHTML = '<p>Error loading data.</p>';
           });
       }
 
-      window.addEventListener('DOMContentLoaded', () => {
+      window.addEventListener("DOMContentLoaded", () => {
         fetchData();
         setInterval(fetchData, 2 * 1000);
       });
