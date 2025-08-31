@@ -15,6 +15,10 @@ body {
   font-family: 'kaneda-gothic', sans-serif;
 }
 
+.topbar {
+  top: 179px;
+}
+
 .desk-bar {
   display: flex;
   position: absolute;
@@ -42,33 +46,6 @@ body {
 
 #logo > img {
   height: 85px;
-}
-
-#last-match {
-  font-size: 75px;
-  text-transform: uppercase;
-}
-
-.player {
-  flex: 1 1 0;
-}
-
-.player1 {
-  text-align: right;
-}
-.player2 {
-  text-align: left;
-}
-
-.player.kana {
-  font-family: 'Noto Sans JP', sans-serif;
-  font-weight: 900;
-  font-size: 61px;
-  margin-top: -5px;
-}
-
-.score {
-  margin: 0 34px;
 }
 
 .interview-label {

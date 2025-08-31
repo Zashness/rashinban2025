@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <title>Overlay X</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/player-score-topbar.css" />
     <link rel="stylesheet" href="assets/in-game.css" />
     <link rel="modulepreload" href="assets/js/consts.js" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -45,58 +46,12 @@
 
     <script type="module">
       import { SHEET_ID, OVERLAYS_TAB_ID } from './assets/js/consts.js';
-      /** Finds the first row where `active` column is TRUE */
-      function getActiveRow(data) {
-        for (let row of data) {
-          if (row.active === 'TRUE') {
-            return row;
-          }
-        }
-      }
-
-      function containsJapanese(text) {
-        // "\p{Script=Han}" covers all CJK
-        const japaneseRE = /[\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Han}]/u;
-        return japaneseRE.test(text);
-      }
-
-      function applyKanaFont(playerName, node) {
-        if (containsJapanese(playerName)) {
-          node.classList.add('kana');
-        } else {
-          node.classList.remove('kana');
-        }
-      }
+      import { renderNameAndScoreFromRow } from './assets/js/player-name-score.js';
+      import { getActiveRow } from './assets/js/utils.js';
 
       function render(data) {
-        // debugger;
         const row = getActiveRow(data);
-        if (!row || !row.player_1 || !row.player_2) {
-          return;
-        }
-
-        const playerOne = row.player_1.split('|');
-        const playerTwo = row.player_2.split('|');
-
-        // Player 1
-        const playerOneNode = document.getElementById('player1');
-        const playerOneName = playerOne[0].trim() || '';
-        playerOneNode.innerHTML = playerOneName;
-        applyKanaFont(playerOneName, playerOneNode);
-        if (playerOne[1].trim()) {
-          document.getElementById('player1-handle').innerHTML = '@' + playerOne[1].trim() || '';
-        }
-        document.getElementById('score1').innerHTML = row.player_1_score.trim() || '0';
-
-        // Player 2
-        const playerTwoNode = document.getElementById('player2');
-        const playerTwoName = playerTwo[0].trim() || '';
-        playerTwoNode.innerHTML = playerTwoName;
-        applyKanaFont(playerTwoName, playerTwoNode);
-        if (playerTwo[1].trim()) {
-          document.getElementById('player2-handle').innerHTML = '@' + playerTwo[1].trim() || '';
-        }
-        document.getElementById('score2').innerHTML = row.player_2_score.trim() || '0';
+        renderNameAndScoreFromRow(row);
       }
 
       function fetchData() {

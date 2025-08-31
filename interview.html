@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <title>Overlay X</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/player-score-topbar.css" />
     <link rel="stylesheet" href="assets/interview.css" />
     <link rel="modulepreload" href="assets/js/consts.js" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -18,19 +19,30 @@
     <!-- Parses csv to JSON -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
     <script>
-      const SHOW_LOGO = "--表示OFF--"; // show the logo by default
-      const SHOW_LAST_MATCH = "--Last 'active' match--"; // show the last match "<player1> 1 - 0 <player2>"
+      const SHOW_LOGO = '--Logo表示--';
     </script>
   </head>
   <body>
+    <div class="topbar" id="last-match">
+      <div class="player1-bg player-bg">
+        <div id="player1-handle" class="player-handle player1-handle"></div>
+        <div id="player1" class="player player1"></div>
+      </div>
+      <div class="score-bg score1-bg">
+        <div id="score1" class="score score1"></div>
+      </div>
+      <div class="score-bg score2-bg">
+        <div id="score2" class="score score2"></div>
+      </div>
+      <div class="player2-bg player-bg">
+        <div id="player2" class="player player2"></div>
+        <div id="player2-handle" class="player-handle player2-handle"></div>
+      </div>
+    </div>
+
     <div class="desk-bar">
       <div id="logo">
         <img src="assets/images/red.svg" />
-      </div>
-      <div id="last-match">
-        <div class="player player1"></div>
-        <div class="score"></div>
-        <div class="player player2"></div>
       </div>
       <div id="interview">
         <img src="assets/images/phone.svg" />
@@ -43,94 +55,45 @@
     <div id="error"></div>
 
     <script type="module">
-      import { SHEET_ID, OVERLAYS_TAB_ID } from "./assets/js/consts.js";
-      const LOGO_NODE = document.getElementById("logo");
-      const LAST_MATCH_NODE = document.getElementById("last-match");
-      const INTERVIEW_NODE = document.getElementById("interview");
+      import { SHEET_ID, OVERLAYS_TAB_ID } from './assets/js/consts.js';
+      import { renderNameAndScoreFromRow } from './assets/js/player-name-score.js';
+      import { applyKanaFont, containsJapanese, getActiveRow } from './assets/js/utils.js';
 
-      /** Finds the first row where `active` column is TRUE */
-      function getActiveRow(data) {
-        for (let row of data) {
-          if (row.active === "TRUE") {
-            return row;
-          }
-        }
-      }
+      const LOGO_NODE = document.getElementById('logo');
+      const LAST_MATCH_NODE = document.getElementById('last-match');
+      const INTERVIEW_NODE = document.getElementById('interview');
 
       /**
-       * Sets 'visible' class for passed in element and hides the other 2 elements.
+       * Sets 'visible' class for passed in element and hides the other element.
        */
       function showNode(nodeToShow) {
-        const nodes = new Set([LOGO_NODE, LAST_MATCH_NODE, INTERVIEW_NODE]);
+        const nodes = new Set([LOGO_NODE, INTERVIEW_NODE]);
         nodes.delete(nodeToShow);
         nodes.forEach((node) => {
-          node.classList.remove("visible");
+          node.classList.remove('visible');
         });
 
-        nodeToShow.classList.add("visible");
+        nodeToShow.classList.add('visible');
+      }
+
+      function showLastMatch(data) {
+        const row = getActiveRow(data);
+        renderNameAndScoreFromRow(row);
+
+        LAST_MATCH_NODE.classList.add('visible');
+      }
+
+      function hideLastMatch() {
+        LAST_MATCH_NODE.classList.remove('visible');
       }
 
       function showLogo() {
         showNode(LOGO_NODE);
       }
 
-      function containsJapanese(text) {
-        // "\p{Script=Han}" covers all CJK
-        const japaneseRE =
-          /[\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Han}]/u;
-        return japaneseRE.test(text);
-      }
-
-      function applyKanaFont(playerName, node) {
-        if (containsJapanese(playerName)) {
-          node.classList.add("kana");
-        } else {
-          node.classList.remove("kana");
-        }
-      }
-
-      function showLastMatch(data) {
-        /**
-         * Find "active" row as marked by the `active` column.
-         */
-        const row = getActiveRow(data);
-        if (
-          !row ||
-          !row.player_1 || // Ensure player_1 name and optional handle
-          !row.player_2 // Ensure player_2 name and optional handle
-        ) {
-          return;
-        }
-
-        const playerOne = row.player_1.split("|");
-        const playerTwo = row.player_2.split("|");
-
-        // Player 1: `player_1` column in spreadsheet.
-        const playerOneName = playerOne[0].trim() || "";
-        const playerOneScore = row.player_1_score.trim() || "0";
-
-        // Player 2: `player_2` column in spreadsheet.
-        const playerTwoName = playerTwo[0].trim() || "";
-        const playerTwoScore = row.player_2_score.trim() || "0";
-
-        const playerOneNode = LAST_MATCH_NODE.querySelector(".player1");
-        const playerTwoNode = LAST_MATCH_NODE.querySelector(".player2");
-        playerOneNode.innerText = playerOneName;
-        LAST_MATCH_NODE.querySelector(
-          ".score"
-        ).innerText = `${playerOneScore} - ${playerTwoScore}`;
-        playerTwoNode.innerText = playerTwoName;
-
-        // apply different font size for Japanese names
-        applyKanaFont(playerOneName, playerOneNode);
-        applyKanaFont(playerTwoName, playerTwoNode);
-
-        showNode(LAST_MATCH_NODE);
-      }
-
       function showInterview(data) {
         const playerName = data[0].desk_view;
-        const playerNameNode = document.getElementById("interviewee");
+        const playerNameNode = document.getElementById('interviewee');
         playerNameNode.innerText = playerName;
 
         // apply different font size for Japanese names
@@ -140,11 +103,16 @@
       }
 
       function render(data) {
+        // Controlled by `show_last_match` column in spreadsheet.
+        if (data[0].show_last_match === 'TRUE') {
+          showLastMatch(data);
+        } else {
+          hideLastMatch();
+        }
+
         // Controlled by `desk_view` column in spreadsheet.
         if (data[0].desk_view === SHOW_LOGO) {
           showLogo();
-        } else if (data[0].desk_view === SHOW_LAST_MATCH) {
-          showLastMatch(data);
         } else if (!!data[0].desk_view) {
           showInterview(data);
         }
@@ -166,12 +134,12 @@
             render(data);
           })
           .catch((err) => {
-            console.error("Fetch/Parse error:", err);
+            console.error('Fetch/Parse error:', err);
             // document.getElementById('error').innerHTML = '<p>Error loading data.</p>';
           });
       }
 
-      window.addEventListener("DOMContentLoaded", () => {
+      window.addEventListener('DOMContentLoaded', () => {
         fetchData();
         setInterval(fetchData, 2 * 1000);
       });

@@ -1,0 +1,131 @@
+.topbar {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'kaneda-gothic', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.center {
+  width: 440px;
+  height: 123px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.round,
+.game-mode,
+.damage {
+  padding-top: 21px;
+  font-size: 20px;
+  font-family: 'Akshar', sans-serif;
+  font-weight: 500;
+  color: #151b26;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.round {
+  flex-basis: 120px;
+  text-align: center;
+}
+.game-mode {
+  flex-basis: 200px;
+  text-align: center;
+}
+.damage {
+  flex-basis: 120px;
+  text-align: center;
+}
+
+.score-bg {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 123px;
+  height: 123px;
+}
+
+.score {
+  font-size: 96px;
+}
+
+.score1-bg {
+  background-color: #ff3030;
+}
+
+.score2-bg {
+  background-color: #3083ff;
+}
+
+.player-bg {
+  width: 617px;
+  height: 123px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: #fff;
+}
+
+.player1-bg {
+  background-color: #cc2626;
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.player2-bg {
+  background-color: #2669cc;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.player {
+  font-family: 'kaneda-gothic', sans-serif;
+  font-weight: 900;
+  font-size: 64px;
+  letter-spacing: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #fff;
+  flex: 0 0 auto;
+  margin: 0;
+}
+
+.player.kana {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 61px;
+}
+
+.player-handle {
+  font-family: 'Akshar', sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #fff;
+  flex: 1 1 auto;
+  margin: 0;
+}
+
+.player1-handle {
+  order: 1;
+}
+.player1 {
+  order: 2;
+  padding-right: 40px;
+}
+
+.player2 {
+  order: 1;
+  padding-left: 40px;
+}
+.player2-handle {
+  order: 2;
+}
