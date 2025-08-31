@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Rashinban Geoguessr Game Master Mode
 // @namespace    https://github.com/Zashness/rashinban2025/blob/gh-pages/tampermonkeys/in-game.user.js
-// @version      0.2.4
+// @version      0.2.5
 // @description  Game Master Mode mods for Rashinban2025
 // @author       Zashness
 // @match        https://www.geoguessr.com/*
@@ -43,7 +43,7 @@
     [class^="game-notch_roundInfo__"] {
       background: #fff;
       position: fixed !important;
-      top: 82px;
+      top: 53px;
       height: 123px;
       width: 440px;
     }

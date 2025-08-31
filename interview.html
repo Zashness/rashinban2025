@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <title>Overlay X</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/marquee.css" />
     <link rel="stylesheet" href="assets/player-score-topbar.css" />
     <link rel="stylesheet" href="assets/interview.css" />
     <link rel="modulepreload" href="assets/js/consts.js" />
@@ -41,9 +42,6 @@
     </div>
 
     <div class="desk-bar">
-      <div id="logo">
-        <img src="assets/images/red.svg" />
-      </div>
       <div id="interview">
         <img src="assets/images/phone.svg" />
         <div class="interview-label">PLAYER INTERVIEWS ...</div>
@@ -52,16 +50,22 @@
         </div>
       </div>
     </div>
+
+    <div class="sponsor-marquee" id="sponsor-marquee"></div>
+
     <div id="error"></div>
 
     <script type="module">
       import { SHEET_ID, OVERLAYS_TAB_ID } from './assets/js/consts.js';
       import { renderNameAndScoreFromRow } from './assets/js/player-name-score.js';
       import { applyKanaFont, containsJapanese, getActiveRow } from './assets/js/utils.js';
+      import { initSponsorMarquee } from './assets/js/marquee.js';
 
-      const LOGO_NODE = document.getElementById('logo');
+      const LOGO_NODE = document.getElementById('sponsor-marquee');
       const LAST_MATCH_NODE = document.getElementById('last-match');
       const INTERVIEW_NODE = document.getElementById('interview');
+
+      initSponsorMarquee({});
 
       /**
        * Sets 'visible' class for passed in element and hides the other element.

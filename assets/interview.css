@@ -29,24 +29,28 @@ body {
   align-items: center;
 }
 
-#logo,
+#sponsor-marquee,
 #last-match,
 #interview {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
   width: 100%;
+  transition: opacity 600ms ease;
 }
 
-#logo.visible,
+#sponsor-marquee.visible,
 #last-match.visible,
 #interview.visible {
   display: flex;
+  visibility: visible;
+  opacity: 1;
   justify-content: center;
   align-items: center;
 }
 
-#logo > img {
+/* #sponsor-marquee > img {
   height: 85px;
-}
+} */
 
 .interview-label {
   margin-left: 12px;
@@ -78,4 +82,8 @@ body {
   font-size: 48px;
   margin-top: -6px;
   padding: 0 11px;
+}
+
+.hidden.hidden {
+  visibility: hidden;
 }
