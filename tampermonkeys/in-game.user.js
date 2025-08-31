@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Rashinban Geoguessr Game Master Mode
 // @namespace    https://github.com/Zashness/rashinban2025/blob/gh-pages/tampermonkeys/in-game.user.js
-// @version      0.2.3
+// @version      0.2.4
 // @description  Game Master Mode mods for Rashinban2025
 // @author       Zashness
 // @match        https://www.geoguessr.com/*
@@ -41,24 +41,23 @@
       display: none;
     }
     [class^="game-notch_roundInfo__"] {
-      background: #353535;
-      border-radius: 12px;
+      background: #fff;
       position: fixed !important;
       top: 82px;
-      height: 114px;
-      width: 760px;
+      height: 123px;
+      width: 440px;
     }
     /* "Round X" */
     [class^="game-notch_roundInfo__"] div [class^="views_round__"] > label:last-child {
-      left: 132px;
+      left: 57px;
     }
     /* "Move/No Move/NMPZ" */
     [class^="game-notch_roundInfo__"] div [class^="views_roundMultiplier__"]:nth-child(2) > label:last-child {
-      left: 330px;
+      left: 219px;
     }
     /* "Multiplier x3.5" */
     [class^="game-notch_roundInfo__"] div [class^="views_roundMultiplier__"]:last-child > label:last-child {
-      left: 634px;
+      left: 378px;
     }
     /* ROUND & DAMAGE */
     [class^="game-notch_roundInfo__"] div [class^="views_round"] > label:first-child {
@@ -70,10 +69,11 @@
       font-optical-sizing: auto;
       font-weight: 900;
       font-style: normal;
-      top: 44px;
+      top: 68px;
       position: fixed;
       font-size: 64px;
-      color: white;
+      color: #151b26;
+      transform: translateX(-50%);
     }
 
 

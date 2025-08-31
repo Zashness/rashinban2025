@@ -6,46 +6,41 @@
     <title>Overlay X</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="assets/in-game.css" />
-    <link rel="modulepreload" href="assets/js/consts.js">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Akshar:wght@300..700&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.typekit.net/ljs6bhu.css"> <!-- kaneda-gothic -->
+    <link rel="modulepreload" href="assets/js/consts.js" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abel&family=Akshar:wght@300..700&family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://use.typekit.net/ljs6bhu.css" />
+    <!-- kaneda-gothic -->
     <!-- Parses csv to JSON -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
   </head>
   <body>
     <div class="topbar">
-      <div class="spacer"></div>
-      <div class="score-bg score-bg1">
-        <div id="score1" class="score score1"></div>
-      </div>
-      <div class="center"></div>
-      <div class="score-bg score-bg2">
-        <div id="score2" class="score score2"></div>
-      </div>
-      <div class="spacer"></div>
-    </div>
-    <div class="round">ROUND</div>
-    <div class="game-mode">GAME MODE</div>
-    <div class="damage">DAMAGE</div>
-
-    <div class="player-wrapper1">
-      <div class="player-name-bg player-name-bg1">
+      <div class="player1-bg player-bg">
+        <div id="player1-handle" class="player-handle player1-handle"></div>
         <div id="player1" class="player player1"></div>
       </div>
-      <div id="player1-handle-bg" class="player-handle-bg player-handle-bg1">
-        <div id="player1-handle" class="player-handle player1-handle"></div>
+      <div class="score-bg score1-bg">
+        <div id="score1" class="score score1"></div>
       </div>
-    </div>
-    <div class="player-wrapper2">
-      <div class="player-name-bg player-name-bg2">
+      <div class="center">
+        <div class="round">ROUND</div>
+        <div class="game-mode">GAME MODE</div>
+        <div class="damage">DAMAGE</div>
+      </div>
+      <div class="score-bg score2-bg">
+        <div id="score2" class="score score2"></div>
+      </div>
+      <div class="player2-bg player-bg">
         <div id="player2" class="player player2"></div>
-      </div>
-      <div id="player2-handle-bg" class="player-handle-bg player-handle-bg2">
         <div id="player2-handle" class="player-handle player2-handle"></div>
       </div>
     </div>
+
     <div id="error"></div>
 
     <script type="module">
@@ -56,6 +51,20 @@
           if (row.active === 'TRUE') {
             return row;
           }
+        }
+      }
+
+      function containsJapanese(text) {
+        // "\p{Script=Han}" covers all CJK
+        const japaneseRE = /[\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Han}]/u;
+        return japaneseRE.test(text);
+      }
+
+      function applyKanaFont(playerName, node) {
+        if (containsJapanese(playerName)) {
+          node.classList.add('kana');
+        } else {
+          node.classList.remove('kana');
         }
       }
 
@@ -70,22 +79,22 @@
         const playerTwo = row.player_2.split('|');
 
         // Player 1
-        document.getElementById('player1').innerHTML = playerOne[0].trim() || '';
+        const playerOneNode = document.getElementById('player1');
+        const playerOneName = playerOne[0].trim() || '';
+        playerOneNode.innerHTML = playerOneName;
+        applyKanaFont(playerOneName, playerOneNode);
         if (playerOne[1].trim()) {
           document.getElementById('player1-handle').innerHTML = '@' + playerOne[1].trim() || '';
-          document.getElementById('player1-handle-bg').style.display = 'flex';
-        } else {
-          document.getElementById('player1-handle-bg').style.display = 'none';
         }
         document.getElementById('score1').innerHTML = row.player_1_score.trim() || '0';
 
         // Player 2
-        document.getElementById('player2').innerHTML = playerTwo[0].trim() || '';
+        const playerTwoNode = document.getElementById('player2');
+        const playerTwoName = playerTwo[0].trim() || '';
+        playerTwoNode.innerHTML = playerTwoName;
+        applyKanaFont(playerTwoName, playerTwoNode);
         if (playerTwo[1].trim()) {
           document.getElementById('player2-handle').innerHTML = '@' + playerTwo[1].trim() || '';
-          document.getElementById('player2-handle-bg').style.display = 'flex';
-        } else {
-          document.getElementById('player2-handle-bg').style.display = 'none';
         }
         document.getElementById('score2').innerHTML = row.player_2_score.trim() || '0';
       }
