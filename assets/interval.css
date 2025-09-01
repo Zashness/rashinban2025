@@ -1,5 +1,6 @@
 /* no fancy scss, we be raw doggin css */
-body, html,
+body,
+html,
 .container {
   width: 1920px;
   height: 1080px;
@@ -11,8 +12,8 @@ body, html,
   font-style: normal;
 }
 
-body{
-  background-color: rgba(0,0,0,100);
+body {
+  background-color: rgba(0, 0, 0, 100);
 }
 
 .bg {
@@ -37,23 +38,23 @@ body{
 }
 
 #icon {
-    position: absolute;
-    top: 22px;
-    left: 925px;
-    z-index: 2;
+  position: absolute;
+  top: 22px;
+  left: 925px;
+  z-index: 2;
 }
 
 .title {
-    margin: 0;
-    width: 1062px;
-    height: 138px;
-    position: absolute;
-    font-size: 200px;
-    line-height: 138px;
-    text-align: center;
-    left: 429px;
-    top: 116px;
-    z-index: 2;
+  margin: 0;
+  width: 1062px;
+  height: 138px;
+  position: absolute;
+  font-size: 200px;
+  line-height: 138px;
+  text-align: center;
+  left: 429px;
+  top: 116px;
+  z-index: 2;
 }
 
 .topbar {
@@ -66,92 +67,92 @@ body{
 }
 
 .info {
-    position: absolute;
-    left: 140px;
-    top: 355px;
-    width: 385px;
-    height: 562px;
+  position: absolute;
+  left: 140px;
+  top: 355px;
+  width: 385px;
+  height: 562px;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .enabled {
-    visibility: visible;
+  visibility: visible;
 }
 
 .disabled {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 .coming-up {
-    font-size: 96px;
-    line-height: 66px;
-    margin: 0;
+  font-size: 96px;
+  line-height: 66px;
+  margin: 0;
 }
 
 .bar {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    background-color: #fff;
-    height: 2px;
-    width: 363px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: #fff;
+  height: 2px;
+  width: 363px;
 }
 
-#next-match p{
-    width: 1000px;
-    height: 44px;
-    margin: 0;
-    /* display: flex;
+#next-match p {
+  width: 1000px;
+  height: 44px;
+  margin: 0;
+  /* display: flex;
     flex-direction: row;
     align-items: center; */
 }
 
 .versus {
-    font-size: 40px;
-    margin-left: 18px
+  font-size: 40px;
+  margin-left: 18px;
 }
 
-.name-kaneda{
-    font-family: "kaneda-gothic", sans-serif;
-    font-size: 64px;
-    line-height: 44px;
-    text-transform: uppercase;
+.name-kaneda {
+  font-family: 'kaneda-gothic', sans-serif;
+  font-size: 64px;
+  line-height: 44px;
+  text-transform: uppercase;
 }
 
 .name-noto {
-    position: relative;
-    top: -3px;
-    font-family: "Noto Sans JP", sans-serif;
-    font-weight: 900;
-    font-size: 48px;
-    line-height: 35px;
+  position: relative;
+  top: -3px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 35px;
 }
 
 #countdown {
-    margin: 0;
-    font-size: 200px;
-    line-height: 138px;
+  margin: 0;
+  font-size: 200px;
+  line-height: 138px;
 }
 
 .slideshow {
-    position: absolute;
-    right: 140px;
-    top: 355px; 
-    width: 998px;
-    height: 562px;
-    background-color: #000;
-    border-radius: 30px;
+  position: absolute;
+  right: 140px;
+  top: 355px;
+  width: 998px;
+  height: 562px;
+  background-color: #000;
+  border-radius: 30px;
 }
 
 .slide {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 30px;
-    opacity: 0;
-    transition: opacity 0.5s ease-out;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
 }
 
 .slide.visible {
@@ -159,40 +160,44 @@ body{
 }
 
 #slide-brackets {
-    position: absolute;
-    inset: 0;
-    opacity: 0;
-    transition: opacity .6s;
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.6s;
 }
 
 #slide-brackets.visible {
-    opacity: 1;
+  opacity: 1;
 }
 
 .frame-wrapper {
-    position: absolute; inset: 0; overflow: hidden;
-    border: #ff3030 solid 10.5px;
-    border-radius: 30px;
-    background: #1f1f1f;
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border: #ff3030 solid 10.5px;
+  border-radius: 30px;
+  background: #1f1f1f;
 }
 .frame-viewport {
-    border: 0; width: 1920px; height: 1080px;
-    transform-origin: 0 0;
-    scale: 0.5;
+  border: 0;
+  width: 1920px;
+  height: 1080px;
+  transform-origin: 0 -10px;
+  scale: 0.51;
 }
 
 #logo {
-    position: absolute;
-    left: 801px;
-    top: 998px;
-    z-index: 2;
+  position: absolute;
+  left: 801px;
+  top: 998px;
+  z-index: 2;
 }
 
 .bottombar {
-    position: absolute;
-    width: 1920px;
-    height: 46px;
-    top: 1034px;
-    z-index: 1;
-    background-color: #ff3030;
+  position: absolute;
+  width: 1920px;
+  height: 46px;
+  top: 1034px;
+  z-index: 1;
+  background-color: #ff3030;
 }
