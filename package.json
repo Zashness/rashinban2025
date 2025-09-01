@@ -1,0 +1,10 @@
+{
+  "name": "rashinban2025",
+  "version": "1.0.0",
+  "description": "Overlays and tampermonkey scripts for [Rashinban 2025](https://rashinban.org/).",
+  "type": "module",
+  "scripts": {
+    "build:tm": "node scripts/build-userscript.js"
+  },
+  "license": "MIT"
+}

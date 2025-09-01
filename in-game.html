@@ -5,7 +5,6 @@
     <meta charset="utf-8" />
     <title>Overlay X</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="assets/marquee.css" />
     <link rel="stylesheet" href="assets/player-score-topbar.css" />
     <link rel="stylesheet" href="assets/in-game.css" />
     <link rel="modulepreload" href="assets/js/consts.js" />
@@ -43,21 +42,12 @@
       </div>
     </div>
 
-    <div class="sponsor-marquee" id="sponsor-marquee"></div>
-
     <div id="error"></div>
 
     <script type="module">
       import { SHEET_ID, OVERLAYS_TAB_ID } from './assets/js/consts.js';
       import { renderNameAndScoreFromRow } from './assets/js/player-name-score.js';
-      import { initSponsorMarquee } from './assets/js/marquee.js';
       import { getActiveRow } from './assets/js/utils.js';
-
-      initSponsorMarquee({
-        container: 'sponsor-marquee',
-        speed: 40,
-        bottom: 120,
-      });
 
       function render(data) {
         const row = getActiveRow(data);
