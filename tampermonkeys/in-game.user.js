@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Rashinban Geoguessr Game Master Mode
 // @namespace    https://github.com/Zashness/rashinban2025/blob/gh-pages/tampermonkeys/in-game.user.js
-// @version      0.2.7
+// @version      0.2.8
 // @description  Game Master Mode mods for Rashinban2025
 // @author       Zashness
 // @match        https://www.geoguessr.com/*
@@ -202,6 +202,10 @@
       display: none;
     }
 
+    /* moves up the wrapper for "next round starts in 03,02,01" */
+    [class^="views_bottom__"] {
+      top: 200px;
+    }
     [class^="views_roundStartTitle__"],
     [class^="views_roundStartCount__"] {
       font-family: "kaneda-gothic", sans-serif;
