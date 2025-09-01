@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Rashinban Geoguessr Game Master Mode
 // @namespace    https://github.com/Zashness/rashinban2025/blob/gh-pages/tampermonkeys/in-game.user.js
-// @version      0.2.6
+// @version      0.2.7
 // @description  Game Master Mode mods for Rashinban2025
 // @author       Zashness
 // @match        https://www.geoguessr.com/*
@@ -164,19 +164,24 @@
     }
     div[class^="spectate-map_toggle__"]:hover {
       opacity: 0.2;
-    }I
+    }
 
 
     /* ===================================== */
     /* ========= Game preview mode ========= */
     /* ===================================== */
 
-    [class^="cam-hud_wrapper__"]:has(~ [class^="preview-round_guessMapContainer__"]) {
-      visibility:hidden;
+    [class^="cam-hud_wrapper__"]:has(~[class^="preview-round_guessMapContainer__"]) {
+      visibility: hidden;
+    }
+
+    /* hide guess map during preview */
+    [class^="preview-round_guessMapContainer__"] {
+      visibility: hidden;
     }
 
     [class^="round-score-screen_button__"] button,
-    [class^="preview-round_startRoundButton__"] button{
+    [class^="preview-round_startRoundButton__"] button {
       font-family: "kaneda-gothic", sans-serif;
       font-weight: 900;
       font-size: 36px;
@@ -188,7 +193,7 @@
       --box-shadow: none;
     }
     [class^="round-score-screen_button__"]:hover button,
-    [class^="preview-round_startRoundButton__"]:hover button{
+    [class^="preview-round_startRoundButton__"]:hover button {
       opacity: .2;
     }
 
