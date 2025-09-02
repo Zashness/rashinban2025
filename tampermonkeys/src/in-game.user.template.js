@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Rashinban Geoguessr Game Master Mode
 // @namespace    https://github.com/Zashness/rashinban2025/blob/gh-pages/tampermonkeys/out/in-game.user.js
-// @version      1.0.1
+// @version      1.0.2
 // @description  Game Master Mode mods for Rashinban2025
 // @author       Zashness
 // @match        https://www.geoguessr.com/*
@@ -282,16 +282,17 @@
   document.body.appendChild(sponsorContainer);
 
   const logoUrlPrefix =
-    'https://raw.githubusercontent.com/Zashness/rashinban2025/refs/heads/gh-pages/assets/logos/';
+    'https://raw.githubusercontent.com/Zashness/rashinban2025/refs/heads/gh-pages/';
   const logos = [
-    { src: logoUrlPrefix + 'red-tokyo.png' },
-    { src: logoUrlPrefix + 'rashinban-logo.png' },
-    { src: logoUrlPrefix + 'geoguessr-logo.png' },
+    { src: logoUrlPrefix + 'assets/logos/red-tokyo.png' },
+    { src: logoUrlPrefix + 'assets/logos/TAMURA_BUILDS__color.png' },
+    { src: logoUrlPrefix + 'assets/logos/spicescode.png' },
+    { src: logoUrlPrefix + 'assets/logos/geoguessr-logo.png' },
+    { src: logoUrlPrefix + 'assets/logos/geoguessr-record_logo.png' },
   ];
   initSponsorMarquee({
-    container: 'sponsor-marquee',
+    containerId: 'sponsor-marquee',
     logos: logos,
-    speed: 40,
     bottom: 120,
   });
 })();
