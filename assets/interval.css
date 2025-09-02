@@ -196,8 +196,8 @@ body {
 .bottombar {
   position: absolute;
   width: 1920px;
-  height: 46px;
-  top: 1034px;
+  height: 120px;
+  bottom: 0;
   z-index: 1;
   background-color: #ff3030;
 }

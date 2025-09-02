@@ -4,15 +4,17 @@
 
 const defaultLogos = [
   { src: 'assets/logos/red-tokyo.png' },
-  { src: 'assets/logos/rashinban-logo.png' },
+  { src: 'assets/logos/TAMURA_BUILDS__color.png' },
+  { src: 'assets/logos/spicescode.png' },
   { src: 'assets/logos/geoguessr-logo.png' },
+  { src: 'assets/logos/geoguessr-record_logo.png' },
 ];
 
 export async function initSponsorMarquee({
   containerId = 'sponsor-marquee',
   logos = defaultLogos,
   speed = 40, // px/sec
-  gap = 60, // px
+  gap = 72, // px
   height = 64, // px
   bottom = 142, // px, distance of the logos' center from the bottom of the screen
 } = {}) {

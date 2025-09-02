@@ -6,6 +6,7 @@
   bottom: var(--bottom, 84px);
   transform: translateY(50%);
   overflow: hidden;
+  z-index: 2;
 }
 
 .sponsor-track {

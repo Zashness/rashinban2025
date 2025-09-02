@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <title>Overlay X</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/marquee.css" />
     <link rel="stylesheet" href="assets/interval.css" />
     <link rel="modulepreload" href="assets/js/consts.js" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -52,12 +53,29 @@
       </div>
 
       <div id="error"></div>
-      <img src="assets/images/logo.svg" id="logo" />
       <div class="bottombar"></div>
+
+      <div class="sponsor-marquee" id="sponsor-marquee"></div>
     </div>
 
     <script type="module">
       import { SHEET_ID, OVERLAYS_TAB_ID } from './assets/js/consts.js';
+      import { initSponsorMarquee } from './assets/js/marquee.js';
+
+      const logos = [
+        { src: 'assets/logos/red-tokyo.png' },
+        { src: 'assets/logos/TAMURA_BUILDS__color.png' },
+        { src: 'assets/logos/spicescode.png' },
+        { src: 'assets/logos/geoguessr-logo.png' },
+        { src: 'assets/logos/geoguessr-record_logo.png' },
+        { src: 'assets/logos/AltoIP-logo.png' },
+      ];
+
+      initSponsorMarquee({
+        containerId: 'sponsor-marquee',
+        logos: logos,
+        bottom: 60,
+      });
 
       let papaData;
 
@@ -314,12 +332,12 @@
         const p2Class = p2Az ? 'name-kaneda' : 'name-noto';
 
         document.getElementById('next-match').innerHTML = `
-          <p class="game-name">
-            <span class="${p1Class}">${playerOneName}</span>
-            <span class="versus" style="margin-right:${p2Az ? '18px' : '12px'};">VS</span>
-            <span class="${p2Class}">${playerTwoName}</span>
-          </p>
-        `;
+              <p class="game-name">
+                <span class="${p1Class}">${playerOneName}</span>
+                <span class="versus" style="margin-right:${p2Az ? '18px' : '12px'};">VS</span>
+                <span class="${p2Class}">${playerTwoName}</span>
+              </p>
+            `;
       }
 
       function fetchData() {

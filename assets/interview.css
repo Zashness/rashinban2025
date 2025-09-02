@@ -38,7 +38,6 @@ body {
   transition: opacity 600ms ease;
 }
 
-#sponsor-marquee.visible,
 #last-match.visible,
 #interview.visible {
   display: flex;
@@ -48,9 +47,10 @@ body {
   align-items: center;
 }
 
-/* #sponsor-marquee > img {
-  height: 85px;
-} */
+#sponsor-marquee.visible {
+  visibility: visible;
+  opacity: 1;
+}
 
 .interview-label {
   margin-left: 12px;
