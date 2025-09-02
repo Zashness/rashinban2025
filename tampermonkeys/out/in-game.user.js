@@ -288,11 +288,11 @@
  */
 
 const defaultLogos = [
-  { src: 'assets/logos/red-tokyo.png' },
-  { src: 'assets/logos/TAMURA_BUILDS__color.png' },
-  { src: 'assets/logos/spicescode.png' },
+  { src: 'assets/logos/red-tokyo-logo.svg' },
+  { src: 'assets/logos/tamura-builds-white.svg' },
+  { src: 'assets/logos/spicescode-white.svg' },
   { src: 'assets/logos/geoguessr-logo.png' },
-  { src: 'assets/logos/geoguessr-record_logo.png' },
+  { src: 'assets/logos/geoguessr-record.svg' },
 ];
 
 async function initSponsorMarquee({
@@ -376,11 +376,11 @@ function waitForImages(root) {
   const logoUrlPrefix =
     'https://raw.githubusercontent.com/Zashness/rashinban2025/refs/heads/gh-pages/';
   const logos = [
-    { src: logoUrlPrefix + 'assets/logos/red-tokyo.png' },
-    { src: logoUrlPrefix + 'assets/logos/TAMURA_BUILDS__color.png' },
-    { src: logoUrlPrefix + 'assets/logos/spicescode.png' },
+    { src: logoUrlPrefix + 'assets/logos/red-tokyo-logo.svg' },
+    { src: logoUrlPrefix + 'assets/logos/tamura-builds-white.svg' },
+    { src: logoUrlPrefix + 'assets/logos/spicescode-white.svg' },
     { src: logoUrlPrefix + 'assets/logos/geoguessr-logo.png' },
-    { src: logoUrlPrefix + 'assets/logos/geoguessr-record_logo.png' },
+    { src: logoUrlPrefix + 'assets/logos/geoguessr-record.svg' },
   ];
   initSponsorMarquee({
     containerId: 'sponsor-marquee',

@@ -3,11 +3,11 @@
  */
 
 const defaultLogos = [
-  { src: 'assets/logos/red-tokyo.png' },
-  { src: 'assets/logos/TAMURA_BUILDS__color.png' },
-  { src: 'assets/logos/spicescode.png' },
+  { src: 'assets/logos/red-tokyo-logo.svg' },
+  { src: 'assets/logos/tamura-builds-white.svg' },
+  { src: 'assets/logos/spicescode-white.svg' },
   { src: 'assets/logos/geoguessr-logo.png' },
-  { src: 'assets/logos/geoguessr-record_logo.png' },
+  { src: 'assets/logos/geoguessr-record.svg' },
 ];
 
 export async function initSponsorMarquee({

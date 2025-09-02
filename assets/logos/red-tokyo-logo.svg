@@ -1,0 +1,2220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 148.6 71.3">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3 {
+        fill: none;
+      }
+
+      .cls-4 {
+        filter: url(#drop-shadow-1);
+      }
+
+      .cls-5 {
+        filter: url(#drop-shadow-3);
+      }
+
+      .cls-6 {
+        filter: url(#drop-shadow-2);
+      }
+
+      .cls-7 {
+        filter: url(#drop-shadow-6);
+      }
+
+      .cls-8 {
+        filter: url(#drop-shadow-7);
+      }
+
+      .cls-9 {
+        filter: url(#drop-shadow-5);
+      }
+
+      .cls-10 {
+        filter: url(#drop-shadow-4);
+      }
+
+      .cls-11 {
+        font-size: 100px;
+      }
+
+      .cls-11, .cls-12, .cls-13, .cls-14, .cls-15, .cls-16, .cls-17, .cls-18, .cls-19, .cls-20, .cls-21, .cls-22, .cls-23, .cls-24, .cls-25, .cls-26, .cls-27, .cls-28, .cls-29 {
+        fill: #fff;
+      }
+
+      .cls-30 {
+        fill: url(#_名称未設定グラデーション_8);
+      }
+
+      .cls-30, .cls-31, .cls-32, .cls-33 {
+        mix-blend-mode: multiply;
+      }
+
+      .cls-30, .cls-34 {
+        opacity: .7;
+      }
+
+      .cls-12 {
+        font-size: 230px;
+      }
+
+      .cls-12, .cls-35, .cls-25, .cls-26, .cls-28, .cls-29, .cls-36, .cls-37, .cls-38, .cls-39 {
+        font-family: BebasKai, 'Bebas Kai';
+      }
+
+      .cls-31 {
+        opacity: .6;
+      }
+
+      .cls-32 {
+        opacity: .4;
+      }
+
+      .cls-40 {
+        font-size: 28px;
+      }
+
+      .cls-40, .cls-41, .cls-42, .cls-19 {
+        font-family: HiraginoSans-W6-83pv-RKSJ-H, 'Hiragino Sans';
+      }
+
+      .cls-41, .cls-43, .cls-20 {
+        font-size: 24px;
+      }
+
+      .cls-42, .cls-19 {
+        font-size: 18px;
+      }
+
+      .cls-44 {
+        fill: #969696;
+      }
+
+      .cls-13, .cls-14, .cls-16, .cls-21, .cls-45 {
+        font-family: Impact, Impact;
+      }
+
+      .cls-13, .cls-45, .cls-26, .cls-37 {
+        font-size: 130px;
+      }
+
+      .cls-14 {
+        font-size: 61.7px;
+      }
+
+      .cls-15, .cls-46 {
+        opacity: .8;
+      }
+
+      .cls-16 {
+        font-size: 207.9px;
+      }
+
+      .cls-2 {
+        stroke-width: 1px;
+      }
+
+      .cls-2, .cls-3 {
+        stroke: #000;
+      }
+
+      .cls-2, .cls-3, .cls-23 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-47 {
+        isolation: isolate;
+      }
+
+      .cls-43, .cls-20, .cls-22 {
+        font-family: HiraginoSans-W3-83pv-RKSJ-H, 'Hiragino Sans';
+      }
+
+      .cls-48 {
+        letter-spacing: .2em;
+      }
+
+      .cls-49 {
+        clip-path: url(#clippath-17);
+      }
+
+      .cls-50 {
+        clip-path: url(#clippath-19);
+      }
+
+      .cls-51 {
+        clip-path: url(#clippath-11);
+      }
+
+      .cls-52 {
+        clip-path: url(#clippath-16);
+      }
+
+      .cls-53 {
+        clip-path: url(#clippath-18);
+      }
+
+      .cls-54 {
+        clip-path: url(#clippath-10);
+      }
+
+      .cls-55 {
+        clip-path: url(#clippath-15);
+      }
+
+      .cls-56 {
+        clip-path: url(#clippath-13);
+      }
+
+      .cls-57 {
+        clip-path: url(#clippath-14);
+      }
+
+      .cls-58 {
+        clip-path: url(#clippath-12);
+      }
+
+      .cls-59 {
+        clip-path: url(#clippath-30);
+      }
+
+      .cls-60 {
+        clip-path: url(#clippath-27);
+      }
+
+      .cls-61 {
+        clip-path: url(#clippath-29);
+      }
+
+      .cls-62 {
+        clip-path: url(#clippath-26);
+      }
+
+      .cls-63 {
+        clip-path: url(#clippath-28);
+      }
+
+      .cls-64 {
+        clip-path: url(#clippath-20);
+      }
+
+      .cls-65 {
+        clip-path: url(#clippath-21);
+      }
+
+      .cls-66 {
+        clip-path: url(#clippath-22);
+      }
+
+      .cls-67 {
+        clip-path: url(#clippath-23);
+      }
+
+      .cls-68 {
+        clip-path: url(#clippath-24);
+      }
+
+      .cls-69 {
+        clip-path: url(#clippath-25);
+      }
+
+      .cls-70 {
+        fill: #e1241b;
+      }
+
+      .cls-71, .cls-28, .cls-38 {
+        font-size: 48px;
+      }
+
+      .cls-72 {
+        clip-path: url(#clippath-1);
+      }
+
+      .cls-73 {
+        clip-path: url(#clippath-3);
+      }
+
+      .cls-74 {
+        clip-path: url(#clippath-4);
+      }
+
+      .cls-75 {
+        clip-path: url(#clippath-2);
+      }
+
+      .cls-76 {
+        clip-path: url(#clippath-7);
+      }
+
+      .cls-77 {
+        clip-path: url(#clippath-6);
+      }
+
+      .cls-78 {
+        clip-path: url(#clippath-9);
+      }
+
+      .cls-79 {
+        clip-path: url(#clippath-8);
+      }
+
+      .cls-80 {
+        clip-path: url(#clippath-5);
+      }
+
+      .cls-81, .cls-36 {
+        font-size: 72px;
+      }
+
+      .cls-82 {
+        font-size: 14px;
+      }
+
+      .cls-82, .cls-17 {
+        font-family: HiraginoSans-W4-83pv-RKSJ-H, 'Hiragino Sans';
+      }
+
+      .cls-17 {
+        font-size: 105px;
+        letter-spacing: .1em;
+      }
+
+      .cls-21 {
+        font-size: 64px;
+        letter-spacing: .2em;
+      }
+
+      .cls-22 {
+        font-size: 42px;
+      }
+
+      .cls-83 {
+        fill: red;
+      }
+
+      .cls-23 {
+        stroke: #fff;
+      }
+
+      .cls-84 {
+        letter-spacing: -.5em;
+      }
+
+      .cls-24 {
+        font-size: 27.5px;
+      }
+
+      .cls-24, .cls-85 {
+        font-family: KozGoPr6N-Regular-83pv-RKSJ-H, 'Kozuka Gothic Pr6N';
+      }
+
+      .cls-25 {
+        font-size: 140px;
+      }
+
+      .cls-27 {
+        font-family: UDKakugoC80Pro-B-83pv-RKSJ-H, 'FOT-UDKakugoC80 Pro';
+        font-size: 36px;
+      }
+
+      .cls-29 {
+        font-size: 40px;
+      }
+
+      .cls-86 {
+        clip-path: url(#clippath);
+      }
+
+      .cls-39 {
+        font-size: 170px;
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-1" x="-75.8" y="93.4" width="1920" height="1080"/>
+    </clipPath>
+    <clipPath id="clippath-1">
+      <rect class="cls-1" x="18.2" y="1773.4" width="400" height="833.3"/>
+    </clipPath>
+    <clipPath id="clippath-2">
+      <rect class="cls-1" x="462.2" y="1773.4" width="400" height="833.3"/>
+    </clipPath>
+    <clipPath id="clippath-3">
+      <rect class="cls-1" x="906.2" y="1773.4" width="400" height="833.3"/>
+    </clipPath>
+    <clipPath id="clippath-4">
+      <rect class="cls-1" x="1350.2" y="1773.4" width="400" height="833.3"/>
+    </clipPath>
+    <clipPath id="clippath-5">
+      <rect class="cls-1" x="2784.2" y="1881.1" width="640" height="400"/>
+    </clipPath>
+    <clipPath id="clippath-6">
+      <rect class="cls-1" x="2104.2" y="1881.1" width="640" height="400"/>
+    </clipPath>
+    <clipPath id="clippath-7">
+      <rect class="cls-1" x="3464.2" y="1881.1" width="640" height="400"/>
+    </clipPath>
+    <clipPath id="clippath-8">
+      <rect class="cls-1" x="2144.2" y="93.4" width="1920" height="1080"/>
+    </clipPath>
+    <clipPath id="clippath-9">
+      <rect class="cls-1" x="2144.2" y="5188.5" width="1920" height="1200"/>
+    </clipPath>
+    <filter id="drop-shadow-1" filterUnits="userSpaceOnUse">
+      <feOffset dx="5.6" dy="5.6"/>
+      <feGaussianBlur result="blur" stdDeviation="5.6"/>
+      <feFlood flood-color="#000" flood-opacity=".8"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clippath-10">
+      <rect class="cls-1" x="2504.2" y="5385.8" width="523.5" height="700.7"/>
+    </clipPath>
+    <clipPath id="clippath-11">
+      <rect class="cls-1" x="3076" y="5385.8" width="628.2" height="700.7"/>
+    </clipPath>
+    <filter id="drop-shadow-2" filterUnits="userSpaceOnUse">
+      <feOffset dx="20" dy="20"/>
+      <feGaussianBlur result="blur-2" stdDeviation="0"/>
+      <feFlood flood-color="#000" flood-opacity="1"/>
+      <feComposite in2="blur-2" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clippath-12">
+      <rect class="cls-1" x="2364.2" y="2852.1" width="700" height="420"/>
+    </clipPath>
+    <filter id="drop-shadow-3" filterUnits="userSpaceOnUse">
+      <feOffset dx="20" dy="20"/>
+      <feGaussianBlur result="blur-3" stdDeviation="0"/>
+      <feFlood flood-color="#000" flood-opacity="1"/>
+      <feComposite in2="blur-3" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clippath-13">
+      <rect class="cls-1" x="3144.2" y="2852.1" width="700" height="420"/>
+    </clipPath>
+    <filter id="drop-shadow-4" filterUnits="userSpaceOnUse">
+      <feOffset dx="20" dy="20"/>
+      <feGaussianBlur result="blur-4" stdDeviation="0"/>
+      <feFlood flood-color="#000" flood-opacity="1"/>
+      <feComposite in2="blur-4" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clippath-14">
+      <rect class="cls-1" x="2364.2" y="3492.1" width="700" height="420"/>
+    </clipPath>
+    <filter id="drop-shadow-5" filterUnits="userSpaceOnUse">
+      <feOffset dx="20" dy="20"/>
+      <feGaussianBlur result="blur-5" stdDeviation="0"/>
+      <feFlood flood-color="#000" flood-opacity="1"/>
+      <feComposite in2="blur-5" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clippath-15">
+      <rect class="cls-1" x="3144.2" y="3492.1" width="700" height="420"/>
+    </clipPath>
+    <clipPath id="clippath-16">
+      <rect class="cls-1" x="-75.8" y="4676.7" width="1920" height="1200"/>
+    </clipPath>
+    <filter id="drop-shadow-6" filterUnits="userSpaceOnUse">
+      <feOffset dx="5.6" dy="5.6"/>
+      <feGaussianBlur result="blur-6" stdDeviation="5.6"/>
+      <feFlood flood-color="#000" flood-opacity=".8"/>
+      <feComposite in2="blur-6" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clippath-17">
+      <rect class="cls-1" x="284.2" y="4874" width="523.5" height="700.7"/>
+    </clipPath>
+    <clipPath id="clippath-18">
+      <rect class="cls-1" x="856" y="4874" width="628.2" height="700.7"/>
+    </clipPath>
+    <clipPath id="clippath-19">
+      <rect class="cls-1" x="4364.2" y="2242.8" width="1920" height="1152"/>
+    </clipPath>
+    <linearGradient id="_名称未設定グラデーション_8" data-name="名称未設定グラデーション 8" x1="5324.2" y1="2966.1" x2="5324.2" y2="2242.8" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000"/>
+    </linearGradient>
+    <clipPath id="clippath-20">
+      <rect class="cls-1" x="4364.2" y="93.4" width="1920" height="1080"/>
+    </clipPath>
+    <clipPath id="clippath-21">
+      <rect class="cls-1" x="5544.2" y="1473.4" width="740" height="650"/>
+    </clipPath>
+    <clipPath id="clippath-22">
+      <rect class="cls-1" x="5544.2" y="1473.4" width="1040" height="650"/>
+    </clipPath>
+    <clipPath id="clippath-23">
+      <rect class="cls-1" x="4364.2" y="4324.8" width="1920" height="1200"/>
+    </clipPath>
+    <filter id="drop-shadow-7" filterUnits="userSpaceOnUse">
+      <feOffset dx="5.6" dy="5.6"/>
+      <feGaussianBlur result="blur-7" stdDeviation="5.6"/>
+      <feFlood flood-color="#000" flood-opacity=".8"/>
+      <feComposite in2="blur-7" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clippath-24">
+      <rect class="cls-1" x="4724.2" y="4522.1" width="523.5" height="700.7"/>
+    </clipPath>
+    <clipPath id="clippath-25">
+      <rect class="cls-1" x="5296" y="4522.1" width="628.2" height="700.7"/>
+    </clipPath>
+    <clipPath id="clippath-26">
+      <rect class="cls-1" x="11554.2" y="903.4" width="1340" height="400"/>
+    </clipPath>
+    <clipPath id="clippath-27">
+      <rect class="cls-1" x="13774.2" y="4021.8" width="1340" height="400"/>
+    </clipPath>
+    <clipPath id="clippath-28">
+      <rect class="cls-1" x="13774.2" y="5883.9" width="1340" height="400"/>
+    </clipPath>
+    <clipPath id="clippath-29">
+      <rect class="cls-1" x="13774.2" y="902.7" width="1340" height="400"/>
+    </clipPath>
+    <clipPath id="clippath-30">
+      <rect class="cls-1" x="13774.2" y="2159.8" width="1340" height="400"/>
+    </clipPath>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.6.0, SVG Export Plug-In . SVG Version: 1.2.0 Build 709)  -->
+  <g class="cls-47">
+    <g id="_レイヤー_1" data-name="レイヤー_1">
+      <rect x="-75.8" y="1373.4" width="1920" height="783.6"/>
+      <g class="cls-86">
+        <image width="4320" height="2880" transform="translate(-163.6 72.9) scale(.5)" xlink:href="rogo-1.png"/>
+      </g>
+      <g>
+        <g>
+          <path class="cls-18" d="M102.5,136.6l4.8-4.8c-2,1.2-4.7,1-6.4-.8-2-2-2-5.4,0-7.4,2-2,5.4-2,7.4,0,1.8,1.8,2,4.4.8,6.4l4.8-4.8c-.4-1.7-1.2-3.3-2.6-4.7-3.7-3.7-9.8-3.7-13.5,0-3.7,3.7-3.7,9.8,0,13.5,1.3,1.3,2.9,2.2,4.7,2.6Z"/>
+          <g>
+            <polygon class="cls-18" points="-25.8 125.4 -19.6 131.7 3.2 131.7 -10.7 145.6 -10.7 134.8 -17 134.8 -17 160.7 -17 160.7 18.3 125.4 -25.8 125.4"/>
+            <polygon class="cls-18" points="-1.6 149.7 9.4 160.7 18.3 160.7 2.8 145.3 -1.6 149.7"/>
+          </g>
+          <g>
+            <polygon class="cls-18" points="22.7 125.4 16.4 131.7 51.7 131.7 57.9 125.4 22.7 125.4"/>
+            <polygon class="cls-18" points="51.7 160.7 57.9 154.4 28.9 154.4 28.9 134.8 22.7 134.8 22.7 160.7 51.7 160.7"/>
+            <polygon class="cls-18" points="52.3 139.9 31.7 139.9 31.7 146.2 46 146.2 52.3 139.9"/>
+          </g>
+          <polygon class="cls-18" points="86.1 125.4 62.4 125.4 56.1 131.7 83.5 131.7 91 139.2 75.8 154.4 68.6 154.4 68.6 134.8 62.4 134.8 62.4 154.4 56.1 160.7 78.4 160.7 99.9 139.2 86.1 125.4"/>
+        </g>
+        <g>
+          <g>
+            <g>
+              <polygon class="cls-18" points="106.6 148.5 98.1 145.4 98.8 144.7 106.2 147.4 106.6 148.5"/>
+              <polygon class="cls-18" points="99.7 145.1 98.8 144.7 102.1 141.5 102.4 142.4 99.7 145.1"/>
+              <polygon class="cls-18" points="103 141.4 105.5 148.1 106.6 148.5 104.2 141.8 103 141.4"/>
+            </g>
+            <g>
+              <polygon class="cls-18" points="110.1 145 107.1 136.5 106.3 137.2 109 144.6 110.1 145"/>
+              <polygon class="cls-18" points="106.7 138.1 106.3 137.2 103.1 140.5 104 140.8 106.7 138.1"/>
+              <polygon class="cls-18" points="103 141.4 109.7 143.9 110.1 145 103.4 142.5 103 141.4"/>
+            </g>
+          </g>
+          <g>
+            <polygon class="cls-18" points="107.8 135.8 108.1 136.7 112.3 132.5 112 131.6 107.8 135.8"/>
+            <polygon class="cls-18" points="112.9 140.9 113.6 141.6 117.5 137.7 117.1 136.7 112.9 140.9"/>
+            <rect class="cls-18" x="111.2" y="135.8" width=".9" height="6.4" transform="translate(-65.6 119.6) rotate(-45)"/>
+            <polygon class="cls-18" points="113.3 135.3 110.3 138.3 111 139 113.7 136.3 113.3 135.3"/>
+          </g>
+          <polygon class="cls-18" points="58.4 185.2 58.7 186.1 63.6 181.2 63.2 180.3 58.4 185.2"/>
+          <rect class="cls-18" x="63.7" y="183.2" width=".9" height="6.4" transform="translate(-113 100) rotate(-45)"/>
+          <g>
+            <polygon class="cls-18" points="64.3 180.5 67.2 177.6 66.5 177 63.9 179.6 64.3 180.5"/>
+            <path class="cls-18" d="M65.4,180.7c.2.8.5,1.5,1.1,2.1l.6-.6c-.6-.6-.9-1.5-.9-2.3l-.8.8Z"/>
+            <path class="cls-18" d="M71.7,177.6l.6-.6c-1.6-1.6-4.2-1.6-5.8,0l.6.6c1.2-1.2,3.3-1.2,4.5,0Z"/>
+            <path class="cls-18" d="M71.7,177.6l.6-.6c1.6,1.6,1.6,4.2,0,5.8l-.6-.6c1.2-1.2,1.2-3.3,0-4.5Z"/>
+            <path class="cls-18" d="M67.2,182.1l-.6.6c1.6,1.6,4.2,1.6,5.8,0l-.6-.6c-1.2,1.2-3.3,1.2-4.5,0Z"/>
+          </g>
+          <g>
+            <polygon class="cls-18" points="116.5 132.1 122 133.1 122.8 132.3 117.3 131.4 116.5 132.1"/>
+            <polygon class="cls-18" points="118.8 131.2 117.6 132.3 116.5 132.1 118.1 130.5 118.8 131.2"/>
+            <polygon class="cls-18" points="112.7 130.9 113 131.8 116.2 128.6 115.6 128 112.7 130.9"/>
+            <rect class="cls-18" x="116.1" y="130.9" width=".9" height="6.4" transform="translate(-60.7 121.7) rotate(-45)"/>
+            <path class="cls-18" d="M115.6,128l.6.6c.5-.5,1.4-.5,1.9,0s.5,1.4,0,1.9l.6.6c.9-.9.9-2.3,0-3.2s-2.3-.9-3.2,0Z"/>
+          </g>
+          <g>
+            <g>
+              <polygon class="cls-18" points="80 164.9 82.9 162 82.2 161.3 79.6 163.9 80 164.9"/>
+              <path class="cls-18" d="M81.1,165c.2.8.5,1.5,1.1,2.1l.6-.6c-.6-.6-.9-1.5-.9-2.3l-.8.8Z"/>
+              <path class="cls-18" d="M87.4,162l.6-.6c-1.6-1.6-4.2-1.6-5.8,0l.6.6c1.2-1.2,3.3-1.2,4.5,0Z"/>
+              <path class="cls-18" d="M87.4,162l.6-.6c1.6,1.6,1.6,4.2,0,5.8l-.6-.6c1.2-1.2,1.2-3.3,0-4.5Z"/>
+              <path class="cls-18" d="M82.9,166.5l-.6.6c1.6,1.6,4.2,1.6,5.8,0l-.6-.6c-1.2,1.2-3.3,1.2-4.5,0Z"/>
+            </g>
+            <g>
+              <polygon class="cls-18" points="78.2 165.3 81.3 173.8 82 173.1 78.9 164.6 78.2 165.3"/>
+              <polygon class="cls-18" points="80.9 170 75.5 168 74.8 168.8 81.3 171.1 80.9 170"/>
+            </g>
+          </g>
+          <g>
+            <polygon class="cls-18" points="75 174.1 75.1 175.1 79.3 175.8 80.1 175 75 174.1"/>
+            <polygon class="cls-18" points="75.6 177.7 70.7 172.8 70.1 173.5 75.9 179.2 75.9 179.2 75.6 177.7"/>
+            <polygon class="cls-18" points="73.3 170.2 74.7 178.1 75.9 179.2 74.1 169.4 73.3 170.2"/>
+          </g>
+          <polygon class="cls-18" points="87.3 156.2 87.7 157.1 92.6 152.3 92.2 151.3 87.3 156.2"/>
+          <rect class="cls-18" x="92.7" y="154.3" width=".9" height="6.4" transform="translate(-84 112) rotate(-45)"/>
+          <g>
+            <polygon class="cls-18" points="93.3 151.6 96.2 148.7 95.5 148 92.9 150.6 93.3 151.6"/>
+            <path class="cls-18" d="M94.4,151.7c.2.8.5,1.5,1.1,2.1l.6-.6c-.6-.6-.9-1.5-.9-2.3l-.8.8Z"/>
+            <path class="cls-18" d="M100.7,148.7l.6-.6c-1.6-1.6-4.2-1.6-5.8,0l.6.6c1.2-1.2,3.3-1.2,4.5,0Z"/>
+            <path class="cls-18" d="M100.7,148.7l.6-.6c1.6,1.6,1.6,4.2,0,5.8l-.6-.6c1.2-1.2,1.2-3.3,0-4.5Z"/>
+            <path class="cls-18" d="M96.2,153.2l-.6.6c1.6,1.6,4.2,1.6,5.8,0l-.6-.6c-1.2,1.2-3.3,1.2-4.5,0Z"/>
+          </g>
+        </g>
+      </g>
+      <g>
+        <g>
+          <path class="cls-18" d="M128.4,18.8l4.8-4.8c-2,1.2-4.7,1-6.4-.8-2-2-2-5.4,0-7.4,2-2,5.4-2,7.4,0,1.8,1.8,2,4.4.8,6.4l4.8-4.8c-.4-1.7-1.2-3.3-2.6-4.7-3.7-3.7-9.8-3.7-13.5,0-3.7,3.7-3.7,9.8,0,13.5,1.3,1.3,2.9,2.2,4.7,2.6Z"/>
+          <g>
+            <polygon class="cls-18" points="0 7.7 6.3 13.9 29 13.9 15.1 27.8 15.1 17.1 8.8 17.1 8.8 42.9 8.8 42.9 44.1 7.7 0 7.7"/>
+            <polygon class="cls-18" points="24.3 31.9 35.3 42.9 44.1 42.9 28.7 27.5 24.3 31.9"/>
+          </g>
+          <g>
+            <polygon class="cls-18" points="48.5 7.7 42.3 13.9 77.5 13.9 83.8 7.7 48.5 7.7"/>
+            <polygon class="cls-18" points="77.5 42.9 83.8 36.7 54.8 36.7 54.8 17.1 48.5 17.1 48.5 42.9 77.5 42.9"/>
+            <polygon class="cls-18" points="78.1 22.2 57.6 22.2 57.6 28.4 71.9 28.4 78.1 22.2"/>
+          </g>
+          <polygon class="cls-18" points="111.9 7.7 88.2 7.7 81.9 13.9 109.3 13.9 116.9 21.5 101.7 36.7 94.5 36.7 94.5 17.1 88.2 17.1 88.2 36.7 81.9 42.9 104.3 42.9 125.7 21.5 111.9 7.7"/>
+        </g>
+        <g>
+          <g>
+            <g>
+              <polygon class="cls-18" points="132.4 30.8 123.9 27.7 124.6 27 132 29.7 132.4 30.8"/>
+              <polygon class="cls-18" points="125.6 27.3 124.6 27 127.9 23.7 128.3 24.7 125.6 27.3"/>
+              <polygon class="cls-18" points="128.9 23.7 131.3 30.4 132.4 30.8 130 24.1 128.9 23.7"/>
+            </g>
+            <g>
+              <polygon class="cls-18" points="136 27.2 132.9 18.7 132.2 19.5 134.9 26.8 136 27.2"/>
+              <polygon class="cls-18" points="132.5 20.4 132.2 19.5 128.9 22.7 129.8 23.1 132.5 20.4"/>
+              <polygon class="cls-18" points="128.9 23.7 135.6 26.1 136 27.2 129.3 24.8 128.9 23.7"/>
+            </g>
+          </g>
+          <g>
+            <polygon class="cls-18" points="133.6 18 133.9 19 138.1 14.8 137.8 13.8 133.6 18"/>
+            <polygon class="cls-18" points="138.7 23.2 139.4 23.8 143.3 19.9 143 19 138.7 23.2"/>
+            <rect class="cls-18" x="137" y="18.1" width=".9" height="6.4" transform="translate(25.2 103.4) rotate(-45)"/>
+            <polygon class="cls-18" points="139.2 17.6 136.2 20.6 136.8 21.3 139.5 18.5 139.2 17.6"/>
+          </g>
+          <polygon class="cls-18" points="84.2 67.4 84.5 68.4 89.4 63.5 89.1 62.6 84.2 67.4"/>
+          <rect class="cls-18" x="89.6" y="65.5" width=".9" height="6.4" transform="translate(-22.2 83.8) rotate(-45)"/>
+          <g>
+            <polygon class="cls-18" points="90.1 62.8 93 59.9 92.4 59.3 89.8 61.9 90.1 62.8"/>
+            <path class="cls-18" d="M91.3,63c.2.8.5,1.5,1.1,2.1l.6-.6c-.6-.6-.9-1.5-.9-2.3l-.8.8Z"/>
+            <path class="cls-18" d="M97.5,59.9l.6-.6c-1.6-1.6-4.2-1.6-5.8,0l.6.6c1.2-1.2,3.3-1.2,4.5,0Z"/>
+            <path class="cls-18" d="M97.5,59.9l.6-.6c1.6,1.6,1.6,4.2,0,5.8l-.6-.6c1.2-1.2,1.2-3.3,0-4.5Z"/>
+            <path class="cls-18" d="M93,64.4l-.6.6c1.6,1.6,4.2,1.6,5.8,0l-.6-.6c-1.2,1.2-3.3,1.2-4.5,0Z"/>
+          </g>
+          <g>
+            <polygon class="cls-18" points="142.4 14.4 147.8 15.4 148.6 14.6 143.1 13.6 142.4 14.4"/>
+            <polygon class="cls-18" points="144.6 13.4 143.5 14.6 142.4 14.4 144 12.8 144.6 13.4"/>
+            <polygon class="cls-18" points="138.5 13.1 138.9 14.1 142.1 10.9 141.4 10.2 138.5 13.1"/>
+            <rect class="cls-18" x="141.9" y="13.1" width=".9" height="6.4" transform="translate(30.1 105.5) rotate(-45)"/>
+            <path class="cls-18" d="M141.4,10.2l.6.6c.5-.5,1.4-.5,1.9,0s.5,1.4,0,1.9l.6.6c.9-.9.9-2.3,0-3.2s-2.3-.9-3.2,0Z"/>
+          </g>
+          <g>
+            <g>
+              <polygon class="cls-18" points="105.8 47.1 108.7 44.2 108 43.6 105.4 46.2 105.8 47.1"/>
+              <path class="cls-18" d="M106.9,47.3c.2.8.5,1.5,1.1,2.1l.6-.6c-.6-.6-.9-1.5-.9-2.3l-.8.8Z"/>
+              <path class="cls-18" d="M113.2,44.2l.6-.6c-1.6-1.6-4.2-1.6-5.8,0l.6.6c1.2-1.2,3.3-1.2,4.5,0Z"/>
+              <path class="cls-18" d="M113.2,44.2l.6-.6c1.6,1.6,1.6,4.2,0,5.8l-.6-.6c1.2-1.2,1.2-3.3,0-4.5Z"/>
+              <path class="cls-18" d="M108.7,48.7l-.6.6c1.6,1.6,4.2,1.6,5.8,0l-.6-.6c-1.2,1.2-3.3,1.2-4.5,0Z"/>
+            </g>
+            <g>
+              <polygon class="cls-18" points="104 47.6 107.1 56.1 107.8 55.4 104.7 46.9 104 47.6"/>
+              <polygon class="cls-18" points="106.7 52.3 101.3 50.3 100.6 51 107.1 53.4 106.7 52.3"/>
+            </g>
+          </g>
+          <g>
+            <polygon class="cls-18" points="100.8 56.4 101 57.3 105.1 58.1 105.9 57.3 100.8 56.4"/>
+            <polygon class="cls-18" points="101.4 59.9 96.6 55.1 95.9 55.7 101.7 61.5 101.7 61.5 101.4 59.9"/>
+            <polygon class="cls-18" points="99.2 52.4 100.6 60.4 101.7 61.5 100 51.7 99.2 52.4"/>
+          </g>
+          <polygon class="cls-18" points="113.2 38.5 113.5 39.4 118.4 34.5 118 33.6 113.2 38.5"/>
+          <rect class="cls-18" x="118.5" y="36.5" width=".9" height="6.4" transform="translate(6.8 95.8) rotate(-45)"/>
+          <g>
+            <polygon class="cls-18" points="119.1 33.8 122 30.9 121.4 30.3 118.8 32.9 119.1 33.8"/>
+            <path class="cls-18" d="M120.2,34c.2.8.5,1.5,1.1,2.1l.6-.6c-.6-.6-.9-1.5-.9-2.3l-.8.8Z"/>
+            <path class="cls-18" d="M126.5,30.9l.6-.6c-1.6-1.6-4.2-1.6-5.8,0l.6.6c1.2-1.2,3.3-1.2,4.5,0Z"/>
+            <path class="cls-18" d="M126.5,30.9l.6-.6c1.6,1.6,1.6,4.2,0,5.8l-.6-.6c1.2-1.2,1.2-3.3,0-4.5Z"/>
+            <path class="cls-18" d="M122,35.4l-.6.6c1.6,1.6,4.2,1.6,5.8,0l-.6-.6c-1.2,1.2-3.3,1.2-4.5,0Z"/>
+          </g>
+        </g>
+      </g>
+      <g class="cls-46">
+        <g>
+          <path class="cls-18" d="M1111.6,625l19-19c-7.9,4.9-18.5,3.9-25.3-3-8.1-8.1-8.1-21.1,0-29.2,8.1-8.1,21.1-8.1,29.2,0,6.9,6.9,7.9,17.4,3,25.3l19-19c-1.5-6.7-4.8-13.1-10-18.3-14.6-14.6-38.4-14.6-53,0-14.6,14.6-14.6,38.4,0,53,5.2,5.2,11.6,8.5,18.3,10Z"/>
+          <g>
+            <polygon class="cls-18" points="607.1 581.2 631.7 605.8 721.1 605.8 666.5 660.4 666.5 618 641.9 618 641.9 719.7 641.9 719.7 780.4 581.2 607.1 581.2"/>
+            <polygon class="cls-18" points="702.5 676.5 745.7 719.7 780.4 719.7 719.9 659.1 702.5 676.5"/>
+          </g>
+          <g>
+            <polygon class="cls-18" points="797.8 581.2 773.2 605.8 911.8 605.8 936.4 581.2 797.8 581.2"/>
+            <polygon class="cls-18" points="911.8 719.7 936.4 695.1 822.4 695.1 822.4 618 797.8 618 797.8 719.7 911.8 719.7"/>
+            <polygon class="cls-18" points="914.1 638.2 833.4 638.2 833.4 662.7 889.6 662.7 914.1 638.2"/>
+          </g>
+          <polygon class="cls-18" points="1047 581.2 953.7 581.2 929.2 605.8 1036.8 605.8 1066.5 635.4 1006.7 695.1 978.3 695.1 978.3 618 953.7 618 953.7 695.1 929.2 719.7 1016.9 719.7 1101.2 635.4 1047 581.2"/>
+        </g>
+        <g>
+          <g>
+            <g>
+              <polygon class="cls-18" points="1127.6 672 1094.2 659.8 1097 657 1126 667.6 1127.6 672"/>
+              <polygon class="cls-18" points="1100.7 658.4 1097 657 1109.8 644.2 1111.2 647.9 1100.7 658.4"/>
+              <polygon class="cls-18" points="1113.6 644.1 1123.2 670.4 1127.6 672 1118 645.7 1113.6 644.1"/>
+            </g>
+            <g>
+              <polygon class="cls-18" points="1141.5 658 1129.4 624.6 1126.6 627.4 1137.1 656.4 1141.5 658"/>
+              <polygon class="cls-18" points="1127.9 631.1 1126.6 627.4 1113.7 640.3 1117.4 641.7 1127.9 631.1"/>
+              <polygon class="cls-18" points="1113.6 644.1 1139.9 653.6 1141.5 658 1115.2 648.5 1113.6 644.1"/>
+            </g>
+          </g>
+          <g>
+            <polygon class="cls-18" points="1132.2 621.9 1133.5 625.6 1150 609 1148.7 605.3 1132.2 621.9"/>
+            <polygon class="cls-18" points="1152.4 642.1 1154.9 644.6 1170.3 629.3 1168.9 625.6 1152.4 642.1"/>
+            <rect class="cls-18" x="1145.5" y="622" width="3.6" height="25" transform="translate(-112.6 997.1) rotate(-45)"/>
+            <polygon class="cls-18" points="1154.1 620.2 1142.3 632 1144.8 634.5 1155.4 623.9 1154.1 620.2"/>
+          </g>
+          <polygon class="cls-18" points="938 816 939.3 819.7 958.5 800.6 957.1 796.9 938 816"/>
+          <rect class="cls-18" x="959.1" y="808.4" width="3.6" height="25" transform="translate(-299.1 919.9) rotate(-45)"/>
+          <g>
+            <polygon class="cls-18" points="961.3 797.8 972.7 786.4 970.1 783.9 959.9 794.1 961.3 797.8"/>
+            <path class="cls-18" d="M965.7,798.4c.6,3,2.1,5.9,4.4,8.2l2.5-2.5c-2.5-2.5-3.7-5.7-3.7-9l-3.3,3.3Z"/>
+            <path class="cls-18" d="M990.4,786.4l2.5-2.5c-6.3-6.3-16.5-6.3-22.8,0l2.5,2.5c4.9-4.9,12.8-4.9,17.7,0Z"/>
+            <path class="cls-18" d="M990.4,786.4l2.5-2.5c6.3,6.3,6.3,16.5,0,22.8l-2.5-2.5c4.9-4.9,4.9-12.8,0-17.7Z"/>
+            <path class="cls-18" d="M972.7,804.1l-2.5,2.5c6.3,6.3,16.5,6.3,22.8,0l-2.5-2.5c-4.9,4.9-12.8,4.9-17.7,0Z"/>
+          </g>
+          <g>
+            <polygon class="cls-18" points="1166.7 607.6 1188.2 611.4 1191.2 608.4 1169.7 604.6 1166.7 607.6"/>
+            <polygon class="cls-18" points="1175.5 603.8 1171 608.4 1166.7 607.6 1173 601.3 1175.5 603.8"/>
+            <polygon class="cls-18" points="1151.5 602.5 1152.8 606.2 1165.4 593.7 1162.9 591.1 1151.5 602.5"/>
+            <rect class="cls-18" x="1164.9" y="602.7" width="3.6" height="25" transform="translate(-93.3 1005.1) rotate(-45)"/>
+            <path class="cls-18" d="M1162.9,591.1l2.5,2.5c2.1-2.1,5.5-2.1,7.6,0s2.1,5.5,0,7.6l2.5,2.5c3.5-3.5,3.5-9.2,0-12.6-3.5-3.5-9.2-3.5-12.6,0Z"/>
+          </g>
+          <g>
+            <g>
+              <polygon class="cls-18" points="1022.9 736.2 1034.3 724.8 1031.7 722.3 1021.5 732.5 1022.9 736.2"/>
+              <path class="cls-18" d="M1027.3,736.8c.6,3,2.1,5.9,4.4,8.2l2.5-2.5c-2.5-2.5-3.7-5.7-3.7-9l-3.3,3.3Z"/>
+              <path class="cls-18" d="M1052,724.8l2.5-2.5c-6.3-6.3-16.5-6.3-22.8,0l2.5,2.5c4.9-4.9,12.8-4.9,17.7,0Z"/>
+              <path class="cls-18" d="M1052,724.8l2.5-2.5c6.3,6.3,6.3,16.5,0,22.8l-2.5-2.5c4.9-4.9,4.9-12.8,0-17.7Z"/>
+              <path class="cls-18" d="M1034.3,742.5l-2.5,2.5c6.3,6.3,16.5,6.3,22.8,0l-2.5-2.5c-4.9,4.9-12.8,4.9-17.7,0Z"/>
+            </g>
+            <g>
+              <polygon class="cls-18" points="1015.9 738.1 1028.1 771.5 1030.9 768.7 1018.7 735.3 1015.9 738.1"/>
+              <polygon class="cls-18" points="1026.4 756.4 1005.3 748.7 1002.5 751.5 1028 760.7 1026.4 756.4"/>
+            </g>
+          </g>
+          <g>
+            <polygon class="cls-18" points="1003.3 772.6 1003.9 776.3 1020.4 779.2 1023.4 776.1 1003.3 772.6"/>
+            <polygon class="cls-18" points="1005.7 786.6 986.6 767.4 984.1 769.9 1006.8 792.7 1006.8 792.7 1005.7 786.6"/>
+            <polygon class="cls-18" points="996.9 757.1 1002.4 788.3 1006.8 792.7 1000 754 996.9 757.1"/>
+          </g>
+          <polygon class="cls-18" points="1051.9 702.1 1053.2 705.8 1072.4 686.7 1071.1 683 1051.9 702.1"/>
+          <rect class="cls-18" x="1073" y="694.5" width="3.6" height="25" transform="translate(-185.2 967.1) rotate(-45)"/>
+          <g>
+            <polygon class="cls-18" points="1075.2 683.9 1086.6 672.5 1084 670 1073.8 680.2 1075.2 683.9"/>
+            <path class="cls-18" d="M1079.6,684.5c.6,3,2.1,5.9,4.4,8.2l2.5-2.5c-2.5-2.5-3.7-5.7-3.7-9l-3.3,3.3Z"/>
+            <path class="cls-18" d="M1104.3,672.5l2.5-2.5c-6.3-6.3-16.5-6.3-22.8,0l2.5,2.5c4.9-4.9,12.8-4.9,17.7,0Z"/>
+            <path class="cls-18" d="M1104.3,672.5l2.5-2.5c6.3,6.3,6.3,16.5,0,22.8l-2.5-2.5c4.9-4.9,4.9-12.8,0-17.7Z"/>
+            <path class="cls-18" d="M1086.6,690.2l-2.5,2.5c6.3,6.3,16.5,6.3,22.8,0l-2.5-2.5c-4.9,4.9-12.8,4.9-17.7,0Z"/>
+          </g>
+        </g>
+      </g>
+      <g>
+        <rect class="cls-18" x="1744.2" y="129.4" width="50" height="8"/>
+        <rect class="cls-18" x="1744.2" y="149.4" width="50" height="8"/>
+        <rect class="cls-18" x="1744.2" y="169.4" width="50" height="8"/>
+      </g>
+      <rect x="-75.8" y="1173.4" width="1920" height="200"/>
+      <g>
+        <text class="cls-22" transform="translate(387.1 1284)"><tspan x="0" y="0">本 日 の 営 業 時 間</tspan></text>
+        <text class="cls-21" transform="translate(825 1289.6)"><tspan x="0" y="0">00</tspan><tspan x="99.3" y="-7">:</tspan><tspan x="127.6" y="0">00 ~ 00</tspan><tspan x="428.6" y="-7">:</tspan><tspan x="456.9" y="0">00</tspan></text>
+      </g>
+      <g>
+        <g class="cls-72">
+          <image id="Gc3EE3" width="560" height="315" transform="translate(-75.2 1773.4) scale(2.6)" xlink:href="rogo-2.png"/>
+        </g>
+        <text class="cls-16" transform="translate(51.5 2409)"><tspan x="0" y="0">1F</tspan></text>
+        <text class="cls-14" transform="translate(51.5 2483)"><tspan x="0" y="0">WONDER</tspan><tspan x="0" y="70">ZONE</tspan></text>
+      </g>
+      <g>
+        <g class="cls-75">
+          <image width="4320" height="2880" transform="translate(127.1 1762.7) scale(.3)" xlink:href="rogo-3.png"/>
+        </g>
+        <rect class="cls-31" x="462.2" y="1773.4" width="400" height="833.3"/>
+        <text class="cls-16" transform="translate(495.5 2409)"><tspan x="0" y="0">3F</tspan></text>
+        <text class="cls-14" transform="translate(495.5 2483)"><tspan x="0" y="0">INSPIRATION</tspan><tspan x="0" y="70">ZONE</tspan></text>
+      </g>
+      <g>
+        <g class="cls-73">
+          <image width="1920" height="1280" transform="translate(549 1741.9) scale(.7)" xlink:href="rogo-4.png"/>
+        </g>
+        <rect class="cls-31" x="906.2" y="1773.4" width="400" height="833.3"/>
+        <text class="cls-16" transform="translate(939.5 2409)"><tspan x="0" y="0">4F</tspan></text>
+        <text class="cls-14" transform="translate(939.9 2483)"><tspan x="0" y="0">ATTRACTIONS</tspan><tspan x="0" y="70">ZONE</tspan></text>
+      </g>
+      <g>
+        <g class="cls-74">
+          <image width="4320" height="2880" transform="translate(950.3 1753.8) scale(.3)" xlink:href="rogo-5.png"/>
+        </g>
+        <rect class="cls-31" x="1350.2" y="1773.4" width="400" height="833.3"/>
+        <text class="cls-16" transform="translate(1383.5 2409)"><tspan x="0" y="0">5F</tspan></text>
+        <text class="cls-14" transform="translate(1383.5 2483)"><tspan x="0" y="0">ULTIMATE</tspan><tspan x="0" y="70">ZONE</tspan></text>
+      </g>
+      <text class="cls-20" transform="translate(18.2 1657.8)"><tspan x="0" y="0">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間</tspan><tspan class="cls-84" x="1512" y="0">、</tspan><tspan x="0" y="42">行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています</tspan><tspan class="cls-84" x="1392" y="42">。</tspan></text>
+      <text class="cls-13" transform="translate(22.5 1575.6)"><tspan x="0" y="0">ATTRACTIONS</tspan></text>
+      <g>
+        <rect x="84.2" y="2706.7" width="1600" height="1870"/>
+        <text class="cls-13" transform="translate(731 2923.1)"><tspan x="0" y="0">EVENT</tspan></text>
+        <g>
+          <g>
+            <rect class="cls-44" x="234.2" y="3016.1" width="400" height="300"/>
+            <g>
+              <rect class="cls-18" x="234.2" y="3316.1" width="400" height="100"/>
+              <g>
+                <text class="cls-42" transform="translate(244.2 3359.1)"><tspan x="0" y="0">イベント名イベント名イベント名</tspan></text>
+                <text class="cls-82" transform="translate(244.2 3383.5)"><tspan x="0" y="0">開催期間 00.00〜00.00</tspan></text>
+              </g>
+            </g>
+          </g>
+          <g>
+            <rect class="cls-44" x="684.2" y="3016.1" width="400" height="300"/>
+            <g>
+              <rect class="cls-18" x="684.2" y="3316.1" width="400" height="100"/>
+              <g>
+                <text class="cls-42" transform="translate(694.2 3359.1)"><tspan x="0" y="0">イベント名イベント名イベント名</tspan></text>
+                <text class="cls-82" transform="translate(694.2 3383.5)"><tspan x="0" y="0">開催期間 00.00〜00.00</tspan></text>
+              </g>
+            </g>
+          </g>
+          <g>
+            <rect class="cls-44" x="1134.2" y="3016.1" width="400" height="300"/>
+            <g>
+              <rect class="cls-18" x="1134.2" y="3316.1" width="400" height="100"/>
+              <g>
+                <text class="cls-42" transform="translate(1144.2 3359.1)"><tspan x="0" y="0">イベント名イベント名イベント名</tspan></text>
+                <text class="cls-82" transform="translate(1144.2 3383.5)"><tspan x="0" y="0">開催期間 00.00〜00.00</tspan></text>
+              </g>
+            </g>
+          </g>
+        </g>
+        <g>
+          <g>
+            <rect class="cls-44" x="234.2" y="3496.1" width="400" height="300"/>
+            <g>
+              <rect class="cls-18" x="234.2" y="3796.1" width="400" height="100"/>
+              <g>
+                <text class="cls-42" transform="translate(244.2 3839.1)"><tspan x="0" y="0">イベント名イベント名イベント名</tspan></text>
+                <text class="cls-82" transform="translate(244.2 3863.5)"><tspan x="0" y="0">開催期間 00.00〜00.00</tspan></text>
+              </g>
+            </g>
+          </g>
+          <g>
+            <rect class="cls-44" x="684.2" y="3496.1" width="400" height="300"/>
+            <g>
+              <rect class="cls-18" x="684.2" y="3796.1" width="400" height="100"/>
+              <g>
+                <text class="cls-42" transform="translate(694.2 3839.1)"><tspan x="0" y="0">イベント名イベント名イベント名</tspan></text>
+                <text class="cls-82" transform="translate(694.2 3863.5)"><tspan x="0" y="0">開催期間 00.00〜00.00</tspan></text>
+              </g>
+            </g>
+          </g>
+          <g>
+            <rect class="cls-44" x="1134.2" y="3496.1" width="400" height="300"/>
+            <g>
+              <rect class="cls-18" x="1134.2" y="3796.1" width="400" height="100"/>
+              <g>
+                <text class="cls-42" transform="translate(1144.2 3839.1)"><tspan x="0" y="0">イベント名イベント名イベント名</tspan></text>
+                <text class="cls-82" transform="translate(1144.2 3863.5)"><tspan x="0" y="0">開催期間 00.00〜00.00</tspan></text>
+              </g>
+            </g>
+          </g>
+        </g>
+        <g>
+          <g>
+            <rect class="cls-44" x="234.2" y="3976.1" width="400" height="300"/>
+            <g>
+              <rect class="cls-18" x="234.2" y="4276.1" width="400" height="100"/>
+              <g>
+                <text class="cls-42" transform="translate(244.2 4319.1)"><tspan x="0" y="0">イベント名イベント名イベント名</tspan></text>
+                <text class="cls-82" transform="translate(244.2 4343.5)"><tspan x="0" y="0">開催期間 00.00〜00.00</tspan></text>
+              </g>
+            </g>
+          </g>
+          <g>
+            <rect class="cls-44" x="684.2" y="3976.1" width="400" height="300"/>
+            <g>
+              <rect class="cls-18" x="684.2" y="4276.1" width="400" height="100"/>
+              <g>
+                <text class="cls-42" transform="translate(694.2 4319.1)"><tspan x="0" y="0">イベント名イベント名イベント名</tspan></text>
+                <text class="cls-82" transform="translate(694.2 4343.5)"><tspan x="0" y="0">開催期間 00.00〜00.00</tspan></text>
+              </g>
+            </g>
+          </g>
+          <g>
+            <rect class="cls-44" x="1134.2" y="3976.1" width="400" height="300"/>
+            <g>
+              <rect class="cls-18" x="1134.2" y="4276.1" width="400" height="100"/>
+              <g>
+                <text class="cls-42" transform="translate(1144.2 4319.1)"><tspan x="0" y="0">イベント名イベント名イベント名</tspan></text>
+                <text class="cls-82" transform="translate(1144.2 4343.5)"><tspan x="0" y="0">開催期間 00.00〜00.00</tspan></text>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g>
+        <g>
+          <rect class="cls-18" x="-25.8" y="5976.7" width="1050" height="900"/>
+          <text class="cls-45" transform="translate(22.5 6132.1)"><tspan x="0" y="0">NEWS</tspan></text>
+          <g>
+            <text class="cls-41" transform="translate(18.2 6240.2)"><tspan x="0" y="0">2024.00.00</tspan></text>
+            <text class="cls-41" transform="translate(211.9 6240.2)"><tspan x="0" y="0">テキストテキストテキストテキストテキストテキストテキストテキスト</tspan><tspan x="0" y="42">テキストテキストテキストテキストテキストテキストテキスト</tspan></text>
+            <line class="cls-2" x1="24.2" y1="6313" x2="974.2" y2="6313"/>
+          </g>
+          <g>
+            <text class="cls-41" transform="translate(18.2 6394.1)"><tspan x="0" y="0">2024.00.00</tspan></text>
+            <text class="cls-41" transform="translate(211.9 6394.1)"><tspan x="0" y="0">テキストテキストテキストテキストテキストテキストテキストテキスト</tspan><tspan x="0" y="42">テキストテキストテキストテキストテキストテキストテキスト</tspan></text>
+            <line class="cls-2" x1="24.2" y1="6466.8" x2="974.2" y2="6466.8"/>
+          </g>
+          <g>
+            <text class="cls-41" transform="translate(18.2 6547.9)"><tspan x="0" y="0">2024.00.00</tspan></text>
+            <text class="cls-41" transform="translate(211.9 6547.9)"><tspan x="0" y="0">テキストテキストテキストテキストテキストテキストテキストテキスト</tspan><tspan x="0" y="42">テキストテキストテキストテキストテキストテキストテキスト</tspan></text>
+            <line class="cls-2" x1="24.2" y1="6620.7" x2="974.2" y2="6620.7"/>
+          </g>
+          <g>
+            <text class="cls-41" transform="translate(18.2 6701.8)"><tspan x="0" y="0">2024.00.00</tspan></text>
+            <text class="cls-41" transform="translate(211.9 6701.8)"><tspan x="0" y="0">テキストテキストテキストテキストテキストテキストテキストテキスト</tspan><tspan x="0" y="42">テキストテキストテキストテキストテキストテキストテキスト</tspan></text>
+            <line class="cls-2" x1="24.2" y1="6774.5" x2="974.2" y2="6774.5"/>
+          </g>
+        </g>
+        <g>
+          <image id="sXo69d" width="670" height="186" transform="translate(1084.2 5994.7)" xlink:href="rogo-6.png"/>
+          <image id="Wkx1k4" width="670" height="186" transform="translate(1084.2 6220.7)" xlink:href="rogo-7.png"/>
+          <image id="Ru6g6A" width="670" height="186" transform="translate(1084.2 6446.7)" xlink:href="rogo-8.png"/>
+          <image id="OnPUmk" width="670" height="186" transform="translate(1084.2 6672.7)" xlink:href="rogo-9.png"/>
+        </g>
+      </g>
+      <image id="EuZQ13" width="2880" height="966" transform="translate(-75.8 7576.7) scale(.7)" xlink:href="rogo-10.png"/>
+      <rect class="cls-33" x="6584.2" y="93.4" width="1920" height="1080"/>
+      <g>
+        <g>
+          <path class="cls-18" d="M6762.5,136.6l4.8-4.8c-2,1.2-4.7,1-6.4-.8-2-2-2-5.4,0-7.4,2-2,5.4-2,7.4,0,1.8,1.8,2,4.4.8,6.4l4.8-4.8c-.4-1.7-1.2-3.3-2.6-4.7-3.7-3.7-9.8-3.7-13.5,0-3.7,3.7-3.7,9.8,0,13.5,1.3,1.3,2.9,2.2,4.7,2.6Z"/>
+          <g>
+            <polygon class="cls-18" points="6634.2 125.4 6640.4 131.7 6663.2 131.7 6649.3 145.6 6649.3 134.8 6643 134.8 6643 160.7 6643 160.7 6678.3 125.4 6634.2 125.4"/>
+            <polygon class="cls-18" points="6658.4 149.7 6669.4 160.7 6678.3 160.7 6662.8 145.3 6658.4 149.7"/>
+          </g>
+          <g>
+            <polygon class="cls-18" points="6682.7 125.4 6676.4 131.7 6711.7 131.7 6717.9 125.4 6682.7 125.4"/>
+            <polygon class="cls-18" points="6711.7 160.7 6717.9 154.4 6688.9 154.4 6688.9 134.8 6682.7 134.8 6682.7 160.7 6711.7 160.7"/>
+            <polygon class="cls-18" points="6712.3 139.9 6691.7 139.9 6691.7 146.2 6706 146.2 6712.3 139.9"/>
+          </g>
+          <polygon class="cls-18" points="6746.1 125.4 6722.4 125.4 6716.1 131.7 6743.5 131.7 6751 139.2 6735.8 154.4 6728.6 154.4 6728.6 134.8 6722.4 134.8 6722.4 154.4 6716.1 160.7 6738.4 160.7 6759.9 139.2 6746.1 125.4"/>
+        </g>
+        <g>
+          <g>
+            <g>
+              <polygon class="cls-18" points="6766.6 148.5 6758.1 145.4 6758.8 144.7 6766.2 147.4 6766.6 148.5"/>
+              <polygon class="cls-18" points="6759.7 145.1 6758.8 144.7 6762.1 141.5 6762.4 142.4 6759.7 145.1"/>
+              <polygon class="cls-18" points="6763 141.4 6765.5 148.1 6766.6 148.5 6764.2 141.8 6763 141.4"/>
+            </g>
+            <g>
+              <polygon class="cls-18" points="6770.1 145 6767.1 136.5 6766.3 137.2 6769 144.6 6770.1 145"/>
+              <polygon class="cls-18" points="6766.7 138.1 6766.3 137.2 6763.1 140.5 6764 140.8 6766.7 138.1"/>
+              <polygon class="cls-18" points="6763 141.4 6769.7 143.9 6770.1 145 6763.4 142.5 6763 141.4"/>
+            </g>
+          </g>
+          <g>
+            <polygon class="cls-18" points="6767.8 135.8 6768.1 136.7 6772.3 132.5 6772 131.6 6767.8 135.8"/>
+            <polygon class="cls-18" points="6772.9 140.9 6773.6 141.6 6777.5 137.7 6777.1 136.7 6772.9 140.9"/>
+            <rect class="cls-18" x="6771.2" y="135.8" width=".9" height="6.4" transform="translate(1885.1 4829) rotate(-45)"/>
+            <polygon class="cls-18" points="6773.3 135.3 6770.3 138.3 6771 139 6773.7 136.3 6773.3 135.3"/>
+          </g>
+          <polygon class="cls-18" points="6718.4 185.2 6718.7 186.1 6723.6 181.2 6723.2 180.3 6718.4 185.2"/>
+          <rect class="cls-18" x="6723.7" y="183.2" width=".9" height="6.4" transform="translate(1837.6 4809.3) rotate(-45)"/>
+          <g>
+            <polygon class="cls-18" points="6724.3 180.5 6727.2 177.6 6726.5 177 6723.9 179.6 6724.3 180.5"/>
+            <path class="cls-18" d="M6725.4,180.7c.2.8.5,1.5,1.1,2.1l.6-.6c-.6-.6-.9-1.5-.9-2.3l-.8.8Z"/>
+            <path class="cls-18" d="M6731.7,177.6l.6-.6c-1.6-1.6-4.2-1.6-5.8,0l.6.6c1.2-1.2,3.3-1.2,4.5,0Z"/>
+            <path class="cls-18" d="M6731.7,177.6l.6-.6c1.6,1.6,1.6,4.2,0,5.8l-.6-.6c1.2-1.2,1.2-3.3,0-4.5Z"/>
+            <path class="cls-18" d="M6727.2,182.1l-.6.6c1.6,1.6,4.2,1.6,5.8,0l-.6-.6c-1.2,1.2-3.3,1.2-4.5,0Z"/>
+          </g>
+          <g>
+            <polygon class="cls-18" points="6776.5 132.1 6782 133.1 6782.8 132.3 6777.3 131.4 6776.5 132.1"/>
+            <polygon class="cls-18" points="6778.8 131.2 6777.6 132.3 6776.5 132.1 6778.1 130.5 6778.8 131.2"/>
+            <polygon class="cls-18" points="6772.7 130.9 6773 131.8 6776.2 128.6 6775.6 128 6772.7 130.9"/>
+            <rect class="cls-18" x="6776.1" y="130.9" width=".9" height="6.4" transform="translate(1890 4831) rotate(-45)"/>
+            <path class="cls-18" d="M6775.6,128l.6.6c.5-.5,1.4-.5,1.9,0s.5,1.4,0,1.9l.6.6c.9-.9.9-2.3,0-3.2-.9-.9-2.3-.9-3.2,0Z"/>
+          </g>
+          <g>
+            <g>
+              <polygon class="cls-18" points="6740 164.9 6742.9 162 6742.2 161.3 6739.6 163.9 6740 164.9"/>
+              <path class="cls-18" d="M6741.1,165c.2.8.5,1.5,1.1,2.1l.6-.6c-.6-.6-.9-1.5-.9-2.3l-.8.8Z"/>
+              <path class="cls-18" d="M6747.4,162l.6-.6c-1.6-1.6-4.2-1.6-5.8,0l.6.6c1.2-1.2,3.3-1.2,4.5,0Z"/>
+              <path class="cls-18" d="M6747.4,162l.6-.6c1.6,1.6,1.6,4.2,0,5.8l-.6-.6c1.2-1.2,1.2-3.3,0-4.5Z"/>
+              <path class="cls-18" d="M6742.9,166.5l-.6.6c1.6,1.6,4.2,1.6,5.8,0l-.6-.6c-1.2,1.2-3.3,1.2-4.5,0Z"/>
+            </g>
+            <g>
+              <polygon class="cls-18" points="6738.2 165.3 6741.3 173.8 6742 173.1 6738.9 164.6 6738.2 165.3"/>
+              <polygon class="cls-18" points="6740.9 170 6735.5 168 6734.8 168.8 6741.3 171.1 6740.9 170"/>
+            </g>
+          </g>
+          <g>
+            <polygon class="cls-18" points="6735 174.1 6735.1 175.1 6739.3 175.8 6740.1 175 6735 174.1"/>
+            <polygon class="cls-18" points="6735.6 177.7 6730.7 172.8 6730.1 173.5 6735.9 179.2 6735.9 179.2 6735.6 177.7"/>
+            <polygon class="cls-18" points="6733.3 170.2 6734.7 178.1 6735.9 179.2 6734.1 169.4 6733.3 170.2"/>
+          </g>
+          <polygon class="cls-18" points="6747.3 156.2 6747.7 157.1 6752.6 152.3 6752.2 151.3 6747.3 156.2"/>
+          <rect class="cls-18" x="6752.7" y="154.3" width=".9" height="6.4" transform="translate(1866.6 4821.3) rotate(-45)"/>
+          <g>
+            <polygon class="cls-18" points="6753.3 151.6 6756.2 148.7 6755.5 148 6752.9 150.6 6753.3 151.6"/>
+            <path class="cls-18" d="M6754.4,151.7c.2.8.5,1.5,1.1,2.1l.6-.6c-.6-.6-.9-1.5-.9-2.3l-.8.8Z"/>
+            <path class="cls-18" d="M6760.7,148.7l.6-.6c-1.6-1.6-4.2-1.6-5.8,0l.6.6c1.2-1.2,3.3-1.2,4.5,0Z"/>
+            <path class="cls-18" d="M6760.7,148.7l.6-.6c1.6,1.6,1.6,4.2,0,5.8l-.6-.6c1.2-1.2,1.2-3.3,0-4.5Z"/>
+            <path class="cls-18" d="M6756.2,153.2l-.6.6c1.6,1.6,4.2,1.6,5.8,0l-.6-.6c-1.2,1.2-3.3,1.2-4.5,0Z"/>
+          </g>
+        </g>
+      </g>
+      <g>
+        <rect class="cls-18" x="8404.2" y="149.4" width="50" height="8" transform="translate(2360.4 6005.2) rotate(-45)"/>
+        <rect class="cls-18" x="8404.2" y="149.4" width="50" height="8" transform="translate(2577.3 -5915.4) rotate(45)"/>
+      </g>
+      <rect class="cls-33" x="11024.2" y="93.4" width="1920" height="580"/>
+      <g>
+        <g>
+          <path class="cls-18" d="M11202.5,136.6l4.8-4.8c-2,1.2-4.7,1-6.4-.8-2-2-2-5.4,0-7.4,2-2,5.4-2,7.4,0,1.8,1.8,2,4.4.8,6.4l4.8-4.8c-.4-1.7-1.2-3.3-2.6-4.7-3.7-3.7-9.8-3.7-13.5,0-3.7,3.7-3.7,9.8,0,13.5,1.3,1.3,2.9,2.2,4.7,2.6Z"/>
+          <g>
+            <polygon class="cls-18" points="11074.2 125.4 11080.4 131.7 11103.2 131.7 11089.3 145.6 11089.3 134.8 11083 134.8 11083 160.7 11083 160.7 11118.3 125.4 11074.2 125.4"/>
+            <polygon class="cls-18" points="11098.4 149.7 11109.4 160.7 11118.3 160.7 11102.8 145.3 11098.4 149.7"/>
+          </g>
+          <g>
+            <polygon class="cls-18" points="11122.7 125.4 11116.4 131.7 11151.7 131.7 11157.9 125.4 11122.7 125.4"/>
+            <polygon class="cls-18" points="11151.7 160.7 11157.9 154.4 11128.9 154.4 11128.9 134.8 11122.7 134.8 11122.7 160.7 11151.7 160.7"/>
+            <polygon class="cls-18" points="11152.3 139.9 11131.7 139.9 11131.7 146.2 11146 146.2 11152.3 139.9"/>
+          </g>
+          <polygon class="cls-18" points="11186.1 125.4 11162.4 125.4 11156.1 131.7 11183.5 131.7 11191 139.2 11175.8 154.4 11168.6 154.4 11168.6 134.8 11162.4 134.8 11162.4 154.4 11156.1 160.7 11178.4 160.7 11199.9 139.2 11186.1 125.4"/>
+        </g>
+        <g>
+          <g>
+            <g>
+              <polygon class="cls-18" points="11206.6 148.5 11198.1 145.4 11198.8 144.7 11206.2 147.4 11206.6 148.5"/>
+              <polygon class="cls-18" points="11199.7 145.1 11198.8 144.7 11202.1 141.5 11202.4 142.4 11199.7 145.1"/>
+              <polygon class="cls-18" points="11203 141.4 11205.5 148.1 11206.6 148.5 11204.2 141.8 11203 141.4"/>
+            </g>
+            <g>
+              <polygon class="cls-18" points="11210.1 145 11207.1 136.5 11206.3 137.2 11209 144.6 11210.1 145"/>
+              <polygon class="cls-18" points="11206.7 138.1 11206.3 137.2 11203.1 140.5 11204 140.8 11206.7 138.1"/>
+              <polygon class="cls-18" points="11203 141.4 11209.7 143.9 11210.1 145 11203.4 142.5 11203 141.4"/>
+            </g>
+          </g>
+          <g>
+            <polygon class="cls-18" points="11207.8 135.8 11208.1 136.7 11212.3 132.5 11212 131.6 11207.8 135.8"/>
+            <polygon class="cls-18" points="11212.9 140.9 11213.6 141.6 11217.5 137.7 11217.1 136.7 11212.9 140.9"/>
+            <rect class="cls-18" x="11211.2" y="135.8" width=".9" height="6.4" transform="translate(3185.5 7968.5) rotate(-45)"/>
+            <polygon class="cls-18" points="11213.3 135.3 11210.3 138.3 11211 139 11213.7 136.3 11213.3 135.3"/>
+          </g>
+          <polygon class="cls-18" points="11158.4 185.2 11158.7 186.1 11163.6 181.2 11163.2 180.3 11158.4 185.2"/>
+          <rect class="cls-18" x="11163.7" y="183.2" width=".9" height="6.4" transform="translate(3138.1 7948.9) rotate(-45)"/>
+          <g>
+            <polygon class="cls-18" points="11164.3 180.5 11167.2 177.6 11166.5 177 11163.9 179.6 11164.3 180.5"/>
+            <path class="cls-18" d="M11165.4,180.7c.2.8.5,1.5,1.1,2.1l.6-.6c-.6-.6-.9-1.5-.9-2.3l-.8.8Z"/>
+            <path class="cls-18" d="M11171.7,177.6l.6-.6c-1.6-1.6-4.2-1.6-5.8,0l.6.6c1.2-1.2,3.3-1.2,4.5,0Z"/>
+            <path class="cls-18" d="M11171.7,177.6l.6-.6c1.6,1.6,1.6,4.2,0,5.8l-.6-.6c1.2-1.2,1.2-3.3,0-4.5Z"/>
+            <path class="cls-18" d="M11167.2,182.1l-.6.6c1.6,1.6,4.2,1.6,5.8,0l-.6-.6c-1.2,1.2-3.3,1.2-4.5,0Z"/>
+          </g>
+          <g>
+            <polygon class="cls-18" points="11216.5 132.1 11222 133.1 11222.8 132.3 11217.3 131.4 11216.5 132.1"/>
+            <polygon class="cls-18" points="11218.8 131.2 11217.6 132.3 11216.5 132.1 11218.1 130.5 11218.8 131.2"/>
+            <polygon class="cls-18" points="11212.7 130.9 11213 131.8 11216.2 128.6 11215.6 128 11212.7 130.9"/>
+            <rect class="cls-18" x="11216.1" y="130.9" width=".9" height="6.4" transform="translate(3190.4 7970.6) rotate(-45)"/>
+            <path class="cls-18" d="M11215.6,128l.6.6c.5-.5,1.4-.5,1.9,0,.5.5.5,1.4,0,1.9l.6.6c.9-.9.9-2.3,0-3.2-.9-.9-2.3-.9-3.2,0Z"/>
+          </g>
+          <g>
+            <g>
+              <polygon class="cls-18" points="11180 164.9 11182.9 162 11182.2 161.3 11179.6 163.9 11180 164.9"/>
+              <path class="cls-18" d="M11181.1,165c.2.8.5,1.5,1.1,2.1l.6-.6c-.6-.6-.9-1.5-.9-2.3l-.8.8Z"/>
+              <path class="cls-18" d="M11187.4,162l.6-.6c-1.6-1.6-4.2-1.6-5.8,0l.6.6c1.2-1.2,3.3-1.2,4.5,0Z"/>
+              <path class="cls-18" d="M11187.4,162l.6-.6c1.6,1.6,1.6,4.2,0,5.8l-.6-.6c1.2-1.2,1.2-3.3,0-4.5Z"/>
+              <path class="cls-18" d="M11182.9,166.5l-.6.6c1.6,1.6,4.2,1.6,5.8,0l-.6-.6c-1.2,1.2-3.3,1.2-4.5,0Z"/>
+            </g>
+            <g>
+              <polygon class="cls-18" points="11178.2 165.3 11181.3 173.8 11182 173.1 11178.9 164.6 11178.2 165.3"/>
+              <polygon class="cls-18" points="11180.9 170 11175.5 168 11174.8 168.8 11181.3 171.1 11180.9 170"/>
+            </g>
+          </g>
+          <g>
+            <polygon class="cls-18" points="11175 174.1 11175.1 175.1 11179.3 175.8 11180.1 175 11175 174.1"/>
+            <polygon class="cls-18" points="11175.6 177.7 11170.7 172.8 11170.1 173.5 11175.9 179.2 11175.9 179.2 11175.6 177.7"/>
+            <polygon class="cls-18" points="11173.3 170.2 11174.7 178.1 11175.9 179.2 11174.1 169.4 11173.3 170.2"/>
+          </g>
+          <polygon class="cls-18" points="11187.3 156.2 11187.7 157.1 11192.6 152.3 11192.2 151.3 11187.3 156.2"/>
+          <rect class="cls-18" x="11192.7" y="154.3" width=".9" height="6.4" transform="translate(3167.1 7960.9) rotate(-45)"/>
+          <g>
+            <polygon class="cls-18" points="11193.3 151.6 11196.2 148.7 11195.5 148 11192.9 150.6 11193.3 151.6"/>
+            <path class="cls-18" d="M11194.4,151.7c.2.8.5,1.5,1.1,2.1l.6-.6c-.6-.6-.9-1.5-.9-2.3l-.8.8Z"/>
+            <path class="cls-18" d="M11200.7,148.7l.6-.6c-1.6-1.6-4.2-1.6-5.8,0l.6.6c1.2-1.2,3.3-1.2,4.5,0Z"/>
+            <path class="cls-18" d="M11200.7,148.7l.6-.6c1.6,1.6,1.6,4.2,0,5.8l-.6-.6c1.2-1.2,1.2-3.3,0-4.5Z"/>
+            <path class="cls-18" d="M11196.2,153.2l-.6.6c1.6,1.6,4.2,1.6,5.8,0l-.6-.6c-1.2,1.2-3.3,1.2-4.5,0Z"/>
+          </g>
+        </g>
+      </g>
+      <g>
+        <rect class="cls-18" x="12844.2" y="129.4" width="50" height="8"/>
+        <rect class="cls-18" x="12844.2" y="149.4" width="50" height="8"/>
+        <rect class="cls-18" x="12844.2" y="169.4" width="50" height="8"/>
+      </g>
+      <image id="EuZQ13-2" data-name="EuZQ13" width="2880" height="966" transform="translate(11024.2 8088.5) scale(.7)" xlink:href="rogo-11.png"/>
+      <rect class="cls-33" x="13244.2" y="93.4" width="1920" height="580"/>
+      <g>
+        <g>
+          <path class="cls-18" d="M13422.5,136.6l4.8-4.8c-2,1.2-4.7,1-6.4-.8-2-2-2-5.4,0-7.4,2-2,5.4-2,7.4,0,1.8,1.8,2,4.4.8,6.4l4.8-4.8c-.4-1.7-1.2-3.3-2.6-4.7-3.7-3.7-9.8-3.7-13.5,0-3.7,3.7-3.7,9.8,0,13.5,1.3,1.3,2.9,2.2,4.7,2.6Z"/>
+          <g>
+            <polygon class="cls-18" points="13294.2 125.4 13300.4 131.7 13323.2 131.7 13309.3 145.6 13309.3 134.8 13303 134.8 13303 160.7 13303 160.7 13338.3 125.4 13294.2 125.4"/>
+            <polygon class="cls-18" points="13318.4 149.7 13329.4 160.7 13338.3 160.7 13322.8 145.3 13318.4 149.7"/>
+          </g>
+          <g>
+            <polygon class="cls-18" points="13342.7 125.4 13336.4 131.7 13371.7 131.7 13377.9 125.4 13342.7 125.4"/>
+            <polygon class="cls-18" points="13371.7 160.7 13377.9 154.4 13348.9 154.4 13348.9 134.8 13342.7 134.8 13342.7 160.7 13371.7 160.7"/>
+            <polygon class="cls-18" points="13372.3 139.9 13351.7 139.9 13351.7 146.2 13366 146.2 13372.3 139.9"/>
+          </g>
+          <polygon class="cls-18" points="13406.1 125.4 13382.4 125.4 13376.1 131.7 13403.5 131.7 13411 139.2 13395.8 154.4 13388.6 154.4 13388.6 134.8 13382.4 134.8 13382.4 154.4 13376.1 160.7 13398.4 160.7 13419.9 139.2 13406.1 125.4"/>
+        </g>
+        <g>
+          <g>
+            <g>
+              <polygon class="cls-18" points="13426.6 148.5 13418.1 145.4 13418.8 144.7 13426.2 147.4 13426.6 148.5"/>
+              <polygon class="cls-18" points="13419.7 145.1 13418.8 144.7 13422.1 141.5 13422.4 142.4 13419.7 145.1"/>
+              <polygon class="cls-18" points="13423 141.4 13425.5 148.1 13426.6 148.5 13424.2 141.8 13423 141.4"/>
+            </g>
+            <g>
+              <polygon class="cls-18" points="13430.1 145 13427.1 136.5 13426.3 137.2 13429 144.6 13430.1 145"/>
+              <polygon class="cls-18" points="13426.7 138.1 13426.3 137.2 13423.1 140.5 13424 140.8 13426.7 138.1"/>
+              <polygon class="cls-18" points="13423 141.4 13429.7 143.9 13430.1 145 13423.4 142.5 13423 141.4"/>
+            </g>
+          </g>
+          <g>
+            <polygon class="cls-18" points="13427.8 135.8 13428.1 136.7 13432.3 132.5 13432 131.6 13427.8 135.8"/>
+            <polygon class="cls-18" points="13432.9 140.9 13433.6 141.6 13437.5 137.7 13437.1 136.7 13432.9 140.9"/>
+            <rect class="cls-18" x="13431.2" y="135.8" width=".9" height="6.4" transform="translate(3835.8 9538.3) rotate(-45)"/>
+            <polygon class="cls-18" points="13433.3 135.3 13430.3 138.3 13431 139 13433.7 136.3 13433.3 135.3"/>
+          </g>
+          <polygon class="cls-18" points="13378.4 185.2 13378.7 186.1 13383.6 181.2 13383.2 180.3 13378.4 185.2"/>
+          <rect class="cls-18" x="13383.7" y="183.2" width=".9" height="6.4" transform="translate(3788.3 9518.6) rotate(-45)"/>
+          <g>
+            <polygon class="cls-18" points="13384.3 180.5 13387.2 177.6 13386.5 177 13383.9 179.6 13384.3 180.5"/>
+            <path class="cls-18" d="M13385.4,180.7c.2.8.5,1.5,1.1,2.1l.6-.6c-.6-.6-.9-1.5-.9-2.3l-.8.8Z"/>
+            <path class="cls-18" d="M13391.7,177.6l.6-.6c-1.6-1.6-4.2-1.6-5.8,0l.6.6c1.2-1.2,3.3-1.2,4.5,0Z"/>
+            <path class="cls-18" d="M13391.7,177.6l.6-.6c1.6,1.6,1.6,4.2,0,5.8l-.6-.6c1.2-1.2,1.2-3.3,0-4.5Z"/>
+            <path class="cls-18" d="M13387.2,182.1l-.6.6c1.6,1.6,4.2,1.6,5.8,0l-.6-.6c-1.2,1.2-3.3,1.2-4.5,0Z"/>
+          </g>
+          <g>
+            <polygon class="cls-18" points="13436.5 132.1 13442 133.1 13442.8 132.3 13437.3 131.4 13436.5 132.1"/>
+            <polygon class="cls-18" points="13438.8 131.2 13437.6 132.3 13436.5 132.1 13438.1 130.5 13438.8 131.2"/>
+            <polygon class="cls-18" points="13432.7 130.9 13433 131.8 13436.2 128.6 13435.6 128 13432.7 130.9"/>
+            <rect class="cls-18" x="13436.1" y="130.9" width=".9" height="6.4" transform="translate(3840.7 9540.3) rotate(-45)"/>
+            <path class="cls-18" d="M13435.6,128l.6.6c.5-.5,1.4-.5,1.9,0s.5,1.4,0,1.9l.6.6c.9-.9.9-2.3,0-3.2-.9-.9-2.3-.9-3.2,0Z"/>
+          </g>
+          <g>
+            <g>
+              <polygon class="cls-18" points="13400 164.9 13402.9 162 13402.2 161.3 13399.6 163.9 13400 164.9"/>
+              <path class="cls-18" d="M13401.1,165c.2.8.5,1.5,1.1,2.1l.6-.6c-.6-.6-.9-1.5-.9-2.3l-.8.8Z"/>
+              <path class="cls-18" d="M13407.4,162l.6-.6c-1.6-1.6-4.2-1.6-5.8,0l.6.6c1.2-1.2,3.3-1.2,4.5,0Z"/>
+              <path class="cls-18" d="M13407.4,162l.6-.6c1.6,1.6,1.6,4.2,0,5.8l-.6-.6c1.2-1.2,1.2-3.3,0-4.5Z"/>
+              <path class="cls-18" d="M13402.9,166.5l-.6.6c1.6,1.6,4.2,1.6,5.8,0l-.6-.6c-1.2,1.2-3.3,1.2-4.5,0Z"/>
+            </g>
+            <g>
+              <polygon class="cls-18" points="13398.2 165.3 13401.3 173.8 13402 173.1 13398.9 164.6 13398.2 165.3"/>
+              <polygon class="cls-18" points="13400.9 170 13395.5 168 13394.8 168.8 13401.3 171.1 13400.9 170"/>
+            </g>
+          </g>
+          <g>
+            <polygon class="cls-18" points="13395 174.1 13395.1 175.1 13399.3 175.8 13400.1 175 13395 174.1"/>
+            <polygon class="cls-18" points="13395.6 177.7 13390.7 172.8 13390.1 173.5 13395.9 179.2 13395.9 179.2 13395.6 177.7"/>
+            <polygon class="cls-18" points="13393.3 170.2 13394.7 178.1 13395.9 179.2 13394.1 169.4 13393.3 170.2"/>
+          </g>
+          <polygon class="cls-18" points="13407.3 156.2 13407.7 157.1 13412.6 152.3 13412.2 151.3 13407.3 156.2"/>
+          <rect class="cls-18" x="13412.7" y="154.3" width=".9" height="6.4" transform="translate(3817.3 9530.7) rotate(-45)"/>
+          <g>
+            <polygon class="cls-18" points="13413.3 151.6 13416.2 148.7 13415.5 148 13412.9 150.6 13413.3 151.6"/>
+            <path class="cls-18" d="M13414.4,151.7c.2.8.5,1.5,1.1,2.1l.6-.6c-.6-.6-.9-1.5-.9-2.3l-.8.8Z"/>
+            <path class="cls-18" d="M13420.7,148.7l.6-.6c-1.6-1.6-4.2-1.6-5.8,0l.6.6c1.2-1.2,3.3-1.2,4.5,0Z"/>
+            <path class="cls-18" d="M13420.7,148.7l.6-.6c1.6,1.6,1.6,4.2,0,5.8l-.6-.6c1.2-1.2,1.2-3.3,0-4.5Z"/>
+            <path class="cls-18" d="M13416.2,153.2l-.6.6c1.6,1.6,4.2,1.6,5.8,0l-.6-.6c-1.2,1.2-3.3,1.2-4.5,0Z"/>
+          </g>
+        </g>
+      </g>
+      <g>
+        <rect class="cls-18" x="15064.2" y="129.4" width="50" height="8"/>
+        <rect class="cls-18" x="15064.2" y="149.4" width="50" height="8"/>
+        <rect class="cls-18" x="15064.2" y="169.4" width="50" height="8"/>
+      </g>
+      <image id="EuZQ13-3" data-name="EuZQ13" width="2880" height="966" transform="translate(13244.2 8088.5) scale(.7)" xlink:href="rogo-12.png"/>
+      <rect class="cls-33" x="8804.2" y="93.4" width="1920" height="580"/>
+      <g>
+        <g>
+          <path class="cls-18" d="M8982.5,136.6l4.8-4.8c-2,1.2-4.7,1-6.4-.8-2-2-2-5.4,0-7.4s5.4-2,7.4,0c1.8,1.8,2,4.4.8,6.4l4.8-4.8c-.4-1.7-1.2-3.3-2.6-4.7-3.7-3.7-9.8-3.7-13.5,0-3.7,3.7-3.7,9.8,0,13.5,1.3,1.3,2.9,2.2,4.7,2.6Z"/>
+          <g>
+            <polygon class="cls-18" points="8854.2 125.4 8860.4 131.7 8883.2 131.7 8869.3 145.6 8869.3 134.8 8863 134.8 8863 160.7 8863 160.7 8898.3 125.4 8854.2 125.4"/>
+            <polygon class="cls-18" points="8878.4 149.7 8889.4 160.7 8898.3 160.7 8882.8 145.3 8878.4 149.7"/>
+          </g>
+          <g>
+            <polygon class="cls-18" points="8902.7 125.4 8896.4 131.7 8931.7 131.7 8937.9 125.4 8902.7 125.4"/>
+            <polygon class="cls-18" points="8931.7 160.7 8937.9 154.4 8908.9 154.4 8908.9 134.8 8902.7 134.8 8902.7 160.7 8931.7 160.7"/>
+            <polygon class="cls-18" points="8932.3 139.9 8911.7 139.9 8911.7 146.2 8926 146.2 8932.3 139.9"/>
+          </g>
+          <polygon class="cls-18" points="8966.1 125.4 8942.4 125.4 8936.1 131.7 8963.5 131.7 8971 139.2 8955.8 154.4 8948.6 154.4 8948.6 134.8 8942.4 134.8 8942.4 154.4 8936.1 160.7 8958.4 160.7 8979.9 139.2 8966.1 125.4"/>
+        </g>
+        <g>
+          <g>
+            <g>
+              <polygon class="cls-18" points="8986.6 148.5 8978.1 145.4 8978.8 144.7 8986.2 147.4 8986.6 148.5"/>
+              <polygon class="cls-18" points="8979.7 145.1 8978.8 144.7 8982.1 141.5 8982.4 142.4 8979.7 145.1"/>
+              <polygon class="cls-18" points="8983 141.4 8985.5 148.1 8986.6 148.5 8984.2 141.8 8983 141.4"/>
+            </g>
+            <g>
+              <polygon class="cls-18" points="8990.1 145 8987.1 136.5 8986.3 137.2 8989 144.6 8990.1 145"/>
+              <polygon class="cls-18" points="8986.7 138.1 8986.3 137.2 8983.1 140.5 8984 140.8 8986.7 138.1"/>
+              <polygon class="cls-18" points="8983 141.4 8989.7 143.9 8990.1 145 8983.4 142.5 8983 141.4"/>
+            </g>
+          </g>
+          <g>
+            <polygon class="cls-18" points="8987.8 135.8 8988.1 136.7 8992.3 132.5 8992 131.6 8987.8 135.8"/>
+            <polygon class="cls-18" points="8992.9 140.9 8993.6 141.6 8997.5 137.7 8997.1 136.7 8992.9 140.9"/>
+            <rect class="cls-18" x="8991.2" y="135.8" width=".9" height="6.4" transform="translate(2535.3 6398.7) rotate(-45)"/>
+            <polygon class="cls-18" points="8993.3 135.3 8990.3 138.3 8991 139 8993.7 136.3 8993.3 135.3"/>
+          </g>
+          <polygon class="cls-18" points="8938.4 185.2 8938.7 186.1 8943.6 181.2 8943.2 180.3 8938.4 185.2"/>
+          <rect class="cls-18" x="8943.7" y="183.2" width=".9" height="6.4" transform="translate(2487.9 6379.1) rotate(-45)"/>
+          <g>
+            <polygon class="cls-18" points="8944.3 180.5 8947.2 177.6 8946.5 177 8943.9 179.6 8944.3 180.5"/>
+            <path class="cls-18" d="M8945.4,180.7c.2.8.5,1.5,1.1,2.1l.6-.6c-.6-.6-.9-1.5-.9-2.3l-.8.8Z"/>
+            <path class="cls-18" d="M8951.7,177.6l.6-.6c-1.6-1.6-4.2-1.6-5.8,0l.6.6c1.2-1.2,3.3-1.2,4.5,0Z"/>
+            <path class="cls-18" d="M8951.7,177.6l.6-.6c1.6,1.6,1.6,4.2,0,5.8l-.6-.6c1.2-1.2,1.2-3.3,0-4.5Z"/>
+            <path class="cls-18" d="M8947.2,182.1l-.6.6c1.6,1.6,4.2,1.6,5.8,0l-.6-.6c-1.2,1.2-3.3,1.2-4.5,0Z"/>
+          </g>
+          <g>
+            <polygon class="cls-18" points="8996.5 132.1 9002 133.1 9002.8 132.3 8997.3 131.4 8996.5 132.1"/>
+            <polygon class="cls-18" points="8998.8 131.2 8997.6 132.3 8996.5 132.1 8998.1 130.5 8998.8 131.2"/>
+            <polygon class="cls-18" points="8992.7 130.9 8993 131.8 8996.2 128.6 8995.6 128 8992.7 130.9"/>
+            <rect class="cls-18" x="8996.1" y="130.9" width=".9" height="6.4" transform="translate(2540.2 6400.8) rotate(-45)"/>
+            <path class="cls-18" d="M8995.6,128l.6.6c.5-.5,1.4-.5,1.9,0,.5.5.5,1.4,0,1.9l.6.6c.9-.9.9-2.3,0-3.2-.9-.9-2.3-.9-3.2,0Z"/>
+          </g>
+          <g>
+            <g>
+              <polygon class="cls-18" points="8960 164.9 8962.9 162 8962.2 161.3 8959.6 163.9 8960 164.9"/>
+              <path class="cls-18" d="M8961.1,165c.2.8.5,1.5,1.1,2.1l.6-.6c-.6-.6-.9-1.5-.9-2.3l-.8.8Z"/>
+              <path class="cls-18" d="M8967.4,162l.6-.6c-1.6-1.6-4.2-1.6-5.8,0l.6.6c1.2-1.2,3.3-1.2,4.5,0Z"/>
+              <path class="cls-18" d="M8967.4,162l.6-.6c1.6,1.6,1.6,4.2,0,5.8l-.6-.6c1.2-1.2,1.2-3.3,0-4.5Z"/>
+              <path class="cls-18" d="M8962.9,166.5l-.6.6c1.6,1.6,4.2,1.6,5.8,0l-.6-.6c-1.2,1.2-3.3,1.2-4.5,0Z"/>
+            </g>
+            <g>
+              <polygon class="cls-18" points="8958.2 165.3 8961.3 173.8 8962 173.1 8958.9 164.6 8958.2 165.3"/>
+              <polygon class="cls-18" points="8960.9 170 8955.5 168 8954.8 168.8 8961.3 171.1 8960.9 170"/>
+            </g>
+          </g>
+          <g>
+            <polygon class="cls-18" points="8955 174.1 8955.1 175.1 8959.3 175.8 8960.1 175 8955 174.1"/>
+            <polygon class="cls-18" points="8955.6 177.7 8950.7 172.8 8950.1 173.5 8955.9 179.2 8955.9 179.2 8955.6 177.7"/>
+            <polygon class="cls-18" points="8953.3 170.2 8954.7 178.1 8955.9 179.2 8954.1 169.4 8953.3 170.2"/>
+          </g>
+          <polygon class="cls-18" points="8967.3 156.2 8967.7 157.1 8972.6 152.3 8972.2 151.3 8967.3 156.2"/>
+          <rect class="cls-18" x="8972.7" y="154.3" width=".9" height="6.4" transform="translate(2516.8 6391.1) rotate(-45)"/>
+          <g>
+            <polygon class="cls-18" points="8973.3 151.6 8976.2 148.7 8975.5 148 8972.9 150.6 8973.3 151.6"/>
+            <path class="cls-18" d="M8974.4,151.7c.2.8.5,1.5,1.1,2.1l.6-.6c-.6-.6-.9-1.5-.9-2.3l-.8.8Z"/>
+            <path class="cls-18" d="M8980.7,148.7l.6-.6c-1.6-1.6-4.2-1.6-5.8,0l.6.6c1.2-1.2,3.3-1.2,4.5,0Z"/>
+            <path class="cls-18" d="M8980.7,148.7l.6-.6c1.6,1.6,1.6,4.2,0,5.8l-.6-.6c1.2-1.2,1.2-3.3,0-4.5Z"/>
+            <path class="cls-18" d="M8976.2,153.2l-.6.6c1.6,1.6,4.2,1.6,5.8,0l-.6-.6c-1.2,1.2-3.3,1.2-4.5,0Z"/>
+          </g>
+        </g>
+      </g>
+      <g>
+        <rect class="cls-18" x="10624.2" y="129.4" width="50" height="8"/>
+        <rect class="cls-18" x="10624.2" y="149.4" width="50" height="8"/>
+        <rect class="cls-18" x="10624.2" y="169.4" width="50" height="8"/>
+      </g>
+      <image id="EuZQ13-4" data-name="EuZQ13" width="2880" height="966" transform="translate(8804.2 8088.5) scale(.7)" xlink:href="rogo-13.png"/>
+      <polygon class="cls-70" points="4064.2 4258.5 2144.2 3208.5 2144.2 2186.9 4064.2 2158.5 4064.2 4258.5"/>
+      <g>
+        <g class="cls-80">
+          <image width="1620" height="1080" transform="translate(2729.3 1831.1) scale(.5)" xlink:href="rogo-14.png"/>
+        </g>
+        <g class="cls-77">
+          <image width="1620" height="1080" transform="translate(2061 1838.9) scale(.4)" xlink:href="rogo-15.png"/>
+        </g>
+        <g class="cls-76">
+          <image width="4320" height="2880" transform="translate(3424.6 1841.3) scale(.2)" xlink:href="rogo-16.png"/>
+        </g>
+      </g>
+      <g class="cls-79">
+        <image width="4320" height="2880" transform="translate(2056.4 72.9) scale(.5)" xlink:href="rogo-17.png"/>
+      </g>
+      <rect class="cls-32" x="2144.2" y="93.4" width="1920" height="1080"/>
+      <g>
+        <g>
+          <path class="cls-18" d="M2322.5,136.6l4.8-4.8c-2,1.2-4.7,1-6.4-.8-2-2-2-5.4,0-7.4,2-2,5.4-2,7.4,0,1.8,1.8,2,4.4.8,6.4l4.8-4.8c-.4-1.7-1.2-3.3-2.6-4.7-3.7-3.7-9.8-3.7-13.5,0-3.7,3.7-3.7,9.8,0,13.5,1.3,1.3,2.9,2.2,4.7,2.6Z"/>
+          <g>
+            <polygon class="cls-18" points="2194.2 125.4 2200.4 131.7 2223.2 131.7 2209.3 145.6 2209.3 134.8 2203 134.8 2203 160.7 2203 160.7 2238.3 125.4 2194.2 125.4"/>
+            <polygon class="cls-18" points="2218.4 149.7 2229.4 160.7 2238.3 160.7 2222.8 145.3 2218.4 149.7"/>
+          </g>
+          <g>
+            <polygon class="cls-18" points="2242.7 125.4 2236.4 131.7 2271.7 131.7 2277.9 125.4 2242.7 125.4"/>
+            <polygon class="cls-18" points="2271.7 160.7 2277.9 154.4 2248.9 154.4 2248.9 134.8 2242.7 134.8 2242.7 160.7 2271.7 160.7"/>
+            <polygon class="cls-18" points="2272.3 139.9 2251.7 139.9 2251.7 146.2 2266 146.2 2272.3 139.9"/>
+          </g>
+          <polygon class="cls-18" points="2306.1 125.4 2282.4 125.4 2276.1 131.7 2303.5 131.7 2311 139.2 2295.8 154.4 2288.6 154.4 2288.6 134.8 2282.4 134.8 2282.4 154.4 2276.1 160.7 2298.4 160.7 2319.9 139.2 2306.1 125.4"/>
+        </g>
+        <g>
+          <g>
+            <g>
+              <polygon class="cls-18" points="2326.6 148.5 2318.1 145.4 2318.8 144.7 2326.2 147.4 2326.6 148.5"/>
+              <polygon class="cls-18" points="2319.7 145.1 2318.8 144.7 2322.1 141.5 2322.4 142.4 2319.7 145.1"/>
+              <polygon class="cls-18" points="2323 141.4 2325.5 148.1 2326.6 148.5 2324.2 141.8 2323 141.4"/>
+            </g>
+            <g>
+              <polygon class="cls-18" points="2330.1 145 2327.1 136.5 2326.3 137.2 2329 144.6 2330.1 145"/>
+              <polygon class="cls-18" points="2326.7 138.1 2326.3 137.2 2323.1 140.5 2324 140.8 2326.7 138.1"/>
+              <polygon class="cls-18" points="2323 141.4 2329.7 143.9 2330.1 145 2323.4 142.5 2323 141.4"/>
+            </g>
+          </g>
+          <g>
+            <polygon class="cls-18" points="2327.8 135.8 2328.1 136.7 2332.3 132.5 2332 131.6 2327.8 135.8"/>
+            <polygon class="cls-18" points="2332.9 140.9 2333.6 141.6 2337.5 137.7 2337.1 136.7 2332.9 140.9"/>
+            <rect class="cls-18" x="2331.2" y="135.8" width=".9" height="6.4" transform="translate(584.6 1689.4) rotate(-45)"/>
+            <polygon class="cls-18" points="2333.3 135.3 2330.3 138.3 2331 139 2333.7 136.3 2333.3 135.3"/>
+          </g>
+          <polygon class="cls-18" points="2278.4 185.2 2278.7 186.1 2283.6 181.2 2283.2 180.3 2278.4 185.2"/>
+          <rect class="cls-18" x="2283.7" y="183.2" width=".9" height="6.4" transform="translate(537.2 1669.8) rotate(-45)"/>
+          <g>
+            <polygon class="cls-18" points="2284.3 180.5 2287.2 177.6 2286.5 177 2283.9 179.6 2284.3 180.5"/>
+            <path class="cls-18" d="M2285.4,180.7c.2.8.5,1.5,1.1,2.1l.6-.6c-.6-.6-.9-1.5-.9-2.3l-.8.8Z"/>
+            <path class="cls-18" d="M2291.7,177.6l.6-.6c-1.6-1.6-4.2-1.6-5.8,0l.6.6c1.2-1.2,3.3-1.2,4.5,0Z"/>
+            <path class="cls-18" d="M2291.7,177.6l.6-.6c1.6,1.6,1.6,4.2,0,5.8l-.6-.6c1.2-1.2,1.2-3.3,0-4.5Z"/>
+            <path class="cls-18" d="M2287.2,182.1l-.6.6c1.6,1.6,4.2,1.6,5.8,0l-.6-.6c-1.2,1.2-3.3,1.2-4.5,0Z"/>
+          </g>
+          <g>
+            <polygon class="cls-18" points="2336.5 132.1 2342 133.1 2342.8 132.3 2337.3 131.4 2336.5 132.1"/>
+            <polygon class="cls-18" points="2338.8 131.2 2337.6 132.3 2336.5 132.1 2338.1 130.5 2338.8 131.2"/>
+            <polygon class="cls-18" points="2332.7 130.9 2333 131.8 2336.2 128.6 2335.6 128 2332.7 130.9"/>
+            <rect class="cls-18" x="2336.1" y="130.9" width=".9" height="6.4" transform="translate(589.6 1691.5) rotate(-45)"/>
+            <path class="cls-18" d="M2335.6,128l.6.6c.5-.5,1.4-.5,1.9,0s.5,1.4,0,1.9l.6.6c.9-.9.9-2.3,0-3.2-.9-.9-2.3-.9-3.2,0Z"/>
+          </g>
+          <g>
+            <g>
+              <polygon class="cls-18" points="2300 164.9 2302.9 162 2302.2 161.3 2299.6 163.9 2300 164.9"/>
+              <path class="cls-18" d="M2301.1,165c.2.8.5,1.5,1.1,2.1l.6-.6c-.6-.6-.9-1.5-.9-2.3l-.8.8Z"/>
+              <path class="cls-18" d="M2307.4,162l.6-.6c-1.6-1.6-4.2-1.6-5.8,0l.6.6c1.2-1.2,3.3-1.2,4.5,0Z"/>
+              <path class="cls-18" d="M2307.4,162l.6-.6c1.6,1.6,1.6,4.2,0,5.8l-.6-.6c1.2-1.2,1.2-3.3,0-4.5Z"/>
+              <path class="cls-18" d="M2302.9,166.5l-.6.6c1.6,1.6,4.2,1.6,5.8,0l-.6-.6c-1.2,1.2-3.3,1.2-4.5,0Z"/>
+            </g>
+            <g>
+              <polygon class="cls-18" points="2298.2 165.3 2301.3 173.8 2302 173.1 2298.9 164.6 2298.2 165.3"/>
+              <polygon class="cls-18" points="2300.9 170 2295.5 168 2294.8 168.8 2301.3 171.1 2300.9 170"/>
+            </g>
+          </g>
+          <g>
+            <polygon class="cls-18" points="2295 174.1 2295.1 175.1 2299.3 175.8 2300.1 175 2295 174.1"/>
+            <polygon class="cls-18" points="2295.6 177.7 2290.7 172.8 2290.1 173.5 2295.9 179.2 2295.9 179.2 2295.6 177.7"/>
+            <polygon class="cls-18" points="2293.3 170.2 2294.7 178.1 2295.9 179.2 2294.1 169.4 2293.3 170.2"/>
+          </g>
+          <polygon class="cls-18" points="2307.3 156.2 2307.7 157.1 2312.6 152.3 2312.2 151.3 2307.3 156.2"/>
+          <rect class="cls-18" x="2312.7" y="154.3" width=".9" height="6.4" transform="translate(566.2 1681.8) rotate(-45)"/>
+          <g>
+            <polygon class="cls-18" points="2313.3 151.6 2316.2 148.7 2315.5 148 2312.9 150.6 2313.3 151.6"/>
+            <path class="cls-18" d="M2314.4,151.7c.2.8.5,1.5,1.1,2.1l.6-.6c-.6-.6-.9-1.5-.9-2.3l-.8.8Z"/>
+            <path class="cls-18" d="M2320.7,148.7l.6-.6c-1.6-1.6-4.2-1.6-5.8,0l.6.6c1.2-1.2,3.3-1.2,4.5,0Z"/>
+            <path class="cls-18" d="M2320.7,148.7l.6-.6c1.6,1.6,1.6,4.2,0,5.8l-.6-.6c1.2-1.2,1.2-3.3,0-4.5Z"/>
+            <path class="cls-18" d="M2316.2,153.2l-.6.6c1.6,1.6,4.2,1.6,5.8,0l-.6-.6c-1.2,1.2-3.3,1.2-4.5,0Z"/>
+          </g>
+        </g>
+      </g>
+      <g>
+        <rect class="cls-18" x="3964.2" y="129.4" width="50" height="8"/>
+        <rect class="cls-18" x="3964.2" y="149.4" width="50" height="8"/>
+        <rect class="cls-18" x="3964.2" y="169.4" width="50" height="8"/>
+      </g>
+      <rect x="2144.2" y="1173.4" width="1920" height="200"/>
+      <g>
+        <text class="cls-22" transform="translate(2607.1 1284)"><tspan x="0" y="0">本 日 の 営 業 時 間</tspan></text>
+        <text class="cls-21" transform="translate(3045 1289.6)"><tspan x="0" y="0">00</tspan><tspan x="99.3" y="-7">:</tspan><tspan x="127.6" y="0">00 ~ 00</tspan><tspan x="428.6" y="-7">:</tspan><tspan x="456.9" y="0">00</tspan></text>
+      </g>
+      <g>
+        <text class="cls-43" transform="translate(2342.2 1666.1)"><tspan x="0" y="0">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間</tspan><tspan class="cls-84" x="1512" y="0">、</tspan><tspan x="60" y="42">行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています</tspan><tspan class="cls-84" x="1452" y="42">。</tspan><tspan x="0" y="84">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間</tspan><tspan class="cls-84" x="1512" y="84">、</tspan><tspan x="60" y="126">行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています</tspan><tspan class="cls-84" x="1452" y="126">。</tspan></text>
+        <text class="cls-37" transform="translate(2671.5 1583.9)"><tspan x="0" y="0">RED° TOKYO TOWER ?</tspan></text>
+      </g>
+      <g>
+        <rect class="cls-18" x="2144.2" y="4258.5" width="1920" height="930"/>
+        <text class="cls-37" transform="translate(2951 4494.8)"><tspan x="0" y="0">event</tspan></text>
+        <g>
+          <g>
+            <rect class="cls-44" x="2024.2" y="4587.8" width="400" height="300"/>
+            <g>
+              <rect class="cls-18" x="2024.2" y="4887.8" width="400" height="100"/>
+              <g>
+                <text class="cls-42" transform="translate(2034.2 4930.8)"><tspan x="0" y="0">イベント名イベント名イベント名</tspan></text>
+                <text class="cls-82" transform="translate(2034.2 4955.2)"><tspan x="0" y="0">開催期間 00.00〜00.00</tspan></text>
+              </g>
+            </g>
+          </g>
+          <g>
+            <rect class="cls-44" x="2464.2" y="4587.8" width="400" height="300"/>
+            <g>
+              <rect class="cls-18" x="2464.2" y="4887.8" width="400" height="100"/>
+              <g>
+                <text class="cls-42" transform="translate(2474.2 4930.8)"><tspan x="0" y="0">イベント名イベント名イベント名</tspan></text>
+                <text class="cls-82" transform="translate(2474.2 4955.2)"><tspan x="0" y="0">開催期間 00.00〜00.00</tspan></text>
+              </g>
+            </g>
+          </g>
+          <g>
+            <rect class="cls-44" x="2904.2" y="4587.8" width="400" height="300"/>
+            <g>
+              <rect class="cls-18" x="2904.2" y="4887.8" width="400" height="100"/>
+              <g>
+                <text class="cls-42" transform="translate(2914.2 4930.8)"><tspan x="0" y="0">イベント名イベント名イベント名</tspan></text>
+                <text class="cls-82" transform="translate(2914.2 4955.2)"><tspan x="0" y="0">開催期間 00.00〜00.00</tspan></text>
+              </g>
+            </g>
+          </g>
+          <g>
+            <rect class="cls-44" x="3344.2" y="4587.8" width="400" height="300"/>
+            <g>
+              <rect class="cls-18" x="3344.2" y="4887.8" width="400" height="100"/>
+              <g>
+                <text class="cls-42" transform="translate(3354.2 4930.8)"><tspan x="0" y="0">イベント名イベント名イベント名</tspan></text>
+                <text class="cls-82" transform="translate(3354.2 4955.2)"><tspan x="0" y="0">開催期間 00.00〜00.00</tspan></text>
+              </g>
+            </g>
+          </g>
+          <g>
+            <rect class="cls-44" x="3784.2" y="4587.8" width="400" height="300"/>
+            <g>
+              <rect class="cls-18" x="3784.2" y="4887.8" width="400" height="100"/>
+              <g>
+                <text class="cls-42" transform="translate(3794.2 4930.8)"><tspan x="0" y="0">イベント名イベント名イベント名</tspan></text>
+                <text class="cls-82" transform="translate(3794.2 4955.2)"><tspan x="0" y="0">開催期間 00.00〜00.00</tspan></text>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g>
+        <g class="cls-78">
+          <image width="2773" height="1873" transform="translate(1866.2 4952.4)" xlink:href="rogo-18.png"/>
+        </g>
+        <rect class="cls-32" x="2144.2" y="5238.5" width="1920" height="1150"/>
+        <g class="cls-4">
+          <g>
+            <rect class="cls-18" x="2504.2" y="5385.8" width="523.5" height="805.4"/>
+            <g class="cls-54">
+              <image width="1860" height="1096" transform="translate(2504.2 5385.8) scale(.6)" xlink:href="rogo-19.png"/>
+            </g>
+          </g>
+          <g class="cls-51">
+            <image width="1860" height="1096" transform="translate(2515.1 5385.8) scale(.6)" xlink:href="rogo-20.png"/>
+          </g>
+        </g>
+      </g>
+      <g>
+        <g>
+          <rect class="cls-18" x="2194.2" y="6488.5" width="1050" height="900"/>
+          <text class="cls-37" transform="translate(2242.5 6643.9)"><tspan x="0" y="0">NEWS</tspan></text>
+          <g>
+            <text class="cls-41" transform="translate(2238.2 6752.1)"><tspan x="0" y="0">2024.00.00</tspan></text>
+            <text class="cls-41" transform="translate(2431.9 6752.1)"><tspan x="0" y="0">テキストテキストテキストテキストテキストテキストテキストテキスト</tspan><tspan x="0" y="42">テキストテキストテキストテキストテキストテキストテキスト</tspan></text>
+            <line class="cls-2" x1="2244.2" y1="6824.8" x2="3194.2" y2="6824.8"/>
+          </g>
+          <g>
+            <text class="cls-41" transform="translate(2238.2 6905.9)"><tspan x="0" y="0">2024.00.00</tspan></text>
+            <text class="cls-41" transform="translate(2431.9 6905.9)"><tspan x="0" y="0">テキストテキストテキストテキストテキストテキストテキストテキスト</tspan><tspan x="0" y="42">テキストテキストテキストテキストテキストテキストテキスト</tspan></text>
+            <line class="cls-2" x1="2244.2" y1="6978.6" x2="3194.2" y2="6978.6"/>
+          </g>
+          <g>
+            <text class="cls-41" transform="translate(2238.2 7059.8)"><tspan x="0" y="0">2024.00.00</tspan></text>
+            <text class="cls-41" transform="translate(2431.9 7059.8)"><tspan x="0" y="0">テキストテキストテキストテキストテキストテキストテキストテキスト</tspan><tspan x="0" y="42">テキストテキストテキストテキストテキストテキストテキスト</tspan></text>
+            <line class="cls-2" x1="2244.2" y1="7132.5" x2="3194.2" y2="7132.5"/>
+          </g>
+          <g>
+            <text class="cls-41" transform="translate(2238.2 7213.6)"><tspan x="0" y="0">2024.00.00</tspan></text>
+            <text class="cls-41" transform="translate(2431.9 7213.6)"><tspan x="0" y="0">テキストテキストテキストテキストテキストテキストテキストテキスト</tspan><tspan x="0" y="42">テキストテキストテキストテキストテキストテキストテキスト</tspan></text>
+            <line class="cls-2" x1="2244.2" y1="7286.3" x2="3194.2" y2="7286.3"/>
+          </g>
+        </g>
+        <g>
+          <image id="sXo69d-2" data-name="sXo69d" width="670" height="186" transform="translate(3304.2 6506.5)" xlink:href="rogo-21.png"/>
+          <image id="Wkx1k4-2" data-name="Wkx1k4" width="670" height="186" transform="translate(3304.2 6732.5)" xlink:href="rogo-22.png"/>
+          <image id="Ru6g6A-2" data-name="Ru6g6A" width="670" height="186" transform="translate(3304.2 6958.5)" xlink:href="rogo-23.png"/>
+          <image id="OnPUmk-2" data-name="OnPUmk" width="670" height="186" transform="translate(3304.2 7184.5)" xlink:href="rogo-24.png"/>
+        </g>
+      </g>
+      <g>
+        <text class="cls-26" transform="translate(2832.4 2591.6)"><tspan x="0" y="0">ATTRACTIONS</tspan></text>
+        <text class="cls-20" transform="translate(2618.2 2679.2)"><tspan x="0" y="0">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています</tspan><tspan class="cls-84" x="960" y="0">。</tspan><tspan x="0" y="42">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています</tspan><tspan class="cls-84" x="960" y="42">。</tspan><tspan x="0" y="84">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています</tspan><tspan class="cls-84" x="960" y="84">。</tspan></text>
+      </g>
+      <g>
+        <g>
+          <g class="cls-6">
+            <g class="cls-58">
+              <image id="Gc3EE3-2" data-name="Gc3EE3" width="560" height="315" transform="translate(2364.2 2779) scale(1.6)" xlink:href="rogo-25.png"/>
+            </g>
+            <g>
+              <rect class="cls-18" x="2365.2" y="3273.1" width="698" height="138"/>
+              <path d="M3062.2,3274.1v136h-696v-136h696M3064.2,3272.1h-700v140h700v-140h0Z"/>
+            </g>
+            <text class="cls-81" transform="translate(2410.8 3368.5) scale(1 1)"><tspan class="cls-35" x="0" y="0">1F</tspan><tspan class="cls-85" x="50.4" y="2.2" xml:space="preserve">  </tspan><tspan class="cls-35" x="83.9" y="0">WONDER ZONE</tspan></text>
+          </g>
+          <g class="cls-5">
+            <g>
+              <rect class="cls-18" x="3145.2" y="3273.1" width="698" height="138"/>
+              <path d="M3842.2,3274.1v136h-696v-136h696M3844.2,3272.1h-700v140h700v-140h0Z"/>
+            </g>
+            <text class="cls-36" transform="translate(3190.8 3369.6) scale(1 1)"><tspan x="0" y="0" xml:space="preserve">3F  INSPIRATION ZONE</tspan></text>
+            <g class="cls-56">
+              <image width="4320" height="2880" transform="translate(3107.5 2826.6) scale(.2)" xlink:href="rogo-26.png"/>
+            </g>
+          </g>
+        </g>
+        <g>
+          <g class="cls-10">
+            <g>
+              <rect class="cls-18" x="2365.2" y="3913.1" width="698" height="138"/>
+              <path d="M3062.2,3914.1v136h-696v-136h696M3064.2,3912.1h-700v140h700v-140h0Z"/>
+            </g>
+            <text class="cls-36" transform="translate(2410.8 4009.6) scale(1 1)"><tspan x="0" y="0" xml:space="preserve">4F  ATTRACTIONS ZONE</tspan></text>
+            <g class="cls-57">
+              <image width="1920" height="1280" transform="translate(2248.6 3435.1) scale(.4)" xlink:href="rogo-27.png"/>
+            </g>
+          </g>
+          <g class="cls-9">
+            <g>
+              <rect class="cls-18" x="3145.2" y="3913.1" width="698" height="138"/>
+              <path d="M3842.2,3914.1v136h-696v-136h696M3844.2,3912.1h-700v140h700v-140h0Z"/>
+            </g>
+            <text class="cls-36" transform="translate(3190.8 4009.6) scale(1 1)"><tspan x="0" y="0" xml:space="preserve">5F  ULTIMATE ZONE</tspan></text>
+            <g class="cls-55">
+              <image width="4320" height="2880" transform="translate(3033 3394.7) scale(.2)" xlink:href="rogo-28.png"/>
+            </g>
+          </g>
+        </g>
+      </g>
+      <text class="cls-17" transform="translate(2216.2 949.2) scale(1 1)"><tspan x="0" y="0">東京タワー内の</tspan><tspan x="0" y="140">新体験テーマパーク</tspan></text>
+      <image id="EuZQ13-5" data-name="EuZQ13" width="2880" height="966" transform="translate(2144.2 8088.5) scale(.7)" xlink:href="rogo-29.png"/>
+      <g>
+        <rect x="3804.5" y="5012.5" width="210" height="64"/>
+        <text class="cls-19" transform="translate(3844.6 5052.4)"><tspan x="0" y="0" xml:space="preserve">イベント一覧  &gt;</tspan></text>
+      </g>
+      <g>
+        <g class="cls-52">
+          <image width="2773" height="1873" transform="translate(-353.8 4440.4)" xlink:href="rogo-30.png"/>
+        </g>
+        <rect class="cls-32" x="-75.8" y="4726.7" width="1920" height="1150"/>
+        <g class="cls-7">
+          <g>
+            <rect class="cls-18" x="284.2" y="4874" width="523.5" height="805.4"/>
+            <g class="cls-49">
+              <image width="1860" height="1096" transform="translate(284.2 4874) scale(.6)" xlink:href="rogo-31.png"/>
+            </g>
+          </g>
+          <g class="cls-53">
+            <image width="1860" height="1096" transform="translate(295.1 4874) scale(.6)" xlink:href="rogo-32.png"/>
+          </g>
+        </g>
+      </g>
+      <g class="cls-50">
+        <image id="Gc3EE3-3" data-name="Gc3EE3" width="560" height="315" transform="translate(4315.4 2042.3) scale(4.5)" xlink:href="rogo-33.png"/>
+      </g>
+      <rect class="cls-30" x="4364.2" y="2242.8" width="1920" height="723.3"/>
+      <g class="cls-64">
+        <image width="4320" height="2880" transform="translate(4276.4 72.9) scale(.5)" xlink:href="rogo-34.png"/>
+      </g>
+      <rect class="cls-32" x="4364.2" y="93.4" width="1920" height="1080"/>
+      <g>
+        <g>
+          <path class="cls-18" d="M4542.5,136.6l4.8-4.8c-2,1.2-4.7,1-6.4-.8-2-2-2-5.4,0-7.4,2-2,5.4-2,7.4,0,1.8,1.8,2,4.4.8,6.4l4.8-4.8c-.4-1.7-1.2-3.3-2.6-4.7-3.7-3.7-9.8-3.7-13.5,0-3.7,3.7-3.7,9.8,0,13.5,1.3,1.3,2.9,2.2,4.7,2.6Z"/>
+          <g>
+            <polygon class="cls-18" points="4414.2 125.4 4420.4 131.7 4443.2 131.7 4429.3 145.6 4429.3 134.8 4423 134.8 4423 160.7 4423 160.7 4458.3 125.4 4414.2 125.4"/>
+            <polygon class="cls-18" points="4438.4 149.7 4449.4 160.7 4458.3 160.7 4442.8 145.3 4438.4 149.7"/>
+          </g>
+          <g>
+            <polygon class="cls-18" points="4462.7 125.4 4456.4 131.7 4491.7 131.7 4497.9 125.4 4462.7 125.4"/>
+            <polygon class="cls-18" points="4491.7 160.7 4497.9 154.4 4468.9 154.4 4468.9 134.8 4462.7 134.8 4462.7 160.7 4491.7 160.7"/>
+            <polygon class="cls-18" points="4492.3 139.9 4471.7 139.9 4471.7 146.2 4486 146.2 4492.3 139.9"/>
+          </g>
+          <polygon class="cls-18" points="4526.1 125.4 4502.4 125.4 4496.1 131.7 4523.5 131.7 4531 139.2 4515.8 154.4 4508.6 154.4 4508.6 134.8 4502.4 134.8 4502.4 154.4 4496.1 160.7 4518.4 160.7 4539.9 139.2 4526.1 125.4"/>
+        </g>
+        <g>
+          <g>
+            <g>
+              <polygon class="cls-18" points="4546.6 148.5 4538.1 145.4 4538.8 144.7 4546.2 147.4 4546.6 148.5"/>
+              <polygon class="cls-18" points="4539.7 145.1 4538.8 144.7 4542.1 141.5 4542.4 142.4 4539.7 145.1"/>
+              <polygon class="cls-18" points="4543 141.4 4545.5 148.1 4546.6 148.5 4544.2 141.8 4543 141.4"/>
+            </g>
+            <g>
+              <polygon class="cls-18" points="4550.1 145 4547.1 136.5 4546.3 137.2 4549 144.6 4550.1 145"/>
+              <polygon class="cls-18" points="4546.7 138.1 4546.3 137.2 4543.1 140.5 4544 140.8 4546.7 138.1"/>
+              <polygon class="cls-18" points="4543 141.4 4549.7 143.9 4550.1 145 4543.4 142.5 4543 141.4"/>
+            </g>
+          </g>
+          <g>
+            <polygon class="cls-18" points="4547.8 135.8 4548.1 136.7 4552.3 132.5 4552 131.6 4547.8 135.8"/>
+            <polygon class="cls-18" points="4552.9 140.9 4553.6 141.6 4557.5 137.7 4557.1 136.7 4552.9 140.9"/>
+            <rect class="cls-18" x="4551.2" y="135.8" width=".9" height="6.4" transform="translate(1234.9 3259.2) rotate(-45)"/>
+            <polygon class="cls-18" points="4553.3 135.3 4550.3 138.3 4551 139 4553.7 136.3 4553.3 135.3"/>
+          </g>
+          <polygon class="cls-18" points="4498.4 185.2 4498.7 186.1 4503.6 181.2 4503.2 180.3 4498.4 185.2"/>
+          <rect class="cls-18" x="4503.7" y="183.2" width=".9" height="6.4" transform="translate(1187.4 3239.5) rotate(-45)"/>
+          <g>
+            <polygon class="cls-18" points="4504.3 180.5 4507.2 177.6 4506.5 177 4503.9 179.6 4504.3 180.5"/>
+            <path class="cls-18" d="M4505.4,180.7c.2.8.5,1.5,1.1,2.1l.6-.6c-.6-.6-.9-1.5-.9-2.3l-.8.8Z"/>
+            <path class="cls-18" d="M4511.7,177.6l.6-.6c-1.6-1.6-4.2-1.6-5.8,0l.6.6c1.2-1.2,3.3-1.2,4.5,0Z"/>
+            <path class="cls-18" d="M4511.7,177.6l.6-.6c1.6,1.6,1.6,4.2,0,5.8l-.6-.6c1.2-1.2,1.2-3.3,0-4.5Z"/>
+            <path class="cls-18" d="M4507.2,182.1l-.6.6c1.6,1.6,4.2,1.6,5.8,0l-.6-.6c-1.2,1.2-3.3,1.2-4.5,0Z"/>
+          </g>
+          <g>
+            <polygon class="cls-18" points="4556.5 132.1 4562 133.1 4562.8 132.3 4557.3 131.4 4556.5 132.1"/>
+            <polygon class="cls-18" points="4558.8 131.2 4557.6 132.3 4556.5 132.1 4558.1 130.5 4558.8 131.2"/>
+            <polygon class="cls-18" points="4552.7 130.9 4553 131.8 4556.2 128.6 4555.6 128 4552.7 130.9"/>
+            <rect class="cls-18" x="4556.1" y="130.9" width=".9" height="6.4" transform="translate(1239.8 3261.2) rotate(-45)"/>
+            <path class="cls-18" d="M4555.6,128l.6.6c.5-.5,1.4-.5,1.9,0s.5,1.4,0,1.9l.6.6c.9-.9.9-2.3,0-3.2-.9-.9-2.3-.9-3.2,0Z"/>
+          </g>
+          <g>
+            <g>
+              <polygon class="cls-18" points="4520 164.9 4522.9 162 4522.2 161.3 4519.6 163.9 4520 164.9"/>
+              <path class="cls-18" d="M4521.1,165c.2.8.5,1.5,1.1,2.1l.6-.6c-.6-.6-.9-1.5-.9-2.3l-.8.8Z"/>
+              <path class="cls-18" d="M4527.4,162l.6-.6c-1.6-1.6-4.2-1.6-5.8,0l.6.6c1.2-1.2,3.3-1.2,4.5,0Z"/>
+              <path class="cls-18" d="M4527.4,162l.6-.6c1.6,1.6,1.6,4.2,0,5.8l-.6-.6c1.2-1.2,1.2-3.3,0-4.5Z"/>
+              <path class="cls-18" d="M4522.9,166.5l-.6.6c1.6,1.6,4.2,1.6,5.8,0l-.6-.6c-1.2,1.2-3.3,1.2-4.5,0Z"/>
+            </g>
+            <g>
+              <polygon class="cls-18" points="4518.2 165.3 4521.3 173.8 4522 173.1 4518.9 164.6 4518.2 165.3"/>
+              <polygon class="cls-18" points="4520.9 170 4515.5 168 4514.8 168.8 4521.3 171.1 4520.9 170"/>
+            </g>
+          </g>
+          <g>
+            <polygon class="cls-18" points="4515 174.1 4515.1 175.1 4519.3 175.8 4520.1 175 4515 174.1"/>
+            <polygon class="cls-18" points="4515.6 177.7 4510.7 172.8 4510.1 173.5 4515.9 179.2 4515.9 179.2 4515.6 177.7"/>
+            <polygon class="cls-18" points="4513.3 170.2 4514.7 178.1 4515.9 179.2 4514.1 169.4 4513.3 170.2"/>
+          </g>
+          <polygon class="cls-18" points="4527.3 156.2 4527.7 157.1 4532.6 152.3 4532.2 151.3 4527.3 156.2"/>
+          <rect class="cls-18" x="4532.7" y="154.3" width=".9" height="6.4" transform="translate(1216.4 3251.5) rotate(-45)"/>
+          <g>
+            <polygon class="cls-18" points="4533.3 151.6 4536.2 148.7 4535.5 148 4532.9 150.6 4533.3 151.6"/>
+            <path class="cls-18" d="M4534.4,151.7c.2.8.5,1.5,1.1,2.1l.6-.6c-.6-.6-.9-1.5-.9-2.3l-.8.8Z"/>
+            <path class="cls-18" d="M4540.7,148.7l.6-.6c-1.6-1.6-4.2-1.6-5.8,0l.6.6c1.2-1.2,3.3-1.2,4.5,0Z"/>
+            <path class="cls-18" d="M4540.7,148.7l.6-.6c1.6,1.6,1.6,4.2,0,5.8l-.6-.6c1.2-1.2,1.2-3.3,0-4.5Z"/>
+            <path class="cls-18" d="M4536.2,153.2l-.6.6c1.6,1.6,4.2,1.6,5.8,0l-.6-.6c-1.2,1.2-3.3,1.2-4.5,0Z"/>
+          </g>
+        </g>
+      </g>
+      <g>
+        <rect class="cls-18" x="6184.2" y="129.4" width="50" height="8"/>
+        <rect class="cls-18" x="6184.2" y="149.4" width="50" height="8"/>
+        <rect class="cls-18" x="6184.2" y="169.4" width="50" height="8"/>
+      </g>
+      <rect x="4364.2" y="1173.4" width="1920" height="200"/>
+      <g>
+        <text class="cls-22" transform="translate(4827.1 1284)"><tspan x="0" y="0">本 日 の 営 業 時 間</tspan></text>
+        <text class="cls-21" transform="translate(5265 1289.6)"><tspan x="0" y="0">00</tspan><tspan x="99.3" y="-7">:</tspan><tspan x="127.6" y="0">00 ~ 00</tspan><tspan x="428.6" y="-7">:</tspan><tspan x="456.9" y="0">00</tspan></text>
+      </g>
+      <g>
+        <g>
+          <text class="cls-43" transform="translate(4514.2 1785.3)"><tspan x="0" y="0">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています</tspan><tspan class="cls-84" x="960" y="0">。</tspan><tspan x="0" y="42">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています</tspan><tspan class="cls-84" x="960" y="42">。</tspan><tspan x="0" y="84">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています</tspan><tspan class="cls-84" x="960" y="84">。</tspan><tspan x="0" y="126">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています</tspan><tspan class="cls-84" x="960" y="126">。</tspan><tspan x="0" y="168">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています</tspan><tspan class="cls-84" x="960" y="168">。</tspan><tspan x="0" y="210">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています</tspan><tspan class="cls-84" x="960" y="210">。</tspan></text>
+          <text class="cls-37" transform="translate(4514.2 1703)"><tspan x="0" y="0">RED° TOKYO TOWER ?</tspan></text>
+        </g>
+        <g class="cls-65">
+          <g class="cls-66">
+            <image width="4320" height="2880" transform="translate(5479.8 1408.8) scale(.3)" xlink:href="rogo-35.png"/>
+          </g>
+        </g>
+      </g>
+      <g>
+        <g class="cls-67">
+          <image width="2773" height="1873" transform="translate(4086.2 4088.4)" xlink:href="rogo-36.png"/>
+        </g>
+        <rect class="cls-32" x="4364.2" y="4374.8" width="1920" height="1150"/>
+        <g class="cls-8">
+          <g>
+            <rect class="cls-18" x="4724.2" y="4522.1" width="523.5" height="805.4"/>
+            <g class="cls-68">
+              <image width="1860" height="1096" transform="translate(4724.2 4522.1) scale(.6)" xlink:href="rogo-37.png"/>
+            </g>
+          </g>
+          <g class="cls-69">
+            <image width="1860" height="1096" transform="translate(4735.1 4522.1) scale(.6)" xlink:href="rogo-38.png"/>
+          </g>
+        </g>
+      </g>
+      <g>
+        <g>
+          <rect class="cls-18" x="4414.2" y="5624.8" width="1050" height="900"/>
+          <text class="cls-37" transform="translate(4462.5 5780.2)"><tspan x="0" y="0">NEWS</tspan></text>
+          <g>
+            <text class="cls-41" transform="translate(4458.2 5888.3)"><tspan x="0" y="0">2024.00.00</tspan></text>
+            <text class="cls-41" transform="translate(4651.9 5888.3)"><tspan x="0" y="0">テキストテキストテキストテキストテキストテキストテキストテキスト</tspan><tspan x="0" y="42">テキストテキストテキストテキストテキストテキストテキスト</tspan></text>
+            <line class="cls-2" x1="4464.2" y1="5961" x2="5414.2" y2="5961"/>
+          </g>
+          <g>
+            <text class="cls-41" transform="translate(4458.2 6042.2)"><tspan x="0" y="0">2024.00.00</tspan></text>
+            <text class="cls-41" transform="translate(4651.9 6042.2)"><tspan x="0" y="0">テキストテキストテキストテキストテキストテキストテキストテキスト</tspan><tspan x="0" y="42">テキストテキストテキストテキストテキストテキストテキスト</tspan></text>
+            <line class="cls-2" x1="4464.2" y1="6114.9" x2="5414.2" y2="6114.9"/>
+          </g>
+          <g>
+            <text class="cls-41" transform="translate(4458.2 6196)"><tspan x="0" y="0">2024.00.00</tspan></text>
+            <text class="cls-41" transform="translate(4651.9 6196)"><tspan x="0" y="0">テキストテキストテキストテキストテキストテキストテキストテキスト</tspan><tspan x="0" y="42">テキストテキストテキストテキストテキストテキストテキスト</tspan></text>
+            <line class="cls-2" x1="4464.2" y1="6268.7" x2="5414.2" y2="6268.7"/>
+          </g>
+          <g>
+            <text class="cls-41" transform="translate(4458.2 6349.9)"><tspan x="0" y="0">2024.00.00</tspan></text>
+            <text class="cls-41" transform="translate(4651.9 6349.9)"><tspan x="0" y="0">テキストテキストテキストテキストテキストテキストテキストテキスト</tspan><tspan x="0" y="42">テキストテキストテキストテキストテキストテキストテキスト</tspan></text>
+            <line class="cls-2" x1="4464.2" y1="6422.6" x2="5414.2" y2="6422.6"/>
+          </g>
+        </g>
+        <g>
+          <image id="sXo69d-3" data-name="sXo69d" width="670" height="186" transform="translate(5524.2 5642.8)" xlink:href="rogo-39.png"/>
+          <image id="Wkx1k4-3" data-name="Wkx1k4" width="670" height="186" transform="translate(5524.2 5868.8)" xlink:href="rogo-40.png"/>
+          <image id="Ru6g6A-3" data-name="Ru6g6A" width="670" height="186" transform="translate(5524.2 6094.8)" xlink:href="rogo-41.png"/>
+          <image id="OnPUmk-3" data-name="OnPUmk" width="670" height="186" transform="translate(5524.2 6320.8)" xlink:href="rogo-42.png"/>
+        </g>
+      </g>
+      <text class="cls-17" transform="translate(4436.2 949.2) scale(1 1)"><tspan x="0" y="0">東京タワー内の</tspan><tspan x="0" y="140">新体験テーマパーク</tspan></text>
+      <image id="EuZQ13-6" data-name="EuZQ13" width="2880" height="966" transform="translate(4364.2 7224.8) scale(.7)" xlink:href="rogo-43.png"/>
+      <g>
+        <g>
+          <rect class="cls-18" x="4364.2" y="3394.8" width="1920" height="930"/>
+          <text class="cls-37" transform="translate(5171 3631.1)"><tspan x="0" y="0">event</tspan></text>
+          <g>
+            <g>
+              <rect class="cls-44" x="4244.2" y="3724" width="400" height="300"/>
+              <g>
+                <rect class="cls-18" x="4244.2" y="4024" width="400" height="100"/>
+                <g>
+                  <text class="cls-42" transform="translate(4254.2 4067.1)"><tspan x="0" y="0">イベント名イベント名イベント名</tspan></text>
+                  <text class="cls-82" transform="translate(4254.2 4091.4)"><tspan x="0" y="0">開催期間 00.00〜00.00</tspan></text>
+                </g>
+              </g>
+            </g>
+            <g>
+              <rect class="cls-44" x="4684.2" y="3724" width="400" height="300"/>
+              <g>
+                <rect class="cls-18" x="4684.2" y="4024" width="400" height="100"/>
+                <g>
+                  <text class="cls-42" transform="translate(4694.2 4067.1)"><tspan x="0" y="0">イベント名イベント名イベント名</tspan></text>
+                  <text class="cls-82" transform="translate(4694.2 4091.4)"><tspan x="0" y="0">開催期間 00.00〜00.00</tspan></text>
+                </g>
+              </g>
+            </g>
+            <g>
+              <rect class="cls-44" x="5124.2" y="3724" width="400" height="300"/>
+              <g>
+                <rect class="cls-18" x="5124.2" y="4024" width="400" height="100"/>
+                <g>
+                  <text class="cls-42" transform="translate(5134.2 4067.1)"><tspan x="0" y="0">イベント名イベント名イベント名</tspan></text>
+                  <text class="cls-82" transform="translate(5134.2 4091.4)"><tspan x="0" y="0">開催期間 00.00〜00.00</tspan></text>
+                </g>
+              </g>
+            </g>
+            <g>
+              <rect class="cls-44" x="5564.2" y="3724" width="400" height="300"/>
+              <g>
+                <rect class="cls-18" x="5564.2" y="4024" width="400" height="100"/>
+                <g>
+                  <text class="cls-42" transform="translate(5574.2 4067.1)"><tspan x="0" y="0">イベント名イベント名イベント名</tspan></text>
+                  <text class="cls-82" transform="translate(5574.2 4091.4)"><tspan x="0" y="0">開催期間 00.00〜00.00</tspan></text>
+                </g>
+              </g>
+            </g>
+            <g>
+              <rect class="cls-44" x="6004.2" y="3724" width="400" height="300"/>
+              <g>
+                <rect class="cls-18" x="6004.2" y="4024" width="400" height="100"/>
+                <g>
+                  <text class="cls-42" transform="translate(6014.2 4067.1)"><tspan x="0" y="0">イベント名イベント名イベント名</tspan></text>
+                  <text class="cls-82" transform="translate(6014.2 4091.4)"><tspan x="0" y="0">開催期間 00.00〜00.00</tspan></text>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+        <g>
+          <rect x="6024.5" y="4148.8" width="210" height="64"/>
+          <text class="cls-19" transform="translate(6064.6 4188.7)"><tspan x="0" y="0" xml:space="preserve">イベント一覧  &gt;</tspan></text>
+        </g>
+      </g>
+      <g>
+        <text class="cls-26" transform="translate(4454.2 2442.6)"><tspan x="0" y="0" xml:space="preserve">1F  WONDER ZONE</tspan></text>
+        <text class="cls-20" transform="translate(4454.2 2510.2)"><tspan x="0" y="0">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています</tspan><tspan class="cls-84" x="960" y="0">。</tspan><tspan x="0" y="42">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています</tspan><tspan class="cls-84" x="960" y="42">。</tspan><tspan x="0" y="84">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています</tspan><tspan class="cls-84" x="960" y="84">。</tspan></text>
+      </g>
+      <g>
+        <g>
+          <rect class="cls-18" x="5779.5" y="3262.7" width="80" height="80"/>
+          <text class="cls-38" transform="translate(5802.7 3318.2)"><tspan x="0" y="0">1F</tspan></text>
+        </g>
+        <g>
+          <rect class="cls-34" x="5899.5" y="3262.7" width="80" height="80"/>
+          <text class="cls-28" transform="translate(5921.2 3318.2)"><tspan x="0" y="0">3F</tspan></text>
+        </g>
+        <g>
+          <rect class="cls-34" x="6019.5" y="3262.7" width="80" height="80"/>
+          <text class="cls-28" transform="translate(6041.2 3318.2)"><tspan x="0" y="0">4F</tspan></text>
+        </g>
+        <g>
+          <rect class="cls-34" x="6139.5" y="3262.7" width="80" height="80"/>
+          <text class="cls-28" transform="translate(6161.2 3318.2)"><tspan x="0" y="0">5F</tspan></text>
+        </g>
+      </g>
+      <g>
+        <rect x="4452.2" y="2629.8" width="434.8" height="81.3"/>
+        <text class="cls-24" transform="translate(4560.7 2678.9)"><tspan x="0" y="0">詳しくはこちら &gt;</tspan></text>
+      </g>
+      <g>
+        <text class="cls-22" transform="translate(6944.2 307.5)"><tspan x="0" y="0">アトラクション一覧</tspan></text>
+        <text class="cls-29" transform="translate(7706.5 315)"><tspan x="0" y="0">attraction</tspan></text>
+        <text class="cls-22" transform="translate(6944.2 440.1)"><tspan x="0" y="0">フード・レストラン・ショップ</tspan></text>
+        <text class="cls-22" transform="translate(6944.2 572.7)"><tspan x="0" y="0">イベント情報</tspan></text>
+        <text class="cls-22" transform="translate(6944.2 705.3)"><tspan x="0" y="0">チケット購入</tspan></text>
+        <text class="cls-22" transform="translate(6944.2 838)"><tspan x="0" y="0">アクセス</tspan></text>
+        <text class="cls-22" transform="translate(6944.2 970.6)"><tspan x="0" y="0">よくある質問</tspan></text>
+        <text class="cls-29" transform="translate(7706.5 447.6)"><tspan x="0" y="0">Food / Restaurant / Shop</tspan></text>
+        <text class="cls-29" transform="translate(7706.5 580.2)"><tspan x="0" y="0">event</tspan></text>
+        <text class="cls-29" transform="translate(7706.5 712.8)"><tspan x="0" y="0">tickets</tspan></text>
+        <text class="cls-29" transform="translate(7706.5 845.5)"><tspan x="0" y="0">access</tspan></text>
+        <text class="cls-29" transform="translate(7706.5 978.1)"><tspan x="0" y="0">FAQ</tspan></text>
+        <line class="cls-23" x1="6944.2" y1="333.1" x2="8144.2" y2="333.1"/>
+        <line class="cls-23" x1="6944.2" y1="465.7" x2="8144.2" y2="465.7"/>
+        <line class="cls-23" x1="6944.2" y1="598.4" x2="8144.2" y2="598.4"/>
+        <line class="cls-23" x1="6944.2" y1="731" x2="8144.2" y2="731"/>
+        <line class="cls-23" x1="6944.2" y1="863.6" x2="8144.2" y2="863.6"/>
+        <line class="cls-23" x1="6944.2" y1="996.2" x2="8144.2" y2="996.2"/>
+      </g>
+    </g>
+    <g id="_レイヤー_2" data-name="レイヤー_2">
+      <g>
+        <rect class="cls-15" x="1654.2" y="493.4" width="140" height="680"/>
+        <text class="cls-42" transform="translate(1688.2 770.1)"><tspan x="0" y="0">アクセス</tspan></text>
+        <path d="M1724.2,679.2c-12.5,0-22.6,10.1-22.6,22.6s22.6,44.4,22.6,44.4c0,0,22.6-26.8,22.6-44.4s-10.1-22.6-22.6-22.6ZM1724.2,703.2c-3.1,0-5.6-2.5-5.6-5.6s2.5-5.6,5.6-5.6,5.6,2.5,5.6,5.6-2.5,5.6-5.6,5.6Z"/>
+        <text class="cls-42" transform="translate(1697.2 617)"><tspan x="0" y="0">料金表</tspan></text>
+        <path d="M1761.2,564.6l-13.3-3.8-4.7-1.3c.7-1.5,2.4-2.3,4.1-1.8,0,0,0,0,0,0,0,0,.1,0,.1,0,.4.1.8,0,1.2-.1.4-.2.6-.5.7-.9l2.5-8.8c.2-.8-.2-1.6-1-1.9l-13.3-3.8-41.9-12c-.8-.2-1.6.2-1.9,1l-7.8,27.1c-.2.8.2,1.6,1,1.9l13.1,3.8-3.7,13c-.1.4,0,.8.1,1.1.2.3.5.6.9.7l41.9,12,13.3,3.8c.1,0,.3,0,.4,0,.3,0,.5,0,.7-.2.3-.2.6-.5.7-.9l2.5-8.8c.1-.4,0-.8-.1-1.2-.2-.4-.5-.6-.9-.7s-.1,0-.1,0c-1.8-.5-2.9-2.4-2.4-4.3.3-.9.8-1.6,1.6-2.1.8-.4,1.7-.6,2.6-.3,0,0,0,0,0,0,0,0,.1,0,.1,0,.4.1.8,0,1.2-.1.4-.2.6-.5.7-.9l2.5-8.8c.2-.8-.2-1.6-1-1.9ZM1735.3,544.7l-3.3,11.5-25.9-7.4c-.8-.2-1.6.2-1.9,1l-3.2,11.3-11.7-3.3,6.9-24.2,39,11.2ZM1703.5,563.4l.4-1.4,2.8-9.8,24.5,7h0l1.4.4,1.4.4,5.9,1.7,1.6.5,1.8.5,2.4.7-.3,1-.4,1.4-2.5,8.8-.4,1.4v.4c-.1,0-3.3,11.1-3.3,11.1l-39-11.2,3.3-11.5.4-1.4Z"/>
+        <g>
+          <path d="M1749.2,904.5h-50v-50.1h50v50.1ZM1738.4,893.8c-3.9-5.6-7.6-11.1-11.4-16.5,3.5-4,6.9-8,10.3-12-1.6-.4-2.7,0-3.6,1.3-1.4,1.9-3,3.6-4.6,5.4-1.1,1.2-2.1,2.4-3.2,3.7-.3-.4-.5-.7-.8-1-2-2.9-4-5.8-6-8.7-.2-.3-.6-.7-.9-.7-2.6,0-5.2,0-8,0,3.7,5.4,7.3,10.7,10.9,15.9-3.6,4.2-7.2,8.4-10.9,12.6,1.5.3,2.5.1,3.5-1.1,2.5-3.1,5.2-6.1,7.9-9.2.2-.2.4-.4.6-.6.2.3.3.4.5.6,2.2,3.2,4.4,6.4,6.6,9.6.2.3.6.8.9.8,2.6,0,5.2,0,8,0Z"/>
+          <path class="cls-18" d="M1738.4,893.8c-2.8,0-5.4,0-8,0-.3,0-.7-.5-.9-.8-2.2-3.2-4.4-6.4-6.6-9.6-.1-.2-.3-.4-.5-.6-.2.2-.5.4-.6.6-2.6,3-5.3,6-7.9,9.2-1,1.2-2,1.4-3.5,1.1,3.6-4.2,7.2-8.4,10.9-12.6-3.6-5.3-7.2-10.5-10.9-15.9,2.8,0,5.4,0,8,0,.3,0,.7.4.9.7,2,2.9,4,5.8,6,8.7.2.3.4.6.8,1,1.1-1.3,2.2-2.5,3.2-3.7,1.5-1.8,3.2-3.5,4.6-5.4.9-1.3,2-1.6,3.6-1.3-3.5,4-6.9,8-10.3,12,3.8,5.5,7.5,10.9,11.4,16.5ZM1713.8,866.9c0,.2,0,.3,0,.3,5.6,8.1,11.3,16.1,16.9,24.2.1.2.4.5.6.5,1.1,0,2.2,0,3.4,0,0-.2,0-.3-.1-.4-5.6-8-11.2-16.1-16.9-24.1-.2-.3-.6-.5-.9-.5-1,0-2,0-3.1,0Z"/>
+          <path d="M1713.8,866.9c1.1,0,2.1,0,3.1,0,.3,0,.7.2.9.5,5.6,8,11.3,16.1,16.9,24.1,0,0,0,.1.1.4-1.2,0-2.3,0-3.4,0-.2,0-.4-.3-.6-.5-5.6-8.1-11.3-16.1-16.9-24.2,0,0,0,0,0-.3Z"/>
+        </g>
+        <g>
+          <path d="M1724.3,934.5c3.3.1,7.9.1,12.4.5,6.7.6,11.3,5.2,12.1,11.8.2,1.5.3,3.1.3,4.6,0,5.7,0,11.3,0,17,0,2.2-.2,4.5-.9,6.7-1.8,5.2-5.5,8.2-10.9,9.1-1.3.2-2.6.3-3.9.3-6.2,0-12.4,0-18.7,0-2.4,0-4.7-.3-7-1.2-4.8-1.9-7.5-5.5-8.2-10.5-.4-2.5-.5-5.1-.5-7.7,0-5.3,0-10.6.1-15.8,0-3.4.8-6.5,2.9-9.3,2.6-3.4,6.3-5,10.5-5.2,3.5-.2,7-.2,11.7-.4ZM1723.7,980.3s0,0,0-.1c.7,0,1.3,0,2,0,3.4,0,6.9,0,10.3-.3,4.8-.4,7.9-3.3,8.4-8.1.8-7.5.3-14.9.2-22.4,0-.3,0-.6,0-.9-.2-1.9-.6-3.7-1.7-5.2-1.8-2.5-4.3-3.7-7.2-3.8-5.4-.2-10.8-.2-16.2-.3-2.2,0-4.4,0-6.7.3-5,.4-8.3,3.6-8.7,8.6-.5,7.6-.4,15.3,0,22.9,0,1.2.4,2.5.8,3.6,1.4,3.4,4.1,5.1,7.7,5.3,3.7.3,7.5.3,11.3.4Z"/>
+          <path class="cls-18" d="M1723.7,980.3c-3.8-.1-7.5-.1-11.3-.4-3.5-.3-6.3-1.9-7.7-5.3-.5-1.1-.8-2.4-.8-3.6-.3-7.6-.5-15.3,0-22.9.4-5,3.7-8.2,8.7-8.6,2.2-.2,4.4-.3,6.7-.3,5.4,0,10.8,0,16.2.3,2.9.1,5.5,1.2,7.2,3.8,1.1,1.6,1.5,3.4,1.7,5.2,0,.3,0,.6,0,.9,0,7.5.5,15-.2,22.4-.5,4.8-3.6,7.7-8.4,8.1-3.4.3-6.8.2-10.3.3-.7,0-1.3,0-2,0,0,0,0,0,0,.1ZM1711.3,959.6c0,7.1,5.8,12.9,12.9,12.9,7.1,0,12.9-5.8,12.9-12.9,0-7.1-5.8-12.9-12.9-12.9-7.1,0-12.9,5.7-12.9,12.9ZM1740.6,946.2c0-1.7-1.4-3-3.1-3-1.7,0-3,1.4-3,3,0,1.7,1.4,3,3,3,1.7,0,3-1.4,3-3.1Z"/>
+          <path d="M1711.3,959.6c0-7.1,5.7-12.8,12.9-12.9,7.1,0,12.9,5.7,12.9,12.9,0,7.1-5.8,12.9-12.9,12.9-7.1,0-12.9-5.8-12.9-12.9ZM1724.2,968c4.6,0,8.3-3.7,8.3-8.3,0-4.6-3.7-8.3-8.3-8.3-4.6,0-8.3,3.7-8.3,8.3,0,4.6,3.7,8.3,8.3,8.3Z"/>
+          <path d="M1740.6,946.2c0,1.7-1.3,3.1-3,3.1-1.7,0-3-1.4-3-3,0-1.6,1.3-3,3-3,1.7,0,3,1.3,3.1,3Z"/>
+          <path class="cls-18" d="M1724.2,968c-4.6,0-8.3-3.7-8.3-8.3,0-4.6,3.7-8.3,8.3-8.3,4.6,0,8.3,3.7,8.3,8.3,0,4.6-3.7,8.3-8.3,8.3Z"/>
+        </g>
+        <g>
+          <path d="M1724,1048.9c-3.6,0-8.2-.1-12.7-.3-2.4-.1-4.9-.4-7.3-.8-2-.3-3.3-1.8-3.8-3.7-.9-3.3-1-6.6-1-9.9,0-4,.1-8,.8-11.9.3-1.5.6-3.1,1.4-4.5.9-1.6,2.4-2.5,4.2-2.6,2.9-.2,5.8-.5,8.7-.5,6.8,0,13.5,0,20.3,0,3,0,5.9.3,8.9.6,2.1.3,3.7,1.6,4.2,3.7.5,1.9.9,3.9,1.1,5.9.3,3.2.4,6.3.4,9.5,0,3.1-.2,6.2-.9,9.2-.3,1.4-.9,2.6-2.1,3.5-1,.7-2.2.9-3.4,1-5.9.7-11.9.7-18.8.8ZM1717.4,1039.9c5.8-3,11.6-6,17.4-9-5.9-3-11.6-5.9-17.4-8.9v17.9Z"/>
+          <path class="cls-18" d="M1717.4,1039.9v-17.9c5.8,3,11.6,5.9,17.4,8.9-5.9,3-11.6,6-17.4,9Z"/>
+        </g>
+        <image id="Ims8yx" width="512" height="512" transform="translate(1699.2 1078.9) scale(0)" xlink:href="rogo-44.png"/>
+        <line class="cls-3" x1="1674.2" y1="649.1" x2="1774.2" y2="649.1"/>
+        <line class="cls-3" x1="1674.2" y1="808.3" x2="1774.2" y2="808.3"/>
+      </g>
+      <g>
+        <text class="cls-42" transform="translate(1981.8 801.5)"><tspan x="0" y="0">アクセス</tspan></text>
+        <path d="M2017.8,710.6c-12.5,0-22.6,10.1-22.6,22.6s22.6,44.4,22.6,44.4c0,0,22.6-26.8,22.6-44.4s-10.1-22.6-22.6-22.6ZM2017.8,734.6c-3.1,0-5.6-2.5-5.6-5.6s2.5-5.6,5.6-5.6,5.6,2.5,5.6,5.6-2.5,5.6-5.6,5.6Z"/>
+        <text class="cls-42" transform="translate(1990.8 648.4)"><tspan x="0" y="0">料金表</tspan></text>
+        <path d="M2054.8,596l-13.3-3.8-4.7-1.3c.7-1.5,2.4-2.3,4.1-1.8,0,0,0,0,0,0,0,0,.1,0,.1,0,.4.1.8,0,1.2-.1.4-.2.6-.5.7-.9l2.5-8.8c.2-.8-.2-1.6-1-1.9l-13.3-3.8-41.9-12c-.8-.2-1.6.2-1.9,1l-7.8,27.1c-.2.8.2,1.6,1,1.9l13.1,3.8-3.7,13c-.1.4,0,.8.1,1.1.2.3.5.6.9.7l41.9,12,13.3,3.8c.1,0,.3,0,.4,0,.3,0,.5,0,.7-.2.3-.2.6-.5.7-.9l2.5-8.8c.1-.4,0-.8-.1-1.2-.2-.4-.5-.6-.9-.7s-.1,0-.1,0c-1.8-.5-2.9-2.4-2.4-4.3.3-.9.8-1.6,1.6-2.1.8-.4,1.7-.6,2.6-.3,0,0,0,0,0,0,0,0,.1,0,.1,0,.4.1.8,0,1.2-.1.4-.2.6-.5.7-.9l2.5-8.8c.2-.8-.2-1.6-1-1.9ZM2028.9,576.1l-3.3,11.5-25.9-7.4c-.8-.2-1.6.2-1.9,1l-3.2,11.3-11.7-3.3,6.9-24.2,39,11.2ZM1997.1,594.7l.4-1.4,2.8-9.8,24.5,7h0l1.4.4,1.4.4,5.9,1.7,1.6.5,1.8.5,2.4.7-.3,1-.4,1.4-2.5,8.8-.4,1.4v.4c-.1,0-3.3,11.1-3.3,11.1l-39-11.2,3.3-11.5.4-1.4Z"/>
+        <g>
+          <path d="M2042.8,935.9h-50v-50.1h50v50.1ZM2032,925.1c-3.9-5.6-7.6-11.1-11.4-16.5,3.5-4,6.9-8,10.3-12-1.6-.4-2.7,0-3.6,1.3-1.4,1.9-3,3.6-4.6,5.4-1.1,1.2-2.1,2.4-3.2,3.7-.3-.4-.5-.7-.8-1-2-2.9-4-5.8-6-8.7-.2-.3-.6-.7-.9-.7-2.6,0-5.2,0-8,0,3.7,5.4,7.3,10.7,10.9,15.9-3.6,4.2-7.2,8.4-10.9,12.6,1.5.3,2.5.1,3.5-1.1,2.5-3.1,5.2-6.1,7.9-9.2.2-.2.4-.4.6-.6.2.3.3.4.5.6,2.2,3.2,4.4,6.4,6.6,9.6.2.3.6.8.9.8,2.6,0,5.2,0,8,0Z"/>
+          <path class="cls-18" d="M2032,925.1c-2.8,0-5.4,0-8,0-.3,0-.7-.5-.9-.8-2.2-3.2-4.4-6.4-6.6-9.6-.1-.2-.3-.4-.5-.6-.2.2-.5.4-.6.6-2.6,3-5.3,6-7.9,9.2-1,1.2-2,1.4-3.5,1.1,3.6-4.2,7.2-8.4,10.9-12.6-3.6-5.3-7.2-10.5-10.9-15.9,2.8,0,5.4,0,8,0,.3,0,.7.4.9.7,2,2.9,4,5.8,6,8.7.2.3.4.6.8,1,1.1-1.3,2.2-2.5,3.2-3.7,1.5-1.8,3.2-3.5,4.6-5.4.9-1.3,2-1.6,3.6-1.3-3.5,4-6.9,8-10.3,12,3.8,5.5,7.5,10.9,11.4,16.5ZM2007.4,898.3c0,.2,0,.3,0,.3,5.6,8.1,11.3,16.1,16.9,24.2.1.2.4.5.6.5,1.1,0,2.2,0,3.4,0,0-.2,0-.3-.1-.4-5.6-8-11.2-16.1-16.9-24.1-.2-.3-.6-.5-.9-.5-1,0-2,0-3.1,0Z"/>
+          <path d="M2007.4,898.3c1.1,0,2.1,0,3.1,0,.3,0,.7.2.9.5,5.6,8,11.3,16.1,16.9,24.1,0,0,0,.1.1.4-1.2,0-2.3,0-3.4,0-.2,0-.4-.3-.6-.5-5.6-8.1-11.3-16.1-16.9-24.2,0,0,0,0,0-.3Z"/>
+        </g>
+        <g>
+          <path d="M2018,965.9c3.3.1,7.9.1,12.4.5,6.7.6,11.3,5.2,12.1,11.8.2,1.5.3,3.1.3,4.6,0,5.7,0,11.3,0,17,0,2.2-.2,4.5-.9,6.7-1.8,5.2-5.5,8.2-10.9,9.1-1.3.2-2.6.3-3.9.3-6.2,0-12.4,0-18.7,0-2.4,0-4.7-.3-7-1.2-4.8-1.9-7.5-5.5-8.2-10.5-.4-2.5-.5-5.1-.5-7.7,0-5.3,0-10.6.1-15.8,0-3.4.8-6.5,2.9-9.3,2.6-3.4,6.3-5,10.5-5.2,3.5-.2,7-.2,11.7-.4ZM2017.3,1011.6s0,0,0-.1c.7,0,1.3,0,2,0,3.4,0,6.9,0,10.3-.3,4.8-.4,7.9-3.3,8.4-8.1.8-7.5.3-14.9.2-22.4,0-.3,0-.6,0-.9-.2-1.9-.6-3.7-1.7-5.2-1.8-2.5-4.3-3.7-7.2-3.8-5.4-.2-10.8-.2-16.2-.3-2.2,0-4.4,0-6.7.3-5,.4-8.3,3.6-8.7,8.6-.5,7.6-.4,15.3,0,22.9,0,1.2.4,2.5.8,3.6,1.4,3.4,4.1,5.1,7.7,5.3,3.7.3,7.5.3,11.3.4Z"/>
+          <path class="cls-18" d="M2017.3,1011.6c-3.8-.1-7.5-.1-11.3-.4-3.5-.3-6.3-1.9-7.7-5.3-.5-1.1-.8-2.4-.8-3.6-.3-7.6-.5-15.3,0-22.9.4-5,3.7-8.2,8.7-8.6,2.2-.2,4.4-.3,6.7-.3,5.4,0,10.8,0,16.2.3,2.9.1,5.5,1.2,7.2,3.8,1.1,1.6,1.5,3.4,1.7,5.2,0,.3,0,.6,0,.9,0,7.5.5,15-.2,22.4-.5,4.8-3.6,7.7-8.4,8.1-3.4.3-6.8.2-10.3.3-.7,0-1.3,0-2,0,0,0,0,0,0,.1ZM2004.9,991c0,7.1,5.8,12.9,12.9,12.9,7.1,0,12.9-5.8,12.9-12.9,0-7.1-5.8-12.9-12.9-12.9-7.1,0-12.9,5.7-12.9,12.9ZM2034.2,977.6c0-1.7-1.4-3-3.1-3-1.7,0-3,1.4-3,3,0,1.7,1.4,3,3,3,1.7,0,3-1.4,3-3.1Z"/>
+          <path d="M2004.9,991c0-7.1,5.7-12.8,12.9-12.9,7.1,0,12.9,5.7,12.9,12.9,0,7.1-5.8,12.9-12.9,12.9-7.1,0-12.9-5.8-12.9-12.9ZM2017.8,999.3c4.6,0,8.3-3.7,8.3-8.3,0-4.6-3.7-8.3-8.3-8.3-4.6,0-8.3,3.7-8.3,8.3,0,4.6,3.7,8.3,8.3,8.3Z"/>
+          <path d="M2034.2,977.6c0,1.7-1.3,3.1-3,3.1-1.7,0-3-1.4-3-3,0-1.6,1.3-3,3-3,1.7,0,3,1.3,3.1,3Z"/>
+          <path class="cls-18" d="M2017.8,999.3c-4.6,0-8.3-3.7-8.3-8.3,0-4.6,3.7-8.3,8.3-8.3,4.6,0,8.3,3.7,8.3,8.3,0,4.6-3.7,8.3-8.3,8.3Z"/>
+        </g>
+        <g>
+          <path d="M2017.6,1080.3c-3.6,0-8.2-.1-12.7-.3-2.4-.1-4.9-.4-7.3-.8-2-.3-3.3-1.8-3.8-3.7-.9-3.3-1-6.6-1-9.9,0-4,.1-8,.8-11.9.3-1.5.6-3.1,1.4-4.5.9-1.6,2.4-2.5,4.2-2.6,2.9-.2,5.8-.5,8.7-.5,6.8,0,13.5,0,20.3,0,3,0,5.9.3,8.9.6,2.1.3,3.7,1.6,4.2,3.7.5,1.9.9,3.9,1.1,5.9.3,3.2.4,6.3.4,9.5,0,3.1-.2,6.2-.9,9.2-.3,1.4-.9,2.6-2.1,3.5-1,.7-2.2.9-3.4,1-5.9.7-11.9.7-18.8.8ZM2011,1071.2c5.8-3,11.6-6,17.4-9-5.9-3-11.6-5.9-17.4-8.9v17.9Z"/>
+          <path class="cls-18" d="M2011,1071.2v-17.9c5.8,3,11.6,5.9,17.4,8.9-5.9,3-11.6,6-17.4,9Z"/>
+        </g>
+        <image id="Ims8yx-2" data-name="Ims8yx" width="512" height="512" transform="translate(1992.8 1110.3) scale(0)" xlink:href="rogo-45.png"/>
+        <line class="cls-3" x1="1967.8" y1="680.5" x2="2067.8" y2="680.5"/>
+        <line class="cls-3" x1="1967.8" y1="839.6" x2="2067.8" y2="839.6"/>
+      </g>
+      <g>
+        <rect class="cls-15" x="3874.2" y="493.4" width="140" height="680"/>
+        <text class="cls-42" transform="translate(3908.2 770.1)"><tspan x="0" y="0">アクセス</tspan></text>
+        <path d="M3944.2,679.2c-12.5,0-22.6,10.1-22.6,22.6s22.6,44.4,22.6,44.4c0,0,22.6-26.8,22.6-44.4s-10.1-22.6-22.6-22.6ZM3944.2,703.2c-3.1,0-5.6-2.5-5.6-5.6s2.5-5.6,5.6-5.6,5.6,2.5,5.6,5.6-2.5,5.6-5.6,5.6Z"/>
+        <text class="cls-42" transform="translate(3917.2 617)"><tspan x="0" y="0">料金表</tspan></text>
+        <path d="M3981.2,564.6l-13.3-3.8-4.7-1.3c.7-1.5,2.4-2.3,4.1-1.8,0,0,0,0,0,0,0,0,.1,0,.1,0,.4.1.8,0,1.2-.1.4-.2.6-.5.7-.9l2.5-8.8c.2-.8-.2-1.6-1-1.9l-13.3-3.8-41.9-12c-.8-.2-1.6.2-1.9,1l-7.8,27.1c-.2.8.2,1.6,1,1.9l13.1,3.8-3.7,13c-.1.4,0,.8.1,1.1.2.3.5.6.9.7l41.9,12,13.3,3.8c.1,0,.3,0,.4,0,.3,0,.5,0,.7-.2.3-.2.6-.5.7-.9l2.5-8.8c.1-.4,0-.8-.1-1.2-.2-.4-.5-.6-.9-.7s-.1,0-.1,0c-1.8-.5-2.9-2.4-2.4-4.3.3-.9.8-1.6,1.6-2.1.8-.4,1.7-.6,2.6-.3,0,0,0,0,0,0,0,0,.1,0,.1,0,.4.1.8,0,1.2-.1.4-.2.6-.5.7-.9l2.5-8.8c.2-.8-.2-1.6-1-1.9ZM3955.3,544.7l-3.3,11.5-25.9-7.4c-.8-.2-1.6.2-1.9,1l-3.2,11.3-11.7-3.3,6.9-24.2,39,11.2ZM3923.5,563.4l.4-1.4,2.8-9.8,24.5,7h0l1.4.4,1.4.4,5.9,1.7,1.6.5,1.8.5,2.4.7-.3,1-.4,1.4-2.5,8.8-.4,1.4v.4c-.1,0-3.3,11.1-3.3,11.1l-39-11.2,3.3-11.5.4-1.4Z"/>
+        <g>
+          <path d="M3969.2,904.5h-50v-50.1h50v50.1ZM3958.4,893.8c-3.9-5.6-7.6-11.1-11.4-16.5,3.5-4,6.9-8,10.3-12-1.6-.4-2.7,0-3.6,1.3-1.4,1.9-3,3.6-4.6,5.4-1.1,1.2-2.1,2.4-3.2,3.7-.3-.4-.5-.7-.8-1-2-2.9-4-5.8-6-8.7-.2-.3-.6-.7-.9-.7-2.6,0-5.2,0-8,0,3.7,5.4,7.3,10.7,10.9,15.9-3.6,4.2-7.2,8.4-10.9,12.6,1.5.3,2.5.1,3.5-1.1,2.5-3.1,5.2-6.1,7.9-9.2.2-.2.4-.4.6-.6.2.3.3.4.5.6,2.2,3.2,4.4,6.4,6.6,9.6.2.3.6.8.9.8,2.6,0,5.2,0,8,0Z"/>
+          <path class="cls-18" d="M3958.4,893.8c-2.8,0-5.4,0-8,0-.3,0-.7-.5-.9-.8-2.2-3.2-4.4-6.4-6.6-9.6-.1-.2-.3-.4-.5-.6-.2.2-.5.4-.6.6-2.6,3-5.3,6-7.9,9.2-1,1.2-2,1.4-3.5,1.1,3.6-4.2,7.2-8.4,10.9-12.6-3.6-5.3-7.2-10.5-10.9-15.9,2.8,0,5.4,0,8,0,.3,0,.7.4.9.7,2,2.9,4,5.8,6,8.7.2.3.4.6.8,1,1.1-1.3,2.2-2.5,3.2-3.7,1.5-1.8,3.2-3.5,4.6-5.4.9-1.3,2-1.6,3.6-1.3-3.5,4-6.9,8-10.3,12,3.8,5.5,7.5,10.9,11.4,16.5ZM3933.8,866.9c0,.2,0,.3,0,.3,5.6,8.1,11.3,16.1,16.9,24.2.1.2.4.5.6.5,1.1,0,2.2,0,3.4,0,0-.2,0-.3-.1-.4-5.6-8-11.2-16.1-16.9-24.1-.2-.3-.6-.5-.9-.5-1,0-2,0-3.1,0Z"/>
+          <path d="M3933.8,866.9c1.1,0,2.1,0,3.1,0,.3,0,.7.2.9.5,5.6,8,11.3,16.1,16.9,24.1,0,0,0,.1.1.4-1.2,0-2.3,0-3.4,0-.2,0-.4-.3-.6-.5-5.6-8.1-11.3-16.1-16.9-24.2,0,0,0,0,0-.3Z"/>
+        </g>
+        <g>
+          <path d="M3944.3,934.5c3.3.1,7.9.1,12.4.5,6.7.6,11.3,5.2,12.1,11.8.2,1.5.3,3.1.3,4.6,0,5.7,0,11.3,0,17,0,2.2-.2,4.5-.9,6.7-1.8,5.2-5.5,8.2-10.9,9.1-1.3.2-2.6.3-3.9.3-6.2,0-12.4,0-18.7,0-2.4,0-4.7-.3-7-1.2-4.8-1.9-7.5-5.5-8.2-10.5-.4-2.5-.5-5.1-.5-7.7,0-5.3,0-10.6.1-15.8,0-3.4.8-6.5,2.9-9.3,2.6-3.4,6.3-5,10.5-5.2,3.5-.2,7-.2,11.7-.4ZM3943.7,980.3s0,0,0-.1c.7,0,1.3,0,2,0,3.4,0,6.9,0,10.3-.3,4.8-.4,7.9-3.3,8.4-8.1.8-7.5.3-14.9.2-22.4,0-.3,0-.6,0-.9-.2-1.9-.6-3.7-1.7-5.2-1.8-2.5-4.3-3.7-7.2-3.8-5.4-.2-10.8-.2-16.2-.3-2.2,0-4.4,0-6.7.3-5,.4-8.3,3.6-8.7,8.6-.5,7.6-.4,15.3,0,22.9,0,1.2.4,2.5.8,3.6,1.4,3.4,4.1,5.1,7.7,5.3,3.7.3,7.5.3,11.3.4Z"/>
+          <path class="cls-18" d="M3943.7,980.3c-3.8-.1-7.5-.1-11.3-.4-3.5-.3-6.3-1.9-7.7-5.3-.5-1.1-.8-2.4-.8-3.6-.3-7.6-.5-15.3,0-22.9.4-5,3.7-8.2,8.7-8.6,2.2-.2,4.4-.3,6.7-.3,5.4,0,10.8,0,16.2.3,2.9.1,5.5,1.2,7.2,3.8,1.1,1.6,1.5,3.4,1.7,5.2,0,.3,0,.6,0,.9,0,7.5.5,15-.2,22.4-.5,4.8-3.6,7.7-8.4,8.1-3.4.3-6.8.2-10.3.3-.7,0-1.3,0-2,0,0,0,0,0,0,.1ZM3931.3,959.6c0,7.1,5.8,12.9,12.9,12.9,7.1,0,12.9-5.8,12.9-12.9,0-7.1-5.8-12.9-12.9-12.9-7.1,0-12.9,5.7-12.9,12.9ZM3960.6,946.2c0-1.7-1.4-3-3.1-3-1.7,0-3,1.4-3,3,0,1.7,1.4,3,3,3,1.7,0,3-1.4,3-3.1Z"/>
+          <path d="M3931.3,959.6c0-7.1,5.7-12.8,12.9-12.9,7.1,0,12.9,5.7,12.9,12.9,0,7.1-5.8,12.9-12.9,12.9-7.1,0-12.9-5.8-12.9-12.9ZM3944.2,968c4.6,0,8.3-3.7,8.3-8.3,0-4.6-3.7-8.3-8.3-8.3-4.6,0-8.3,3.7-8.3,8.3,0,4.6,3.7,8.3,8.3,8.3Z"/>
+          <path d="M3960.6,946.2c0,1.7-1.3,3.1-3,3.1-1.7,0-3-1.4-3-3,0-1.6,1.3-3,3-3,1.7,0,3,1.3,3.1,3Z"/>
+          <path class="cls-18" d="M3944.2,968c-4.6,0-8.3-3.7-8.3-8.3,0-4.6,3.7-8.3,8.3-8.3,4.6,0,8.3,3.7,8.3,8.3,0,4.6-3.7,8.3-8.3,8.3Z"/>
+        </g>
+        <g>
+          <path d="M3944,1048.9c-3.6,0-8.2-.1-12.7-.3-2.4-.1-4.9-.4-7.3-.8-2-.3-3.3-1.8-3.8-3.7-.9-3.3-1-6.6-1-9.9,0-4,.1-8,.8-11.9.3-1.5.6-3.1,1.4-4.5.9-1.6,2.4-2.5,4.2-2.6,2.9-.2,5.8-.5,8.7-.5,6.8,0,13.5,0,20.3,0,3,0,5.9.3,8.9.6,2.1.3,3.7,1.6,4.2,3.7.5,1.9.9,3.9,1.1,5.9.3,3.2.4,6.3.4,9.5,0,3.1-.2,6.2-.9,9.2-.3,1.4-.9,2.6-2.1,3.5-1,.7-2.2.9-3.4,1-5.9.7-11.9.7-18.8.8ZM3937.4,1039.9c5.8-3,11.6-6,17.4-9-5.9-3-11.6-5.9-17.4-8.9v17.9Z"/>
+          <path class="cls-18" d="M3937.4,1039.9v-17.9c5.8,3,11.6,5.9,17.4,8.9-5.9,3-11.6,6-17.4,9Z"/>
+        </g>
+        <image id="Ims8yx-3" data-name="Ims8yx" width="512" height="512" transform="translate(3919.2 1078.9) scale(0)" xlink:href="rogo-46.png"/>
+        <line class="cls-3" x1="3894.2" y1="649.1" x2="3994.2" y2="649.1"/>
+        <line class="cls-3" x1="3894.2" y1="808.3" x2="3994.2" y2="808.3"/>
+      </g>
+      <g>
+        <rect class="cls-15" x="6094.2" y="493.4" width="140" height="680"/>
+        <text class="cls-42" transform="translate(6128.2 770.1)"><tspan x="0" y="0">アクセス</tspan></text>
+        <path d="M6164.2,679.2c-12.5,0-22.6,10.1-22.6,22.6s22.6,44.4,22.6,44.4c0,0,22.6-26.8,22.6-44.4s-10.1-22.6-22.6-22.6ZM6164.2,703.2c-3.1,0-5.6-2.5-5.6-5.6s2.5-5.6,5.6-5.6,5.6,2.5,5.6,5.6-2.5,5.6-5.6,5.6Z"/>
+        <text class="cls-42" transform="translate(6137.2 617)"><tspan x="0" y="0">料金表</tspan></text>
+        <path d="M6201.2,564.6l-13.3-3.8-4.7-1.3c.7-1.5,2.4-2.3,4.1-1.8,0,0,0,0,0,0,0,0,.1,0,.1,0,.4.1.8,0,1.2-.1.4-.2.6-.5.7-.9l2.5-8.8c.2-.8-.2-1.6-1-1.9l-13.3-3.8-41.9-12c-.8-.2-1.6.2-1.9,1l-7.8,27.1c-.2.8.2,1.6,1,1.9l13.1,3.8-3.7,13c-.1.4,0,.8.1,1.1.2.3.5.6.9.7l41.9,12,13.3,3.8c.1,0,.3,0,.4,0,.3,0,.5,0,.7-.2.3-.2.6-.5.7-.9l2.5-8.8c.1-.4,0-.8-.1-1.2-.2-.4-.5-.6-.9-.7s-.1,0-.1,0c-1.8-.5-2.9-2.4-2.4-4.3.3-.9.8-1.6,1.6-2.1.8-.4,1.7-.6,2.6-.3,0,0,0,0,0,0,0,0,.1,0,.1,0,.4.1.8,0,1.2-.1.4-.2.6-.5.7-.9l2.5-8.8c.2-.8-.2-1.6-1-1.9ZM6175.3,544.7l-3.3,11.5-25.9-7.4c-.8-.2-1.6.2-1.9,1l-3.2,11.3-11.7-3.3,6.9-24.2,39,11.2ZM6143.5,563.4l.4-1.4,2.8-9.8,24.5,7h0l1.4.4,1.4.4,5.9,1.7,1.6.5,1.8.5,2.4.7-.3,1-.4,1.4-2.5,8.8-.4,1.4v.4c-.1,0-3.3,11.1-3.3,11.1l-39-11.2,3.3-11.5.4-1.4Z"/>
+        <g>
+          <path d="M6189.2,904.5h-50v-50.1h50v50.1ZM6178.4,893.8c-3.9-5.6-7.6-11.1-11.4-16.5,3.5-4,6.9-8,10.3-12-1.6-.4-2.7,0-3.6,1.3-1.4,1.9-3,3.6-4.6,5.4-1.1,1.2-2.1,2.4-3.2,3.7-.3-.4-.5-.7-.8-1-2-2.9-4-5.8-6-8.7-.2-.3-.6-.7-.9-.7-2.6,0-5.2,0-8,0,3.7,5.4,7.3,10.7,10.9,15.9-3.6,4.2-7.2,8.4-10.9,12.6,1.5.3,2.5.1,3.5-1.1,2.5-3.1,5.2-6.1,7.9-9.2.2-.2.4-.4.6-.6.2.3.3.4.5.6,2.2,3.2,4.4,6.4,6.6,9.6.2.3.6.8.9.8,2.6,0,5.2,0,8,0Z"/>
+          <path class="cls-18" d="M6178.4,893.8c-2.8,0-5.4,0-8,0-.3,0-.7-.5-.9-.8-2.2-3.2-4.4-6.4-6.6-9.6-.1-.2-.3-.4-.5-.6-.2.2-.5.4-.6.6-2.6,3-5.3,6-7.9,9.2-1,1.2-2,1.4-3.5,1.1,3.6-4.2,7.2-8.4,10.9-12.6-3.6-5.3-7.2-10.5-10.9-15.9,2.8,0,5.4,0,8,0,.3,0,.7.4.9.7,2,2.9,4,5.8,6,8.7.2.3.4.6.8,1,1.1-1.3,2.2-2.5,3.2-3.7,1.5-1.8,3.2-3.5,4.6-5.4.9-1.3,2-1.6,3.6-1.3-3.5,4-6.9,8-10.3,12,3.8,5.5,7.5,10.9,11.4,16.5ZM6153.8,866.9c0,.2,0,.3,0,.3,5.6,8.1,11.3,16.1,16.9,24.2.1.2.4.5.6.5,1.1,0,2.2,0,3.4,0,0-.2,0-.3-.1-.4-5.6-8-11.2-16.1-16.9-24.1-.2-.3-.6-.5-.9-.5-1,0-2,0-3.1,0Z"/>
+          <path d="M6153.8,866.9c1.1,0,2.1,0,3.1,0,.3,0,.7.2.9.5,5.6,8,11.3,16.1,16.9,24.1,0,0,0,.1.1.4-1.2,0-2.3,0-3.4,0-.2,0-.4-.3-.6-.5-5.6-8.1-11.3-16.1-16.9-24.2,0,0,0,0,0-.3Z"/>
+        </g>
+        <g>
+          <path d="M6164.3,934.5c3.3.1,7.9.1,12.4.5,6.7.6,11.3,5.2,12.1,11.8.2,1.5.3,3.1.3,4.6,0,5.7,0,11.3,0,17,0,2.2-.2,4.5-.9,6.7-1.8,5.2-5.5,8.2-10.9,9.1-1.3.2-2.6.3-3.9.3-6.2,0-12.4,0-18.7,0-2.4,0-4.7-.3-7-1.2-4.8-1.9-7.5-5.5-8.2-10.5-.4-2.5-.5-5.1-.5-7.7,0-5.3,0-10.6.1-15.8,0-3.4.8-6.5,2.9-9.3,2.6-3.4,6.3-5,10.5-5.2,3.5-.2,7-.2,11.7-.4ZM6163.7,980.3s0,0,0-.1c.7,0,1.3,0,2,0,3.4,0,6.9,0,10.3-.3,4.8-.4,7.9-3.3,8.4-8.1.8-7.5.3-14.9.2-22.4,0-.3,0-.6,0-.9-.2-1.9-.6-3.7-1.7-5.2-1.8-2.5-4.3-3.7-7.2-3.8-5.4-.2-10.8-.2-16.2-.3-2.2,0-4.4,0-6.7.3-5,.4-8.3,3.6-8.7,8.6-.5,7.6-.4,15.3,0,22.9,0,1.2.4,2.5.8,3.6,1.4,3.4,4.1,5.1,7.7,5.3,3.7.3,7.5.3,11.3.4Z"/>
+          <path class="cls-18" d="M6163.7,980.3c-3.8-.1-7.5-.1-11.3-.4-3.5-.3-6.3-1.9-7.7-5.3-.5-1.1-.8-2.4-.8-3.6-.3-7.6-.5-15.3,0-22.9.4-5,3.7-8.2,8.7-8.6,2.2-.2,4.4-.3,6.7-.3,5.4,0,10.8,0,16.2.3,2.9.1,5.5,1.2,7.2,3.8,1.1,1.6,1.5,3.4,1.7,5.2,0,.3,0,.6,0,.9,0,7.5.5,15-.2,22.4-.5,4.8-3.6,7.7-8.4,8.1-3.4.3-6.8.2-10.3.3-.7,0-1.3,0-2,0,0,0,0,0,0,.1ZM6151.3,959.6c0,7.1,5.8,12.9,12.9,12.9,7.1,0,12.9-5.8,12.9-12.9,0-7.1-5.8-12.9-12.9-12.9-7.1,0-12.9,5.7-12.9,12.9ZM6180.6,946.2c0-1.7-1.4-3-3.1-3-1.7,0-3,1.4-3,3,0,1.7,1.4,3,3,3,1.7,0,3-1.4,3-3.1Z"/>
+          <path d="M6151.3,959.6c0-7.1,5.7-12.8,12.9-12.9,7.1,0,12.9,5.7,12.9,12.9,0,7.1-5.8,12.9-12.9,12.9-7.1,0-12.9-5.8-12.9-12.9ZM6164.2,968c4.6,0,8.3-3.7,8.3-8.3,0-4.6-3.7-8.3-8.3-8.3-4.6,0-8.3,3.7-8.3,8.3,0,4.6,3.7,8.3,8.3,8.3Z"/>
+          <path d="M6180.6,946.2c0,1.7-1.3,3.1-3,3.1-1.7,0-3-1.4-3-3,0-1.6,1.3-3,3-3,1.7,0,3,1.3,3.1,3Z"/>
+          <path class="cls-18" d="M6164.2,968c-4.6,0-8.3-3.7-8.3-8.3,0-4.6,3.7-8.3,8.3-8.3,4.6,0,8.3,3.7,8.3,8.3,0,4.6-3.7,8.3-8.3,8.3Z"/>
+        </g>
+        <g>
+          <path d="M6164,1048.9c-3.6,0-8.2-.1-12.7-.3-2.4-.1-4.9-.4-7.3-.8-2-.3-3.3-1.8-3.8-3.7-.9-3.3-1-6.6-1-9.9,0-4,.1-8,.8-11.9.3-1.5.6-3.1,1.4-4.5.9-1.6,2.4-2.5,4.2-2.6,2.9-.2,5.8-.5,8.7-.5,6.8,0,13.5,0,20.3,0,3,0,5.9.3,8.9.6,2.1.3,3.7,1.6,4.2,3.7.5,1.9.9,3.9,1.1,5.9.3,3.2.4,6.3.4,9.5,0,3.1-.2,6.2-.9,9.2-.3,1.4-.9,2.6-2.1,3.5-1,.7-2.2.9-3.4,1-5.9.7-11.9.7-18.8.8ZM6157.4,1039.9c5.8-3,11.6-6,17.4-9-5.9-3-11.6-5.9-17.4-8.9v17.9Z"/>
+          <path class="cls-18" d="M6157.4,1039.9v-17.9c5.8,3,11.6,5.9,17.4,8.9-5.9,3-11.6,6-17.4,9Z"/>
+        </g>
+        <image id="Ims8yx-4" data-name="Ims8yx" width="512" height="512" transform="translate(6139.2 1078.9) scale(0)" xlink:href="rogo-47.png"/>
+        <line class="cls-3" x1="6114.2" y1="649.1" x2="6214.2" y2="649.1"/>
+        <line class="cls-3" x1="6114.2" y1="808.3" x2="6214.2" y2="808.3"/>
+      </g>
+      <text class="cls-12" transform="translate(11074.2 584.5)"><tspan x="0" y="0">attraction</tspan></text>
+      <rect class="cls-18" x="11074.2" y="673.4" width="480" height="720"/>
+      <g>
+        <text class="cls-71" transform="translate(11100.9 792.6) scale(1 1)"><tspan class="cls-35" x="0" y="0">1F</tspan><tspan class="cls-85" x="33.6" y="1.4" xml:space="preserve">  </tspan><tspan class="cls-35" x="56" y="0">WONDER ZONE</tspan></text>
+        <path d="M11472.2,725.4v106h-396v-106h396M11474.2,723.4h-400v110h400v-110h0Z"/>
+        <text class="cls-71" transform="translate(11100.9 962.6) scale(1 1)"><tspan class="cls-35" x="0" y="0">3F</tspan><tspan class="cls-85" x="36.6" y="1.4" xml:space="preserve">  </tspan><tspan class="cls-35" x="59" y="0">INSPIRATION ZONE</tspan></text>
+        <path d="M11472.2,895.4v106h-396v-106h396M11474.2,893.4h-400v110h400v-110h0Z"/>
+        <text class="cls-71" transform="translate(11100.9 1132.6) scale(1 1)"><tspan class="cls-35" x="0" y="0">4F</tspan><tspan class="cls-85" x="37.2" y="1.4" xml:space="preserve">  </tspan><tspan class="cls-35" x="59.5" y="0">ATTRACTION ZONE</tspan></text>
+        <path d="M11472.2,1065.4v106h-396v-106h396M11474.2,1063.4h-400v110h400v-110h0Z"/>
+        <text class="cls-71" transform="translate(11100.9 1302.6) scale(1 1)"><tspan class="cls-35" x="0" y="0">5F</tspan><tspan class="cls-85" x="36.6" y="1.4" xml:space="preserve">  </tspan><tspan class="cls-35" x="59" y="0">ULTIMATE ZONE</tspan></text>
+        <path d="M11472.2,1235.4v106h-396v-106h396M11474.2,1233.4h-400v110h400v-110h0Z"/>
+      </g>
+      <polygon points="12894.2 883.4 11554.2 883.4 11554.2 723.4 12774 723.4 12894.2 883.4"/>
+      <text class="cls-11" transform="translate(11604.2 836.9) scale(1 1)"><tspan class="cls-35" x="0" y="0">1F</tspan><tspan class="cls-85" x="70" y="3" xml:space="preserve">  </tspan><tspan class="cls-35" x="116.6" y="0">WONDER ZONE</tspan></text>
+      <text class="cls-43" transform="translate(11554.2 1364.5)"><tspan x="0" y="0">グルメも、V</tspan><tspan class="cls-48" x="137.2" y="0">R</tspan><tspan x="160.6" y="0">レースゲームも。世界の人々が日本の味を楽しめる「RED°SHOKUDO」や</tspan><tspan class="cls-84" x="969.5" y="0">、</tspan><tspan x="0" y="42">さらにボートレースの体験型アトラクションなど、誰もが楽しめるコンテンツを用意しています</tspan><tspan class="cls-84" x="1032" y="42">。</tspan><tspan x="0" y="84">※</tspan><tspan class="cls-48" x="24" y="84">1</tspan><tspan x="45.8" y="84">階はパーク入場チケット対象外施設です</tspan><tspan class="cls-84" x="477.8" y="84">。</tspan></text>
+      <text class="cls-12" transform="translate(13294.2 584.5)"><tspan x="0" y="0">attraction</tspan></text>
+      <text class="cls-27" transform="translate(14194.4 584.5)"><tspan x="0" y="0">アトラクション一覧</tspan></text>
+      <g>
+        <text class="cls-71" transform="translate(13403 782) scale(1 1)"><tspan class="cls-35" x="0" y="0">1F</tspan><tspan class="cls-85" x="33.6" y="1.4" xml:space="preserve">  </tspan><tspan class="cls-35" x="56" y="0">WONDER ZONE</tspan></text>
+        <text class="cls-71" transform="translate(13810.9 782) scale(1 1)"><tspan class="cls-35" x="0" y="0">3F</tspan><tspan class="cls-85" x="36.6" y="1.4" xml:space="preserve">  </tspan><tspan class="cls-35" x="59" y="0">INSPIRATION ZONE</tspan></text>
+        <text class="cls-71" transform="translate(14254 782) scale(1 1)"><tspan class="cls-35" x="0" y="0">4F</tspan><tspan class="cls-85" x="37.2" y="1.4" xml:space="preserve">  </tspan><tspan class="cls-35" x="59.5" y="0">ATTRACTION ZONE</tspan></text>
+        <text class="cls-71" transform="translate(14712.9 782) scale(1 1)"><tspan class="cls-35" x="0" y="0">5F</tspan><tspan class="cls-85" x="36.6" y="1.4" xml:space="preserve">  </tspan><tspan class="cls-35" x="59" y="0">ULTIMATE ZONE</tspan></text>
+        <path d="M13742.2,714.7v106h-396v-106h396M13744.2,712.7h-400v110h400v-110h0Z"/>
+        <path d="M14182.2,714.7v106h-396v-106h396M14184.2,712.7h-400v110h400v-110h0Z"/>
+        <path d="M14622.2,714.7v106h-396v-106h396M14624.2,712.7h-400v110h400v-110h0Z"/>
+        <path d="M15062.2,714.7v106h-396v-106h396M15064.2,712.7h-400v110h400v-110h0Z"/>
+      </g>
+      <text class="cls-12" transform="translate(8854.2 584.5)"><tspan x="0" y="0">attraction</tspan></text>
+      <text class="cls-71" transform="translate(8963 782) scale(1 1)"><tspan class="cls-35" x="0" y="0">1F</tspan><tspan class="cls-85" x="33.6" y="1.4" xml:space="preserve">  </tspan><tspan class="cls-35" x="56" y="0">WONDER ZONE</tspan></text>
+      <text class="cls-71" transform="translate(9370.9 782) scale(1 1)"><tspan class="cls-35" x="0" y="0">3F</tspan><tspan class="cls-85" x="36.6" y="1.4" xml:space="preserve">  </tspan><tspan class="cls-35" x="59" y="0">INSPIRATION ZONE</tspan></text>
+      <text class="cls-71" transform="translate(9814 782) scale(1 1)"><tspan class="cls-35" x="0" y="0">4F</tspan><tspan class="cls-85" x="37.2" y="1.4" xml:space="preserve">  </tspan><tspan class="cls-35" x="59.5" y="0">ATTRACTION ZONE</tspan></text>
+      <text class="cls-71" transform="translate(10272.9 782) scale(1 1)"><tspan class="cls-35" x="0" y="0">5F</tspan><tspan class="cls-85" x="36.6" y="1.4" xml:space="preserve">  </tspan><tspan class="cls-35" x="59" y="0">ULTIMATE ZONE</tspan></text>
+      <path d="M9302.2,714.7v106h-396v-106h396M9304.2,712.7h-400v110h400v-110h0Z"/>
+      <path d="M9742.2,714.7v106h-396v-106h396M9744.2,712.7h-400v110h400v-110h0Z"/>
+      <path d="M10182.2,714.7v106h-396v-106h396M10184.2,712.7h-400v110h400v-110h0Z"/>
+      <path d="M10622.2,714.7v106h-396v-106h396M10624.2,712.7h-400v110h400v-110h0Z"/>
+      <polygon points="10674.2 1138.1 8804.2 1138.1 8804.2 978.1 10506.4 978.1 10674.2 1138.1"/>
+      <text class="cls-11" transform="translate(8854.2 1091.6) scale(1 1)"><tspan class="cls-35" x="0" y="0">1F</tspan><tspan class="cls-85" x="70" y="3" xml:space="preserve">  </tspan><tspan class="cls-35" x="116.6" y="0">WONDER ZONE</tspan></text>
+      <text class="cls-43" transform="translate(8854.2 1188.3)"><tspan x="0" y="0">グルメも、V</tspan><tspan class="cls-48" x="137.2" y="0">R</tspan><tspan x="160.6" y="0">レースゲームも。世界の人々が日本の味を楽しめる「RED°SHOKUDO」や</tspan><tspan class="cls-84" x="969.5" y="0">、</tspan><tspan x="0" y="42">さらにボートレースの体験型アトラクションなど、誰もが楽しめるコンテンツを用意しています</tspan><tspan class="cls-84" x="1032" y="42">。</tspan><tspan x="0" y="84">※</tspan><tspan class="cls-48" x="24" y="84">1</tspan><tspan x="45.8" y="84">階はパーク入場チケット対象外施設です</tspan><tspan class="cls-84" x="477.8" y="84">。</tspan></text>
+      <g>
+        <g>
+          <rect class="cls-18" x="8854.2" y="1796.2" width="580" height="90"/>
+          <rect class="cls-44" x="8854.2" y="1361.2" width="580" height="435"/>
+          <text class="cls-40" transform="translate(8854.2 1850.3)"><tspan x="0" y="0">アトラクション名</tspan></text>
+          <polygon class="cls-83" points="9374.2 1886.2 9434.2 1826.2 9434.2 1886.2 9374.2 1886.2"/>
+        </g>
+        <g>
+          <rect class="cls-18" x="9474.2" y="1796.2" width="580" height="90"/>
+          <rect class="cls-44" x="9474.2" y="1361.2" width="580" height="435"/>
+          <text class="cls-40" transform="translate(9474.2 1850.3)"><tspan x="0" y="0">アトラクション名</tspan></text>
+          <polygon class="cls-83" points="9994.2 1886.2 10054.2 1826.2 10054.2 1886.2 9994.2 1886.2"/>
+        </g>
+      </g>
+      <polygon points="10674.2 2218.1 8804.2 2218.1 8804.2 2058.1 10506.4 2058.1 10674.2 2218.1"/>
+      <text class="cls-11" transform="translate(8854.2 2171.6) scale(1 1)"><tspan class="cls-35" x="0" y="0">3F</tspan><tspan class="cls-85" x="76.3" y="3" xml:space="preserve">  </tspan><tspan class="cls-35" x="122.9" y="0">INSPIRATION ZONE</tspan></text>
+      <text class="cls-43" transform="translate(8854.2 2268.2)"><tspan x="0" y="0">エントランスを抜けると、プロジェクションマッピングよる映像演出やレトロゲー</tspan><tspan class="cls-48" x="888" y="0">ム</tspan><tspan x="918" y="0">/V</tspan><tspan class="cls-48" x="946.6" y="0">R</tspan><tspan x="970" y="0">ゲームなどの体験コンテンツも</tspan><tspan class="cls-84" x="1306" y="0">。</tspan><tspan x="0" y="42">さらにオフィシャルショップ</tspan><tspan class="cls-48" x="312" y="42">で</tspan><tspan x="342" y="42">RED°限定のアイテムも手に入ります</tspan><tspan class="cls-84" x="736.2" y="42">。</tspan></text>
+      <g>
+        <g>
+          <rect class="cls-18" x="8854.2" y="2834.2" width="580" height="90"/>
+          <rect class="cls-44" x="8854.2" y="2399.2" width="580" height="435"/>
+          <text class="cls-40" transform="translate(8854.2 2888.2)"><tspan x="0" y="0">アトラクション名</tspan></text>
+          <polygon class="cls-83" points="9374.2 2924.2 9434.2 2864.2 9434.2 2924.2 9374.2 2924.2"/>
+        </g>
+        <g>
+          <rect class="cls-18" x="9474.2" y="2834.2" width="580" height="90"/>
+          <rect class="cls-44" x="9474.2" y="2399.2" width="580" height="435"/>
+          <text class="cls-40" transform="translate(9474.2 2888.2)"><tspan x="0" y="0">アトラクション名</tspan></text>
+          <polygon class="cls-83" points="9994.2 2924.2 10054.2 2864.2 10054.2 2924.2 9994.2 2924.2"/>
+        </g>
+        <g>
+          <rect class="cls-18" x="10094.2" y="2834.2" width="580" height="90"/>
+          <rect class="cls-44" x="10094.2" y="2399.2" width="580" height="435"/>
+          <text class="cls-40" transform="translate(10094.2 2888.2)"><tspan x="0" y="0">アトラクション名</tspan></text>
+          <polygon class="cls-83" points="10614.2 2924.2 10674.2 2864.2 10674.2 2924.2 10614.2 2924.2"/>
+        </g>
+      </g>
+      <polygon points="12894.2 2350.4 11554.2 2350.4 11554.2 2190.4 12774 2190.4 12894.2 2350.4"/>
+      <text class="cls-11" transform="translate(11604.2 2303.9) scale(1 1)"><tspan class="cls-35" x="0" y="0">3F</tspan><tspan class="cls-85" x="76.3" y="3" xml:space="preserve">  </tspan><tspan class="cls-35" x="122.9" y="0">INSPIRATION ZONE</tspan></text>
+      <text class="cls-43" transform="translate(11604.2 2831.5)"><tspan x="0" y="0">エントランスを抜けると、プロジェクションマッピングよる映像演出や</tspan><tspan x="0" y="42">レトロゲー</tspan><tspan class="cls-48" x="120" y="42">ム</tspan><tspan x="150" y="42">/V</tspan><tspan class="cls-48" x="178.6" y="42">R</tspan><tspan x="202" y="42">ゲームなどの体験コンテンツも</tspan><tspan class="cls-84" x="538" y="42">。</tspan><tspan x="0" y="84">さらにオフィシャルショップ</tspan><tspan class="cls-48" x="312" y="84">で</tspan><tspan x="342" y="84">RED°限定のアイテムも手に入ります</tspan><tspan class="cls-84" x="736.2" y="84">。</tspan></text>
+      <g>
+        <g>
+          <rect class="cls-44" x="11554.2" y="1497.4" width="420" height="380"/>
+          <rect class="cls-18" x="11554.2" y="1877.4" width="420" height="90"/>
+          <text class="cls-40" transform="translate(11554.2 1931.5)"><tspan x="0" y="0">アトラクション名</tspan></text>
+          <polygon class="cls-83" points="11914.2 1967.4 11974.2 1907.4 11974.2 1967.4 11914.2 1967.4"/>
+        </g>
+        <g>
+          <rect class="cls-44" x="12014.2" y="1497.4" width="420" height="380"/>
+          <rect class="cls-18" x="12014.2" y="1877.4" width="420" height="90"/>
+          <text class="cls-40" transform="translate(12014.2 1931.5)"><tspan x="0" y="0">アトラクション名</tspan></text>
+          <polygon class="cls-83" points="12374.2 1967.4 12434.2 1907.4 12434.2 1967.4 12374.2 1967.4"/>
+        </g>
+      </g>
+      <g>
+        <g>
+          <rect class="cls-44" x="11554.2" y="2964.5" width="420" height="380"/>
+          <rect class="cls-18" x="11554.2" y="3344.5" width="420" height="90"/>
+          <text class="cls-40" transform="translate(11554.2 3398.5)"><tspan x="0" y="0">アトラクション名</tspan></text>
+          <polygon class="cls-83" points="11914.2 3434.5 11974.2 3374.5 11974.2 3434.5 11914.2 3434.5"/>
+        </g>
+        <g>
+          <rect class="cls-44" x="12014.2" y="2964.5" width="420" height="380"/>
+          <rect class="cls-18" x="12014.2" y="3344.5" width="420" height="90"/>
+          <text class="cls-40" transform="translate(12014.2 3398.5)"><tspan x="0" y="0">アトラクション名</tspan></text>
+          <polygon class="cls-83" points="12374.2 3434.5 12434.2 3374.5 12434.2 3434.5 12374.2 3434.5"/>
+        </g>
+        <rect class="cls-44" x="12474.2" y="2964.5" width="420" height="380"/>
+        <rect class="cls-18" x="12474.2" y="3344.5" width="420" height="90"/>
+        <text class="cls-40" transform="translate(12474.2 3398.5)"><tspan x="0" y="0">アトラクション名</tspan></text>
+        <polygon class="cls-83" points="12834.2 3434.5 12894.2 3374.5 12894.2 3434.5 12834.2 3434.5"/>
+      </g>
+      <g>
+        <g>
+          <rect class="cls-44" x="11554.2" y="3474.5" width="420" height="380"/>
+          <rect class="cls-18" x="11554.2" y="3854.5" width="420" height="90"/>
+          <text class="cls-40" transform="translate(11554.2 3908.5)"><tspan x="0" y="0">アトラクション名</tspan></text>
+          <polygon class="cls-83" points="11914.2 3944.5 11974.2 3884.5 11974.2 3944.5 11914.2 3944.5"/>
+        </g>
+        <g>
+          <rect class="cls-44" x="12014.2" y="3474.5" width="420" height="380"/>
+          <rect class="cls-18" x="12014.2" y="3854.5" width="420" height="90"/>
+          <text class="cls-40" transform="translate(12014.2 3908.5)"><tspan x="0" y="0">アトラクション名</tspan></text>
+          <polygon class="cls-83" points="12374.2 3944.5 12434.2 3884.5 12434.2 3944.5 12374.2 3944.5"/>
+        </g>
+        <rect class="cls-44" x="12474.2" y="3474.5" width="420" height="380"/>
+        <rect class="cls-18" x="12474.2" y="3854.5" width="420" height="90"/>
+        <text class="cls-40" transform="translate(12474.2 3908.5)"><tspan x="0" y="0">アトラクション名</tspan></text>
+        <polygon class="cls-83" points="12834.2 3944.5 12894.2 3884.5 12894.2 3944.5 12834.2 3944.5"/>
+      </g>
+      <g class="cls-62">
+        <image id="_x32_2Dbxq" width="560" height="315" transform="translate(11554.2 761.8) scale(2.4)" xlink:href="rogo-48.png"/>
+      </g>
+      <rect class="cls-44" x="11554.2" y="2370.4" width="1340" height="400"/>
+      <text class="cls-43" transform="translate(13294.2 1363.8)"><tspan x="0" y="0">グルメも、V</tspan><tspan class="cls-48" x="137.2" y="0">R</tspan><tspan x="160.6" y="0">レースゲームも。世界の人々が日本の味を楽しめる「RED°SHOKUDO」や、さらにボートレースの体験型アトラクションなど</tspan><tspan class="cls-84" x="1521.5" y="0">、</tspan><tspan x="0" y="42">誰もが楽しめるコンテンツを用意しています</tspan><tspan class="cls-84" x="480" y="42">。</tspan><tspan x="492" y="42">※</tspan><tspan class="cls-48" x="516" y="42">1</tspan><tspan x="537.8" y="42">階はパーク入場チケット対象外施設です</tspan><tspan class="cls-84" x="969.8" y="42">。</tspan></text>
+      <g>
+        <g>
+          <rect class="cls-18" x="13294.2" y="1889.8" width="580" height="90"/>
+          <rect class="cls-44" x="13294.2" y="1454.8" width="580" height="435"/>
+          <text class="cls-40" transform="translate(13294.2 1943.8)"><tspan x="0" y="0">アトラクション名</tspan></text>
+          <polygon class="cls-83" points="13814.2 1979.8 13874.2 1919.8 13874.2 1979.8 13814.2 1979.8"/>
+        </g>
+        <g>
+          <rect class="cls-18" x="13914.2" y="1889.8" width="580" height="90"/>
+          <rect class="cls-44" x="13914.2" y="1454.8" width="580" height="435"/>
+          <text class="cls-40" transform="translate(13914.2 1943.8)"><tspan x="0" y="0">アトラクション名</tspan></text>
+          <polygon class="cls-83" points="14434.2 1979.8 14494.2 1919.8 14494.2 1979.8 14434.2 1979.8"/>
+        </g>
+      </g>
+      <text class="cls-43" transform="translate(13294.2 2620.9)"><tspan x="0" y="0">エントランスを抜けると、プロジェクションマッピングよる映像演出やレトロゲー</tspan><tspan class="cls-48" x="888" y="0">ム</tspan><tspan x="918" y="0">/V</tspan><tspan class="cls-48" x="946.6" y="0">R</tspan><tspan x="970" y="0">ゲームなどの体験コンテンツも</tspan><tspan class="cls-84" x="1306" y="0">。</tspan><tspan x="0" y="42">さらにオフィシャルショップ</tspan><tspan class="cls-48" x="312" y="42">で</tspan><tspan x="342" y="42">RED°限定のアイテムも手に入ります</tspan><tspan class="cls-84" x="736.2" y="42">。</tspan></text>
+      <g>
+        <g>
+          <rect class="cls-18" x="13294.2" y="3146.8" width="580" height="90"/>
+          <rect class="cls-44" x="13294.2" y="2711.8" width="580" height="435"/>
+          <text class="cls-40" transform="translate(13294.2 3200.9)"><tspan x="0" y="0">アトラクション名</tspan></text>
+          <polygon class="cls-83" points="13814.2 3236.8 13874.2 3176.8 13874.2 3236.8 13814.2 3236.8"/>
+        </g>
+        <g>
+          <rect class="cls-18" x="13914.2" y="3146.8" width="580" height="90"/>
+          <rect class="cls-44" x="13914.2" y="2711.8" width="580" height="435"/>
+          <text class="cls-40" transform="translate(13914.2 3200.9)"><tspan x="0" y="0">アトラクション名</tspan></text>
+          <polygon class="cls-83" points="14434.2 3236.8 14494.2 3176.8 14494.2 3236.8 14434.2 3236.8"/>
+        </g>
+        <g>
+          <rect class="cls-18" x="14534.2" y="3146.8" width="580" height="90"/>
+          <rect class="cls-44" x="14534.2" y="2711.8" width="580" height="435"/>
+          <text class="cls-40" transform="translate(14534.2 3200.9)"><tspan x="0" y="0">アトラクション名</tspan></text>
+          <polygon class="cls-83" points="15054.2 3236.8 15114.2 3176.8 15114.2 3236.8 15054.2 3236.8"/>
+        </g>
+      </g>
+      <g>
+        <g>
+          <rect class="cls-18" x="13294.2" y="3751.8" width="580" height="90"/>
+          <rect class="cls-44" x="13294.2" y="3316.8" width="580" height="435"/>
+          <text class="cls-40" transform="translate(13294.2 3805.9)"><tspan x="0" y="0">アトラクション名</tspan></text>
+          <polygon class="cls-83" points="13814.2 3841.8 13874.2 3781.8 13874.2 3841.8 13814.2 3841.8"/>
+        </g>
+        <g>
+          <rect class="cls-18" x="13914.2" y="3751.8" width="580" height="90"/>
+          <rect class="cls-44" x="13914.2" y="3316.8" width="580" height="435"/>
+          <text class="cls-40" transform="translate(13914.2 3805.9)"><tspan x="0" y="0">アトラクション名</tspan></text>
+          <polygon class="cls-83" points="14434.2 3841.8 14494.2 3781.8 14494.2 3841.8 14434.2 3841.8"/>
+        </g>
+        <g>
+          <rect class="cls-18" x="14534.2" y="3751.8" width="580" height="90"/>
+          <rect class="cls-44" x="14534.2" y="3316.8" width="580" height="435"/>
+          <text class="cls-40" transform="translate(14534.2 3805.9)"><tspan x="0" y="0">アトラクション名</tspan></text>
+          <polygon class="cls-83" points="15054.2 3841.8 15114.2 3781.8 15114.2 3841.8 15054.2 3841.8"/>
+        </g>
+      </g>
+      <g class="cls-60">
+        <image width="1920" height="1280" transform="translate(13717.1 3833.5) scale(.8)" xlink:href="rogo-49.png"/>
+      </g>
+      <text class="cls-43" transform="translate(13294.2 4483)"><tspan x="0" y="0">超人スポーツやドローン競技など、体験型コンテンツが充実</tspan><tspan class="cls-84" x="648" y="0">。</tspan><tspan x="0" y="42">超人スポーツをはじめ、ドローン競技などの体験型コンテンツが充実したフロア。多彩なフィジカ</tspan><tspan class="cls-48" x="1056" y="42">ルe</tspan><tspan x="1106.1" y="42">スポーツが楽しめる</tspan><tspan class="cls-84" x="1322.1" y="42">。</tspan></text>
+      <g>
+        <g>
+          <rect class="cls-18" x="13294.2" y="5008.9" width="580" height="90"/>
+          <rect class="cls-44" x="13294.2" y="4573.9" width="580" height="435"/>
+          <text class="cls-40" transform="translate(13294.2 5063)"><tspan x="0" y="0">アトラクション名</tspan></text>
+          <polygon class="cls-83" points="13814.2 5098.9 13874.2 5038.9 13874.2 5098.9 13814.2 5098.9"/>
+        </g>
+        <g>
+          <rect class="cls-18" x="13914.2" y="5008.9" width="580" height="90"/>
+          <rect class="cls-44" x="13914.2" y="4573.9" width="580" height="435"/>
+          <text class="cls-40" transform="translate(13914.2 5063)"><tspan x="0" y="0">アトラクション名</tspan></text>
+          <polygon class="cls-83" points="14434.2 5098.9 14494.2 5038.9 14494.2 5098.9 14434.2 5098.9"/>
+        </g>
+        <g>
+          <rect class="cls-18" x="14534.2" y="5008.9" width="580" height="90"/>
+          <rect class="cls-44" x="14534.2" y="4573.9" width="580" height="435"/>
+          <text class="cls-40" transform="translate(14534.2 5063)"><tspan x="0" y="0">アトラクション名</tspan></text>
+          <polygon class="cls-83" points="15054.2 5098.9 15114.2 5038.9 15114.2 5098.9 15054.2 5098.9"/>
+        </g>
+      </g>
+      <g>
+        <g>
+          <rect class="cls-18" x="13294.2" y="5613.9" width="580" height="90"/>
+          <rect class="cls-44" x="13294.2" y="5178.9" width="580" height="435"/>
+          <text class="cls-40" transform="translate(13294.2 5668)"><tspan x="0" y="0">アトラクション名</tspan></text>
+          <polygon class="cls-83" points="13814.2 5703.9 13874.2 5643.9 13874.2 5703.9 13814.2 5703.9"/>
+        </g>
+        <g>
+          <rect class="cls-18" x="13914.2" y="5613.9" width="580" height="90"/>
+          <rect class="cls-44" x="13914.2" y="5178.9" width="580" height="435"/>
+          <text class="cls-40" transform="translate(13914.2 5668)"><tspan x="0" y="0">アトラクション名</tspan></text>
+          <polygon class="cls-83" points="14434.2 5703.9 14494.2 5643.9 14494.2 5703.9 14434.2 5703.9"/>
+        </g>
+        <g>
+          <rect class="cls-18" x="14534.2" y="5613.9" width="580" height="90"/>
+          <rect class="cls-44" x="14534.2" y="5178.9" width="580" height="435"/>
+          <text class="cls-40" transform="translate(14534.2 5668)"><tspan x="0" y="0">アトラクション名</tspan></text>
+          <polygon class="cls-83" points="15054.2 5703.9 15114.2 5643.9 15114.2 5703.9 15054.2 5703.9"/>
+        </g>
+      </g>
+      <g class="cls-63">
+        <image width="4320" height="2880" transform="translate(13680.7 5662.2) scale(.4)" xlink:href="rogo-50.png"/>
+      </g>
+      <text class="cls-43" transform="translate(13294.2 6345)"><tspan class="cls-48" x="0" y="0">2</tspan><tspan x="21.8" y="0">つの次世代アリーナ</tspan><tspan class="cls-48" x="237.8" y="0">とe</tspan><tspan x="287.9" y="0">モータースポーツ、ポーカーなどのマインドスポーツ、カフ</tspan><tspan class="cls-48" x="935.9" y="0">ェ&amp;</tspan><tspan x="991" y="0">バーを展開</tspan><tspan class="cls-84" x="1111" y="0">。</tspan><tspan x="0" y="42">最先端</tspan><tspan class="cls-48" x="72" y="42">の</tspan><tspan x="102" y="42">X</tspan><tspan class="cls-48" x="119.3" y="42">R</tspan><tspan x="142.8" y="42">技術を搭載した日本初のハイブリッド型アリーナでは、大会やエンタメイベントを日々開催</tspan><tspan class="cls-84" x="1126.8" y="42">。</tspan><tspan x="0" y="84">さらに、本格的</tspan><tspan class="cls-48" x="168" y="84">なe</tspan><tspan x="218.1" y="84">モータースポーツのシミュレーターエリア、ポーカーなどのマインドスポーツ、カフ</tspan><tspan class="cls-48" x="1130.1" y="84">ェ&amp;</tspan><tspan x="1185.2" y="84">バーも揃えています</tspan><tspan class="cls-84" x="1401.2" y="84">。</tspan></text>
+      <g>
+        <g>
+          <g>
+            <rect class="cls-18" x="13294.2" y="6913" width="580" height="90"/>
+            <rect class="cls-44" x="13294.2" y="6478" width="580" height="435"/>
+            <text class="cls-40" transform="translate(13294.2 6967)"><tspan x="0" y="0">アトラクション名</tspan></text>
+            <polygon class="cls-83" points="13814.2 7003 13874.2 6943 13874.2 7003 13814.2 7003"/>
+          </g>
+          <g>
+            <rect class="cls-18" x="13914.2" y="6913" width="580" height="90"/>
+            <rect class="cls-44" x="13914.2" y="6478" width="580" height="435"/>
+            <text class="cls-40" transform="translate(13914.2 6967)"><tspan x="0" y="0">アトラクション名</tspan></text>
+            <polygon class="cls-83" points="14434.2 7003 14494.2 6943 14494.2 7003 14434.2 7003"/>
+          </g>
+          <g>
+            <rect class="cls-18" x="14534.2" y="6913" width="580" height="90"/>
+            <rect class="cls-44" x="14534.2" y="6478" width="580" height="435"/>
+            <text class="cls-40" transform="translate(14534.2 6967)"><tspan x="0" y="0">アトラクション名</tspan></text>
+            <polygon class="cls-83" points="15054.2 7003 15114.2 6943 15114.2 7003 15054.2 7003"/>
+          </g>
+        </g>
+        <g>
+          <g>
+            <rect class="cls-18" x="13294.2" y="7518" width="580" height="90"/>
+            <rect class="cls-44" x="13294.2" y="7083" width="580" height="435"/>
+            <text class="cls-40" transform="translate(13294.2 7572)"><tspan x="0" y="0">アトラクション名</tspan></text>
+            <polygon class="cls-83" points="13814.2 7608 13874.2 7548 13874.2 7608 13814.2 7608"/>
+          </g>
+          <g>
+            <rect class="cls-18" x="13914.2" y="7518" width="580" height="90"/>
+            <rect class="cls-44" x="13914.2" y="7083" width="580" height="435"/>
+            <text class="cls-40" transform="translate(13914.2 7572)"><tspan x="0" y="0">アトラクション名</tspan></text>
+            <polygon class="cls-83" points="14434.2 7608 14494.2 7548 14494.2 7608 14434.2 7608"/>
+          </g>
+          <g>
+            <rect class="cls-18" x="14534.2" y="7518" width="580" height="90"/>
+            <rect class="cls-44" x="14534.2" y="7083" width="580" height="435"/>
+            <text class="cls-40" transform="translate(14534.2 7572)"><tspan x="0" y="0">アトラクション名</tspan></text>
+            <polygon class="cls-83" points="15054.2 7608 15114.2 7548 15114.2 7608 15054.2 7608"/>
+          </g>
+        </g>
+      </g>
+      <g>
+        <g class="cls-61">
+          <image id="_x32_2Dbxq-2" data-name="_x32_2Dbxq" width="560" height="315" transform="translate(13774.2 761.1) scale(2.4)" xlink:href="rogo-51.png"/>
+        </g>
+        <polygon points="14360.4 1263.7 13294.2 1263.7 13357.9 1109.7 14424.2 1109.7 14360.4 1263.7"/>
+        <text class="cls-39" transform="translate(13614.3 1066) scale(1 1)"><tspan x="0" y="0">1F</tspan></text>
+        <text class="cls-25" transform="translate(13407.2 1233) scale(1 1)"><tspan x="0" y="0">WONDER ZONE</tspan></text>
+        <g>
+          <polygon points="13519.4 1011.1 13494 994.1 13494 1028.1 13519.4 1011.1"/>
+          <polygon points="13556.9 1011.1 13531.4 994.1 13531.4 1028.1 13556.9 1011.1"/>
+          <polygon points="13594.3 1011.1 13568.9 994.1 13568.9 1028.1 13594.3 1011.1"/>
+        </g>
+      </g>
+      <g>
+        <g class="cls-59">
+          <image width="4320" height="2880" transform="translate(13769.2 2088.5) scale(.3)" xlink:href="rogo-52.png"/>
+        </g>
+        <g>
+          <polygon points="14360.4 2520.8 13294.2 2520.8 13357.9 2366.8 14424.2 2366.8 14360.4 2520.8"/>
+          <text class="cls-39" transform="translate(13614.3 2323.1) scale(1 1)"><tspan x="0" y="0">3F</tspan></text>
+          <text class="cls-25" transform="translate(13407.2 2490) scale(1 1)"><tspan x="0" y="0">INSPIRATION ZONE</tspan></text>
+          <g>
+            <polygon points="13519.4 2268.2 13494 2251.2 13494 2285.2 13519.4 2268.2"/>
+            <polygon points="13556.9 2268.2 13531.4 2251.2 13531.4 2285.2 13556.9 2268.2"/>
+            <polygon points="13594.3 2268.2 13568.9 2251.2 13568.9 2285.2 13594.3 2268.2"/>
+          </g>
+        </g>
+      </g>
+      <g>
+        <polygon points="14360.4 6245 13294.2 6245 13357.9 6091 14424.2 6091 14360.4 6245"/>
+        <text class="cls-39" transform="translate(13614.3 6047.2) scale(1 1)"><tspan x="0" y="0">5F</tspan></text>
+        <text class="cls-25" transform="translate(13407.2 6214.2) scale(1 1)"><tspan x="0" y="0">ULTIMATE ZONE</tspan></text>
+        <g>
+          <polygon points="13519.4 5992.3 13494 5975.3 13494 6009.3 13519.4 5992.3"/>
+          <polygon points="13556.9 5992.3 13531.4 5975.3 13531.4 6009.3 13556.9 5992.3"/>
+          <polygon points="13594.3 5992.3 13568.9 5975.3 13568.9 6009.3 13594.3 5992.3"/>
+        </g>
+      </g>
+      <g>
+        <polygon points="14360.4 4382.9 13294.2 4382.9 13357.9 4228.9 14424.2 4228.9 14360.4 4382.9"/>
+        <text class="cls-39" transform="translate(13614.3 4185.1) scale(1 1)"><tspan x="0" y="0">4F</tspan></text>
+        <text class="cls-25" transform="translate(13407.2 4352.1) scale(1 1)"><tspan x="0" y="0">ATTRACTION ZONE</tspan></text>
+        <g>
+          <polygon points="13519.4 4130.2 13494 4113.2 13494 4147.2 13519.4 4130.2"/>
+          <polygon points="13556.9 4130.2 13531.4 4113.2 13531.4 4147.2 13556.9 4130.2"/>
+          <polygon points="13594.3 4130.2 13568.9 4113.2 13568.9 4147.2 13594.3 4130.2"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
