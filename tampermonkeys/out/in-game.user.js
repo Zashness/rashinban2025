@@ -25,15 +25,15 @@
     @import url('https://use.typekit.net/ljs6bhu.css');
 
     [class*="game_backgroundDefault__"][class*="game_backgroundDefault__"] {
-      --background: url("https://rashinban.org/assets/images/key-visual.png");
+      --background: linear-gradient(to top,rgba(0,0,0,.9) 0,rgba(0,0,0,0) 350px), url("https://rashinban.org/assets/images/key-visual.png")
     }
     /* In-game background & post-game background */
     [class^="views_activeRoundWrapper__"][class^="views_activeRoundWrapper__"],
     [class^="overlay_backdrop__"][class^="overlay_backdrop__"] {
       background: var(--background);
-      background-repeat: no-repeat !important;
-      background-position: center center !important;
-      background-size: cover !important;
+      background-repeat: no-repeat, no-repeat !important;
+      background-position: center, center !important;
+      background-size: 100% 100%, cover !important;
     }
 
     /* ===================================== */
@@ -121,17 +121,17 @@
     }
     /* Player view. First-child=>left, 2nd child=right. */
     [class^="views_playerViews__"] > :first-child [class^="player-view_panorama__"] {
-      --border-color: #3083FF;
+      --border-color: #FF3030;
     }
     [class^="views_playerViews__"] > :nth-child(2) [class^="player-view_panorama__"] {
-      --border-color: #FF3030;
+      --border-color: #3083FF;
     }
 
     /* HP */
     [class*="cam-hud_wrapper__"][class*="cam-hud_wrapper__"] {
       top: -18px;
       display: grid;
-      grid-template-columns: 1fr minmax(0, 40rem) 1fr;
+      grid-template-columns: 1fr minmax(0, 760px) 1fr;
     }
 
     [class^="wc-health-bar_container__"][class^="wc-health-bar_container__"] {
@@ -171,6 +171,11 @@
     }
     div[class^="spectate-map_toggle__"]:hover {
       opacity: 0.2;
+    }
+
+    /* hide darkened background around player views */
+    [class^=views_playerViews__] [class^="views_bg__"] {
+      background-color: transparent;
     }
 
 
