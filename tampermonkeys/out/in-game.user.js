@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Rashinban Geoguessr Game Master Mode
 // @namespace    https://github.com/Zashness/rashinban2025/blob/gh-pages/tampermonkeys/out/in-game.user.js
-// @version      1.0.2
+// @version      1.0.3
 // @description  Game Master Mode mods for Rashinban2025
 // @author       Zashness
 // @match        https://www.geoguessr.com/*
@@ -225,7 +225,10 @@
       font-size: 48px;
     }
 
-
+    /* hide the sponsor logo marquee */
+    body:has([class^="preview-round_guessMapContainer__"]) #sponsor-marquee {
+      visibility: hidden;
+    }
 
     /* ===================================== */
     /* ========== Post game mode =========== */
@@ -278,7 +281,7 @@
 
   // ===== INLINED: marquee.css =====
 
-  GM_addStyle("/* Transparent container; no background color at all */\n.sponsor-marquee {\n  position: absolute;\n  left: 0;\n  right: 0;\n  bottom: var(--bottom, 84px);\n  transform: translateY(50%);\n  overflow: hidden;\n  z-index: 2;\n}\n\n.sponsor-track {\n  display: flex;\n  align-items: center;\n  gap: var(--gap, 48px);\n  will-change: transform;\n  animation: sponsor-marquee var(--marquee-duration, 60s) linear infinite;\n  animation-play-state: paused;\n}\n\n.sponsor-track.is-ready {\n  animation-play-state: running;\n}\n\n.sponsor-slide {\n  display: flex;\n  align-items: center;\n  gap: var(--gap, 48px);\n}\n\n.sponsor-track img {\n  height: var(--logo-h, 64px);\n  width: auto;\n  object-fit: contain;\n  flex: 0 0 auto;\n}\n\n@keyframes sponsor-marquee {\n  from {\n    transform: translateX(0);\n  }\n  to {\n    transform: translateX(calc(-1 * var(--scroll-distance, 0px)));\n  }\n}\n\n@media (prefers-reduced-motion: reduce) {\n  .sponsor-track {\n    animation: none;\n  }\n}\n");
+  GM_addStyle("/* Transparent container; no background color at all */\n.sponsor-marquee {\n  position: absolute;\n  left: 0;\n  right: 0;\n  bottom: var(--bottom, 84px);\n  transform: translateY(50%);\n  overflow: hidden;\n  z-index: 10;\n  /* passthrough clicks to anything behind */\n  pointer-events: none;\n}\n\n.sponsor-track {\n  display: flex;\n  align-items: center;\n  gap: var(--gap, 48px);\n  will-change: transform;\n  animation: sponsor-marquee var(--marquee-duration, 60s) linear infinite;\n  animation-play-state: paused;\n}\n\n.sponsor-track.is-ready {\n  animation-play-state: running;\n}\n\n.sponsor-slide {\n  display: flex;\n  align-items: center;\n  gap: var(--gap, 48px);\n}\n\n.sponsor-track img {\n  height: var(--logo-h, 64px);\n  width: auto;\n  object-fit: contain;\n  flex: 0 0 auto;\n}\n\n@keyframes sponsor-marquee {\n  from {\n    transform: translateX(0);\n  }\n  to {\n    transform: translateX(calc(-1 * var(--scroll-distance, 0px)));\n  }\n}\n\n@media (prefers-reduced-motion: reduce) {\n  .sponsor-track {\n    animation: none;\n  }\n}\n");
 
   // ===== INLINED: marquee.js =====
   

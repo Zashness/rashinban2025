@@ -6,7 +6,9 @@
   bottom: var(--bottom, 84px);
   transform: translateY(50%);
   overflow: hidden;
-  z-index: 2;
+  z-index: 10;
+  /* passthrough clicks to anything behind */
+  pointer-events: none;
 }
 
 .sponsor-track {
