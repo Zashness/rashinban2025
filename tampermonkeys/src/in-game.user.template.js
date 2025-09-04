@@ -304,6 +304,6 @@
     containerId: 'sponsors',
     leftLogos: leftLogos,
     rightLogos: rightLogos,
-    bottom: 130,
+    bottom: 125,
   });
 })();

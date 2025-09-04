@@ -29,7 +29,7 @@ body {
   align-items: center;
 }
 
-#sponsor-marquee,
+#sponsors,
 #last-match,
 #interview {
   visibility: hidden;
@@ -47,7 +47,7 @@ body {
   align-items: center;
 }
 
-#sponsor-marquee.visible {
+#sponsors.visible {
   visibility: visible;
   opacity: 1;
 }
