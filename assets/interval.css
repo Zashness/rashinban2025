@@ -71,7 +71,7 @@ body {
   left: 140px;
   top: 355px;
   width: 385px;
-  height: 562px;
+  height: 500px;
 
   display: flex;
   flex-direction: column;
@@ -139,7 +139,7 @@ body {
 .slideshow {
   position: absolute;
   right: 140px;
-  top: 355px;
+  top: 328px;
   width: 998px;
   height: 562px;
   background-color: #000;
@@ -196,7 +196,7 @@ body {
 .bottombar {
   position: absolute;
   width: 1920px;
-  height: 120px;
+  height: 150px;
   bottom: 0;
   z-index: 1;
   background-color: #ff3030;

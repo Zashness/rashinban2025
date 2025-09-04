@@ -9,8 +9,8 @@ const ROOT = path.resolve(__dirname, '..');
 const TEMPLATE = path.join(ROOT, 'tampermonkeys', 'src', 'in-game.user.template.js');
 const OUT_DIR = path.join(ROOT, 'tampermonkeys', 'out');
 const OUT_FILE = path.join(OUT_DIR, 'in-game.user.js');
-const CSS_FILE = path.join(ROOT, 'assets', 'marquee.css');
-const JS_FILE = path.join(ROOT, 'assets', 'js', 'marquee.js');
+const CSS_FILE = path.join(ROOT, 'assets', 'sponsors.css');
+const JS_FILE = path.join(ROOT, 'assets', 'js', 'sponsors.js');
 
 // Helpers
 const stripESM = (js) =>
@@ -35,12 +35,12 @@ async function build() {
   ].join('\n');
 
   let out = template
-    .replace('/*@@MARQUEE_CSS_JSON@@*/', JSON.stringify(css))
+    .replace('/*@@SPONSORS_CSS_JSON@@*/', JSON.stringify(css))
     .replace(
-      '//@@MARQUEE_JS@@',
-      `\n/*--- begin inlined marquee.js ---*/\n${stripESM(
+      '//@@SPONSORS_JS@@',
+      `\n/*--- begin inlined sponsors.js ---*/\n${stripESM(
         js
-      )}\n/*--- end inlined marquee.js ---*/\n`
+      )}\n/*--- end inlined sponsors.js ---*/\n`
     )
     .replace(/(^\/\/ ==\/UserScript==\s*)/m, `$1\n${banner}`);
 

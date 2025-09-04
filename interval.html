@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <title>Overlay X</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="assets/marquee.css" />
+    <link rel="stylesheet" href="assets/sponsors.css" />
     <link rel="stylesheet" href="assets/interval.css" />
     <link rel="modulepreload" href="assets/js/consts.js" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -55,26 +55,25 @@
       <div id="error"></div>
       <div class="bottombar"></div>
 
-      <div class="sponsor-marquee" id="sponsor-marquee"></div>
+      <div class="sponsor" id="sponsors"></div>
     </div>
 
     <script type="module">
       import { SHEET_ID, OVERLAYS_TAB_ID } from './assets/js/consts.js';
-      import { initSponsorMarquee } from './assets/js/marquee.js';
+      import { initSponsors } from './assets/js/sponsors.js';
 
       const logos = [
-        { src: 'assets/logos/red-tokyo-logo.svg' },
-        { src: 'assets/logos/tamura-builds-white.svg' },
         { src: 'assets/logos/spicescode-white.svg' },
         { src: 'assets/logos/geoguessr-logo.png' },
         { src: 'assets/logos/geoguessr-record.svg' },
         { src: 'assets/logos/AltoIP-logo-white.png' },
       ];
 
-      initSponsorMarquee({
-        containerId: 'sponsor-marquee',
-        logos: logos,
-        bottom: 60,
+      initSponsors({
+        containerId: 'sponsors',
+        rightLogos: logos,
+        bottom: 76,
+        height: 72,
       });
 
       let papaData;

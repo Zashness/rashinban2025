@@ -230,8 +230,8 @@
       font-size: 48px;
     }
 
-    /* hide the sponsor logo marquee */
-    body:has([class^="preview-round_guessMapContainer__"]) #sponsor-marquee {
+    /* hide the sponsor logos */
+    body:has([class^="preview-round_guessMapContainer__"]) #sponsors {
       visibility: hidden;
     }
 
@@ -284,115 +284,103 @@
     }
 `);
 
-  // ===== INLINED: marquee.css =====
+  // ===== INLINED: sponsors.css =====
 
-  GM_addStyle("/* Transparent container; no background color at all */\n.sponsor-marquee {\n  position: absolute;\n  left: 0;\n  right: 0;\n  bottom: var(--bottom, 84px);\n  transform: translateY(50%);\n  overflow: hidden;\n  z-index: 10;\n  /* passthrough clicks to anything behind */\n  pointer-events: none;\n}\n\n.sponsor-track {\n  display: flex;\n  align-items: center;\n  gap: var(--gap, 48px);\n  will-change: transform;\n  animation: sponsor-marquee var(--marquee-duration, 60s) linear infinite;\n  animation-play-state: paused;\n}\n\n.sponsor-track.is-ready {\n  animation-play-state: running;\n}\n\n.sponsor-slide {\n  display: flex;\n  align-items: center;\n  gap: var(--gap, 48px);\n}\n\n.sponsor-track img {\n  height: var(--logo-h, 64px);\n  width: auto;\n  object-fit: contain;\n  flex: 0 0 auto;\n}\n\n@keyframes sponsor-marquee {\n  from {\n    transform: translateX(0);\n  }\n  to {\n    transform: translateX(calc(-1 * var(--scroll-distance, 0px)));\n  }\n}\n\n@media (prefers-reduced-motion: reduce) {\n  .sponsor-track {\n    animation: none;\n  }\n}\n");
+  GM_addStyle("#sponsors {\n  position: absolute;\n  left: 24px;\n  right: 24px;\n  bottom: var(--bottom, 84px);\n  transform: translateY(50%); /* keeps logo *centers* at --bottom */\n  display: flex;\n  align-items: center;\n  gap: var(--gap, 72px);\n  z-index: 10;\n  /* pass clicks through */\n  pointer-events: none;\n}\n\n/* All logos */\n#sponsors img {\n  height: var(--logo-h, 84px);\n  object-fit: contain;\n  flex: 0 0 auto;\n}\n\n#sponsors .red-tokyo {\n  height: calc(var(--logo-h, 84px) * 1.4);\n  margin-top: 34px;\n}\n\n.sponsor-left-logos {\n  display: flex;\n  justify-content: flex-end;\n  align-items: center;\n  width: 1200px;\n  gap: var(--gap, 72px);\n}\n\n/* The rotating right-side logo */\nimg#sponsor-right {\n  opacity: 1;\n  transition: opacity 300ms ease-in-out;\n  max-width: 400px;\n  max-height: 62px;\n}\n");
 
-  // ===== INLINED: marquee.js =====
+  // ===== INLINED: sponsors.js =====
   
-/*--- begin inlined marquee.js ---*/
+/*--- begin inlined sponsors.js ---*/
 /**
  * Scrolling marquee of sponsor logos.
  */
 
-const defaultLogos = [
+const defaultLeftLogos = [
   { src: 'assets/logos/red-tokyo-logo.svg' },
   { src: 'assets/logos/tamura-builds-white.svg' },
+];
+const defaultRightLogos = [
   { src: 'assets/logos/spicescode-white.svg' },
   { src: 'assets/logos/geoguessr-logo.png' },
   { src: 'assets/logos/geoguessr-record.svg' },
 ];
 
-async function initSponsorMarquee({
-  containerId = 'sponsor-marquee',
-  logos = defaultLogos,
-  speed = 40, // px/sec
-  gap = 72, // px
-  height = 64, // px
+async function initSponsors({
+  containerId = 'sponsors',
+  leftLogos = defaultLeftLogos,
+  rightLogos = defaultRightLogos,
+  delay = 8, // sec
+  height = 84, // px
   bottom = 142, // px, distance of the logos' center from the bottom of the screen
 } = {}) {
   const wrap = document.getElementById(containerId);
-  if (!wrap || !logos.length) return;
+  if (!wrap || !leftLogos.length) return;
   wrap.style.setProperty('--bottom', `${bottom}px`);
+  wrap.style.setProperty('--logo-h', `${height}px`);
+  wrap.style.setProperty('--gap', `72px`);
 
   // Clear & build
   wrap.innerHTML = '';
-  const track = document.createElement('div');
-  track.className = 'sponsor-track';
-  track.style.setProperty('--logo-h', `${height}px`);
-  track.style.setProperty('--gap', `${gap}px`);
-  wrap.appendChild(track);
+  const leftLogoContainer = document.createElement('div');
+  leftLogoContainer.className = 'sponsor-left-logos';
+  wrap.appendChild(leftLogoContainer);
+  leftLogos.forEach((logo) => {
+    const img = document.createElement('img');
+    img.src = logo.src;
+    // special case for red tokyo, it needs more vertical space and offset
+    if (logo.src === 'assets/logos/red-tokyo-logo.svg') {
+      img.classList.add('red-tokyo');
+    }
+    img.decoding = 'async';
+    img.loading = 'eager';
+    leftLogoContainer.appendChild(img);
+  });
 
-  const makeSlide = () => {
-    const slide = document.createElement('div');
-    slide.className = 'sponsor-slide';
-    logos.forEach((logo) => {
-      const img = document.createElement('img');
-      img.src = logo.src;
-      img.decoding = 'async';
-      img.loading = 'eager';
-      slide.appendChild(img);
-    });
-    return slide;
-  };
+  const rightLogo = document.createElement('img');
+  rightLogo.id = 'sponsor-right';
+  rightLogo.decoding = 'async';
+  rightLogo.loading = 'eager';
+  wrap.appendChild(rightLogo);
 
-  // first slide (the “unit” we loop by)
-  const slideA = makeSlide();
-  track.appendChild(slideA);
-
-  // wait for images to settle before measuring
-  await waitForImages(slideA);
-
-  // animate exactly one "unit" width
-  const styles = getComputedStyle(track);
-  const gapPx = parseFloat(styles.columnGap || styles.gap) || 0;
-  const unitWidth = Math.ceil(slideA.getBoundingClientRect().width + gapPx);
-
-  // duplicate slides until we’re safely > 2× container width
-  while (track.scrollWidth < wrap.clientWidth * 2) {
-    track.appendChild(slideA.cloneNode(true));
-  }
-  const duration = unitWidth / Math.max(1, speed); // seconds
-
-  track.style.setProperty('--scroll-distance', `${unitWidth}px`);
-  track.style.setProperty('--marquee-duration', `${duration}s`);
-  track.classList.add('is-ready');
+  let currentIndex = 0;
+  rightLogo.src = rightLogos[currentIndex].src;
+  setInterval(() => {
+    rightLogo.style.opacity = '0';
+    // load the next logo while the node is invisible
+    setTimeout(() => {
+      currentIndex = (currentIndex + 1) % rightLogos.length;
+      rightLogo.src = rightLogos[currentIndex].src;
+    }, 300);
+    // fade the logo back in after the src has been changed, hopefully 300ms is enough time for the image to load
+    setTimeout(() => {
+      rightLogo.style.opacity = '1';
+    }, 600);
+  }, delay * 1000);
 }
 
-function waitForImages(root) {
-  const imgs = Array.from(root.querySelectorAll('img'));
-  return Promise.all(
-    imgs.map((img) => {
-      if (img.complete && img.naturalWidth) return Promise.resolve();
-      if (img.decode) return img.decode().catch(() => {});
-      return new Promise((res) => {
-        img.addEventListener('load', res, { once: true });
-        img.addEventListener('error', res, { once: true });
-      });
-    })
-  );
-}
-
-/*--- end inlined marquee.js ---*/
+/*--- end inlined sponsors.js ---*/
 
 
   const sponsorContainer = document.createElement('div');
-  sponsorContainer.className = 'sponsor-marquee';
-  sponsorContainer.id = 'sponsor-marquee';
+  sponsorContainer.className = 'sponsors';
+  sponsorContainer.id = 'sponsors';
   document.body.appendChild(sponsorContainer);
 
   const logoUrlPrefix =
     'https://raw.githubusercontent.com/Zashness/rashinban2025/refs/heads/gh-pages/';
-  const logos = [
+  const leftLogos = [
     { src: logoUrlPrefix + 'assets/logos/red-tokyo-logo.svg' },
     { src: logoUrlPrefix + 'assets/logos/tamura-builds-white.svg' },
+  ];
+  const rightLogos = [
     { src: logoUrlPrefix + 'assets/logos/spicescode-white.svg' },
     { src: logoUrlPrefix + 'assets/logos/geoguessr-logo.png' },
     { src: logoUrlPrefix + 'assets/logos/geoguessr-record.svg' },
   ];
-  initSponsorMarquee({
-    containerId: 'sponsor-marquee',
-    logos: logos,
-    bottom: 120,
+  initSponsors({
+    containerId: 'sponsors',
+    leftLogos: leftLogos,
+    rightLogos: rightLogos,
+    bottom: 130,
   });
 })();

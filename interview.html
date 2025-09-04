@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <title>Overlay X</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="assets/marquee.css" />
+    <link rel="stylesheet" href="assets/sponsors.css" />
     <link rel="stylesheet" href="assets/player-score-topbar.css" />
     <link rel="stylesheet" href="assets/interview.css" />
     <link rel="modulepreload" href="assets/js/consts.js" />
@@ -51,7 +51,7 @@
       </div>
     </div>
 
-    <div class="sponsor-marquee" id="sponsor-marquee"></div>
+    <div class="sponsors" id="sponsors"></div>
 
     <div id="error"></div>
 
@@ -59,13 +59,13 @@
       import { SHEET_ID, OVERLAYS_TAB_ID } from './assets/js/consts.js';
       import { renderNameAndScoreFromRow } from './assets/js/player-name-score.js';
       import { applyKanaFont, containsJapanese, getActiveRow } from './assets/js/utils.js';
-      import { initSponsorMarquee } from './assets/js/marquee.js';
+      import { initSponsors } from './assets/js/sponsors.js';
 
-      const LOGO_NODE = document.getElementById('sponsor-marquee');
+      const LOGO_NODE = document.getElementById('sponsors');
       const LAST_MATCH_NODE = document.getElementById('last-match');
       const INTERVIEW_NODE = document.getElementById('interview');
 
-      initSponsorMarquee({});
+      initSponsors({});
 
       /**
        * Sets 'visible' class for passed in element and hides the other element.

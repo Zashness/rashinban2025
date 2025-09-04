@@ -1,0 +1,66 @@
+/**
+ * Scrolling marquee of sponsor logos.
+ */
+
+const defaultLeftLogos = [
+  { src: 'assets/logos/red-tokyo-logo.svg' },
+  { src: 'assets/logos/tamura-builds-white.svg' },
+];
+const defaultRightLogos = [
+  { src: 'assets/logos/spicescode-white.svg' },
+  { src: 'assets/logos/geoguessr-logo.png' },
+  { src: 'assets/logos/geoguessr-record.svg' },
+];
+
+export async function initSponsors({
+  containerId = 'sponsors',
+  leftLogos = defaultLeftLogos,
+  rightLogos = defaultRightLogos,
+  delay = 8, // sec
+  height = 84, // px
+  bottom = 142, // px, distance of the logos' center from the bottom of the screen
+} = {}) {
+  const wrap = document.getElementById(containerId);
+  if (!wrap || !leftLogos.length) return;
+  wrap.style.setProperty('--bottom', `${bottom}px`);
+  wrap.style.setProperty('--logo-h', `${height}px`);
+  wrap.style.setProperty('--gap', `72px`);
+
+  // Clear & build
+  wrap.innerHTML = '';
+  const leftLogoContainer = document.createElement('div');
+  leftLogoContainer.className = 'sponsor-left-logos';
+  wrap.appendChild(leftLogoContainer);
+  leftLogos.forEach((logo) => {
+    const img = document.createElement('img');
+    img.src = logo.src;
+    // special case for red tokyo, it needs more vertical space and offset
+    if (logo.src === 'assets/logos/red-tokyo-logo.svg') {
+      img.classList.add('red-tokyo');
+    }
+    img.decoding = 'async';
+    img.loading = 'eager';
+    leftLogoContainer.appendChild(img);
+  });
+
+  const rightLogo = document.createElement('img');
+  rightLogo.id = 'sponsor-right';
+  rightLogo.decoding = 'async';
+  rightLogo.loading = 'eager';
+  wrap.appendChild(rightLogo);
+
+  let currentIndex = 0;
+  rightLogo.src = rightLogos[currentIndex].src;
+  setInterval(() => {
+    rightLogo.style.opacity = '0';
+    // load the next logo while the node is invisible
+    setTimeout(() => {
+      currentIndex = (currentIndex + 1) % rightLogos.length;
+      rightLogo.src = rightLogos[currentIndex].src;
+    }, 300);
+    // fade the logo back in after the src has been changed, hopefully 300ms is enough time for the image to load
+    setTimeout(() => {
+      rightLogo.style.opacity = '1';
+    }, 600);
+  }, delay * 1000);
+}

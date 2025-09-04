@@ -1,0 +1,41 @@
+#sponsors {
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  bottom: var(--bottom, 84px);
+  transform: translateY(50%); /* keeps logo *centers* at --bottom */
+  display: flex;
+  align-items: center;
+  gap: var(--gap, 72px);
+  z-index: 10;
+  /* pass clicks through */
+  pointer-events: none;
+}
+
+/* All logos */
+#sponsors img {
+  height: var(--logo-h, 84px);
+  object-fit: contain;
+  flex: 0 0 auto;
+}
+
+#sponsors .red-tokyo {
+  height: calc(var(--logo-h, 84px) * 1.4);
+  margin-top: 34px;
+}
+
+.sponsor-left-logos {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 1200px;
+  gap: var(--gap, 72px);
+}
+
+/* The rotating right-side logo */
+img#sponsor-right {
+  opacity: 1;
+  transition: opacity 300ms ease-in-out;
+  max-width: 400px;
+  max-height: 62px;
+}
