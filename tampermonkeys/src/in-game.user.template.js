@@ -171,6 +171,18 @@
       background-color: transparent;
     }
 
+    /* 5K Effect */
+    [class^=__5k-celebration_root]{
+      visibility: hidden;
+    }
+
+    #rashinban-5k{
+      display: fixed;
+      width: 1920px;
+      height: 1080px;
+      pointer-events: none;
+    }
+
 
     /* ===================================== */
     /* ========= Game preview mode ========= */
@@ -307,14 +319,36 @@
     bottom: 125,
   });
 
-
-  /* 5K Effect */
-  const overlayRoot = document.getElementById("overlay-portal-destination");
-  const observer = new MutationObserver((mutations) => {
-    const fivek = document.querySelector(`[class^="__5k-celebration_root"]`)
-    if(fivek){
-      console.log("5K detected");
-    }
-  }).observe(overlayRoot, {subtree: true, childList: true})
-
 })();
+
+
+
+window.addEventListener('load', 
+function(){
+  let hasInit = false;
+
+  const domChanges = new MutationObserver((_mutations) =>{
+      /* 5K Effect */
+    const overlayRoot = document.getElementById("overlay-portal-destination");
+    if(!overlayRoot || hasInit){return;}
+    console.log("found overlay root");
+    hasInit = true;
+    const customAnim = document.createElement("video")
+    const videoSrc = document.createElement("source")
+    videoSrc.src = "https://raw.githubusercontent.com/Zashness/rashinban2025/refs/heads/gh-pages/assets/videos/5K.mp4";
+    videoSrc.type = "video/mp4";
+    customAnim.append(videoSrc);
+    customAnim.id = "rashinban-5k";
+    overlayRoot.append(customAnim)
+    
+    const observer = new MutationObserver((mutations) => {
+      console.log("mutation")
+      const fivek = document.querySelector(`[class^="__5k-celebration_root"]`)
+      if(fivek){
+        console.log("5K detected");
+        customAnim.play()
+      }
+    });
+    observer.observe(overlayRoot, {subtree: true, childList: true, characterData: true})
+  }).observe(document.body, {subtree: true, childList: true})
+});

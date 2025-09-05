@@ -25,7 +25,7 @@
     @import url('https://use.typekit.net/ljs6bhu.css');
 
     [class*="game_backgroundDefault__"][class*="game_backgroundDefault__"] {
-      --background: linear-gradient(to top,rgba(0,0,0,.9) 0,rgba(0,0,0,0) 350px), url("https://rashinban.org/assets/images/key-visual.png")
+      --background: linear-gradient(to top,rgba(0,0,0,.9) 0,rgba(0,0,0,0) 350px), url("https://raw.githubusercontent.com/Zashness/rashinban2025/refs/heads/gh-pages/assets/images/key-visual.png")
     }
     /* In-game background & post-game background */
     [class^="views_activeRoundWrapper__"][class^="views_activeRoundWrapper__"],
@@ -178,6 +178,18 @@
       background-color: transparent;
     }
 
+    /* 5K Effect */
+    [class^=__5k-celebration_root]{
+      visibility: hidden;
+    }
+
+    #rashinban-5k{
+      display: fixed;
+      width: 1920px;
+      height: 1080px;
+      pointer-events: none;
+    }
+
 
     /* ===================================== */
     /* ========= Game preview mode ========= */
@@ -286,7 +298,7 @@
 
   // ===== INLINED: sponsors.css =====
 
-  GM_addStyle("#sponsors {\n  position: absolute;\n  left: var(--left, 0px);\n  bottom: var(--bottom, 84px);\n  transform: translateY(50%); /* keeps logo *centers* at --bottom */\n  display: flex;\n  align-items: center;\n  gap: var(--gap, 72px);\n  z-index: 10;\n  /* pass clicks through */\n  pointer-events: none;\n}\n\n/* All logos */\n#sponsors img {\n  height: var(--logo-h, 84px);\n  object-fit: contain;\n  flex: 0 0 auto;\n}\n\n#sponsors .red-tokyo {\n  height: calc(var(--logo-h, 84px) * 1.4);\n  margin-top: 34px;\n}\n\n.sponsor-left-logos {\n  display: flex;\n  justify-content: flex-end;\n  align-items: center;\n  width: 1200px;\n  gap: var(--gap, 72px);\n}\n\n/* The rotating right-side logo */\nimg#sponsor-right {\n  opacity: 1;\n  transition: opacity 300ms ease-in-out;\n  max-width: calc(var(--logo-h, 84px) * 4.75);\n  max-height: calc(var(--logo-h, 84px) * 0.8);\n}\n");
+  GM_addStyle("#sponsors {\r\n  position: absolute;\r\n  left: var(--left, 0px);\r\n  bottom: var(--bottom, 84px);\r\n  transform: translateY(50%); /* keeps logo *centers* at --bottom */\r\n  display: flex;\r\n  align-items: center;\r\n  gap: var(--gap, 72px);\r\n  z-index: 10;\r\n  /* pass clicks through */\r\n  pointer-events: none;\r\n}\r\n\r\n/* All logos */\r\n#sponsors img {\r\n  height: var(--logo-h, 84px);\r\n  object-fit: contain;\r\n  flex: 0 0 auto;\r\n}\r\n\r\n#sponsors .red-tokyo {\r\n  height: calc(var(--logo-h, 84px) * 1.4);\r\n  margin-top: 34px;\r\n}\r\n\r\n.sponsor-left-logos {\r\n  display: flex;\r\n  justify-content: flex-end;\r\n  align-items: center;\r\n  width: 1200px;\r\n  gap: var(--gap, 72px);\r\n}\r\n\r\n/* The rotating right-side logo */\r\nimg#sponsor-right {\r\n  opacity: 1;\r\n  transition: opacity 300ms ease-in-out;\r\n  max-width: calc(var(--logo-h, 84px) * 4.75);\r\n  max-height: calc(var(--logo-h, 84px) * 0.8);\r\n}\r\n");
 
   // ===== INLINED: sponsors.js =====
   
@@ -386,4 +398,37 @@ async function initSponsors({
     rightLogos: rightLogos,
     bottom: 125,
   });
+
 })();
+
+
+
+window.addEventListener('load', 
+function(){
+  let hasInit = false;
+
+  const domChanges = new MutationObserver((_mutations) =>{
+      /* 5K Effect */
+    const overlayRoot = document.getElementById("overlay-portal-destination");
+    if(!overlayRoot || hasInit){return;}
+    console.log("found overlay root");
+    hasInit = true;
+    const customAnim = document.createElement("video")
+    const videoSrc = document.createElement("source")
+    videoSrc.src = "https://raw.githubusercontent.com/Zashness/rashinban2025/refs/heads/gh-pages/assets/videos/5K.mp4";
+    videoSrc.type = "video/mp4";
+    customAnim.append(videoSrc);
+    customAnim.id = "rashinban-5k";
+    overlayRoot.append(customAnim)
+    
+    const observer = new MutationObserver((mutations) => {
+      console.log("mutation")
+      const fivek = document.querySelector(`[class^="__5k-celebration_root"]`)
+      if(fivek){
+        console.log("5K detected");
+        customAnim.play()
+      }
+    });
+    observer.observe(overlayRoot, {subtree: true, childList: true, characterData: true})
+  }).observe(document.body, {subtree: true, childList: true})
+});
