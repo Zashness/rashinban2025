@@ -1,22 +1,35 @@
 // ==UserScript==
 // @name         Rashinban Geoguessr Game Master Mode
 // @namespace    https://github.com/Zashness/rashinban2025/blob/gh-pages/tampermonkeys/out/in-game.user.js
-// @version      1.0.4
+// @version      1.0.5
 // @description  Game Master Mode mods for Rashinban2025
 // @author       Zashness
 // @match        https://www.geoguessr.com/*
 // @icon         https://rashinban.org/assets/images/favicon.ico
 // @grant        GM_addStyle
+// @grant        GM_addElement
 // ==/UserScript==
 
-(function () {
-  'use strict';
-
+window.addEventListener('load', function () {
+  GM_addElement(document.body, 'script', {
+    src: 'https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js',
+  });
   // Inject a CSS rule that matches any class beginning with that prefix
   GM_addStyle(`
-    @import url('https://fonts.googleapis.com/css2?family=Akshar:wght@300..700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Abel&family=Akshar:wght@300..700&family=Noto+Sans+JP:wght@100..900&display=swap');
     @import url('https://use.typekit.net/ljs6bhu.css');
 
+    /* ===================================== */
+    /* ========== Player Scores ============ */
+    /* ===================================== */
+    .topbar.topbar {
+      top: 53px;
+      position: absolute;
+    }
+
+    /* ===================================== */
+    /* ============ Backgrounds ============ */
+    /* ===================================== */
     [class*="game_backgroundDefault__"][class*="game_backgroundDefault__"] {
       --background: linear-gradient(to top,rgba(0,0,0,.9) 0,rgba(0,0,0,0) 350px), url("https://raw.githubusercontent.com/Zashness/rashinban2025/refs/heads/gh-pages/assets/images/key-visual.png")
     }
@@ -289,9 +302,15 @@
     }
 `);
 
-  // ===== INLINED: sponsors.css =====
+  // ===== INLINED: consts.js =====
+  //@@CONSTS_JS@@
+  // ===== INLINED: utils.js =====
+  //@@UTILS_JS@@
 
+  // ===== INLINED: sponsors.css =====
   GM_addStyle(/*@@SPONSORS_CSS_JSON@@*/);
+  // ===== INLINED: player-name-score.css =====
+  GM_addStyle(/*@@PLAYER_SCORE_CSS_JSON@@*/);
 
   // ===== INLINED: sponsors.js =====
   //@@SPONSORS_JS@@
@@ -319,46 +338,97 @@
     bottom: 125,
   });
 
-})();
+  // ===== INLINED: score.js =====
+  //@@SCORE_JS@@
 
+  function render(data) {
+    const row = getActiveRow(data);
+    renderNameAndScoreFromRow(row);
+  }
 
+  function fetchData() {
+    const csvUrl = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=${OVERLAYS_TAB_ID}`;
 
-window.addEventListener('load', 
-function(){
+    fetch(csvUrl)
+      .then((res) => {
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        return res.text();
+      })
+      .then((txt) => {
+        const { data } = Papa.parse(txt, { header: true, skipEmptyLines: true });
+        render(data);
+      })
+      .catch((err) => {
+        console.error('Fetch/Parse error:', err);
+        // document.getElementById('error').innerHTML = '<p>Error loading data.</p>';
+      });
+  }
+
+  const topbarHtml = `
+      <div class="topbar">
+        <div class="player1-bg player-bg">
+          <div id="player1-handle" class="player-handle player1-handle"></div>
+          <div id="player1" class="player player1"></div>
+        </div>
+        <div class="score-bg score1-bg">
+          <div id="score1" class="score score1"></div>
+        </div>
+        <div class="center">
+          <div class="round">ROUND</div>
+          <div class="game-mode">GAME MODE</div>
+          <div class="damage">DAMAGE</div>
+        </div>
+        <div class="score-bg score2-bg">
+          <div id="score2" class="score score2"></div>
+        </div>
+        <div class="player2-bg player-bg">
+          <div id="player2" class="player player2"></div>
+          <div id="player2-handle" class="player-handle player2-handle"></div>
+        </div>
+      </div>
+    `;
+  document.body.insertAdjacentHTML('beforeend', topbarHtml);
+  fetchData();
+  setInterval(fetchData, 5 * 1000);
+
   let hasInit = false;
   let overlayRoot = null;
   let observer = null;
 
-  const domChanges = new MutationObserver((_mutations) =>{
-      /* 5K Effect */
-    
-    const overlay = document.getElementById("overlay-portal-destination");
-    if(overlay !== overlayRoot) {
-      if(observer !== null){observer.disconnect();}
-      hasInit = false;
+  const domChanges = new MutationObserver((_mutations) => {
+    /* 5K Effect */
 
+    const overlay = document.getElementById('overlay-portal-destination');
+    if (overlay !== overlayRoot) {
+      if (observer !== null) {
+        observer.disconnect();
+      }
+      hasInit = false;
     }
-    if(!overlay || hasInit){return;}
-    console.log("found overlay root");
+    if (!overlay || hasInit) {
+      return;
+    }
+    console.log('found overlay root');
     hasInit = true;
     overlayRoot = overlay;
-    const customAnim = document.createElement("video")
-    const videoSrc = document.createElement("source")
-    videoSrc.src = "https://raw.githubusercontent.com/Zashness/rashinban2025/refs/heads/gh-pages/assets/videos/5K.webm";
-    videoSrc.type = "video/mp4";
+    const customAnim = document.createElement('video');
+    const videoSrc = document.createElement('source');
+    videoSrc.src =
+      'https://raw.githubusercontent.com/Zashness/rashinban2025/refs/heads/gh-pages/assets/videos/5K.webm';
+    videoSrc.type = 'video/mp4';
     customAnim.append(videoSrc);
     customAnim.volume = 0.5;
-    customAnim.id = "rashinban-5k";
-    overlayRoot.append(customAnim)
-    
+    customAnim.id = 'rashinban-5k';
+    overlayRoot.append(customAnim);
+
     observer = new MutationObserver((mutations) => {
-      console.log("mutation")
-      const fivek = document.querySelector(`[class^="__5k-celebration_root"]`)
-      if(fivek){
-        customAnim.play()
+      console.log('mutation');
+      const fivek = document.querySelector(`[class^="__5k-celebration_root"]`);
+      if (fivek) {
+        customAnim.play();
       }
     });
-    observer.observe(overlayRoot, {subtree: true, childList: true, characterData: true})
-  })
-  domChanges.observe(document.body, {subtree: true, childList: true})
+    observer.observe(overlayRoot, { subtree: true, childList: true, characterData: true });
+  });
+  domChanges.observe(document.body, { subtree: true, childList: true });
 });

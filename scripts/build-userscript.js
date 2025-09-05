@@ -9,8 +9,12 @@ const ROOT = path.resolve(__dirname, '..');
 const TEMPLATE = path.join(ROOT, 'tampermonkeys', 'src', 'in-game.user.template.js');
 const OUT_DIR = path.join(ROOT, 'tampermonkeys', 'out');
 const OUT_FILE = path.join(OUT_DIR, 'in-game.user.js');
-const CSS_FILE = path.join(ROOT, 'assets', 'sponsors.css');
-const JS_FILE = path.join(ROOT, 'assets', 'js', 'sponsors.js');
+const SPONSORS_CSS_FILE = path.join(ROOT, 'assets', 'sponsors.css');
+const PLAYER_SCORE_CSS_FILE = path.join(ROOT, 'assets', 'player-score-topbar.css');
+const SPONSORS_JS_FILE = path.join(ROOT, 'assets', 'js', 'sponsors.js');
+const PLAYER_SCORE_JS_FILE = path.join(ROOT, 'assets', 'js', 'player-name-score.js');
+const CONSTS_JS_FILE = path.join(ROOT, 'assets', 'js', 'consts.js');
+const UTILS_JS_FILE = path.join(ROOT, 'assets', 'js', 'utils.js');
 
 // Helpers
 const stripESM = (js) =>
@@ -20,11 +24,16 @@ const stripESM = (js) =>
     .replace(/\bexport\s+(?=(?:async\s+)?function|class|const|let|var)/g, '');
 
 async function build() {
-  const [template, css, js] = await Promise.all([
-    fs.readFile(TEMPLATE, 'utf8'),
-    fs.readFile(CSS_FILE, 'utf8'),
-    fs.readFile(JS_FILE, 'utf8'),
-  ]);
+  const [template, sponsorsCss, scoreCss, sponsorsJS, scoreJs, constsJs, utilsJs] =
+    await Promise.all([
+      fs.readFile(TEMPLATE, 'utf8'),
+      fs.readFile(SPONSORS_CSS_FILE, 'utf8'),
+      fs.readFile(PLAYER_SCORE_CSS_FILE, 'utf8'),
+      fs.readFile(SPONSORS_JS_FILE, 'utf8'),
+      fs.readFile(PLAYER_SCORE_JS_FILE, 'utf8'),
+      fs.readFile(CONSTS_JS_FILE, 'utf8'),
+      fs.readFile(UTILS_JS_FILE, 'utf8'),
+    ]);
 
   const banner = [
     '// -----------------------------------------------------------------------------',
@@ -35,12 +44,31 @@ async function build() {
   ].join('\n');
 
   let out = template
-    .replace('/*@@SPONSORS_CSS_JSON@@*/', JSON.stringify(css))
+    .replace('/*@@SPONSORS_CSS_JSON@@*/', JSON.stringify(sponsorsCss))
+    .replace('/*@@PLAYER_SCORE_CSS_JSON@@*/', JSON.stringify(scoreCss))
     .replace(
       '//@@SPONSORS_JS@@',
       `\n/*--- begin inlined sponsors.js ---*/\n${stripESM(
-        js
+        sponsorsJS.trim()
       )}\n/*--- end inlined sponsors.js ---*/\n`
+    )
+    .replace(
+      '//@@SCORE_JS@@',
+      `\n/*--- begin inlined player-name-score.js ---*/\n${stripESM(
+        scoreJs.trim()
+      )}\n/*--- end inlined player-name-score.js ---*/\n`
+    )
+    .replace(
+      '//@@CONSTS_JS@@',
+      `\n/*--- begin inlined consts.js ---*/\n${stripESM(
+        constsJs.trim()
+      )}\n/*--- end inlined consts.js ---*/\n`
+    )
+    .replace(
+      '//@@UTILS_JS@@',
+      `\n/*--- begin inlined utils.js ---*/\n${stripESM(
+        utilsJs.trim()
+      )}\n/*--- end inlined utils.js ---*/\n`
     )
     .replace(/(^\/\/ ==\/UserScript==\s*)/m, `$1\n${banner}`);
 

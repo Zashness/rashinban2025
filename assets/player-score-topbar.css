@@ -16,6 +16,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  z-index: 4;
 }
 
 .round,
@@ -53,6 +54,7 @@
 
 .score {
   font-size: 96px;
+  color: #fff;
 }
 
 .score1-bg {

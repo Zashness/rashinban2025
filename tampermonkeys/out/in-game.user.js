@@ -1,12 +1,13 @@
 // ==UserScript==
 // @name         Rashinban Geoguessr Game Master Mode
 // @namespace    https://github.com/Zashness/rashinban2025/blob/gh-pages/tampermonkeys/out/in-game.user.js
-// @version      1.0.4
+// @version      1.0.5
 // @description  Game Master Mode mods for Rashinban2025
 // @author       Zashness
 // @match        https://www.geoguessr.com/*
 // @icon         https://rashinban.org/assets/images/favicon.ico
 // @grant        GM_addStyle
+// @grant        GM_addElement
 // ==/UserScript==
 
 
@@ -16,14 +17,26 @@
 // and the builder:      scripts/build-userscript.js
 // -----------------------------------------------------------------------------
 
-(function () {
-  'use strict';
-
+window.addEventListener('load', function () {
+  GM_addElement(document.body, 'script', {
+    src: 'https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js',
+  });
   // Inject a CSS rule that matches any class beginning with that prefix
   GM_addStyle(`
-    @import url('https://fonts.googleapis.com/css2?family=Akshar:wght@300..700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Abel&family=Akshar:wght@300..700&family=Noto+Sans+JP:wght@100..900&display=swap');
     @import url('https://use.typekit.net/ljs6bhu.css');
 
+    /* ===================================== */
+    /* ========== Player Scores ============ */
+    /* ===================================== */
+    .topbar.topbar {
+      top: 53px;
+      position: absolute;
+    }
+
+    /* ===================================== */
+    /* ============ Backgrounds ============ */
+    /* ===================================== */
     [class*="game_backgroundDefault__"][class*="game_backgroundDefault__"] {
       --background: linear-gradient(to top,rgba(0,0,0,.9) 0,rgba(0,0,0,0) 350px), url("https://raw.githubusercontent.com/Zashness/rashinban2025/refs/heads/gh-pages/assets/images/key-visual.png")
     }
@@ -296,9 +309,45 @@
     }
 `);
 
-  // ===== INLINED: sponsors.css =====
+  // ===== INLINED: consts.js =====
+  
+/*--- begin inlined consts.js ---*/
+const SHEET_ID = '1IfaRkxsSQSrc9FloVuEY5paGmeEuTOGvru5TJeR6Hvg';
+const OVERLAYS_TAB_ID = '1383961576';
+const BRACKETS_TAB_ID = '1019896571';
+/*--- end inlined consts.js ---*/
 
-  GM_addStyle("#sponsors {\r\n  position: absolute;\r\n  left: var(--left, 0px);\r\n  bottom: var(--bottom, 84px);\r\n  transform: translateY(50%); /* keeps logo *centers* at --bottom */\r\n  display: flex;\r\n  align-items: center;\r\n  gap: var(--gap, 72px);\r\n  z-index: 10;\r\n  /* pass clicks through */\r\n  pointer-events: none;\r\n}\r\n\r\n/* All logos */\r\n#sponsors img {\r\n  height: var(--logo-h, 84px);\r\n  object-fit: contain;\r\n  flex: 0 0 auto;\r\n}\r\n\r\n#sponsors .red-tokyo {\r\n  height: calc(var(--logo-h, 84px) * 1.4);\r\n  margin-top: 34px;\r\n}\r\n\r\n.sponsor-left-logos {\r\n  display: flex;\r\n  justify-content: flex-end;\r\n  align-items: center;\r\n  width: 1200px;\r\n  gap: var(--gap, 72px);\r\n}\r\n\r\n/* The rotating right-side logo */\r\nimg#sponsor-right {\r\n  opacity: 1;\r\n  transition: opacity 300ms ease-in-out;\r\n  max-width: calc(var(--logo-h, 84px) * 4.75);\r\n  max-height: calc(var(--logo-h, 84px) * 0.8);\r\n}\r\n");
+  // ===== INLINED: utils.js =====
+  
+/*--- begin inlined utils.js ---*/
+/** Finds the first row where `active` column is TRUE */
+function getActiveRow(data) {
+  for (let row of data) {
+    if (row.active === 'TRUE') {
+      return row;
+    }
+  }
+  return null;
+}
+
+function containsJapanese(text) {
+  // Hiragana, Katakana, Han (CJK)
+  const japaneseRE = /[\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Han}]/u;
+  return japaneseRE.test(text);
+}
+
+function applyKanaFont(name, el) {
+  if (!el) return;
+  if (containsJapanese(name)) el.classList.add('kana');
+  else el.classList.remove('kana');
+}
+/*--- end inlined utils.js ---*/
+
+
+  // ===== INLINED: sponsors.css =====
+  GM_addStyle("#sponsors {\n  position: absolute;\n  left: var(--left, 0px);\n  bottom: var(--bottom, 84px);\n  transform: translateY(50%); /* keeps logo *centers* at --bottom */\n  display: flex;\n  align-items: center;\n  gap: var(--gap, 72px);\n  z-index: 10;\n  /* pass clicks through */\n  pointer-events: none;\n}\n\n/* All logos */\n#sponsors img {\n  height: var(--logo-h, 84px);\n  object-fit: contain;\n  flex: 0 0 auto;\n}\n\n#sponsors .red-tokyo {\n  height: calc(var(--logo-h, 84px) * 1.4);\n  margin-top: 34px;\n}\n\n.sponsor-left-logos {\n  display: flex;\n  justify-content: flex-end;\n  align-items: center;\n  width: 1200px;\n  gap: var(--gap, 72px);\n}\n\n/* The rotating right-side logo */\nimg#sponsor-right {\n  opacity: 1;\n  transition: opacity 300ms ease-in-out;\n  max-width: calc(var(--logo-h, 84px) * 4.75);\n  max-height: calc(var(--logo-h, 84px) * 0.8);\n}\n");
+  // ===== INLINED: player-name-score.css =====
+  GM_addStyle(".topbar {\n  position: relative;\n  width: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  font-family: 'kaneda-gothic', sans-serif;\n  font-optical-sizing: auto;\n  font-weight: 900;\n  font-style: normal;\n}\n\n.center {\n  width: 440px;\n  height: 123px;\n  display: flex;\n  justify-content: space-between;\n  align-items: flex-start;\n  z-index: 4;\n}\n\n.round,\n.game-mode,\n.damage {\n  padding-top: 21px;\n  font-size: 20px;\n  font-family: 'Akshar', sans-serif;\n  font-weight: 500;\n  color: #151b26;\n  background-color: rgba(0, 0, 0, 0);\n}\n\n.round {\n  flex-basis: 120px;\n  text-align: center;\n}\n.game-mode {\n  flex-basis: 200px;\n  text-align: center;\n}\n.damage {\n  flex-basis: 120px;\n  text-align: center;\n}\n\n.score-bg {\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 123px;\n  height: 123px;\n}\n\n.score {\n  font-size: 96px;\n  color: #fff;\n}\n\n.score1-bg {\n  background-color: #ff3030;\n}\n\n.score2-bg {\n  background-color: #3083ff;\n}\n\n.player-bg {\n  width: 617px;\n  height: 123px;\n  display: flex;\n  align-items: center;\n  gap: 20px;\n  color: #fff;\n}\n\n.player1-bg {\n  background-color: #cc2626;\n  justify-content: flex-end;\n  text-align: right;\n}\n\n.player2-bg {\n  background-color: #2669cc;\n  justify-content: flex-start;\n  text-align: left;\n}\n\n.player {\n  font-family: 'kaneda-gothic', sans-serif;\n  font-weight: 900;\n  font-size: 64px;\n  letter-spacing: 2px;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  color: #fff;\n  flex: 0 0 auto;\n  margin: 0;\n}\n\n.player.kana {\n  font-family: 'Noto Sans JP', sans-serif;\n  font-size: 61px;\n}\n\n.player-handle {\n  font-family: 'Akshar', sans-serif;\n  font-weight: 600;\n  font-size: 30px;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  color: #fff;\n  flex: 1 1 auto;\n  margin: 0;\n}\n\n.player1-handle {\n  order: 1;\n}\n.player1 {\n  order: 2;\n  padding-right: 40px;\n}\n\n.player2 {\n  order: 1;\n  padding-left: 40px;\n}\n.player2-handle {\n  order: 2;\n}\n");
 
   // ===== INLINED: sponsors.js =====
   
@@ -372,7 +421,6 @@ async function initSponsors({
     }, 600);
   }, delay * 1000);
 }
-
 /*--- end inlined sponsors.js ---*/
 
 
@@ -399,46 +447,162 @@ async function initSponsors({
     bottom: 125,
   });
 
-})();
+  // ===== INLINED: score.js =====
+  
+/*--- begin inlined player-name-score.js ---*/
+/**
+ * Call renderNameAndScoreFromRow(...) to update player names and scores.
+ *
+ * Assumes that HTML nodes exist with the following IDs:
+ *   "player1", "player1-handle", "score1"
+ *   "player2", "player2-handle", "score2"
+ */
+
+/** Split "Name|handle" into [name, handle] (both trimmed) */
+function splitPlayerField(field = '') {
+  const [name = '', handle = ''] = String(field).split('|');
+  return [name.trim(), handle.trim()];
+}
+
+function setText(el, text) {
+  if (!el) return;
+  el.textContent = text.trim() || '';
+}
+
+function setHandle(el, handle) {
+  if (!el) return;
+  el.textContent = handle ? '@' + handle : '';
+}
+
+function normScore(score) {
+  const s = String(score || '').trim();
+  return s || '0';
+}
+
+/**
+ * Render the "topbar" from a row object.
+ * Works whether the center block (round, mode, damage multiplier) exists or not.
+ *
+ * @param {object} row - Active row from CSV (Papa header:true)
+ */
+function renderNameAndScoreFromRow(row) {
+  if (!row || !row.player_1 || !row.player_2) return;
+
+  // Player 1
+  const [p1Name, p1Handle] = splitPlayerField(row.player_1);
+  const p1Node = document.getElementById('player1');
+  setText(p1Node, p1Name);
+  applyKanaFont(p1Name, p1Node);
+
+  const p1HandleNode = document.getElementById('player1-handle');
+  setHandle(p1HandleNode, p1Handle);
+
+  const score1Node = document.getElementById('score1');
+  setText(score1Node, normScore(row.player_1_score));
+
+  // Player 2
+  const [p2Name, p2Handle] = splitPlayerField(row.player_2);
+  const p2Node = document.getElementById('player2');
+  setText(p2Node, p2Name);
+  applyKanaFont(p2Name, p2Node);
+
+  const p2HandleNode = document.getElementById('player2-handle');
+  setHandle(p2HandleNode, p2Handle);
+
+  const s2Node = document.getElementById('score2');
+  setText(s2Node, normScore(row.player_2_score));
+}
+/*--- end inlined player-name-score.js ---*/
 
 
+  function render(data) {
+    const row = getActiveRow(data);
+    renderNameAndScoreFromRow(row);
+  }
 
-window.addEventListener('load', 
-function(){
+  function fetchData() {
+    const csvUrl = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=${OVERLAYS_TAB_ID}`;
+
+    fetch(csvUrl)
+      .then((res) => {
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        return res.text();
+      })
+      .then((txt) => {
+        const { data } = Papa.parse(txt, { header: true, skipEmptyLines: true });
+        render(data);
+      })
+      .catch((err) => {
+        console.error('Fetch/Parse error:', err);
+        // document.getElementById('error').innerHTML = '<p>Error loading data.</p>';
+      });
+  }
+
+  const topbarHtml = `
+      <div class="topbar">
+        <div class="player1-bg player-bg">
+          <div id="player1-handle" class="player-handle player1-handle"></div>
+          <div id="player1" class="player player1"></div>
+        </div>
+        <div class="score-bg score1-bg">
+          <div id="score1" class="score score1"></div>
+        </div>
+        <div class="center">
+          <div class="round">ROUND</div>
+          <div class="game-mode">GAME MODE</div>
+          <div class="damage">DAMAGE</div>
+        </div>
+        <div class="score-bg score2-bg">
+          <div id="score2" class="score score2"></div>
+        </div>
+        <div class="player2-bg player-bg">
+          <div id="player2" class="player player2"></div>
+          <div id="player2-handle" class="player-handle player2-handle"></div>
+        </div>
+      </div>
+    `;
+  document.body.insertAdjacentHTML('beforeend', topbarHtml);
+  fetchData();
+  setInterval(fetchData, 5 * 1000);
+
   let hasInit = false;
   let overlayRoot = null;
   let observer = null;
 
-  const domChanges = new MutationObserver((_mutations) =>{
-      /* 5K Effect */
-    
-    const overlay = document.getElementById("overlay-portal-destination");
-    if(overlay !== overlayRoot) {
-      if(observer !== null){observer.disconnect();}
-      hasInit = false;
+  const domChanges = new MutationObserver((_mutations) => {
+    /* 5K Effect */
 
+    const overlay = document.getElementById('overlay-portal-destination');
+    if (overlay !== overlayRoot) {
+      if (observer !== null) {
+        observer.disconnect();
+      }
+      hasInit = false;
     }
-    if(!overlay || hasInit){return;}
-    console.log("found overlay root");
+    if (!overlay || hasInit) {
+      return;
+    }
+    console.log('found overlay root');
     hasInit = true;
     overlayRoot = overlay;
-    const customAnim = document.createElement("video")
-    const videoSrc = document.createElement("source")
-    videoSrc.src = "https://raw.githubusercontent.com/Zashness/rashinban2025/refs/heads/gh-pages/assets/videos/5K.webm";
-    videoSrc.type = "video/mp4";
+    const customAnim = document.createElement('video');
+    const videoSrc = document.createElement('source');
+    videoSrc.src =
+      'https://raw.githubusercontent.com/Zashness/rashinban2025/refs/heads/gh-pages/assets/videos/5K.webm';
+    videoSrc.type = 'video/mp4';
     customAnim.append(videoSrc);
     customAnim.volume = 0.5;
-    customAnim.id = "rashinban-5k";
-    overlayRoot.append(customAnim)
-    
+    customAnim.id = 'rashinban-5k';
+    overlayRoot.append(customAnim);
+
     observer = new MutationObserver((mutations) => {
-      console.log("mutation")
-      const fivek = document.querySelector(`[class^="__5k-celebration_root"]`)
-      if(fivek){
-        customAnim.play()
+      console.log('mutation');
+      const fivek = document.querySelector(`[class^="__5k-celebration_root"]`);
+      if (fivek) {
+        customAnim.play();
       }
     });
-    observer.observe(overlayRoot, {subtree: true, childList: true, characterData: true})
-  })
-  domChanges.observe(document.body, {subtree: true, childList: true})
+    observer.observe(overlayRoot, { subtree: true, childList: true, characterData: true });
+  });
+  domChanges.observe(document.body, { subtree: true, childList: true });
 });
