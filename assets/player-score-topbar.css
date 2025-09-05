@@ -59,11 +59,11 @@
 }
 
 .score1-bg {
-  background-color: #ff3030;
+  background-color: #3083ff;
 }
 
 .score2-bg {
-  background-color: #3083ff;
+  background-color: #ff3030;
 }
 
 .player-bg {
@@ -76,13 +76,13 @@
 }
 
 .player1-bg {
-  background-color: #cc2626;
+  background-color: #2669cc;
   justify-content: flex-end;
   text-align: right;
 }
 
 .player2-bg {
-  background-color: #2669cc;
+  background-color: #cc2626;
   justify-content: flex-start;
   text-align: left;
 }
