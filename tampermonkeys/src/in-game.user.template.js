@@ -297,7 +297,7 @@
   ];
   const rightLogos = [
     { src: logoUrlPrefix + 'assets/logos/spicescode-white.svg' },
-    { src: logoUrlPrefix + 'assets/logos/geoguessr-logo.png' },
+    { src: logoUrlPrefix + 'assets/logos/geoguessr-m.svg' },
     { src: logoUrlPrefix + 'assets/logos/geoguessr-record.svg' },
   ];
   initSponsors({

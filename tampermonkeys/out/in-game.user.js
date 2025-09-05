@@ -301,7 +301,7 @@ const defaultLeftLogos = [
 ];
 const defaultRightLogos = [
   { src: 'assets/logos/spicescode-white.svg' },
-  { src: 'assets/logos/geoguessr-logo.png' },
+  { src: 'assets/logos/geoguessr-m.svg' },
   { src: 'assets/logos/geoguessr-record.svg' },
 ];
 
@@ -377,7 +377,7 @@ async function initSponsors({
   ];
   const rightLogos = [
     { src: logoUrlPrefix + 'assets/logos/spicescode-white.svg' },
-    { src: logoUrlPrefix + 'assets/logos/geoguessr-logo.png' },
+    { src: logoUrlPrefix + 'assets/logos/geoguessr-m.svg' },
     { src: logoUrlPrefix + 'assets/logos/geoguessr-record.svg' },
   ];
   initSponsors({
