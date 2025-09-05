@@ -33,10 +33,13 @@ body {
 #interview {
   display: flex;
   opacity: 0;
-  width: 100%;
   transition: opacity 300ms ease;
   justify-content: center;
   align-items: center;
+}
+
+#last-match {
+  width: 100%;
 }
 
 #last-match.visible,
@@ -52,11 +55,14 @@ body {
 }
 
 #interview {
-  justify-content: center;
-  align-items: center;
   font-size: 80px;
   position: fixed;
   top: 197px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ff3030;
+  border-radius: 12px;
+  padding: 12px 56px;
 }
 
 .interviewee-wrapper {
