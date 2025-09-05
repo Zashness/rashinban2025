@@ -286,7 +286,7 @@
 
   // ===== INLINED: sponsors.css =====
 
-  GM_addStyle("#sponsors {\n  position: absolute;\n  left: 24px;\n  right: 24px;\n  bottom: var(--bottom, 84px);\n  transform: translateY(50%); /* keeps logo *centers* at --bottom */\n  display: flex;\n  align-items: center;\n  gap: var(--gap, 72px);\n  z-index: 10;\n  /* pass clicks through */\n  pointer-events: none;\n}\n\n/* All logos */\n#sponsors img {\n  height: var(--logo-h, 84px);\n  object-fit: contain;\n  flex: 0 0 auto;\n}\n\n#sponsors .red-tokyo {\n  height: calc(var(--logo-h, 84px) * 1.4);\n  margin-top: 34px;\n}\n\n.sponsor-left-logos {\n  display: flex;\n  justify-content: flex-end;\n  align-items: center;\n  width: 1200px;\n  gap: var(--gap, 72px);\n}\n\n/* The rotating right-side logo */\nimg#sponsor-right {\n  opacity: 1;\n  transition: opacity 300ms ease-in-out;\n  max-width: 400px;\n  max-height: 62px;\n}\n");
+  GM_addStyle("#sponsors {\n  position: absolute;\n  left: var(--left, 0px);\n  bottom: var(--bottom, 84px);\n  transform: translateY(50%); /* keeps logo *centers* at --bottom */\n  display: flex;\n  align-items: center;\n  gap: var(--gap, 72px);\n  z-index: 10;\n  /* pass clicks through */\n  pointer-events: none;\n}\n\n/* All logos */\n#sponsors img {\n  height: var(--logo-h, 84px);\n  object-fit: contain;\n  flex: 0 0 auto;\n}\n\n#sponsors .red-tokyo {\n  height: calc(var(--logo-h, 84px) * 1.4);\n  margin-top: 34px;\n}\n\n.sponsor-left-logos {\n  display: flex;\n  justify-content: flex-end;\n  align-items: center;\n  width: 1200px;\n  gap: var(--gap, 72px);\n}\n\n/* The rotating right-side logo */\nimg#sponsor-right {\n  opacity: 1;\n  transition: opacity 300ms ease-in-out;\n  max-width: calc(var(--logo-h, 84px) * 4.75);\n  max-height: calc(var(--logo-h, 84px) * 0.8);\n}\n");
 
   // ===== INLINED: sponsors.js =====
   
@@ -312,12 +312,15 @@ async function initSponsors({
   delay = 8, // sec
   height = 84, // px
   bottom = 142, // px, distance of the logos' center from the bottom of the screen
+  gap = 72, // px, distance between logos
+  left = 0, // px, distance from the left edge of the screen to the leftmost logo
 } = {}) {
   const wrap = document.getElementById(containerId);
   if (!wrap || !leftLogos.length) return;
   wrap.style.setProperty('--bottom', `${bottom}px`);
   wrap.style.setProperty('--logo-h', `${height}px`);
-  wrap.style.setProperty('--gap', `72px`);
+  wrap.style.setProperty('--gap', `${gap}px`);
+  wrap.style.setProperty('--left', `${left}px`);
 
   // Clear & build
   wrap.innerHTML = '';

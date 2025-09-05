@@ -19,12 +19,15 @@ export async function initSponsors({
   delay = 8, // sec
   height = 84, // px
   bottom = 142, // px, distance of the logos' center from the bottom of the screen
+  gap = 72, // px, distance between logos
+  left = 0, // px, distance from the left edge of the screen to the leftmost logo
 } = {}) {
   const wrap = document.getElementById(containerId);
   if (!wrap || !leftLogos.length) return;
   wrap.style.setProperty('--bottom', `${bottom}px`);
   wrap.style.setProperty('--logo-h', `${height}px`);
-  wrap.style.setProperty('--gap', `72px`);
+  wrap.style.setProperty('--gap', `${gap}px`);
+  wrap.style.setProperty('--left', `${left}px`);
 
   // Clear & build
   wrap.innerHTML = '';
