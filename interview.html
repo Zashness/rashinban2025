@@ -19,9 +19,6 @@
     <link rel="stylesheet" href="https://use.typekit.net/ljs6bhu.css" />
     <!-- Parses csv to JSON -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
-    <script>
-      const SHOW_LOGO = '--Logo表示--';
-    </script>
   </head>
   <body>
     <div class="topbar" id="last-match">
@@ -40,14 +37,11 @@
         <div id="player2-handle" class="player-handle player2-handle"></div>
       </div>
     </div>
-
-    <div class="desk-bar">
-      <div id="interview">
-        <img src="assets/images/phone.svg" />
-        <div class="interview-label">PLAYER INTERVIEWS ...</div>
-        <div class="interviewee-wrapper">
-          <div id="interviewee">しいな</div>
-        </div>
+    <div id="interview">
+      <img src="assets/images/phone.svg" />
+      <div class="interview-label">PLAYER INTERVIEWS ...</div>
+      <div class="interviewee-wrapper">
+        <div id="interviewee">しいな</div>
       </div>
     </div>
 
@@ -61,6 +55,9 @@
       import { applyKanaFont, containsJapanese, getActiveRow } from './assets/js/utils.js';
       import { initSponsors } from './assets/js/sponsors.js';
 
+      const HIDE_SCORE_AND_INTERVIEW = '--無表示--';
+      const SHOW_SCORE = '--スコア表示--';
+
       const LOGO_NODE = document.getElementById('sponsors');
       const LAST_MATCH_NODE = document.getElementById('last-match');
       const INTERVIEW_NODE = document.getElementById('interview');
@@ -71,7 +68,7 @@
        * Sets 'visible' class for passed in element and hides the other element.
        */
       function showNode(nodeToShow) {
-        const nodes = new Set([LOGO_NODE, INTERVIEW_NODE]);
+        const nodes = new Set([LAST_MATCH_NODE, INTERVIEW_NODE]);
         nodes.delete(nodeToShow);
         nodes.forEach((node) => {
           node.classList.remove('visible');
@@ -84,15 +81,7 @@
         const row = getActiveRow(data);
         renderNameAndScoreFromRow(row);
 
-        LAST_MATCH_NODE.classList.add('visible');
-      }
-
-      function hideLastMatch() {
-        LAST_MATCH_NODE.classList.remove('visible');
-      }
-
-      function showLogo() {
-        showNode(LOGO_NODE);
+        showNode(LAST_MATCH_NODE);
       }
 
       function showInterview(data) {
@@ -107,17 +96,16 @@
       }
 
       function render(data) {
-        // Controlled by `show_last_match` column in spreadsheet.
-        if (data[0].show_last_match === 'TRUE') {
-          showLastMatch(data);
-        } else {
-          hideLastMatch();
-        }
-
+        const HIDE_SCORE_AND_INTERVIEW = '--無表示--';
+        const SHOW_SCORE = '--スコア表示--';
         // Controlled by `desk_view` column in spreadsheet.
-        if (data[0].desk_view === SHOW_LOGO) {
-          showLogo();
-        } else if (!!data[0].desk_view) {
+        if (data[0].desk_view === SHOW_SCORE) {
+          showLastMatch(data);
+        } else if (data[0].desk_view === HIDE_SCORE_AND_INTERVIEW) {
+          LAST_MATCH_NODE.classList.remove('visible');
+          INTERVIEW_NODE.classList.remove('visible');
+        } else {
+          // Assume desk_view has a player's name for interview.
           showInterview(data);
         }
       }
