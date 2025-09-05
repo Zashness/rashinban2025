@@ -8,7 +8,7 @@ const defaultLeftLogos = [
 ];
 const defaultRightLogos = [
   { src: 'assets/logos/spicescode-white.svg' },
-  { src: 'assets/logos/geoguessr-logo.png' },
+  { src: 'assets/logos/geoguessr-m.svg' },
   { src: 'assets/logos/geoguessr-record.svg' },
 ];
 
