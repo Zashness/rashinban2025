@@ -12,7 +12,7 @@ body {
   width: 1920px;
   height: 1080px;
   overflow: hidden;
-  background: url('https://rashinban.org/assets/images/key-visual.png');
+  background: url('https://raw.githubusercontent.com/Zashness/rashinban2025/refs/heads/gh-pages/assets/images/key-visual.png');
   background-size: 3000px;
   background-position-y: center;
 }
