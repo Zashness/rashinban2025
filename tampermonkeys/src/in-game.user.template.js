@@ -18,7 +18,7 @@
     @import url('https://use.typekit.net/ljs6bhu.css');
 
     [class*="game_backgroundDefault__"][class*="game_backgroundDefault__"] {
-      --background: linear-gradient(to top,rgba(0,0,0,.9) 0,rgba(0,0,0,0) 350px), url("https://rashinban.org/assets/images/key-visual.png")
+      --background: linear-gradient(to top,rgba(0,0,0,.9) 0,rgba(0,0,0,0) 350px), url("https://raw.githubusercontent.com/Zashness/rashinban2025/refs/heads/gh-pages/assets/images/key-visual.png")
     }
     /* In-game background & post-game background */
     [class^="views_activeRoundWrapper__"][class^="views_activeRoundWrapper__"],
@@ -306,4 +306,15 @@
     rightLogos: rightLogos,
     bottom: 125,
   });
+
+
+  /* 5K Effect */
+  const overlayRoot = document.getElementById("overlay-portal-destination");
+  const observer = new MutationObserver((mutations) => {
+    const fivek = document.querySelector(`[class^="__5k-celebration_root"]`)
+    if(fivek){
+      console.log("5K detected");
+    }
+  }).observe(overlayRoot, {subtree: true, childList: true})
+
 })();
