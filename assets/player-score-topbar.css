@@ -8,6 +8,7 @@
   font-optical-sizing: auto;
   font-weight: 900;
   font-style: normal;
+  z-index: 4;
 }
 
 .center {
@@ -16,7 +17,6 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  z-index: 4;
 }
 
 .round,
