@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Rashinban Geoguessr Game Master Mode
 // @namespace    https://github.com/Zashness/rashinban2025/blob/gh-pages/tampermonkeys/out/in-game.user.js
-// @version      1.0.3
+// @version      1.0.4
 // @description  Game Master Mode mods for Rashinban2025
 // @author       Zashness
 // @match        https://www.geoguessr.com/*
@@ -184,12 +184,12 @@
     }
 
     #rashinban-5k{
-      display: fixed;
+      position: fixed;
       width: 1920px;
       height: 1080px;
       pointer-events: none;
+      isolation: isolate;
     }
-
 
     /* ===================================== */
     /* ========= Game preview mode ========= */
@@ -406,29 +406,39 @@ async function initSponsors({
 window.addEventListener('load', 
 function(){
   let hasInit = false;
+  let overlayRoot = null;
+  let observer = null;
 
   const domChanges = new MutationObserver((_mutations) =>{
       /* 5K Effect */
-    const overlayRoot = document.getElementById("overlay-portal-destination");
-    if(!overlayRoot || hasInit){return;}
+    
+    const overlay = document.getElementById("overlay-portal-destination");
+    if(overlay !== overlayRoot) {
+      if(observer !== null){observer.disconnect();}
+      hasInit = false;
+
+    }
+    if(!overlay || hasInit){return;}
     console.log("found overlay root");
     hasInit = true;
+    overlayRoot = overlay;
     const customAnim = document.createElement("video")
     const videoSrc = document.createElement("source")
-    videoSrc.src = "https://raw.githubusercontent.com/Zashness/rashinban2025/refs/heads/gh-pages/assets/videos/5K.mp4";
+    videoSrc.src = "https://raw.githubusercontent.com/Zashness/rashinban2025/refs/heads/gh-pages/assets/videos/5K.webm";
     videoSrc.type = "video/mp4";
     customAnim.append(videoSrc);
+    customAnim.volume = 0.5;
     customAnim.id = "rashinban-5k";
     overlayRoot.append(customAnim)
     
-    const observer = new MutationObserver((mutations) => {
+    observer = new MutationObserver((mutations) => {
       console.log("mutation")
       const fivek = document.querySelector(`[class^="__5k-celebration_root"]`)
       if(fivek){
-        console.log("5K detected");
         customAnim.play()
       }
     });
     observer.observe(overlayRoot, {subtree: true, childList: true, characterData: true})
-  }).observe(document.body, {subtree: true, childList: true})
+  })
+  domChanges.observe(document.body, {subtree: true, childList: true})
 });
