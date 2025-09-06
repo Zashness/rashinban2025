@@ -270,7 +270,7 @@ window.addEventListener('load', function () {
     }
     /* Change position of the scores. Move up and spread to edge of screen. */
     [class*="round-score-animations_scoreTable"][class*="round-score-animations_scoreTable"][class*="round-score-animations_scoreTable"] {
-      width: 1820px;
+      width: 1770px;
       margin-top: -392px;
     }
     /* Fonts for the distance and scores */
@@ -287,6 +287,9 @@ window.addEventListener('load', function () {
       top: -200px;
       position: relative;
       height: 530px;
+    }
+    div[class^="round-score_container__"] {
+      width: 986px;
     }
     /* Remove divider between distance and score */
     [class*="round-score-animations_divider__"][class*="round-score-animations_divider__"],
