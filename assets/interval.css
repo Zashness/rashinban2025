@@ -28,7 +28,7 @@ body {
   position: absolute;
   inset: 0;
   background: inherit;
-  filter: brightness(30%);
+  /* filter: brightness(30%); */
   /* transform: scale(1.05); */
   z-index: 0;
 }
@@ -69,7 +69,7 @@ body {
 .info {
   position: absolute;
   left: 140px;
-  top: 355px;
+  top: 335px;
   width: 385px;
   height: 596px;
 
@@ -139,7 +139,7 @@ body {
 .slideshow {
   position: absolute;
   right: 140px;
-  top: 328px;
+  top: 308px;
   width: 998px;
   height: 562px;
   background-color: #000;

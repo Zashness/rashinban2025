@@ -36,7 +36,11 @@
       </div>
 
       <div class="slideshow">
-        <img src="assets/slides/metas/1.png" class="slide visible" id="slide1" />
+        <img
+          src="assets/slides/metas/1.png"
+          class="slide visible"
+          id="slide1"
+        />
         <img src="assets/slides/metas/2.png" class="slide" id="slide2" />
         <!-- Brackets slide -->
         <div class="slide" id="slide-brackets">
@@ -59,20 +63,20 @@
     </div>
 
     <script type="module">
-      import { SHEET_ID, OVERLAYS_TAB_ID } from './assets/js/consts.js';
-      import { initSponsors } from './assets/js/sponsors.js';
+      import { SHEET_ID, OVERLAYS_TAB_ID } from "./assets/js/consts.js";
+      import { initSponsors } from "./assets/js/sponsors.js";
 
       const logos = [
-        { src: 'assets/logos/spicescode-white.svg' },
-        { src: 'assets/logos/geoguessr-m.svg' },
-        { src: 'assets/logos/geoguessr-record.svg' },
-        { src: 'assets/logos/AltoIP-logo-white.png' },
+        { src: "assets/logos/spicescode-white.svg" },
+        { src: "assets/logos/geoguessr-m.svg" },
+        { src: "assets/logos/geoguessr-record.svg" },
+        { src: "assets/logos/AltoIP-logo-white.png" },
       ];
 
       initSponsors({
-        containerId: 'sponsors',
+        containerId: "sponsors",
         rightLogos: logos,
-        bottom: 118,
+        bottom: 128,
         height: 62,
         gap: 44,
         left: 240,
@@ -83,7 +87,7 @@
       /** Finds the first row where `next` column is TRUE */
       function getNextMatchRow(data) {
         for (let row of data) {
-          if (row.active === 'TRUE') {
+          if (row.active === "TRUE") {
             return row;
           }
         }
@@ -97,7 +101,8 @@
 
         const nowLocal = new Date();
         // don't know where the running instance is, so convert to utc
-        const utcMs = nowLocal.getTime() + nowLocal.getTimezoneOffset() * 60_000;
+        const utcMs =
+          nowLocal.getTime() + nowLocal.getTimezoneOffset() * 60_000;
         // convert now into JST
         const nowJst = new Date(utcMs + 9 * 60 * 60_000);
 
@@ -117,7 +122,7 @@
         // beyond that, we roll it to tomorrow
         if (eventJst.getTime() <= nowJst.getTime()) {
           if (nowJst.getTime() - eventJst.getTime() < 30 * 60 * 1000) {
-            return '00:00';
+            return "00:00";
           }
           eventJst.setDate(eventJst.getDate() + 1);
         }
@@ -128,8 +133,14 @@
         const secsLeft = Math.floor(totalSec % 60);
 
         // format, pad single digits to always 2 digits "5" -> "05", and clamp any negative to 0
-        const formattedMinsLeft = String(Math.max(minsLeft, 0)).padStart(2, '0');
-        const formattedSecsLeft = String(Math.max(secsLeft, 0)).padStart(2, '0');
+        const formattedMinsLeft = String(Math.max(minsLeft, 0)).padStart(
+          2,
+          "0"
+        );
+        const formattedSecsLeft = String(Math.max(secsLeft, 0)).padStart(
+          2,
+          "0"
+        );
 
         return `${formattedMinsLeft}:${formattedSecsLeft}`;
       }
@@ -164,18 +175,18 @@
       ];
 
       const TERMS = [
-        'terms/1.png',
-        'terms/2.png',
-        'terms/3.png',
-        'terms/4.png',
-        'terms/5.png',
-        'terms/6.png',
-        'terms/7.png',
-        'terms/8.png',
-        'terms/9.png',
-        'terms/10.png',
-        'terms/11.png',
-        'terms/12.png',
+        "terms/1.png",
+        "terms/2.png",
+        "terms/3.png",
+        "terms/4.png",
+        "terms/5.png",
+        "terms/6.png",
+        "terms/7.png",
+        "terms/8.png",
+        "terms/9.png",
+        "terms/10.png",
+        "terms/11.png",
+        "terms/12.png",
       ];
 
       const METAS = [
@@ -246,7 +257,10 @@
         'metas/65.png',
       ];
 
-      const slideEls = [document.getElementById('slide1'), document.getElementById('slide2')];
+      const slideEls = [
+        document.getElementById("slide1"),
+        document.getElementById("slide2"),
+      ];
       let currentSlideIndex = 0; // index in FILES
       let topLayer = 0; // which of slideEls is currently visible
       const SHUFFLED_TERMS = TERMS.map((x) => {
@@ -260,32 +274,40 @@
         .sort((a, b) => a.key - b.key)
         .map((x) => x.value);
 
-      const bracketSlide = document.getElementById('slide-brackets');
-      const bracketIframe = document.getElementById('bracketsFrame');
+      const bracketSlide = document.getElementById("slide-brackets");
+      const bracketIframe = document.getElementById("bracketsFrame");
 
       function slideshow() {
         // Initialize files array. This prevents adding brackets multiple times.
         const files = SPONSORS.concat(SHUFFLED_TERMS.concat(SHUFFLED_METAS));
         // mix in brackets into slides when specified
-        if (papaData?.[0]?.with_brackets === 'TRUE') {
+        if (papaData?.[0]?.with_brackets === "TRUE") {
           // insert a brackets “slide” every N slides
-          const bracketsFrequency = Number(papaData?.[0]?.brackets_frequency) || 6;
-          const BRACKETS_TOKEN = '__BRACKETS__';
+          const bracketsFrequency =
+            Number(papaData?.[0]?.brackets_frequency) || 6;
+          const BRACKETS_TOKEN = "__BRACKETS__";
 
-          for (let i = bracketsFrequency; i < files.length; i += bracketsFrequency + 1) {
+          for (
+            let i = bracketsFrequency;
+            i < files.length;
+            i += bracketsFrequency + 1
+          ) {
             files.splice(i, 0, BRACKETS_TOKEN);
           }
         }
 
         // brackets branch
-        if (files[currentSlideIndex] === '__BRACKETS__') {
+        if (files[currentSlideIndex] === "__BRACKETS__") {
           // show iframe slide
-          bracketSlide.classList.add('visible');
-          bracketIframe.contentWindow.postMessage({ type: 'START' }, location.origin);
+          bracketSlide.classList.add("visible");
+          bracketIframe.contentWindow.postMessage(
+            { type: "START" },
+            location.origin
+          );
 
           // hide image layers
-          slideEls[0].classList.remove('visible');
-          slideEls[1].classList.remove('visible');
+          slideEls[0].classList.remove("visible");
+          slideEls[1].classList.remove("visible");
 
           // after 15s, hide iframe and continue to next item
           const BRACKETS_DURATION = 15_000;
@@ -293,9 +315,12 @@
             currentSlideIndex = (currentSlideIndex + 1) % files.length;
             // slight delay to match fade timing
             setTimeout(() => {
-              bracketSlide.classList.remove('visible');
+              bracketSlide.classList.remove("visible");
               // resets brackets for next time
-              bracketIframe.contentWindow.postMessage({ type: 'END' }, location.origin);
+              bracketIframe.contentWindow.postMessage(
+                { type: "END" },
+                location.origin
+              );
             }, 160);
             slideshow();
           }, BRACKETS_DURATION);
@@ -311,8 +336,8 @@
 
         function fadeout() {
           // trigger fade via CSS
-          fadeIn.classList.add('visible');
-          fadeOut.classList.remove('visible');
+          fadeIn.classList.add("visible");
+          fadeOut.classList.remove("visible");
 
           // advance pointers
           currentSlideIndex = (currentSlideIndex + 1) % files.length;
@@ -321,6 +346,24 @@
           setTimeout(slideshow, duration);
         }
         setTimeout(fadeout, 160);
+      }
+
+      function render() {
+        renderCountdown();
+        renderTitle();
+      }
+
+      function renderTitle() {
+        if (!papaData) {
+          return;
+        }
+        const data = papaData;
+        const titleEl = document.querySelector(".title");
+        if (papaData?.[0]?.is_interval === "TRUE") {
+          titleEl.textContent = "INTERVAL";
+        } else {
+          titleEl.textContent = "ONLINE QUALIFIER";
+        }
       }
 
       function renderCountdown() {
@@ -332,8 +375,8 @@
         const hh = data[0].next_event_hh || 0;
         const mm = data[0].next_event_mm || 0;
         const remaining = getTimeToNextEvent(hh, mm);
-        document.getElementById('countdown').textContent = remaining;
-        const infoBox = document.getElementById('info');
+        document.getElementById("countdown").textContent = remaining;
+        const infoBox = document.getElementById("info");
 
         const row = getNextMatchRow(data);
         if (
@@ -341,29 +384,31 @@
           !row.player_1 || // Ensure player_1 name and optional handle
           !row.player_2 // Ensure player_2 name and optional handle
         ) {
-          infoBox.setAttribute('class', 'disabled');
+          infoBox.setAttribute("class", "disabled");
           return;
         }
-        infoBox.setAttribute('class', 'enabled');
+        infoBox.setAttribute("class", "enabled");
 
-        const playerOne = row.player_1.split('|');
-        const playerTwo = row.player_2.split('|');
+        const playerOne = row.player_1.split("|");
+        const playerTwo = row.player_2.split("|");
 
         // Player 1: `player_1` column in spreadsheet.
-        const playerOneName = playerOne[0].trim() || '';
+        const playerOneName = playerOne[0].trim() || "";
 
         // Player 2: `player_2` column in spreadsheet.
-        const playerTwoName = playerTwo[0].trim() || '';
+        const playerTwoName = playerTwo[0].trim() || "";
 
         const p1Az = isAlphaNumeric(playerOneName);
         const p2Az = isAlphaNumeric(playerTwoName);
-        const p1Class = p1Az ? 'name-kaneda' : 'name-noto';
-        const p2Class = p2Az ? 'name-kaneda' : 'name-noto';
+        const p1Class = p1Az ? "name-kaneda" : "name-noto";
+        const p2Class = p2Az ? "name-kaneda" : "name-noto";
 
-        document.getElementById('next-match').innerHTML = `
+        document.getElementById("next-match").innerHTML = `
               <p class="game-name">
                 <span class="${p1Class}">${playerOneName}</span>
-                <span class="versus" style="margin-right:${p2Az ? '18px' : '12px'};">VS</span>
+                <span class="versus" style="margin-right:${
+                  p2Az ? "18px" : "12px"
+                };">VS</span>
                 <span class="${p2Class}">${playerTwoName}</span>
               </p>
             `;
@@ -385,15 +430,15 @@
             papaData = data;
           })
           .catch((err) => {
-            console.error('Fetch/Parse error:', err);
+            console.error("Fetch/Parse error:", err);
             // document.getElementById('error').innerHTML = '<p>Error loading data.</p>';
           });
       }
 
-      window.addEventListener('DOMContentLoaded', () => {
+      window.addEventListener("DOMContentLoaded", () => {
         fetchData();
         setInterval(fetchData, 10_000); // Six times a minute
-        setInterval(renderCountdown, 1_000);
+        setInterval(render, 1_000);
         slideshow();
       });
     </script>
