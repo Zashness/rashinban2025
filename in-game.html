@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <!-- In Game: overlays for pre-game/in-game/post-game in Game Master Mode -->
 <html lang="en">
   <head>
@@ -63,7 +63,10 @@
             return res.text();
           })
           .then((txt) => {
-            const { data } = Papa.parse(txt, { header: true, skipEmptyLines: true });
+            const { data } = Papa.parse(txt, {
+              header: true,
+              skipEmptyLines: true,
+            });
             render(data);
           })
           .catch((err) => {

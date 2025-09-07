@@ -366,7 +366,10 @@ window.addEventListener('load', function () {
         return res.text();
       })
       .then((txt) => {
-        const { data } = Papa.parse(txt, { header: true, skipEmptyLines: true });
+        const { data } = Papa.parse(txt, {
+          header: true,
+          skipEmptyLines: true,
+        });
         render(data);
       })
       .catch((err) => {
@@ -439,7 +442,11 @@ window.addEventListener('load', function () {
         customAnim.play();
       }
     });
-    observer.observe(overlayRoot, { subtree: true, childList: true, characterData: true });
+    observer.observe(overlayRoot, {
+      subtree: true,
+      childList: true,
+      characterData: true,
+    });
   });
   domChanges.observe(document.body, { subtree: true, childList: true });
 });

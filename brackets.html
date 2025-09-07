@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -2061,7 +2061,7 @@
               removeWinner(row.match_number);
               const winnerPosition = p1_score > p2_score ? 'top' : 'bottom';
               const winnerEl = document.getElementById(
-                `match${row.match_number}-${winnerPosition}`
+                `match${row.match_number}-${winnerPosition}`,
               );
               const parent = winnerEl.parentElement;
               parent.classList.add('winner');
@@ -2089,7 +2089,10 @@
             return res.text();
           })
           .then((txt) => {
-            const { data } = Papa.parse(txt, { header: true, skipEmptyLines: true });
+            const { data } = Papa.parse(txt, {
+              header: true,
+              skipEmptyLines: true,
+            });
             render(data);
             // for use in the iframe "mini" view
             bracketsData = data;

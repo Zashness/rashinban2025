@@ -49,26 +49,26 @@ async function build() {
     .replace(
       '//@@SPONSORS_JS@@',
       `\n/*--- begin inlined sponsors.js ---*/\n${stripESM(
-        sponsorsJS.trim()
-      )}\n/*--- end inlined sponsors.js ---*/\n`
+        sponsorsJS.trim(),
+      )}\n/*--- end inlined sponsors.js ---*/\n`,
     )
     .replace(
       '//@@SCORE_JS@@',
       `\n/*--- begin inlined player-name-score.js ---*/\n${stripESM(
-        scoreJs.trim()
-      )}\n/*--- end inlined player-name-score.js ---*/\n`
+        scoreJs.trim(),
+      )}\n/*--- end inlined player-name-score.js ---*/\n`,
     )
     .replace(
       '//@@CONSTS_JS@@',
       `\n/*--- begin inlined consts.js ---*/\n${stripESM(
-        constsJs.trim()
-      )}\n/*--- end inlined consts.js ---*/\n`
+        constsJs.trim(),
+      )}\n/*--- end inlined consts.js ---*/\n`,
     )
     .replace(
       '//@@UTILS_JS@@',
       `\n/*--- begin inlined utils.js ---*/\n${stripESM(
-        utilsJs.trim()
-      )}\n/*--- end inlined utils.js ---*/\n`
+        utilsJs.trim(),
+      )}\n/*--- end inlined utils.js ---*/\n`,
     )
     .replace(/(^\/\/ ==\/UserScript==\s*)/m, `$1\n${banner}`);
 
