@@ -7,13 +7,18 @@
     "build:tm": "node scripts/build-userscript.js",
     "prepare": "husky",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "serve": "http-server . -p 4173 -c-1",
+    "test:ui": "playwright test",
+    "test:update": "playwright test --update-snapshots"
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx,css,scss,less,md,html,json,yml,yaml}": "prettier --write"
   },
   "license": "MIT",
   "devDependencies": {
+    "@playwright/test": "^1.55.0",
+    "http-server": "^14.1.1",
     "husky": "^9.1.7",
     "lint-staged": "^16.1.6",
     "prettier": "^3.6.2"

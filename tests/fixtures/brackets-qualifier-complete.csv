@@ -1,0 +1,31 @@
+,active,match_number,player_1,player_1_score,player_2_score,player_2
+Upper Stage 1,FALSE,1,YRP,2,0,鳴神
+,FALSE,2,tozangezan,1,2,Sam
+,FALSE,3,conkani,2,0,はまだし
+,FALSE,4,sp4ghet,2,1,KZT
+,FALSE,5,.kg,2,1,SD
+,FALSE,6,kmap,2,1,ken
+,FALSE,7,gnrr,2,0,アラメイン
+,TRUE,8,uma,2,0,masamune
+Lower Stage 1,FALSE,9,鳴神,0,2,tozangezan
+,FALSE,10,はまだし,0,2,KZT
+,FALSE,11,SD,2,1,ken
+,FALSE,12,masamune,0,2,アラメイン
+Upper Quarterfinals,FALSE,13,YRP,2,1,Sam
+,FALSE,14,conkani,2,0,sp4ghet
+,TRUE,15,.kg,2,1,kmap
+,FALSE,16,gnrr,2,1,uma
+Lower Stage 2,FALSE,17,Sam,0,2,アラメイン
+,FALSE,18,sp4ghet,2,0,SD
+,FALSE,19,kmap,2,1,KZT
+,FALSE,20,uma,2,1,tozangezan
+Lower Stage 3,FALSE,21,sp4ghet,2,1,アラメイン
+,FALSE,22,uma,2,0,kmap
+Upper Semifinals,TRUE,23,YRP,2,0,conkani
+,TRUE,24,.kg,0,2,gnrr
+Lower Quarterfinals,TRUE,25,conkani,1,2,uma
+,TRUE,26,.kg,1,2,sp4ghet
+Lower Semifinal,TRUE,27,uma,0,2,sp4ghet
+Upper Final,TRUE,28,YRP,1,2,gnrr
+Lower Final,TRUE,29,YRP,2,1,sp4ghet
+Final,TRUE,30,gnrr,0,2,YRP
