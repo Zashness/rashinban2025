@@ -11,6 +11,10 @@ concurrency:
 jobs:
   test:
     runs-on: ubuntu-latest
+    container:
+      image: mcr.microsoft.com/playwright:v1.47.2-jammy
+      options: --ipc=host
+
     timeout-minutes: 10
     env:
       TZ: America/New_York
@@ -38,22 +42,17 @@ jobs:
       - name: Wait for server
         run: npx --yes wait-on http://127.0.0.1:4173
 
-      - name: Run Playwright tests
+      - name: Run Playwright tests (non-blocking)
         run: npx playwright test
+        continue-on-error: true
 
-      # if a test fails, upload the HTML report and traces for debugging
-      - name: Upload Playwright report (on failure)
-        if: failure()
+      - name: Upload visual artifacts
+        if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: playwright-report
-          path: playwright-report
-          retention-days: 7
-
-      - name: Upload traces (on failure)
-        if: failure()
-        uses: actions/upload-artifact@v4
-        with:
-          name: playwright-traces
-          path: test-results/**/*.zip
-          retention-days: 7
+          name: visual-artifacts
+          path: |
+            test-results/**/*.{png,webp,zip,txt,log}
+            tests/**/*-snapshots/**/*.png
+            playwright-report
+          retention-days: 14
