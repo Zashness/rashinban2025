@@ -20,4 +20,10 @@ export default defineConfig({
     timeout: 15_000,
   },
   reporter: [['list'], ['html', { outputFolder: 'playwright-report', open: 'never' }]],
+  expect: {
+    toHaveScreenshot: {
+      threshold: 0.35, // tolerate minor changes in rendering fonts, anti-aliasing, etc.
+      maxDiffPixels: 100, // no more than 100 pixels may differ
+    },
+  },
 });
