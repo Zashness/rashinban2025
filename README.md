@@ -22,3 +22,20 @@ Overlays and tampermonkey scripts for [Rashinban 2025](https://rashinban.org/).
 ### For Analyst
 
 - Tampermonkey: https://github.com/Zashness/rashinban2025/blob/gh-pages/tampermonkeys/fullscreen-player.user.js
+
+## Developer Setup
+
+### One time setup
+```
+npm ci
+```
+
+### Run tests locally
+```
+npm run test:ui
+```
+
+### Update snapshots (when a visual change is intended)
+```
+npm run test:update
+```
