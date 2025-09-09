@@ -1,26 +1,18 @@
 import { defineConfig } from '@playwright/test';
 
 export default defineConfig({
-  testDir: 'tests',
+  testDir: './tests',
+  timeout: 15_000,
   use: {
-    baseURL: 'http://localhost:4173',
-    browserName: 'chromium',
+    baseURL: 'http://127.0.0.1:4173',
     viewport: { width: 1920, height: 1080 },
     deviceScaleFactor: 1,
-    colorScheme: 'dark',
     timezoneId: 'America/New_York',
-    // keep screenshots small & stable:
-    screenshot: 'off',
   },
-  expect: {
-    toHaveScreenshot: {
-      // perceptual diff in YIQ color space (default 0.2); tweak if fonts AA differ
-      threshold: 0.4,
-      // or cap by pixel ratio if needed:
-      // maxDiffPixelRatio: 0.003,
-      scale: 'css',
-    },
-    timeout: 10000,
+  webServer: {
+    command: 'npm run serve',
+    url: 'http://127.0.0.1:4173',
+    reuseExistingServer: true, // don’t start another if you already have one
+    timeout: 15_000,
   },
-  testTimeout: 60000,
 });
