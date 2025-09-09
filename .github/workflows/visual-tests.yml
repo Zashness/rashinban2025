@@ -56,3 +56,79 @@ jobs:
             tests/**/*-snapshots/**/*.png
             playwright-report
           retention-days: 14
+
+      - name: Add screenshots to job summary
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          # How many pairs to embed (don't add too many, I guess there's a limit)
+          LIMIT=20
+          PREVIEW_WIDTH=900
+          ROOT="test-results"
+
+          echo "## Visual test screenshots" >> "$GITHUB_STEP_SUMMARY"
+          echo "_Up to $LIMIT pairs. Full files still uploaded as artifacts._" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+
+          # Collect all actual/diff images (png/webp)
+          mapfile -t IMAGES < <(find "$ROOT" -type f \( -name '*-actual.png' -o -name '*-diff.png' -o -name '*-actual.webp' -o -name '*-diff.webp' \) | sort)
+
+          # Build unique basenames by stripping '-actual.ext' / '-diff.ext'
+          declare -A BASES=()
+          for f in "${IMAGES[@]:-}"; do
+            base="$(sed -E 's/-(actual|diff)\.(png|webp)$//' <<<"$f")"
+            BASES["$base"]=1
+          done
+
+          count=0
+          for base in "${!BASES[@]}"; do
+            (( count++ ))
+            if (( count > LIMIT )); then break; fi
+
+            # Resolve actual/diff in either png or webp
+            actual=""
+            diff=""
+            for ext in png webp; do
+              [[ -z "$actual" && -f "${base}-actual.$ext" ]] && actual="${base}-actual.$ext"
+              [[ -z "$diff"   && -f "${base}-diff.$ext"   ]] && diff="${base}-diff.$ext"
+            done
+
+            # Determine content-types
+            ct_actual=""; ct_diff=""
+            [[ -n "$actual" ]] && ct_actual="image/${actual##*.}"
+            [[ -n "$diff"   ]] && ct_diff="image/${diff##*.}"
+
+            rel_title="${base#./}"
+            {
+              echo "<details><summary><code>${rel_title}</code></summary>"
+              echo ""
+              echo "<table><thead><tr><th align='left'>Actual</th><th align='left'>Diff</th></tr></thead><tbody><tr>"
+              # Actual cell
+              echo "<td valign='top'>"
+              if [[ -n "$actual" ]]; then
+                echo "<div><code>${actual#./}</code></div>"
+                echo "<img src=\"data:${ct_actual};base64,$(base64 -w0 "$actual")\" width=\"$PREVIEW_WIDTH\"/>"
+              else
+                echo "<em>No actual image found</em>"
+              fi
+              echo "</td>"
+              # Diff cell
+              echo "<td valign='top'>"
+              if [[ -n "$diff" ]]; then
+                echo "<div><code>${diff#./}</code></div>"
+                echo "<img src=\"data:${ct_diff};base64,$(base64 -w0 "$diff")\" width=\"$PREVIEW_WIDTH\"/>"
+              else
+                echo "<em>No diff image found</em>"
+              fi
+              echo "</td>"
+              echo "</tr></tbody></table>"
+              echo "</details>"
+              echo ""
+            } >> "$GITHUB_STEP_SUMMARY"
+          done
+
+          if (( count == 0 )); then
+            echo "_No images found under \`$ROOT\`. Check artifact uploads or paths._" >> "$GITHUB_STEP_SUMMARY"
+          fi
