@@ -1,6 +1,6 @@
 # rashinban2025
 
-Overlays and tampermonkey scripts for [Rashinban 2025](https://rashinban.org/).
+Overlays and tampermonkey scripts for [Rashinban 2025](https://rashinban.org/)
 
 ### Game Master (in-game) Mode
 
