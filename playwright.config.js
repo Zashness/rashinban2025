@@ -8,6 +8,10 @@ export default defineConfig({
     viewport: { width: 1920, height: 1080 },
     deviceScaleFactor: 1,
     timezoneId: 'America/New_York',
+    // keep visuals stable & collect debug only on failure
+    trace: 'retain-on-failure',
+    screenshot: 'only-on-failure',
+    video: 'off',
   },
   webServer: {
     command: 'npm run serve',
@@ -15,4 +19,5 @@ export default defineConfig({
     reuseExistingServer: true, // don’t start another if you already have one
     timeout: 15_000,
   },
+  reporter: [['list'], ['html', { outputFolder: 'playwright-report', open: 'never' }]],
 });

@@ -3,3 +3,4 @@ node_modules/
 
 # Playwright transient artifacts
 test-results/
+playwright-report/
