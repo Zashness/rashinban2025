@@ -6,7 +6,10 @@ test('brackets qualifier baseline', async ({ page }) => {
   await page.route(
     '**/1IfaRkxsSQSrc9FloVuEY5paGmeEuTOGvru5TJeR6Hvg/*format=csv*',
     async (route) => {
-      const body = readFileSync('tests/fixtures/brackets-qualifier-complete.csv', 'utf8');
+      const body = readFileSync(
+        'tests/fixtures/brackets-qualifier-upper-1-empty-score.csv',
+        'utf8',
+      );
       await route.fulfill({
         status: 200,
         contentType: 'text/csv',
