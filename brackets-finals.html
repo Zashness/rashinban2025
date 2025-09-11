@@ -1,0 +1,1162 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Brackets - Finals</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/brackets.css" />
+    <link rel="modulepreload" href="assets/js/consts.js" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://use.typekit.net/ljs6bhu.css" />
+    <!-- kaneda-gothic -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <!-- Parses csv to JSON -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+  </head>
+  <body>
+    <!-- don't ask me where I got this -->
+    <div class="bracket-wrapper">
+      <svg
+        id="bracket"
+        class="bracket-svg"
+        viewBox="0 0 1920 1080"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <defs>
+          <clipPath id="match-clippath-top">
+            <rect x="26" y="5" width="200" height="45" rx="3" ry="3"></rect>
+          </clipPath>
+        </defs>
+        <g class="parent">
+          <!-- top red -->
+          <rect class="filter" x="-100" y="-100" width="2512" height="600" fill="#ff005e" />
+          <rect class="filter-bright" x="-1000" y="-100" width="1050" height="600" fill="#ff005e" />
+          <!-- bottom blue -->
+          <rect class="filter" x="-100" y="500" width="2512" height="800" fill="#0051ff" />
+          <rect class="filter-bright" x="-1000" y="500" width="1050" height="800" fill="#0051ff" />
+
+          <!--"UPPER"-->
+          <svg
+            x="60"
+            y="224"
+            width="68"
+            height="148"
+            viewBox="0 0 68 148"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0.0399871 13.5252C0.0399874 5.55725 5.12799 0.469247 13.576 0.469247L67.24 0.46925L67.24 10.7413L13.768 10.7412C10.216 10.7412 8.87199 11.4132 8.87199 13.7172C8.87199 15.9252 10.216 16.5972 13.768 16.5972L67.24 16.5973L67.24 26.6773L13.576 26.6772C5.12799 26.6772 0.0399867 21.5892 0.0399871 13.5252ZM0.999986 32.255L67.24 32.255L67.24 45.599C67.24 54.527 62.632 59.039 53.512 59.039L44.2 59.039C35.08 59.039 30.472 54.527 30.472 45.599L30.472 42.527L0.999986 42.527L0.999986 32.255ZM39.112 42.527L39.112 44.639C39.112 47.903 40.264 48.767 44.872 48.767L52.84 48.767C57.448 48.767 58.6 47.903 58.6 44.639L58.6 42.527L39.112 42.527ZM0.999985 63.1925L67.24 63.1925L67.24 76.5365C67.24 85.4645 62.632 89.9765 53.512 89.9765L44.2 89.9765C35.08 89.9765 30.472 85.4645 30.472 76.5365L30.472 73.4645L0.999985 73.4645L0.999985 63.1925ZM39.112 73.4645L39.112 75.5765C39.112 78.8405 40.264 79.7045 44.872 79.7045L52.84 79.7045C57.448 79.7045 58.6 78.8405 58.6 75.5765L58.6 73.4645L39.112 73.4645ZM0.999984 94.13L67.24 94.13L67.24 117.074L58.6 117.074L58.6 104.402L40.936 104.402L40.936 115.346L32.296 115.346L32.296 104.402L9.63998 104.402L9.63998 117.074L0.999983 117.074L0.999984 94.13ZM0.999982 121.317L67.24 121.317L67.24 134.47C67.24 143.398 62.632 147.91 53.512 147.909L47.464 147.909C41.608 147.909 38.056 146.085 36.328 142.437L36.136 142.437C34.408 146.085 30.856 147.909 25.096 147.909L0.999981 147.909L0.999982 137.637L25.672 137.637C30.28 137.637 31.336 136.293 31.336 132.549L31.336 131.589L0.999982 131.589L0.999982 121.317ZM39.976 131.589L39.976 133.509C39.976 136.773 41.224 137.637 45.736 137.637L52.84 137.637C57.448 137.637 58.6 136.774 58.6 133.509L58.6 131.59L39.976 131.589Z"
+              fill="white"
+            />
+          </svg>
+          <!--"LOWER"-->
+          <svg
+            x="60"
+            y="545"
+            width="69"
+            height="157"
+            viewBox="0 0 69 157"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0.999995 0.614372L67.24 0.614375L67.24 10.8864L9.64 10.8864L9.63999 22.5984L0.999994 22.5984L0.999995 0.614372ZM0.0399936 38.9806C0.0399939 30.7246 5.22399 25.5406 13.96 25.5406L54.28 25.5406C63.016 25.5406 68.2 30.7246 68.2 38.9806C68.2 47.3326 63.016 52.3246 54.28 52.3246L13.96 52.3246C5.22399 52.3246 0.0399932 47.3326 0.0399936 38.9806ZM8.87199 38.9806C8.87199 41.2846 10.312 42.0526 13.96 42.0526L54.28 42.0526C57.928 42.0526 59.368 41.2846 59.368 38.9806C59.368 36.5806 57.928 35.8126 54.28 35.8126L13.96 35.8126C10.312 35.8126 8.87199 36.5806 8.87199 38.9806ZM0.999993 61.2669L67.24 55.5069L67.24 65.7789L18.76 68.5629L18.76 68.7549L67.24 73.0749L67.24 82.4829L18.76 86.8989L18.76 87.0909L67.24 89.8749L67.24 99.4749L0.999991 93.6189L0.999992 81.2349L40.264 77.6829L40.264 77.4909L0.999992 73.9389L0.999993 61.2669ZM0.999991 103.177L67.24 103.177L67.24 126.121L58.6 126.121L58.6 113.449L40.936 113.449L40.936 124.393L32.296 124.393L32.296 113.449L9.63999 113.449L9.63999 126.121L0.99999 126.121L0.999991 103.177ZM0.99999 130.364L67.24 130.364L67.24 143.516C67.24 152.444 62.632 156.956 53.512 156.956L47.464 156.956C41.608 156.956 38.056 155.132 36.328 151.484L36.136 151.484C34.408 155.132 30.856 156.956 25.096 156.956L0.999988 156.956L0.999989 146.684L25.672 146.684C30.28 146.684 31.336 145.34 31.336 141.596L31.336 140.636L0.999989 140.636L0.99999 130.364ZM39.976 140.636L39.976 142.556C39.976 145.82 41.224 146.684 45.736 146.684L52.84 146.684C57.448 146.684 58.6 145.82 58.6 142.556L58.6 140.636L39.976 140.636Z"
+              fill="white"
+            />
+          </svg>
+          <!--"LOWER FINAL WINNER"-->
+          <svg
+            x="670"
+            y="400"
+            width="211"
+            height="29"
+            viewBox="0 0 211 29"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0.391406 28V0.399998H4.67141V24.4H9.55141V28H0.391406ZM16.3773 28.4C12.9373 28.4 10.7773 26.24 10.7773 22.6V5.8C10.7773 2.16 12.9373 -1.90735e-06 16.3773 -1.90735e-06C19.8573 -1.90735e-06 21.9373 2.16 21.9373 5.8V22.6C21.9373 26.24 19.8573 28.4 16.3773 28.4ZM16.3773 24.72C17.3373 24.72 17.6573 24.12 17.6573 22.6V5.8C17.6573 4.28 17.3373 3.68 16.3773 3.68C15.3773 3.68 15.0573 4.28 15.0573 5.8V22.6C15.0573 24.12 15.3773 24.72 16.3773 24.72ZM25.6633 28L23.2633 0.399998H27.5433L28.7033 20.6H28.7833L30.5833 0.399998H34.5033L36.3433 20.6H36.4233L37.5833 0.399998H41.5833L39.1433 28H33.9833L32.5033 11.64H32.4233L30.9433 28H25.6633ZM43.1258 28V0.399998H52.6858V4H47.4058V11.36H51.9658V14.96H47.4058V24.4H52.6858V28H43.1258ZM54.4539 28V0.399998H59.9339C63.6539 0.399998 65.5339 2.32 65.5339 6.12V8.64C65.5339 11.08 64.7739 12.56 63.2539 13.28V13.36C64.7739 14.08 65.5339 15.56 65.5339 17.96V28H61.2539V17.72C61.2539 15.8 60.6939 15.36 59.1339 15.36H58.7339V28H54.4539ZM58.7339 11.76H59.5339C60.8939 11.76 61.2539 11.24 61.2539 9.36V6.4C61.2539 4.48 60.8939 4 59.5339 4H58.7339V11.76ZM73.1648 28V0.399998H82.7248V4H77.4448V11.84H82.0448V15.4H77.4448V28H73.1648ZM84.2977 28V0.399998H88.5777V28H84.2977ZM90.9773 28V0.399998H96.2573L99.0973 16.88H99.1773V0.399998H102.857V28H98.0573L94.7373 8.48H94.6573V28H90.9773ZM104.434 28L107.434 0.399998H113.354L116.354 28H112.034L111.514 22.16H109.034L108.554 28H104.434ZM109.234 18.56H111.314L110.314 4.56H110.234L109.234 18.56ZM117.93 28V0.399998H122.21V24.4H127.09V28H117.93ZM135.702 28L133.302 0.399998H137.582L138.742 20.6H138.822L140.622 0.399998H144.542L146.382 20.6H146.462L147.622 0.399998H151.622L149.182 28H144.022L142.542 11.64H142.462L140.982 28H135.702ZM153.165 28V0.399998H157.445V28H153.165ZM159.845 28V0.399998H165.125L167.965 16.88H168.045V0.399998H171.725V28H166.925L163.605 8.48H163.525V28H159.845ZM174.141 28V0.399998H179.421L182.261 16.88H182.341V0.399998H186.021V28H181.221L177.901 8.48H177.821V28H174.141ZM188.438 28V0.399998H197.998V4H192.718V11.36H197.278V14.96H192.718V24.4H197.998V28H188.438ZM199.766 28V0.399998H205.246C208.966 0.399998 210.846 2.32 210.846 6.12V8.64C210.846 11.08 210.086 12.56 208.566 13.28V13.36C210.086 14.08 210.846 15.56 210.846 17.96V28H206.566V17.72C206.566 15.8 206.006 15.36 204.446 15.36H204.046V28H199.766ZM204.046 11.76H204.846C206.206 11.76 206.566 11.24 206.566 9.36V6.4C206.566 4.48 206.206 4 204.846 4H204.046V11.76Z"
+              fill="white"
+            />
+          </svg>
+
+          <g>
+            <g transform="translate(0 500)" class="bracket-line-container">
+              <path d="M -300 0 L 2000 0" class="bracket-line" data-line-length="748"></path>
+            </g>
+            <g transform="translate(788 601.5)" class="bracket-line-container">
+              <path
+                d="M 10 26 L 92 26 L 92 -164 L -128 -164 L -128 -306"
+                class="bracket-line"
+                data-line-length="748"
+              ></path>
+            </g>
+            <g transform="translate(450 601.5)" class="bracket-line-container">
+              <path d="M 188 26 L 272 26" class="bracket-line" data-line-length="41"></path>
+            </g>
+            <g transform="translate(281 584.5)" class="bracket-line-container">
+              <path d="M 188 1 L 212 1 L 212 57" class="bracket-line" data-line-length="68"></path>
+            </g>
+            <g transform="translate(281 612.5)" class="bracket-line-container">
+              <path
+                d="M 188 53 L 212 53 L 212 15 L 272 15"
+                class="bracket-line"
+                data-line-length="68"
+              ></path>
+            </g>
+            <g transform="translate(112 639.5)" class="bracket-line-container">
+              <path d="M 188 26 L 272 26" class="bracket-line" data-line-length="41"></path>
+            </g>
+            <g transform="translate(112 559.5)" class="bracket-line-container">
+              <path d="M 188 26 L 272 26" class="bracket-line" data-line-length="41"></path>
+            </g>
+            <g transform="translate(450 294.5)" class="bracket-line-container">
+              <path d="M 188 1 L 234 1" class="bracket-line" data-line-length="41"></path>
+            </g>
+            <g
+              transform="translate(619 294.5)"
+              id="match15-bracket-line"
+              class="bracket-line-container"
+            >
+              <path d="M 188 1 L 234 1" class="bracket-line" data-line-length="41"></path>
+            </g>
+            <g transform="translate(281 216.5)" class="bracket-line-container">
+              <path
+                d="M 188 1 L 212 1 L 212 111"
+                class="bracket-line"
+                data-line-length="123"
+              ></path>
+            </g>
+            <g transform="translate(281 288.5)" class="bracket-line-container">
+              <path
+                d="M 188 89 L 212 89 L 212 7 L 234 7"
+                class="bracket-line"
+                data-line-length="123"
+              ></path>
+            </g>
+            <g transform="translate(112 334.5)" class="bracket-line-container">
+              <path d="M 188 1 L 212 1 L 212 57" class="bracket-line" data-line-length="68"></path>
+            </g>
+            <g transform="translate(112 362.5)" class="bracket-line-container">
+              <path
+                d="M 188 53 L 212 53 L 212 15 L 272 15"
+                class="bracket-line"
+                data-line-length="68"
+              ></path>
+            </g>
+            <g transform="translate(112 174.5)" class="bracket-line-container">
+              <path d="M 188 1 L 212 1 L 212 57" class="bracket-line" data-line-length="68"></path>
+            </g>
+            <g transform="translate(112 202.5)" class="bracket-line-container">
+              <path
+                d="M 188 53 L 212 53 L 212 15 L 272 15"
+                class="bracket-line"
+                data-line-length="68"
+              ></path>
+            </g>
+          </g>
+          <g>
+            <g transform="translate(619 600)" class="match" data-identifier="match13">
+              <rect
+                id="match13-border"
+                class="match-border"
+                fill="none"
+                stroke="red"
+                stroke-width="4"
+                x="64"
+                y="3.8"
+                width="125.5"
+                height="47"
+              />
+              <g>
+                <svg x="0" y="5" class="match--player">
+                  <title></title>
+                  <path d="M 65 0 h 123 v 22 h -123 Z" class="match--player-background"></path>
+                  <path d="M 164 0 h 24 v 22 h -24 Z" class="match--seed-background"></path>
+                  <text
+                    id="match13-score-top"
+                    x="176"
+                    y="18"
+                    text-anchor="middle"
+                    class="match--seed"
+                  ></text>
+                  <text
+                    id="match13-top"
+                    x="70"
+                    y="15"
+                    width="147"
+                    height="12"
+                    text-anchor="start"
+                    class="match--player-name"
+                  ></text></svg
+                ><svg x="0" y="28" class="match--player">
+                  <title></title>
+                  <path d="M 65 0 h 123 v 22 h -123 Z" class="match--player-background"></path>
+                  <path d="M 164 0 h 24 v 22 h -24 Z" class="match--seed-background"></path>
+                  <text
+                    id="match13-score-bottom"
+                    x="176"
+                    y="18.5"
+                    text-anchor="middle"
+                    class="match--seed"
+                  ></text>
+                  <text
+                    id="match13-bottom"
+                    x="70"
+                    y="15"
+                    width="147"
+                    height="12"
+                    text-anchor="start"
+                    class="match--player-name"
+                  ></text>
+                  <line x1="65" y1="-0.5" x2="188" y2="-0.5" class="match--player-divider"></line>
+                </svg>
+              </g>
+            </g>
+            <g transform="translate(450 600)" class="match" data-identifier="match11">
+              <rect
+                id="match11-border"
+                class="match-border"
+                fill="none"
+                stroke="red"
+                stroke-width="4"
+                x="64"
+                y="3.8"
+                width="125.5"
+                height="47"
+              />
+              <g>
+                <svg x="0" y="5" class="match--player">
+                  <title></title>
+                  <path d="M 65 0 h 123 v 22 h -123 Z" class="match--player-background"></path>
+                  <path d="M 164 0 h 24 v 22 h -24 Z" class="match--seed-background"></path>
+                  <text
+                    id="match11-score-top"
+                    x="176"
+                    y="18"
+                    text-anchor="middle"
+                    class="match--seed"
+                  ></text>
+                  <text
+                    id="match11-top"
+                    x="70"
+                    y="15"
+                    width="147"
+                    height="12"
+                    text-anchor="start"
+                    class="match--player-name"
+                  ></text></svg
+                ><svg x="0" y="28" class="match--player">
+                  <title></title>
+                  <path d="M 65 0 h 123 v 22 h -123 Z" class="match--player-background"></path>
+                  <path d="M 164 0 h 24 v 22 h -24 Z" class="match--seed-background"></path>
+                  <text
+                    id="match11-score-bottom"
+                    x="176"
+                    y="18.5"
+                    text-anchor="middle"
+                    class="match--seed"
+                  ></text>
+                  <text
+                    id="match11-bottom"
+                    x="70"
+                    y="15"
+                    width="147"
+                    height="12"
+                    text-anchor="start"
+                    class="match--player-name"
+                  ></text>
+                  <line x1="65" y1="-0.5" x2="188" y2="-0.5" class="match--player-divider"></line>
+                </svg>
+              </g>
+            </g>
+            <g transform="translate(281 638)" class="match" data-identifier="match9">
+              <rect
+                id="match9-border"
+                class="match-border"
+                fill="none"
+                stroke="red"
+                stroke-width="4"
+                x="64"
+                y="3.8"
+                width="125.5"
+                height="47"
+              />
+              <g>
+                <svg x="0" y="5" class="match--player">
+                  <title></title>
+                  <path d="M 65 0 h 123 v 22 h -123 Z" class="match--player-background"></path>
+                  <path d="M 164 0 h 24 v 22 h -24 Z" class="match--seed-background"></path>
+                  <text
+                    id="match9-score-top"
+                    x="176"
+                    y="18"
+                    text-anchor="middle"
+                    class="match--seed"
+                  ></text>
+                  <text
+                    id="match9-top"
+                    x="70"
+                    y="15"
+                    width="147"
+                    height="12"
+                    text-anchor="start"
+                    class="match--player-name"
+                  ></text></svg
+                ><svg x="0" y="28" class="match--player">
+                  <title></title>
+                  <path d="M 65 0 h 123 v 22 h -123 Z" class="match--player-background"></path>
+                  <path d="M 164 0 h 24 v 22 h -24 Z" class="match--seed-background"></path>
+                  <text
+                    id="match9-score-bottom"
+                    x="176"
+                    y="18.5"
+                    text-anchor="middle"
+                    class="match--seed"
+                  ></text>
+                  <text
+                    id="match9-bottom"
+                    x="70"
+                    y="15"
+                    width="147"
+                    height="12"
+                    text-anchor="start"
+                    class="match--player-name"
+                  ></text>
+                  <line x1="65" y1="-0.5" x2="188" y2="-0.5" class="match--player-divider"></line>
+                </svg>
+              </g>
+            </g>
+            <g transform="translate(281 558)" class="match" data-identifier="match10">
+              <rect
+                id="match10-border"
+                class="match-border"
+                fill="none"
+                stroke="red"
+                stroke-width="4"
+                x="64"
+                y="3.8"
+                width="125.5"
+                height="47"
+              />
+              <g>
+                <svg x="0" y="5" class="match--player">
+                  <title></title>
+                  <path d="M 65 0 h 123 v 22 h -123 Z" class="match--player-background"></path>
+                  <path d="M 164 0 h 24 v 22 h -24 Z" class="match--seed-background"></path>
+                  <text
+                    id="match10-score-top"
+                    x="176"
+                    y="18"
+                    text-anchor="middle"
+                    class="match--seed"
+                  ></text>
+                  <text
+                    id="match10-top"
+                    x="70"
+                    y="15"
+                    width="147"
+                    height="12"
+                    text-anchor="start"
+                    class="match--player-name"
+                  ></text></svg
+                ><svg x="0" y="28" class="match--player">
+                  <title></title>
+                  <path d="M 65 0 h 123 v 22 h -123 Z" class="match--player-background"></path>
+                  <path d="M 164 0 h 24 v 22 h -24 Z" class="match--seed-background"></path>
+                  <text
+                    id="match10-score-bottom"
+                    x="176"
+                    y="18.5"
+                    text-anchor="middle"
+                    class="match--seed"
+                  ></text>
+                  <text
+                    id="match10-bottom"
+                    x="70"
+                    y="15"
+                    width="147"
+                    height="12"
+                    text-anchor="start"
+                    class="match--player-name"
+                  ></text>
+                  <line x1="65" y1="-0.5" x2="188" y2="-0.5" class="match--player-divider"></line>
+                </svg>
+              </g>
+            </g>
+            <g transform="translate(112 638)" class="match" data-identifier="match6">
+              <rect
+                id="match6-border"
+                class="match-border"
+                fill="none"
+                stroke="red"
+                stroke-width="4"
+                x="64"
+                y="3.8"
+                width="125.5"
+                height="47"
+              />
+              <g>
+                <svg x="0" y="5" class="match--player">
+                  <title></title>
+                  <path d="M 65 0 h 123 v 22 h -123 Z" class="match--player-background"></path>
+                  <path d="M 164 0 h 24 v 22 h -24 Z" class="match--seed-background"></path>
+                  <text
+                    id="match6-score-top"
+                    x="176"
+                    y="18"
+                    text-anchor="middle"
+                    class="match--seed"
+                  ></text>
+                  <text
+                    id="match6-top"
+                    x="70"
+                    y="15"
+                    width="147"
+                    height="12"
+                    text-anchor="start"
+                    class="match--player-name"
+                  ></text></svg
+                ><svg x="0" y="28" class="match--player">
+                  <title></title>
+                  <path d="M 65 0 h 123 v 22 h -123 Z" class="match--player-background"></path>
+                  <path d="M 164 0 h 24 v 22 h -24 Z" class="match--seed-background"></path>
+                  <text
+                    id="match6-score-bottom"
+                    x="176"
+                    y="18.5"
+                    text-anchor="middle"
+                    class="match--seed"
+                  ></text>
+                  <text
+                    id="match6-bottom"
+                    x="70"
+                    y="15"
+                    width="147"
+                    height="12"
+                    text-anchor="start"
+                    class="match--player-name"
+                  ></text>
+                  <line x1="65" y1="-0.5" x2="188" y2="-0.5" class="match--player-divider"></line>
+                </svg>
+              </g>
+            </g>
+            <g transform="translate(112 558)" class="match" data-identifier="match5">
+              <rect
+                id="match5-border"
+                class="match-border"
+                fill="none"
+                stroke="red"
+                stroke-width="4"
+                x="64"
+                y="3.8"
+                width="125.5"
+                height="47"
+              />
+              <g>
+                <svg x="0" y="5" class="match--player">
+                  <title></title>
+                  <path d="M 65 0 h 123 v 22 h -123 Z" class="match--player-background"></path>
+                  <path d="M 164 0 h 24 v 22 h -24 Z" class="match--seed-background"></path>
+                  <text
+                    id="match5-score-top"
+                    x="176"
+                    y="18"
+                    text-anchor="middle"
+                    class="match--seed"
+                  ></text>
+                  <text
+                    id="match5-top"
+                    x="70"
+                    y="15"
+                    width="147"
+                    height="12"
+                    text-anchor="start"
+                    class="match--player-name"
+                  ></text></svg
+                ><svg x="0" y="28" class="match--player">
+                  <title></title>
+                  <path d="M 65 0 h 123 v 22 h -123 Z" class="match--player-background"></path>
+                  <path d="M 164 0 h 24 v 22 h -24 Z" class="match--seed-background"></path>
+                  <text
+                    id="match5-score-bottom"
+                    x="176"
+                    y="18.5"
+                    text-anchor="middle"
+                    class="match--seed"
+                  ></text>
+                  <text
+                    id="match5-bottom"
+                    x="70"
+                    y="15"
+                    width="147"
+                    height="12"
+                    text-anchor="start"
+                    class="match--player-name"
+                  ></text>
+                  <line x1="65" y1="-0.5" x2="188" y2="-0.5" class="match--player-divider"></line>
+                </svg>
+              </g>
+            </g>
+            <g transform="translate(619 268)" class="match" data-identifier="match14">
+              <rect
+                id="match14-border"
+                class="match-border"
+                fill="none"
+                stroke="red"
+                stroke-width="4"
+                x="64"
+                y="3.8"
+                width="125.5"
+                height="47"
+              />
+              <g>
+                <svg x="0" y="5" class="match--player">
+                  <title></title>
+                  <path d="M 65 0 h 123 v 22 h -123 Z" class="match--player-background"></path>
+                  <path d="M 164 0 h 24 v 22 h -24 Z" class="match--seed-background"></path>
+                  <text
+                    id="match14-score-top"
+                    x="176"
+                    y="18"
+                    text-anchor="middle"
+                    class="match--seed"
+                  ></text>
+                  <text
+                    id="match14-top"
+                    x="70"
+                    y="15"
+                    width="147"
+                    height="12"
+                    text-anchor="start"
+                    class="match--player-name"
+                  ></text></svg
+                ><svg x="0" y="28" class="match--player">
+                  <title></title>
+                  <path d="M 65 0 h 123 v 22 h -123 Z" class="match--player-background"></path>
+                  <path d="M 164 0 h 24 v 22 h -24 Z" class="match--seed-background"></path>
+                  <text
+                    id="match14-score-bottom"
+                    x="176"
+                    y="18.5"
+                    text-anchor="middle"
+                    class="match--seed"
+                  ></text>
+                  <text
+                    id="match14-bottom"
+                    x="70"
+                    y="15"
+                    width="147"
+                    height="12"
+                    text-anchor="start"
+                    class="match--player-name"
+                  ></text>
+                  <line x1="65" y1="-0.5" x2="188" y2="-0.5" class="match--player-divider"></line>
+                </svg>
+              </g>
+            </g>
+            <g transform="translate(788 268)" id="match15" class="match" data-identifier="match15">
+              <rect
+                id="match15-border"
+                class="match-border"
+                fill="none"
+                stroke="red"
+                stroke-width="4"
+                x="64"
+                y="3.8"
+                width="125.5"
+                height="47"
+              />
+              <g>
+                <svg x="0" y="5" class="match--player">
+                  <title></title>
+                  <path d="M 65 0 h 123 v 22 h -123 Z" class="match--player-background"></path>
+                  <path d="M 164 0 h 24 v 22 h -24 Z" class="match--seed-background"></path>
+                  <text
+                    id="match15-score-top"
+                    x="176"
+                    y="18"
+                    text-anchor="middle"
+                    class="match--seed"
+                  ></text>
+                  <text
+                    id="match15-top"
+                    x="70"
+                    y="15"
+                    width="147"
+                    height="12"
+                    text-anchor="start"
+                    class="match--player-name"
+                  ></text></svg
+                ><svg x="0" y="28" class="match--player">
+                  <title></title>
+                  <path d="M 65 0 h 123 v 22 h -123 Z" class="match--player-background"></path>
+                  <path d="M 164 0 h 24 v 22 h -24 Z" class="match--seed-background"></path>
+                  <text
+                    id="match15-score-bottom"
+                    x="176"
+                    y="18.5"
+                    text-anchor="middle"
+                    class="match--seed"
+                  ></text>
+                  <text
+                    id="match15-bottom"
+                    x="70"
+                    y="15"
+                    width="147"
+                    height="12"
+                    text-anchor="start"
+                    class="match--player-name"
+                  ></text>
+                  <line x1="65" y1="-0.5" x2="188" y2="-0.5" class="match--player-divider"></line>
+                </svg>
+              </g>
+            </g>
+            <g transform="translate(450 268)" class="match" data-identifier="match12">
+              <rect
+                id="match12-border"
+                class="match-border"
+                fill="none"
+                stroke="red"
+                stroke-width="4"
+                x="64"
+                y="3.8"
+                width="125.5"
+                height="47"
+              />
+              <g>
+                <svg x="0" y="5" class="match--player">
+                  <title></title>
+                  <path d="M 65 0 h 123 v 22 h -123 Z" class="match--player-background"></path>
+                  <path d="M 164 0 h 24 v 22 h -24 Z" class="match--seed-background"></path>
+                  <text
+                    id="match12-score-top"
+                    x="176"
+                    y="18"
+                    text-anchor="middle"
+                    class="match--seed"
+                  ></text>
+                  <text
+                    id="match12-top"
+                    x="70"
+                    y="15"
+                    width="147"
+                    height="12"
+                    text-anchor="start"
+                    class="match--player-name"
+                  ></text></svg
+                ><svg x="0" y="28" class="match--player">
+                  <title></title>
+                  <path d="M 65 0 h 123 v 22 h -123 Z" class="match--player-background"></path>
+                  <path d="M 164 0 h 24 v 22 h -24 Z" class="match--seed-background"></path>
+                  <text
+                    id="match12-score-bottom"
+                    x="176"
+                    y="18.5"
+                    text-anchor="middle"
+                    class="match--seed"
+                  ></text>
+                  <text
+                    id="match12-bottom"
+                    x="70"
+                    y="15"
+                    width="147"
+                    height="12"
+                    text-anchor="start"
+                    class="match--player-name"
+                  ></text>
+                  <line x1="65" y1="-0.5" x2="188" y2="-0.5" class="match--player-divider"></line>
+                </svg>
+              </g>
+            </g>
+            <g transform="translate(281 350)" class="match" data-identifier="match8">
+              <rect
+                id="match8-border"
+                class="match-border"
+                fill="none"
+                stroke="red"
+                stroke-width="4"
+                x="64"
+                y="3.8"
+                width="125.5"
+                height="47"
+              />
+              <g>
+                <svg x="0" y="5" class="match--player">
+                  <title></title>
+                  <path d="M 65 0 h 123 v 22 h -123 Z" class="match--player-background"></path>
+                  <path d="M 164 0 h 24 v 22 h -24 Z" class="match--seed-background"></path>
+                  <text
+                    id="match8-score-top"
+                    x="176"
+                    y="18"
+                    text-anchor="middle"
+                    class="match--seed"
+                  ></text>
+                  <text
+                    id="match8-top"
+                    x="70"
+                    y="15"
+                    width="147"
+                    height="12"
+                    text-anchor="start"
+                    class="match--player-name"
+                  ></text></svg
+                ><svg x="0" y="28" class="match--player">
+                  <title></title>
+                  <path d="M 65 0 h 123 v 22 h -123 Z" class="match--player-background"></path>
+                  <path d="M 164 0 h 24 v 22 h -24 Z" class="match--seed-background"></path>
+                  <text
+                    id="match8-score-bottom"
+                    x="176"
+                    y="18.5"
+                    text-anchor="middle"
+                    class="match--seed"
+                  ></text>
+                  <text
+                    id="match8-bottom"
+                    x="70"
+                    y="15"
+                    width="147"
+                    height="12"
+                    text-anchor="start"
+                    class="match--player-name"
+                  ></text>
+                  <line x1="65" y1="-0.5" x2="188" y2="-0.5" class="match--player-divider"></line>
+                </svg>
+              </g>
+            </g>
+            <g transform="translate(281 190)" class="match" data-identifier="match7">
+              <rect
+                id="match7-border"
+                class="match-border"
+                fill="none"
+                stroke="red"
+                stroke-width="4"
+                x="64"
+                y="3.8"
+                width="125.5"
+                height="47"
+              />
+              <g>
+                <svg x="0" y="5" class="match--player">
+                  <title></title>
+                  <path d="M 65 0 h 123 v 22 h -123 Z" class="match--player-background"></path>
+                  <path d="M 164 0 h 24 v 22 h -24 Z" class="match--seed-background"></path>
+                  <text
+                    id="match7-score-top"
+                    x="176"
+                    y="18"
+                    text-anchor="middle"
+                    class="match--seed"
+                  ></text>
+                  <text
+                    id="match7-top"
+                    x="70"
+                    y="15"
+                    width="147"
+                    height="12"
+                    text-anchor="start"
+                    class="match--player-name"
+                  ></text></svg
+                ><svg x="0" y="28" class="match--player">
+                  <title></title>
+                  <path d="M 65 0 h 123 v 22 h -123 Z" class="match--player-background"></path>
+                  <path d="M 164 0 h 24 v 22 h -24 Z" class="match--seed-background"></path>
+                  <text
+                    id="match7-score-bottom"
+                    x="176"
+                    y="18.5"
+                    text-anchor="middle"
+                    class="match--seed"
+                  ></text>
+                  <text
+                    id="match7-bottom"
+                    x="70"
+                    y="15"
+                    width="147"
+                    height="12"
+                    text-anchor="start"
+                    class="match--player-name"
+                  ></text>
+                  <line x1="65" y1="-0.5" x2="188" y2="-0.5" class="match--player-divider"></line>
+                </svg>
+              </g>
+            </g>
+            <g transform="translate(112 388)" class="match" data-identifier="match4">
+              <rect
+                id="match4-border"
+                class="match-border"
+                fill="none"
+                stroke="red"
+                stroke-width="4"
+                x="64"
+                y="3.8"
+                width="125.5"
+                height="47"
+              />
+              <g>
+                <svg x="0" y="5" class="match--player">
+                  <title></title>
+                  <path d="M 65 0 h 123 v 22 h -123 Z" class="match--player-background"></path>
+                  <path d="M 164 0 h 24 v 22 h -24 Z" class="match--seed-background"></path>
+                  <text
+                    id="match4-score-top"
+                    x="176"
+                    y="18"
+                    text-anchor="middle"
+                    class="match--seed"
+                  ></text>
+                  <text
+                    id="match4-top"
+                    x="70"
+                    y="15"
+                    width="147"
+                    height="12"
+                    text-anchor="start"
+                    class="match--player-name"
+                  ></text></svg
+                ><svg x="0" y="28" class="match--player">
+                  <title></title>
+                  <path d="M 65 0 h 123 v 22 h -123 Z" class="match--player-background"></path>
+                  <path d="M 164 0 h 24 v 22 h -24 Z" class="match--seed-background"></path>
+                  <text
+                    id="match4-score-bottom"
+                    x="176"
+                    y="18.5"
+                    text-anchor="middle"
+                    class="match--seed"
+                  ></text>
+                  <text
+                    id="match4-bottom"
+                    x="70"
+                    y="15"
+                    width="147"
+                    height="12"
+                    text-anchor="start"
+                    class="match--player-name"
+                  ></text>
+                  <line x1="65" y1="-0.5" x2="188" y2="-0.5" class="match--player-divider"></line>
+                </svg>
+              </g>
+            </g>
+            <g transform="translate(112 308)" class="match" data-identifier="match3">
+              <rect
+                id="match3-border"
+                class="match-border"
+                fill="none"
+                stroke="red"
+                stroke-width="4"
+                x="64"
+                y="3.8"
+                width="125.5"
+                height="47"
+              />
+              <g>
+                <svg x="0" y="5" class="match--player">
+                  <title></title>
+                  <path d="M 65 0 h 123 v 22 h -123 Z" class="match--player-background"></path>
+                  <path d="M 164 0 h 24 v 22 h -24 Z" class="match--seed-background"></path>
+                  <text
+                    id="match3-score-top"
+                    x="176"
+                    y="18"
+                    text-anchor="middle"
+                    class="match--seed"
+                  ></text>
+                  <text
+                    id="match3-top"
+                    x="70"
+                    y="15"
+                    width="147"
+                    height="12"
+                    text-anchor="start"
+                    class="match--player-name"
+                  ></text></svg
+                ><svg x="0" y="28" class="match--player">
+                  <title></title>
+                  <path d="M 65 0 h 123 v 22 h -123 Z" class="match--player-background"></path>
+                  <path d="M 164 0 h 24 v 22 h -24 Z" class="match--seed-background"></path>
+                  <text
+                    id="match3-score-bottom"
+                    x="176"
+                    y="18.5"
+                    text-anchor="middle"
+                    class="match--seed"
+                  ></text>
+                  <text
+                    id="match3-bottom"
+                    x="70"
+                    y="15"
+                    width="147"
+                    height="12"
+                    text-anchor="start"
+                    class="match--player-name"
+                  ></text>
+                  <line x1="65" y1="-0.5" x2="188" y2="-0.5" class="match--player-divider"></line>
+                </svg>
+              </g>
+            </g>
+            <g transform="translate(112 228)" class="match" data-identifier="match2">
+              <rect
+                id="match2-border"
+                class="match-border"
+                fill="none"
+                stroke="red"
+                stroke-width="4"
+                x="64"
+                y="3.8"
+                width="125.5"
+                height="47"
+              />
+              <g>
+                <svg x="0" y="5" class="match--player">
+                  <title></title>
+                  <path d="M 65 0 h 123 v 22 h -123 Z" class="match--player-background"></path>
+                  <path d="M 164 0 h 24 v 22 h -24 Z" class="match--seed-background"></path>
+                  <text
+                    id="match2-score-top"
+                    x="176"
+                    y="18"
+                    text-anchor="middle"
+                    class="match--seed"
+                  ></text>
+                  <text
+                    id="match2-top"
+                    x="70"
+                    y="15"
+                    width="147"
+                    height="12"
+                    text-anchor="start"
+                    class="match--player-name"
+                  ></text></svg
+                ><svg x="0" y="28" class="match--player">
+                  <title></title>
+                  <path d="M 65 0 h 123 v 22 h -123 Z" class="match--player-background"></path>
+                  <path d="M 164 0 h 24 v 22 h -24 Z" class="match--seed-background"></path>
+                  <text
+                    id="match2-score-bottom"
+                    x="176"
+                    y="18.5"
+                    text-anchor="middle"
+                    class="match--seed"
+                  ></text>
+                  <text
+                    id="match2-bottom"
+                    x="70"
+                    y="15"
+                    width="147"
+                    height="12"
+                    text-anchor="start"
+                    class="match--player-name"
+                  ></text>
+                  <line x1="65" y1="-0.5" x2="188" y2="-0.5" class="match--player-divider"></line>
+                </svg>
+              </g>
+            </g>
+            <g transform="translate(112 148)" class="match" data-identifier="match1">
+              <rect
+                id="match1-border"
+                class="match-border"
+                fill="none"
+                stroke="red"
+                stroke-width="4"
+                x="64"
+                y="3.8"
+                width="125.5"
+                height="47"
+              />
+              <g>
+                <svg x="0" y="5" class="match--player">
+                  <title></title>
+                  <path d="M 65 0 h 123 v 22 h -123 Z" class="match--player-background"></path>
+                  <path d="M 164 0 h 24 v 22 h -24 Z" class="match--seed-background"></path>
+                  <text
+                    id="match1-score-top"
+                    x="176"
+                    y="18"
+                    text-anchor="middle"
+                    class="match--seed"
+                  ></text>
+                  <text
+                    id="match1-top"
+                    x="70"
+                    y="15"
+                    width="147"
+                    height="12"
+                    text-anchor="start"
+                    class="match--player-name"
+                  ></text></svg
+                ><svg x="0" y="28" class="match--player">
+                  <title></title>
+                  <path d="M 65 0 h 123 v 22 h -123 Z" class="match--player-background"></path>
+                  <path d="M 164 0 h 24 v 22 h -24 Z" class="match--seed-background"></path>
+                  <text
+                    id="match1-score-bottom"
+                    x="176"
+                    y="18.5"
+                    text-anchor="middle"
+                    class="match--seed"
+                  ></text>
+                  <text
+                    id="match1-bottom"
+                    x="70"
+                    y="15"
+                    width="147"
+                    height="12"
+                    text-anchor="start"
+                    class="match--player-name"
+                  ></text>
+                  <line x1="65" y1="-0.5" x2="188" y2="-0.5" class="match--player-divider"></line>
+                </svg>
+              </g>
+            </g>
+          </g>
+        </g>
+      </svg>
+    </div>
+
+    <script type="module">
+      import { SHEET_ID, FINAL_BRACKETS_TAB_ID } from './assets/js/consts.js';
+
+      // define the “steps” you want to zoom to (in the SVG’s own coordinate system)
+      // adjust these x,y,width,height values by eyeballing the viewBox
+      const views = [
+        // full bracket
+        { x: 40, y: 105, w: 1112, h: 630 },
+      ];
+
+      let idx = 0;
+      const svg = document.querySelector('#bracket');
+
+      function zoomTo({ x, y, w, h }) {
+        gsap.to(svg, {
+          attr: { viewBox: `${x} ${y} ${w} ${h}` },
+          duration: 0.8,
+          ease: 'power2.inOut',
+        });
+      }
+      // Start in “full” view
+      zoomTo(views[0]);
+
+      function removeWinner(matchNumber) {
+        document.getElementById(`match${matchNumber}-top`).parentElement.classList.remove('winner');
+        document
+          .getElementById(`match${matchNumber}-bottom`)
+          .parentElement.classList.remove('winner');
+      }
+
+      function render(data) {
+        for (let row of data) {
+          // match 15 may or may not happen, hide unless needed
+          if (row.match_number == '15') {
+            if (!row.player_1 && !row.player_2) {
+              document.getElementById('match15').style.display = 'none';
+              document.getElementById('match15-bracket-line').style.display = 'none';
+            } else {
+              document.getElementById('match15').style.display = 'block';
+              document.getElementById('match15-bracket-line').style.display = 'block';
+            }
+          }
+
+          const winnerEl = document.getElementById(`match${row.match_number}-border`);
+          if (row.active === 'TRUE') {
+            winnerEl.classList.add('active');
+          } else {
+            winnerEl.classList.remove('active');
+          }
+          if (row && row.match_number && !row.player_1 && !row.player_2) {
+            // reset
+            document.getElementById(`match${row.match_number}-top`).textContent = '';
+            document.getElementById(`match${row.match_number}-bottom`).textContent = '';
+            document.getElementById(`match${row.match_number}-score-top`).textContent = '';
+            document.getElementById(`match${row.match_number}-score-bottom`).textContent = '';
+            removeWinner(row.match_number);
+            continue;
+          }
+
+          if (row && row.match_number && (row.player_1 || row.player_2)) {
+            document.getElementById(`match${row.match_number}-top`).textContent =
+              row.player_1.trim();
+            document.getElementById(`match${row.match_number}-bottom`).textContent =
+              row.player_2.trim();
+
+            let p1_score = row.player_1_score.trim();
+            let p2_score = row.player_2_score.trim();
+            if (p1_score === '' || p2_score === '') {
+              document.getElementById(`match${row.match_number}-score-top`).textContent = '';
+              document.getElementById(`match${row.match_number}-score-bottom`).textContent = '';
+              removeWinner(row.match_number);
+              continue;
+            }
+
+            p1_score = Number(row.player_1_score.trim() || 0);
+            p2_score = Number(row.player_2_score.trim() || 0);
+
+            // debugger;
+            if (p1_score === 2 || p2_score === 2) {
+              removeWinner(row.match_number);
+              const winnerPosition = p1_score > p2_score ? 'top' : 'bottom';
+              const winnerEl = document.getElementById(
+                `match${row.match_number}-${winnerPosition}`,
+              );
+              const parent = winnerEl.parentElement;
+              parent.classList.add('winner');
+            } else {
+              removeWinner(row.match_number);
+            }
+            document.getElementById(`match${row.match_number}-score-top`).textContent = p1_score;
+            document.getElementById(`match${row.match_number}-score-bottom`).textContent = p2_score;
+          }
+        }
+      }
+
+      // for use in the iframe "mini" view
+      let bracketsData;
+
+      function fetchData() {
+        const csvUrl = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=${FINAL_BRACKETS_TAB_ID}`;
+
+        fetch(csvUrl)
+          .then((res) => {
+            if (!res.ok) throw new Error(`HTTP ${res.status}`);
+            return res.text();
+          })
+          .then((txt) => {
+            const { data } = Papa.parse(txt, {
+              header: true,
+              skipEmptyLines: true,
+            });
+            render(data);
+            // for use in the iframe "mini" view
+            bracketsData = data;
+          })
+          .catch((err) => {
+            console.error('Fetch/Parse error:', err);
+            // document.getElementById('error').innerHTML = '<p>Error loading data.</p>';
+          });
+      }
+
+      window.addEventListener('DOMContentLoaded', () => {
+        fetchData();
+        setInterval(fetchData, 5 * 1000);
+      });
+
+      /**
+       * Cases where this page is rendered as an iframe
+       */
+      // apply a special class if the path contains ?variant=mini for when this is rendered as an
+      // iframe
+      const q = new URLSearchParams(location.search);
+      const isMini = q.has('mini') || q.get('variant') === 'mini';
+      if (isMini) {
+        document.documentElement.classList.add('mini');
+        zoomTo({ x: 80, y: 125, w: 950, h: 605 });
+      }
+    </script>
+  </body>
+</html>

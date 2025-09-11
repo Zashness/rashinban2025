@@ -1,0 +1,16 @@
+,active,match_number,player_1,player_1_score,player_2_score,player_2
+Upper Quarterfinals,FALSE,1,Alice,2,0,Bob
+,FALSE,2,Carol,0,2,David
+,FALSE,3,Erin,2,1,Frank
+,FALSE,4,George,1,2,Harriet
+Lower Stage 1,FALSE,5,Bob,2,0,Carol
+,FALSE,6,Frank,0,2,George
+Upper Semifinals,FALSE,7,Alice,2,1,David
+,FALSE,8,Erin,1,2,Harriet
+Lower Quarterfinals,FALSE,9,David,0,2,George
+,FALSE,10,Erin,0,2,Bob
+Lower Semifinal,FALSE,11,Bob,2,1,George
+Upper Final,FALSE,12,Alice,2,1,Harriet
+Lower Final,FALSE,13,Harriet,0,2,Bob
+Final,FALSE,14,Alice,2,0,Bob
+Final (if needed),FALSE,15,,0,0,
