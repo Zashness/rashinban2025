@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Bracket Zoom Demo</title>
+    <title>Brackets - Finals</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="assets/brackets.css" />
     <link rel="modulepreload" href="assets/js/consts.js" />
@@ -1155,59 +1155,7 @@
       const isMini = q.has('mini') || q.get('variant') === 'mini';
       if (isMini) {
         document.documentElement.classList.add('mini');
-        zoomTo(views[1]);
-
-        // intercepts post messages from the parent rendering brackets.html in an iframe
-        window.addEventListener('message', (e) => {
-          if (e.origin !== location.origin) return;
-          if (e.data?.type === 'END') {
-            // reset to initial zoom after a delay (waits for transition out)
-            setTimeout(() => {
-              zoomTo(views[1]);
-            }, 300);
-          }
-
-          // Start highlighting the brackets by zooming into sections.
-          if (e.data?.type === 'START') {
-            // First, figure out if we should zoom to losers bracket and final rounds.
-            // losers bracket
-            const losersEarlyRounds = [9, 10, 11, 12, 17, 18, 19, 20, 21, 22, 25, 26];
-            // winnersR3+Semis+Final & losersR3~R6
-            const finalRounds = [21, 22, 23, 24, 25, 26, 27, 28, 29, 30];
-            let showLosersEarlyRounds = false;
-            let showFinalRounds = false;
-
-            for (let row of bracketsData) {
-              if (row.player_1 || row.player_2) {
-                if (losersEarlyRounds.includes(Number(row.match_number))) {
-                  showLosersEarlyRounds = true;
-                }
-                if (finalRounds.includes(Number(row.match_number))) {
-                  showFinalRounds = true;
-                }
-              }
-            }
-
-            const totalTime = 15_000;
-            if (showFinalRounds) {
-              const slideDuration = totalTime / 3;
-              // zoom to early losers bracket
-              setTimeout(() => {
-                zoomTo(views[2]);
-              }, slideDuration);
-              // zoom to final rounds
-              setTimeout(() => {
-                zoomTo(views[3]);
-              }, slideDuration + slideDuration);
-            } else if (showLosersEarlyRounds) {
-              const slideDuration = totalTime / 2;
-              // zoom to early losers bracket
-              setTimeout(() => {
-                zoomTo(views[2]);
-              }, slideDuration);
-            }
-          }
-        });
+        zoomTo({ x: 80, y: 125, w: 950, h: 605 });
       }
     </script>
   </body>

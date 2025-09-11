@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Overlay X</title>
+    <title>Interval</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="assets/sponsors.css" />
     <link rel="stylesheet" href="assets/interval.css" />
@@ -43,7 +43,7 @@
           <div class="frame-wrapper">
             <iframe
               id="bracketsFrame"
-              src="brackets.html?variant=mini"
+              src=""
               loading="lazy"
               class="frame-viewport"
               sandbox="allow-scripts allow-same-origin"
@@ -61,6 +61,13 @@
     <script type="module">
       import { SHEET_ID, OVERLAYS_TAB_ID } from './assets/js/consts.js';
       import { initSponsors } from './assets/js/sponsors.js';
+
+      const BRACKETS_QUALIFIERS_URL = 'brackets.html?variant=mini';
+      const BRACKETS_FINALS_URL = 'brackets-finals.html?variant=mini';
+      // settings for the `with_brackets` column in the spreadsheet
+      const BRACKETS_NONE = '--No brackets--';
+      const BRACKETS_QUALIFIERS = '--Qualifiers--';
+      const BRACKETS_FINALS = '--Finals--';
 
       const logos = [
         { src: 'assets/logos/spicescode-white.svg' },
@@ -266,11 +273,24 @@
       const bracketSlide = document.getElementById('slide-brackets');
       const bracketIframe = document.getElementById('bracketsFrame');
 
+      // tracks the current brackets variant across slideshow renders
+      let bracketsVariant = BRACKETS_NONE;
       function slideshow() {
-        // Initialize files array. This prevents adding brackets multiple times.
-        const files = SPONSORS.concat(SHUFFLED_TERMS.concat(SHUFFLED_METAS));
+        // Initialize files array. Initialize in each call to `slideshow()` to prevent adding brackets multiple times.
+        const files = SPONSORS.concat(SHUFFLED_TERMS).concat(SHUFFLED_METAS);
         // mix in brackets into slides when specified
-        if (papaData?.[0]?.with_brackets === 'TRUE') {
+        const newBracketsVariant = papaData?.[0]?.with_brackets;
+        if (newBracketsVariant === BRACKETS_QUALIFIERS || newBracketsVariant === BRACKETS_FINALS) {
+          // update which brackets variant is being used if it has changed since last render
+          if (newBracketsVariant !== bracketsVariant) {
+            bracketsVariant = newBracketsVariant;
+            if (bracketsVariant === BRACKETS_QUALIFIERS) {
+              bracketIframe.src = BRACKETS_QUALIFIERS_URL;
+            } else if (bracketsVariant === BRACKETS_FINALS) {
+              bracketIframe.src = BRACKETS_FINALS_URL;
+            }
+          }
+
           // insert a brackets “slide” every N slides
           const bracketsFrequency = Number(papaData?.[0]?.brackets_frequency) || 6;
           const BRACKETS_TOKEN = '__BRACKETS__';

@@ -9,7 +9,8 @@ Overlays and tampermonkey scripts for [Rashinban 2025](https://rashinban.org/)
 
 ### Brackets
 
-- Overlay: https://zashness.github.io/rashinban2025/brackets.html
+- Qualifiers: https://zashness.github.io/rashinban2025/brackets.html
+- Finals: https://zashness.github.io/rashinban2025/brackets-finals.html
 
 ### Interval (countdown)
 
@@ -26,16 +27,23 @@ Overlays and tampermonkey scripts for [Rashinban 2025](https://rashinban.org/)
 ## Developer Setup
 
 ### One time setup
+
 ```
 npm ci
 ```
 
 ### Run tests locally
+
+You can run screenshot tests for brackets.html and brackets-finals.html (assumption: using Windows).
+
 ```
 npm run test:ui
 ```
 
 ### Update snapshots (when a visual change is intended)
+
+If the screenshot tests failed because of intended UI changes, update the screenshots:
+
 ```
 npm run test:update
 ```
