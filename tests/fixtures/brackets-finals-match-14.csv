@@ -1,16 +1,16 @@
 ,active,match_number,player_1,player_1_score,player_2_score,player_2
-Upper Quarterfinals,FALSE,1,Shiina,2,0,Alice
-,FALSE,2,Eurya,0,2,YRP
-,FALSE,3,なうろ,2,1,Bob
-,FALSE,4,ここす,1,2,gnrr
-Lower Stage 1,FALSE,5,Alice,2,0,Bob
-,FALSE,6,Alice,0,2,Bob
-Upper Semifinals,FALSE,7,Alice,2,1,Bob
-,FALSE,8,Alice,1,2,Bob
-Lower Quarterfinals,FALSE,9,Alice,2,0,Bob
-,FALSE,10,Alice,0,2,Bob
-Lower Semifinal,FALSE,11,Alice,2,1,Bob
-Upper Final,FALSE,12,Alice,2,1,Bob
-Lower Final,FALSE,13,Alice,1,2,Bob
+Upper Quarterfinals,FALSE,1,Alice,2,0,Bob
+,FALSE,2,Carol,0,2,David
+,FALSE,3,Erin,2,1,Frank
+,FALSE,4,George,1,2,Harriet
+Lower Stage 1,FALSE,5,Bob,2,0,Carol
+,FALSE,6,Frank,0,2,George
+Upper Semifinals,FALSE,7,Alice,2,1,David
+,FALSE,8,Erin,1,2,Harriet
+Lower Quarterfinals,FALSE,9,David,0,2,George
+,FALSE,10,Erin,0,2,Bob
+Lower Semifinal,FALSE,11,Bob,2,1,George
+Upper Final,FALSE,12,Alice,2,1,Harriet
+Lower Final,FALSE,13,Harriet,0,2,Bob
 Final,FALSE,14,Alice,2,0,Bob
 Final (if needed),FALSE,15,,0,0,
