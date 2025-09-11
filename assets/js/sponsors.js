@@ -16,7 +16,7 @@ export async function initSponsors({
   containerId = 'sponsors',
   leftLogos = defaultLeftLogos,
   rightLogos = defaultRightLogos,
-  delay = 8, // sec
+  delay = 12, // sec
   height = 84, // px
   bottom = 142, // px, distance of the logos' center from the bottom of the screen
   gap = 72, // px, distance between logos
