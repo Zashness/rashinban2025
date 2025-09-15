@@ -5,8 +5,10 @@
   transform: translateY(50%); /* keeps logo *centers* at --bottom */
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: var(--gap, 72px);
   z-index: 10;
+  width: var(--width, 1920px);
   /* pass clicks through */
   pointer-events: none;
 }
@@ -27,7 +29,6 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  width: 1200px;
   gap: var(--gap, 72px);
 }
 

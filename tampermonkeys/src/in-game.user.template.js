@@ -334,7 +334,7 @@ window.addEventListener('load', function () {
   const logoUrlPrefix =
     'https://raw.githubusercontent.com/Zashness/rashinban2025/refs/heads/gh-pages/';
   const leftLogos = [
-    { src: logoUrlPrefix + 'assets/logos/red-tokyo-logo.svg' },
+    { src: logoUrlPrefix + 'assets/logos/reject.svg' },
     { src: logoUrlPrefix + 'assets/logos/tamura-builds-white.svg' },
   ];
   const rightLogos = [
@@ -347,6 +347,8 @@ window.addEventListener('load', function () {
     leftLogos: leftLogos,
     rightLogos: rightLogos,
     bottom: 135,
+    width: 1513,
+    left: 203,
   });
 
   // ===== INLINED: score.js =====

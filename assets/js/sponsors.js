@@ -3,7 +3,7 @@
  */
 
 const defaultLeftLogos = [
-  { src: 'assets/logos/red-tokyo-logo.svg' },
+  { src: 'assets/logos/reject.svg' },
   { src: 'assets/logos/tamura-builds-white.svg' },
 ];
 const defaultRightLogos = [
@@ -21,6 +21,7 @@ export async function initSponsors({
   bottom = 142, // px, distance of the logos' center from the bottom of the screen
   gap = 72, // px, distance between logos
   left = 0, // px, distance from the left edge of the screen to the leftmost logo
+  width = 1920,
 } = {}) {
   const wrap = document.getElementById(containerId);
   if (!wrap || !leftLogos.length) return;
@@ -28,6 +29,7 @@ export async function initSponsors({
   wrap.style.setProperty('--logo-h', `${height}px`);
   wrap.style.setProperty('--gap', `${gap}px`);
   wrap.style.setProperty('--left', `${left}px`);
+  wrap.style.setProperty('--width', `${width}px`);
 
   // Clear & build
   wrap.innerHTML = '';
