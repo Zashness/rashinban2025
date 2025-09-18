@@ -61,6 +61,7 @@
     <script type="module">
       import { SHEET_ID, OVERLAYS_TAB_ID } from './assets/js/consts.js';
       import { initSponsors } from './assets/js/sponsors.js';
+      import { containsJapanese } from './assets/js/utils.js';
 
       const BRACKETS_QUALIFIERS_URL = 'brackets.html?variant=mini';
       const BRACKETS_FINALS_URL = 'brackets-finals.html?variant=mini';
@@ -393,10 +394,10 @@
         // Player 2: `player_2` column in spreadsheet.
         const playerTwoName = playerTwo[0].trim() || '';
 
-        const p1Az = isAlphaNumeric(playerOneName);
-        const p2Az = isAlphaNumeric(playerTwoName);
-        const p1Class = p1Az ? 'name-kaneda' : 'name-noto';
-        const p2Class = p2Az ? 'name-kaneda' : 'name-noto';
+        const p1Kana = containsJapanese(playerOneName);
+        const p2Kana = containsJapanese(playerTwoName);
+        const p1Class = p1Kana ? 'name-noto' : 'name-kaneda';
+        const p2Class = p2Kana ? 'name-noto' : 'name-kaneda';
 
         document.getElementById('next-match').innerHTML = `
               <p class="game-name">

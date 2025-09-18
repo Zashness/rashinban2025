@@ -4,7 +4,8 @@
   "description": "Overlays and tampermonkey scripts for [Rashinban 2025](https://rashinban.org/).",
   "type": "module",
   "scripts": {
-    "build:tm": "node scripts/build-userscript.js",
+    "build:tampermonkey": "node tampermonkeys/scripts/build-userscript.js",
+    "build:tm": "node tampermonkeys/scripts/build-userscript.js",
     "prepare": "husky",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
