@@ -201,3 +201,8 @@ body {
   z-index: 1;
   background-color: #ff3030;
 }
+
+/* overrides sponsors */
+.sponsor-right-container {
+  flex-grow: 1;
+}

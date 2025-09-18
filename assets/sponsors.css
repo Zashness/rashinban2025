@@ -5,7 +5,6 @@
   transform: translateY(50%); /* keeps logo *centers* at --bottom */
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: var(--gap, 72px);
   z-index: 10;
   width: var(--width, 1920px);
@@ -32,10 +31,37 @@
   gap: var(--gap, 72px);
 }
 
+.sponsor-right-container {
+  display: flex;
+  justify-content: center;
+}
+
 /* The rotating right-side logo */
 img#sponsor-right {
   opacity: 1;
   transition: opacity 300ms ease-in-out;
-  max-width: calc(var(--logo-h, 84px) * 4.75);
-  max-height: calc(var(--logo-h, 84px) * 0.8);
+}
+
+#sponsors .logo-reject {
+  height: calc(var(--logo-h, 84px) * 0.83);
+}
+
+#sponsors .logo-spicescode {
+  height: calc(var(--logo-h, 84px) * 0.8);
+}
+
+#sponsors .logo-geoguessr {
+  height: calc(var(--logo-h, 84px) * 0.75);
+}
+
+#sponsors .logo-geoguessr-record {
+  height: calc(var(--logo-h, 84px) * 0.5);
+}
+
+#sponsors .logo-alto {
+  height: calc(var(--logo-h, 84px) * 0.8);
+}
+
+#sponsors .logo-birdhouse {
+  height: calc(var(--logo-h, 84px) * 0.85);
 }
