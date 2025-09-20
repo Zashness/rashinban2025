@@ -148,7 +148,7 @@
 
       function isAlphaNumeric(str) {
         const japaneseRE = /[\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Han}]/u;
-        return japaneseRE.test(str);
+        return !japaneseRE.test(str);
       }
 
       const SPONSORS = [
