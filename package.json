@@ -11,6 +11,7 @@
     "format:check": "prettier --check .",
     "serve": "http-server . -p 4173 -s -c-1",
     "test:ui": "playwright test",
+    "test:js": "vitest run --pool forks",
     "test:update": "playwright test --update-snapshots"
   },
   "lint-staged": {
@@ -19,10 +20,12 @@
   "license": "MIT",
   "devDependencies": {
     "@playwright/test": "^1.55.0",
+    "happy-dom": "^18.0.1",
     "http-server": "^14.1.1",
     "husky": "^9.1.7",
     "lint-staged": "^16.1.6",
-    "prettier": "^3.6.2"
+    "prettier": "^3.6.2",
+    "vitest": "^3.2.4"
   },
   "package-lock": "true"
 }

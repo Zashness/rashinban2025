@@ -1,4 +1,4 @@
-name: visual-tests
+name: visual-and-unit-tests
 
 on:
   push: # run on push to any branch
@@ -27,6 +27,9 @@ jobs:
 
       - name: Install deps
         run: npm ci
+
+      - name: Run unit tests (Vitest)
+        run: npx vitest run --coverage=false --pool forks --reporter verbose
 
       - name: Install Playwright (Windows browsers)
         run: npx playwright install
