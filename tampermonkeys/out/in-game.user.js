@@ -1,13 +1,16 @@
 // ==UserScript==
 // @name         Rashinban Geoguessr Game Master Mode
 // @namespace    https://github.com/Zashness/rashinban2025/blob/gh-pages/tampermonkeys/out/in-game.user.js
-// @version      1.1.6
+// @version      1.1.7
 // @description  Game Master Mode mods for Rashinban2025
 // @author       Zashness
 // @match        https://www.geoguessr.com/*
 // @icon         https://rashinban.org/assets/images/favicon.ico
 // @grant        GM_addStyle
 // @grant        GM_addElement
+// @grant        GM_getValue
+// @grant        GM_setValue
+// @grant        GM_registerMenuCommand
 // ==/UserScript==
 
 // -----------------------------------------------------------------------------
@@ -460,6 +463,25 @@ window.addEventListener('load', function () {
   }
   /*--- end inlined sponsors.js ---*/
 
+  /** START SPREADSHEET TOGGLE */
+  const DEFAULTS = { sheetId: SHEET_ID, tabId: OVERLAYS_TAB_ID };
+  const SUB_COMP = { sheetId: '1X4LSputlvX5pdP7xImtuBuCSsUhhjgQ5l5DlCNVq24s', tabId: '1383961576' };
+
+  // read stored config, or default to Rashinban
+  const sheetId = GM_getValue('sheetId', DEFAULTS.sheetId);
+  const tabId = GM_getValue('tabId', DEFAULTS.tabId);
+  const isRashinban = sheetId === DEFAULTS.sheetId && tabId === DEFAULTS.tabId;
+  const currentSheetType = isRashinban ? 'Rashinban' : 'Sub-Competition';
+  GM_registerMenuCommand(`Toggle tournament (current: ${currentSheetType})`, () => {
+    const next = isRashinban ? SUB_COMP : DEFAULTS;
+    // persist to stored config
+    GM_setValue('sheetId', next.sheetId);
+    GM_setValue('tabId', next.tabId);
+    location.reload(); // re-init with new config
+  });
+  /** END SPREADSHEET TOGGLE */
+
+  // Create sponsor container
   const sponsorContainer = document.createElement('div');
   sponsorContainer.className = 'sponsors';
   sponsorContainer.id = 'sponsors';
@@ -559,7 +581,7 @@ window.addEventListener('load', function () {
   }
 
   function fetchData() {
-    const csvUrl = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=${OVERLAYS_TAB_ID}`;
+    const csvUrl = `https://docs.google.com/spreadsheets/d/${sheetId}/export?format=csv&gid=${tabId}`;
 
     fetch(csvUrl)
       .then((res) => {
