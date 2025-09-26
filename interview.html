@@ -52,7 +52,13 @@
     <script type="module">
       import { SHEET_ID, OVERLAYS_TAB_ID } from './assets/js/consts.js';
       import { renderNameAndScoreFromRow } from './assets/js/player-name-score.js';
-      import { applyKanaFont, containsJapanese, getActiveRow } from './assets/js/utils.js';
+      import {
+        applyKanaFont,
+        containsJapanese,
+        getActiveRow,
+        getParamsSheetId,
+        getParamsTabId,
+      } from './assets/js/utils.js';
       import { initSponsors } from './assets/js/sponsors.js';
 
       const HIDE_SCORE_AND_INTERVIEW = '--無表示--';
@@ -116,7 +122,9 @@
       }
 
       function fetchData() {
-        const csvUrl = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=${OVERLAYS_TAB_ID}`;
+        const sheetId = getParamsSheetId() || SHEET_ID;
+        const overlaysTabId = getParamsTabId() || OVERLAYS_TAB_ID;
+        const csvUrl = `https://docs.google.com/spreadsheets/d/${sheetId}/export?format=csv&gid=${overlaysTabId}`;
 
         fetch(csvUrl)
           .then((res) => {

@@ -19,3 +19,13 @@ export function applyKanaFont(name, el) {
   if (containsJapanese(name)) el.classList.add('kana');
   else el.classList.remove('kana');
 }
+
+export function getParamsSheetId() {
+  const params = new URLSearchParams(window.location.search);
+  return params.get('sheetId');
+}
+
+export function getParamsTabId() {
+  const params = new URLSearchParams(window.location.search);
+  return params.get('tabId');
+}

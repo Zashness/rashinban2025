@@ -1029,6 +1029,7 @@
 
     <script type="module">
       import { SHEET_ID, FINAL_BRACKETS_TAB_ID } from './assets/js/consts.js';
+      import { getParamsTabId, getParamsSheetId } from './assets/js/utils.js';
 
       // define the “steps” you want to zoom to (in the SVG’s own coordinate system)
       // adjust these x,y,width,height values by eyeballing the viewBox
@@ -1126,7 +1127,9 @@
       let bracketsData;
 
       function fetchData() {
-        const csvUrl = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=${FINAL_BRACKETS_TAB_ID}`;
+        const sheetId = getParamsSheetId() || SHEET_ID;
+        const finalBracketsTabId = getParamsTabId() || FINAL_BRACKETS_TAB_ID;
+        const csvUrl = `https://docs.google.com/spreadsheets/d/${sheetId}/export?format=csv&gid=${finalBracketsTabId}`;
 
         fetch(csvUrl)
           .then((res) => {
