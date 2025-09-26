@@ -352,6 +352,16 @@ window.addEventListener('load', function () {
     if (containsJapanese(name)) el.classList.add('kana');
     else el.classList.remove('kana');
   }
+
+  function getParamsSheetId() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get('sheetId');
+  }
+
+  function getParamsTabId() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get('tabId');
+  }
   /*--- end inlined utils.js ---*/
 
   // ===== INLINED: sponsors.css =====

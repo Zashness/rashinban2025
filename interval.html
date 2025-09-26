@@ -61,7 +61,7 @@
     <script type="module">
       import { SHEET_ID, OVERLAYS_TAB_ID } from './assets/js/consts.js';
       import { initSponsors } from './assets/js/sponsors.js';
-      import { containsJapanese } from './assets/js/utils.js';
+      import { containsJapanese, getParamsSheetId, getParamsTabId } from './assets/js/utils.js';
 
       const BRACKETS_QUALIFIERS_URL = 'brackets.html?variant=mini';
       const BRACKETS_FINALS_URL = 'brackets-finals.html?variant=mini';
@@ -409,7 +409,9 @@
       }
 
       function fetchData() {
-        const csvUrl = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=${OVERLAYS_TAB_ID}`;
+        const sheetId = getParamsSheetId() || SHEET_ID;
+        const overlaysTabId = getParamsTabId() || OVERLAYS_TAB_ID;
+        const csvUrl = `https://docs.google.com/spreadsheets/d/${sheetId}/export?format=csv&gid=${overlaysTabId}`;
 
         fetch(csvUrl)
           .then((res) => {
