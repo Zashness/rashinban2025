@@ -29,7 +29,7 @@
         <div id="info" class="enabled">
           <h2 class="coming-up">COMING UP</h2>
           <div class="bar"></div>
-          <div id="next-match"></div>
+          <div id="next-matches"></div>
         </div>
 
         <div id="countdown"></div>
@@ -90,15 +90,16 @@
 
       let papaData;
 
-      /** Finds the first row where `next` column is TRUE */
-      function getNextMatchRow(data) {
+      /** Finds the rows where `next` column is TRUE */
+      function getNextMatchRows(data) {
+        const nextMatches = [];
         for (let row of data) {
-          if (row.active === 'TRUE') {
-            return row;
+          if (row.coming_up === 'TRUE') {
+            nextMatches.push(row);
           }
         }
 
-        return null;
+        return nextMatches;
       }
 
       function getTimeToNextEvent(hoursStr, minsStr) {
@@ -374,38 +375,48 @@
         document.getElementById('countdown').textContent = remaining;
         const infoBox = document.getElementById('info');
 
-        const row = getNextMatchRow(data);
-        if (
-          !row ||
-          !row.player_1 || // Ensure player_1 name and optional handle
-          !row.player_2 // Ensure player_2 name and optional handle
-        ) {
-          infoBox.setAttribute('class', 'disabled');
-          return;
-        }
-        infoBox.setAttribute('class', 'enabled');
+        const nextMatchRows = getNextMatchRows(data);
+        const nextMatchesNode = document.getElementById('next-matches');
+        const nextMatches = [];
+        // show up to 4 upcoming matches
+        for (let row of nextMatchRows.slice(0, 4)) {
+          if (
+            !row ||
+            !row.player_1 || // Ensure player_1 name and optional handle
+            !row.player_2 // Ensure player_2 name and optional handle
+          ) {
+            infoBox.setAttribute('class', 'disabled');
+            return;
+          }
+          infoBox.setAttribute('class', 'enabled');
 
-        const playerOne = row.player_1.split('|');
-        const playerTwo = row.player_2.split('|');
+          const playerOne = row.player_1.split('|');
+          const playerTwo = row.player_2.split('|');
 
-        // Player 1: `player_1` column in spreadsheet.
-        const playerOneName = playerOne[0].trim() || '';
+          // Player 1: `player_1` column in spreadsheet.
+          const playerOneName = playerOne[0].trim() || '';
 
-        // Player 2: `player_2` column in spreadsheet.
-        const playerTwoName = playerTwo[0].trim() || '';
+          // Player 2: `player_2` column in spreadsheet.
+          const playerTwoName = playerTwo[0].trim() || '';
 
-        const p1Kana = containsJapanese(playerOneName);
-        const p2Kana = containsJapanese(playerTwoName);
-        const p1Class = p1Kana ? 'name-noto' : 'name-kaneda';
-        const p2Class = p2Kana ? 'name-noto' : 'name-kaneda';
+          const p1Kana = containsJapanese(playerOneName);
+          const p2Kana = containsJapanese(playerTwoName);
+          const p1Class = p1Kana ? 'name-noto' : 'name-kaneda';
+          const p2Class = p2Kana ? 'name-noto' : 'name-kaneda';
 
-        document.getElementById('next-match').innerHTML = `
+          const nextMatch = document.createElement('div');
+          nextMatch.setAttribute('class', 'next-match');
+          nextMatch.innerHTML = `
               <p class="game-name">
                 <span class="${p1Class}">${playerOneName}</span>
-                <span class="versus" style="margin-right:${p2Az ? '18px' : '12px'};">VS</span>
+                <span class="versus" style="margin-right:${p2Kana ? '12px' : '18px'};">VS</span>
                 <span class="${p2Class}">${playerTwoName}</span>
               </p>
             `;
+          nextMatches.push(nextMatch);
+        }
+
+        nextMatchesNode.replaceChildren(...nextMatches);
       }
 
       function fetchData() {
