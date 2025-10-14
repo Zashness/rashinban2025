@@ -19,7 +19,7 @@
   flex: 0 0 auto;
 }
 
-#sponsors .red-tokyo {
+#sponsors .logo-red-tokyo {
   height: calc(var(--logo-h, 84px) * 1.4);
   margin-top: 34px;
 }

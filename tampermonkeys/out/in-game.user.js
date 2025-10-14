@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Rashinban Geoguessr Game Master Mode
 // @namespace    https://github.com/Zashness/rashinban2025/blob/gh-pages/tampermonkeys/out/in-game.user.js
-// @version      1.1.7
+// @version      1.1.8
 // @description  Game Master Mode mods for Rashinban2025
 // @author       Zashness
 // @match        https://www.geoguessr.com/*
@@ -369,7 +369,7 @@ window.addEventListener('load', function () {
 
   // ===== INLINED: sponsors.css =====
   GM_addStyle(
-    '#sponsors {\n  position: absolute;\n  left: var(--left, 0px);\n  bottom: var(--bottom, 84px);\n  transform: translateY(50%); /* keeps logo *centers* at --bottom */\n  display: flex;\n  align-items: center;\n  gap: var(--gap, 72px);\n  z-index: 10;\n  width: var(--width, 1920px);\n  /* pass clicks through */\n  pointer-events: none;\n}\n\n/* All logos */\n#sponsors img {\n  height: var(--logo-h, 84px);\n  object-fit: contain;\n  flex: 0 0 auto;\n}\n\n#sponsors .red-tokyo {\n  height: calc(var(--logo-h, 84px) * 1.4);\n  margin-top: 34px;\n}\n\n.sponsor-left-logos {\n  display: flex;\n  justify-content: flex-end;\n  align-items: center;\n  gap: var(--gap, 72px);\n}\n\n.sponsor-right-container {\n  display: flex;\n  justify-content: center;\n}\n\n/* The rotating right-side logo */\nimg#sponsor-right {\n  opacity: 1;\n  transition: opacity 300ms ease-in-out;\n}\n\n#sponsors .logo-reject {\n  height: calc(var(--logo-h, 84px) * 0.83);\n}\n\n#sponsors .logo-spicescode {\n  height: calc(var(--logo-h, 84px) * 0.8);\n}\n\n#sponsors .logo-geoguessr {\n  height: calc(var(--logo-h, 84px) * 0.75);\n}\n\n#sponsors .logo-geoguessr-record {\n  height: calc(var(--logo-h, 84px) * 0.5);\n}\n\n#sponsors .logo-alto {\n  height: calc(var(--logo-h, 84px) * 0.8);\n}\n\n#sponsors .logo-birdhouse {\n  height: calc(var(--logo-h, 84px) * 0.85);\n}\n',
+    '#sponsors {\n  position: absolute;\n  left: var(--left, 0px);\n  bottom: var(--bottom, 84px);\n  transform: translateY(50%); /* keeps logo *centers* at --bottom */\n  display: flex;\n  align-items: center;\n  gap: var(--gap, 72px);\n  z-index: 10;\n  width: var(--width, 1920px);\n  /* pass clicks through */\n  pointer-events: none;\n}\n\n/* All logos */\n#sponsors img {\n  height: var(--logo-h, 84px);\n  object-fit: contain;\n  flex: 0 0 auto;\n}\n\n#sponsors .logo-red-tokyo {\n  height: calc(var(--logo-h, 84px) * 1.4);\n  margin-top: 34px;\n}\n\n.sponsor-left-logos {\n  display: flex;\n  justify-content: flex-end;\n  align-items: center;\n  gap: var(--gap, 72px);\n}\n\n.sponsor-right-container {\n  display: flex;\n  justify-content: center;\n}\n\n/* The rotating right-side logo */\nimg#sponsor-right {\n  opacity: 1;\n  transition: opacity 300ms ease-in-out;\n}\n\n#sponsors .logo-reject {\n  height: calc(var(--logo-h, 84px) * 0.83);\n}\n\n#sponsors .logo-spicescode {\n  height: calc(var(--logo-h, 84px) * 0.8);\n}\n\n#sponsors .logo-geoguessr {\n  height: calc(var(--logo-h, 84px) * 0.75);\n}\n\n#sponsors .logo-geoguessr-record {\n  height: calc(var(--logo-h, 84px) * 0.5);\n}\n\n#sponsors .logo-alto {\n  height: calc(var(--logo-h, 84px) * 0.8);\n}\n\n#sponsors .logo-birdhouse {\n  height: calc(var(--logo-h, 84px) * 0.85);\n}\n',
   );
   // ===== INLINED: player-name-score.css =====
   GM_addStyle(
@@ -389,7 +389,7 @@ window.addEventListener('load', function () {
    *  - class {string} Optional. Extra CSS class to apply to the rendered <img>.
    */
   const defaultLeftLogos = [
-    { src: 'assets/logos/reject.svg', class: 'logo-reject' },
+    { src: 'assets/logos/red-tokyo-logo.svg', class: 'logo-red-tokyo' },
     { src: 'assets/logos/tamura-builds-white.svg' },
   ];
   const defaultRightLogos = [
@@ -490,7 +490,7 @@ window.addEventListener('load', function () {
   const logoUrlPrefix =
     'https://raw.githubusercontent.com/Zashness/rashinban2025/refs/heads/gh-pages/';
   const leftLogos = [
-    { src: logoUrlPrefix + 'assets/logos/reject.svg', class: 'logo-reject' },
+    { src: logoUrlPrefix + 'assets/logos/red-tokyo-logo.svg', class: 'logo-red-tokyo' },
     { src: logoUrlPrefix + 'assets/logos/tamura-builds-white.svg' },
   ];
   const rightLogos = [

@@ -8,7 +8,7 @@
  *  - class {string} Optional. Extra CSS class to apply to the rendered <img>.
  */
 const defaultLeftLogos = [
-  { src: 'assets/logos/reject.svg', class: 'logo-reject' },
+  { src: 'assets/logos/red-tokyo-logo.svg', class: 'logo-red-tokyo' },
   { src: 'assets/logos/tamura-builds-white.svg' },
 ];
 const defaultRightLogos = [
