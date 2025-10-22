@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Rashinban Geoguessr Game Master Mode
 // @namespace    https://github.com/Zashness/rashinban2025/blob/gh-pages/tampermonkeys/out/in-game.user.js
-// @version      1.1.9
+// @version      1.1.10
 // @description  Game Master Mode mods for Rashinban2025
 // @author       Zashness
 // @match        https://www.geoguessr.com/*
@@ -23,11 +23,16 @@ window.addEventListener('load', function () {
     @import url('https://use.typekit.net/ljs6bhu.css');
 
     /* ===================================== */
-    /* ========== Player Scores ============ */
+    /* ============ Overrides ============== */
     /* ===================================== */
+    /* Override injected player score. */
     .topbar.topbar {
       top: 53px;
       position: absolute;
+    }
+    /* Override injected sponsor. */
+    .sponsors .sponsor-right-container {
+      width: 100%;
     }
 
     /* ===================================== */
@@ -355,23 +360,18 @@ window.addEventListener('load', function () {
 
   const logoUrlPrefix =
     'https://raw.githubusercontent.com/Zashness/rashinban2025/refs/heads/gh-pages/';
-  const leftLogos = [
-    { src: logoUrlPrefix + 'assets/logos/red-tokyo-logo.svg', class: 'logo-red-tokyo' },
+  const logos = [
+    { src: logoUrlPrefix + 'assets/logos/red-tokyo-logo.svg', class: 'logo-red-tokyo banana' },
     { src: logoUrlPrefix + 'assets/logos/tamura-builds-white.svg' },
-  ];
-  const rightLogos = [
-    { src: logoUrlPrefix + 'assets/logos/spicescode-white.svg', class: 'logo-spicescode' },
     { src: logoUrlPrefix + 'assets/logos/geoguessr-m.svg', class: 'logo-geoguessr' },
-    { src: logoUrlPrefix + 'assets/logos/geoguessr-record.svg', class: 'logo-geoguessr-record' },
   ];
   initSponsors({
     containerId: 'sponsors',
-    leftLogos: leftLogos,
-    rightLogos: rightLogos,
+    leftLogos: [],
+    rightLogos: logos,
     bottom: 135,
     height: 84,
-    width: 1340,
-    left: 250,
+    gap: 0,
   });
 
   // ===== INLINED: score.js =====

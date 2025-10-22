@@ -29,7 +29,7 @@ export async function initSponsors({
   width = 1920,
 } = {}) {
   const wrap = document.getElementById(containerId);
-  if (!wrap || !leftLogos.length) return;
+  if (!wrap || leftLogos.length + rightLogos.length === 0) return;
   wrap.style.setProperty('--bottom', `${bottom}px`);
   wrap.style.setProperty('--logo-h', `${height}px`);
   wrap.style.setProperty('--gap', `${gap}px`);

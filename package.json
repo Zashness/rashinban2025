@@ -10,9 +10,9 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "serve": "http-server . -p 4173 -s -c-1",
-    "test:ui": "playwright test",
     "test:js": "vitest run --pool forks",
-    "test:update": "playwright test --update-snapshots"
+    "test:ui": "playwright test",
+    "test:ui-update": "playwright test --update-snapshots"
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx,css,scss,less,md,html,json,yml,yaml}": "prettier --write"
