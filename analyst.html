@@ -1,0 +1,95 @@
+<!doctype html>
+<!-- Interview: show last match & interviewee's name -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Interview Overlay</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/player-score-topbar.css" />
+    <link rel="stylesheet" href="assets/analyst.css" />
+    <link rel="modulepreload" href="assets/js/consts.js" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abel&family=Akshar:wght@300..700&family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- kaneda-gothic -->
+    <link rel="stylesheet" href="https://use.typekit.net/ljs6bhu.css" />
+    <!-- Parses csv to JSON -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+  </head>
+  <body>
+    <div id="nameplates">
+      <div id="analyst-card" class="card">
+        <div id="analyst-label" class="card-label"><span>アナリスト</span></div>
+        <div class="name-container">
+          <span id="analyst-name"></span>
+        </div>
+      </div>
+      <div id="player-card" class="card">
+        <div id="player-label" class="card-label"><span>選手</span></div>
+        <div class="name-container">
+          <span id="player-name"></span>
+        </div>
+      </div>
+    </div>
+
+    <div id="error"></div>
+
+    <script type="module">
+      import { SHEET_ID, OVERLAYS_TAB_ID } from './assets/js/consts.js';
+      import {
+        applyKanaFont,
+        containsJapanese,
+        getActiveRow,
+        getParamsSheetId,
+        getParamsTabId,
+      } from './assets/js/utils.js';
+      import { splitPlayerField } from './assets/js/player-name-score.js';
+
+      const NAMEPLATES_NODE = document.getElementById('nameplates');
+      const ANALYST_NODE = document.getElementById('analyst-name');
+      const PLAYER_NODE = document.getElementById('player-name');
+
+      function render(data) {
+        const analystName = data[0].analyst_desk;
+        const row = getActiveRow(data);
+        const [p1, _p1Handle] = splitPlayerField(row.player_1);
+        const [p2, _p2Handle] = splitPlayerField(row.player_2);
+        const winner = row.player_1_score == 2 ? p1 : row.player_2_score === 2 ? p2 : '';
+
+        PLAYER_NODE.textContent = winner;
+        ANALYST_NODE.textContent = analystName;
+      }
+
+      function fetchData() {
+        const sheetId = getParamsSheetId() || SHEET_ID;
+        const overlaysTabId = getParamsTabId() || OVERLAYS_TAB_ID;
+        const csvUrl = `https://docs.google.com/spreadsheets/d/${sheetId}/export?format=csv&gid=${overlaysTabId}`;
+
+        fetch(csvUrl)
+          .then((res) => {
+            if (!res.ok) throw new Error(`HTTP ${res.status}`);
+            return res.text();
+          })
+          .then((txt) => {
+            const { data } = Papa.parse(txt, {
+              header: true,
+              skipEmptyLines: true,
+            });
+            render(data);
+          })
+          .catch((err) => {
+            console.error('Fetch/Parse error:', err);
+            // document.getElementById('error').innerHTML = '<p>Error loading data.</p>';
+          });
+      }
+
+      window.addEventListener('DOMContentLoaded', () => {
+        fetchData();
+        setInterval(fetchData, 2 * 1000);
+      });
+    </script>
+  </body>
+</html>

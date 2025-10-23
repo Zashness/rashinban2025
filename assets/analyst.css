@@ -1,0 +1,48 @@
+body {
+  position: relative;
+  background-color: #00ff00;
+  width: 1920px;
+  height: 1080px;
+  margin: 0;
+  overflow: hidden;
+  color: white;
+  font-family: 'kaneda-gothic', sans-serif;
+}
+
+.card {
+  position: absolute;
+  width: 306px;
+  height: 137px;
+  background-color: #ff3030;
+
+  .card-label {
+    background-color: #b92b2b;
+    text-align: center;
+    height: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+  }
+}
+
+.name-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 102px;
+  font-size: 96px;
+}
+
+#analyst-card {
+  top: 181px;
+  left: 461px;
+}
+
+#player-card {
+  top: 181px;
+  left: 1111px;
+}

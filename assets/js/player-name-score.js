@@ -8,7 +8,7 @@
 import { applyKanaFont } from './utils.js';
 
 /** Split "Name|handle" into [name, handle] (both trimmed) */
-function splitPlayerField(field = '') {
+export function splitPlayerField(field = '') {
   const [name = '', handle = ''] = String(field).split('|');
   return [name.trim(), handle.trim()];
 }
