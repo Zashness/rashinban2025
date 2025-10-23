@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Rashinban Geoguessr Game Master Mode
 // @namespace    https://github.com/Zashness/rashinban2025/blob/gh-pages/tampermonkeys/out/in-game.user.js
-// @version      1.1.11
+// @version      1.1.12
 // @description  Game Master Mode mods for Rashinban2025
 // @author       Zashness
 // @match        https://www.geoguessr.com/*
@@ -131,7 +131,7 @@ window.addEventListener('load', function () {
 
     /* Wrapper for both player views */
     [class^="views_playerViews__"][class^="views_playerViews__"] {
-      top: 60px;
+      top: 0px;
     }
     /* Player view. First-child=>left, 2nd child=right. */
     [class^="views_playerViews__"] > :first-child [class^="player-view_panorama__"] {
@@ -143,7 +143,7 @@ window.addEventListener('load', function () {
 
     /* HP */
     [class*="cam-hud_wrapper__"][class*="cam-hud_wrapper__"] {
-      top: -18px;
+      top: -78px;
       display: grid;
       grid-template-columns: 1fr minmax(0, 760px) 1fr;
     }
@@ -319,6 +319,34 @@ window.addEventListener('load', function () {
       top: 160px;
       z-index: 3;
     }
+
+
+    /* ===================================== */
+    /* ===== Player Camera Component ======= */
+    /* ===================================== */
+    [class="player-camera-container"]{
+      display: inline;
+      width: 1920px;
+    }
+    .player-camera{
+      position: absolute;
+      top: 795px;
+      width: 373px;
+      height:242px;
+      background-color: #ff00ff;
+      border: 8px solid #000;
+      border-radius: 20px;
+    }
+    
+    #player1-camera{
+      left: 94px;
+      border-color: #3083ff;
+    }
+    
+    #player2-camera{
+      left: 1455px;
+      border-color: #ff3030;
+    }
 `);
 
   // ===== INLINED: consts.js =====
@@ -430,6 +458,20 @@ window.addEventListener('load', function () {
   document.body.insertAdjacentHTML('beforeend', topbarHtml);
   fetchData();
   setInterval(fetchData, 5 * 1000);
+
+  const cameraContainer = document.createElement('div');
+  cameraContainer.className = 'player-camera-container';
+  cameraContainer.id = 'player-camera';
+  document.body.appendChild(cameraContainer);
+
+  const player1Camera = document.createElement('div');
+  player1Camera.className = 'player-camera';
+  player1Camera.id = 'player1-camera';
+  cameraContainer.appendChild(player1Camera);
+  const player2Camera = document.createElement('div');
+  player2Camera.className = 'player-camera';
+  player2Camera.id = 'player2-camera';
+  cameraContainer.appendChild(player2Camera);
 
   let hasInit = false;
   let overlayRoot = null;
