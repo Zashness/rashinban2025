@@ -1,0 +1,92 @@
+<!doctype html>
+<!-- Score: small overlay of player score, player names, & player handle -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Score Overlay</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/score.css" />
+    <link rel="modulepreload" href="assets/js/consts.js" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Akshar:wght@300..700&family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- kaneda-gothic -->
+    <link rel="stylesheet" href="https://use.typekit.net/ljs6bhu.css" />
+    <!-- Parses csv to JSON -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+  </head>
+  <body>
+    <div class="score-container">
+      <div class="player-wrapper">
+        <div class="score-bg score1-bg">
+          <div id="score1" class="score score1"></div>
+        </div>
+        <div class="player1-bg player-bg">
+          <div id="player1" class="player player1"></div>
+          <div id="player1-handle" class="player-handle player1-handle"></div>
+        </div>
+      </div>
+      <div class="player-wrapper">
+        <div class="score-bg score2-bg">
+          <div id="score2" class="score score2"></div>
+        </div>
+        <div class="player2-bg player-bg">
+          <div id="player2" class="player player2"></div>
+          <div id="player2-handle" class="player-handle player2-handle"></div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module">
+      import { SHEET_ID, OVERLAYS_TAB_ID } from './assets/js/consts.js';
+      import { renderNameAndScoreFromRow } from './assets/js/player-name-score.js';
+      import {
+        applyKanaFont,
+        getActiveRow,
+        getParamsSheetId,
+        getParamsTabId,
+      } from './assets/js/utils.js';
+
+      function render(row) {
+        if (!row) {
+          return;
+        }
+
+        renderNameAndScoreFromRow(row);
+      }
+
+      function fetchData() {
+        const sheetId = getParamsSheetId() || SHEET_ID;
+        const overlaysTabId = getParamsTabId() || OVERLAYS_TAB_ID;
+        const csvUrl = `https://docs.google.com/spreadsheets/d/${sheetId}/export?format=csv&gid=${overlaysTabId}`;
+
+        fetch(csvUrl)
+          .then((res) => {
+            if (!res.ok) {
+              throw new Error(`HTTP ${res.status}`);
+            }
+            return res.text();
+          })
+          .then((text) => {
+            const { data } = Papa.parse(text, {
+              header: true,
+              skipEmptyLines: true,
+            });
+            const row = getActiveRow(data);
+            render(row);
+          })
+          .catch((err) => {
+            console.error('Fetch/Parse error:', err);
+          });
+      }
+
+      window.addEventListener('DOMContentLoaded', () => {
+        fetchData();
+        setInterval(fetchData, 20000);
+      });
+    </script>
+  </body>
+</html>

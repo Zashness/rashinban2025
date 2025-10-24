@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  width: 1920px;
+  height: 1080px;
+  background-color: #00ff00;
+  font-family: 'kaneda-gothic', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+.score-container {
+  position: fixed;
+  left: 74px;
+  bottom: 74px;
+  display: flex;
+  flex-direction: column;
+}
+
+.player-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.score-bg {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 81px;
+  height: 81px;
+}
+
+.score {
+  font-size: 64px;
+  color: #fff;
+}
+
+.score1-bg {
+  background-color: #3083ff;
+}
+
+.score2-bg {
+  background-color: #ff3030;
+}
+
+.player-bg {
+  width: 617px;
+  height: 81px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: #fff;
+  justify-content: flex-start;
+}
+
+.player1-bg {
+  background-color: #2669cc;
+}
+
+.player2-bg {
+  background-color: #cc2626;
+}
+
+.player {
+  font-family: 'kaneda-gothic', sans-serif;
+  font-weight: 900;
+  font-size: 64px;
+  letter-spacing: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #fff;
+  margin: 0;
+}
+
+.player.kana {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 61px;
+}
+
+.player-handle {
+  font-family: 'Akshar', sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #fff;
+  margin: 0;
+}
+
+.player1,
+.player2 {
+  padding-left: 40px;
+}

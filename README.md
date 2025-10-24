@@ -19,6 +19,10 @@ Overlays and tampermonkey scripts for [Rashinban 2025](https://rashinban.org/)
 
 - Overlay: https://zashness.github.io/rashinban2025/interview.html
 
+### Score
+
+- Overlay: https://zashness.github.io/rashinban2025/score.html
+
 ### For Analyst
 
 - Tampermonkey: https://github.com/Zashness/rashinban2025/blob/gh-pages/tampermonkeys/fullscreen-player.user.js
