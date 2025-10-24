@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Rashinban Geoguessr Game Master Mode
 // @namespace    https://github.com/Zashness/rashinban2025/blob/gh-pages/tampermonkeys/out/in-game.user.js
-// @version      1.1.12
+// @version      1.1.13
 // @description  Game Master Mode mods for Rashinban2025
 // @author       Zashness
 // @match        https://www.geoguessr.com/*
@@ -458,20 +458,21 @@ window.addEventListener('load', function () {
   document.body.insertAdjacentHTML('beforeend', topbarHtml);
   fetchData();
   setInterval(fetchData, 5 * 1000);
-
-  const cameraContainer = document.createElement('div');
-  cameraContainer.className = 'player-camera-container';
-  cameraContainer.id = 'player-camera';
-  document.body.appendChild(cameraContainer);
-
-  const player1Camera = document.createElement('div');
-  player1Camera.className = 'player-camera';
-  player1Camera.id = 'player1-camera';
-  cameraContainer.appendChild(player1Camera);
-  const player2Camera = document.createElement('div');
-  player2Camera.className = 'player-camera';
-  player2Camera.id = 'player2-camera';
-  cameraContainer.appendChild(player2Camera);
+  if(isRashinban){
+    const cameraContainer = document.createElement('div');
+    cameraContainer.className = 'player-camera-container';
+    cameraContainer.id = 'player-camera';
+    document.body.appendChild(cameraContainer);
+  
+    const player1Camera = document.createElement('div');
+    player1Camera.className = 'player-camera';
+    player1Camera.id = 'player1-camera';
+    cameraContainer.appendChild(player1Camera);
+    const player2Camera = document.createElement('div');
+    player2Camera.className = 'player-camera';
+    player2Camera.id = 'player2-camera';
+    cameraContainer.appendChild(player2Camera);
+  }
 
   let hasInit = false;
   let overlayRoot = null;
