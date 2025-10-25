@@ -57,7 +57,8 @@
         const row = getActiveRow(data);
         const [p1, _p1Handle] = splitPlayerField(row.player_1);
         const [p2, _p2Handle] = splitPlayerField(row.player_2);
-        const winner = row.player_1_score == 2 ? p1 : row.player_2_score === 2 ? p2 : '';
+        console.log('Analyst Overlay Row:', row);
+        const winner = row.player_1_score === '2' ? p1 : row.player_2_score === '2' ? p2 : '';
 
         PLAYER_NODE.textContent = winner;
         ANALYST_NODE.textContent = analystName;
