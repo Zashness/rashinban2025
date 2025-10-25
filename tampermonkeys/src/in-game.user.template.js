@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Rashinban Geoguessr Game Master Mode
 // @namespace    https://github.com/Zashness/rashinban2025/blob/gh-pages/tampermonkeys/out/in-game.user.js
-// @version      1.1.13
+// @version      1.1.14
 // @description  Game Master Mode mods for Rashinban2025
 // @author       Zashness
 // @match        https://www.geoguessr.com/*
@@ -398,7 +398,7 @@ window.addEventListener('load', function () {
     containerId: 'sponsors',
     leftLogos: [],
     rightLogos: logos,
-    bottom: 135,
+    bottom: 155,
     height: 84,
     gap: 0,
   });
