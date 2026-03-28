@@ -1,17 +1,9 @@
-// ==UserScript==
-// @name         Rashinban Geoguessr Game Master Mode
-// @namespace    https://github.com/Zashness/rashinban2025/blob/gh-pages/tampermonkeys/out/in-game.user.js
-// @version      1.1.14
-// @description  Game Master Mode mods for Rashinban2025
-// @author       Zashness
-// @match        https://www.geoguessr.com/*
-// @icon         https://rashinban.org/assets/images/favicon.ico
-// @grant        GM_addStyle
-// @grant        GM_addElement
-// @grant        GM_getValue
-// @grant        GM_setValue
-// @grant        GM_registerMenuCommand
-// ==/UserScript==
+import { SHEET_ID, OVERLAYS_TAB_ID } from '../../assets/js/consts.js';
+import { getActiveRow } from '../../assets/js/utils.js';
+import { initSponsors } from '../../assets/js/sponsors.js';
+import { renderNameAndScoreFromRow } from '../../assets/js/player-name-score.js';
+import sponsorsCss from '../../assets/sponsors.css';
+import playerScoreCss from '../../assets/player-score-topbar.css';
 
 window.addEventListener('load', function () {
   GM_addElement(document.body, 'script', {
@@ -337,30 +329,22 @@ window.addEventListener('load', function () {
       border: 8px solid #000;
       border-radius: 20px;
     }
-    
+
     #player1-camera{
       left: 94px;
       border-color: #3083ff;
     }
-    
+
     #player2-camera{
       left: 1455px;
       border-color: #ff3030;
     }
 `);
 
-  // ===== INLINED: consts.js =====
-  //@@CONSTS_JS@@
-  // ===== INLINED: utils.js =====
-  //@@UTILS_JS@@
-
   // ===== INLINED: sponsors.css =====
-  GM_addStyle(/*@@SPONSORS_CSS_JSON@@*/);
+  GM_addStyle(sponsorsCss);
   // ===== INLINED: player-name-score.css =====
-  GM_addStyle(/*@@PLAYER_SCORE_CSS_JSON@@*/);
-
-  // ===== INLINED: sponsors.js =====
-  //@@SPONSORS_JS@@
+  GM_addStyle(playerScoreCss);
 
   /** START SPREADSHEET TOGGLE */
   const DEFAULTS = { sheetId: SHEET_ID, tabId: OVERLAYS_TAB_ID };
@@ -402,9 +386,6 @@ window.addEventListener('load', function () {
     height: 84,
     gap: 0,
   });
-
-  // ===== INLINED: score.js =====
-  //@@SCORE_JS@@
 
   function render(data) {
     const row = getActiveRow(data);
@@ -458,12 +439,12 @@ window.addEventListener('load', function () {
   document.body.insertAdjacentHTML('beforeend', topbarHtml);
   fetchData();
   setInterval(fetchData, 5 * 1000);
-  if(isRashinban){
+  if (isRashinban) {
     const cameraContainer = document.createElement('div');
     cameraContainer.className = 'player-camera-container';
     cameraContainer.id = 'player-camera';
     document.body.appendChild(cameraContainer);
-  
+
     const player1Camera = document.createElement('div');
     player1Camera.className = 'player-camera';
     player1Camera.id = 'player1-camera';
