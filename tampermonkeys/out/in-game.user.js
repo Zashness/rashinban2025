@@ -18,7 +18,6 @@
 // Edit sources instead: tampermonkeys/src/in-game.user.js
 // and the builder:      tampermonkeys/scripts/build-userscript.js
 // -----------------------------------------------------------------------------
-
 (() => {
   // assets/js/consts.js
   var SHEET_ID = '1IfaRkxsSQSrc9FloVuEY5paGmeEuTOGvru5TJeR6Hvg';
